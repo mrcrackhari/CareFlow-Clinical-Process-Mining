@@ -1,0 +1,3113 @@
+case_id,activity,timestamp,resource,shift
+CASE_001,Registration,2023-10-01 08:00:00,Nurse Jackie,Morning
+CASE_001,Triage,2023-10-01 08:20:00,Nurse Lee,Morning
+CASE_001,Doctor Consultation,2023-10-01 08:45:00,Dr. Brown,Morning
+CASE_001,X-Ray,2023-10-01 09:21:00,Tech Rodriguez,Morning
+CASE_001,Doctor Review,2023-10-01 09:59:00,Dr. Anderson,Morning
+CASE_001,Discharge,2023-10-01 10:22:00,Nurse Wilson,Morning
+CASE_002,Registration,2023-10-01 08:05:00,Nurse Joy,Morning
+CASE_002,Triage,2023-10-01 08:30:00,Nurse Wilson,Morning
+CASE_002,Doctor Consultation,2023-10-01 09:06:00,Dr. Taylor,Morning
+CASE_002,X-Ray,2023-10-01 09:43:00,Tech Miller,Morning
+CASE_002,Doctor Review,2023-10-01 10:23:00,Dr. Garcia,Morning
+CASE_002,Discharge,2023-10-01 10:50:00,Nurse Wilson,Morning
+CASE_003,Registration,2023-10-01 08:14:00,Nurse Jackie,Morning
+CASE_003,Triage,2023-10-01 08:33:00,Nurse Ratched,Morning
+CASE_003,X-Ray,2023-10-01 09:01:00,Tech Miller,Morning
+CASE_003,Triage,2023-10-01 09:41:00,Nurse Joy,Morning
+CASE_003,Doctor Consultation,2023-10-01 10:26:00,Dr. Brown,Morning
+CASE_003,Doctor Review,2023-10-01 11:18:00,Dr. Patel,Morning
+CASE_003,Discharge,2023-10-01 11:36:00,Nurse Davis,Morning
+CASE_004,Registration,2023-10-01 08:21:00,Nurse Wilson,Morning
+CASE_004,Triage,2023-10-01 08:42:00,Nurse Davis,Morning
+CASE_004,Blood Test,2023-10-01 09:09:00,Tech Garcia,Morning
+CASE_004,Blood Test,2023-10-01 09:40:00,Tech Miller,Morning
+CASE_004,Doctor Consultation,2023-10-01 10:33:00,Dr. Jones,Morning
+CASE_004,Doctor Review,2023-10-01 11:11:00,Dr. Patel,Morning
+CASE_004,Discharge,2023-10-01 11:38:00,Nurse Lee,Morning
+CASE_005,Registration,2023-10-01 08:30:00,Nurse Joy,Morning
+CASE_005,Triage,2023-10-01 08:49:00,Nurse Lee,Morning
+CASE_005,Doctor Consultation,2023-10-01 09:15:00,Dr. Wilson,Morning
+CASE_005,X-Ray,2023-10-01 09:50:00,Tech Garcia,Morning
+CASE_005,Doctor Review,2023-10-01 10:22:00,Dr. Garcia,Morning
+CASE_005,Discharge,2023-10-01 10:44:00,Nurse Joy,Morning
+CASE_006,Registration,2023-10-01 08:36:00,Nurse Wilson,Morning
+CASE_006,Triage,2023-10-01 08:52:00,Nurse Joy,Morning
+CASE_006,Doctor Consultation,2023-10-01 09:30:00,Dr. Jones,Morning
+CASE_006,X-Ray,2023-10-01 09:56:00,Tech Miller,Morning
+CASE_006,Doctor Review,2023-10-01 10:20:00,Dr. Smith,Morning
+CASE_006,Discharge,2023-10-01 10:51:00,Nurse Chapel,Morning
+CASE_007,Registration,2023-10-01 08:42:00,Nurse Joy,Morning
+CASE_007,Triage,2023-10-01 09:05:00,Nurse Ratched,Morning
+CASE_007,X-Ray,2023-10-01 09:32:00,Tech Miller,Morning
+CASE_007,Triage,2023-10-01 10:11:00,Nurse Davis,Morning
+CASE_007,Doctor Consultation,2023-10-01 10:49:00,Dr. Patel,Morning
+CASE_007,Doctor Review,2023-10-01 11:35:00,Dr. Patel,Morning
+CASE_007,Discharge,2023-10-01 12:10:00,Nurse Davis,Morning
+CASE_008,Registration,2023-10-01 08:52:00,Nurse Jackie,Morning
+CASE_008,Triage,2023-10-01 09:08:00,Nurse Chapel,Morning
+CASE_008,X-Ray,2023-10-01 09:35:00,Tech Miller,Morning
+CASE_008,Triage,2023-10-01 10:12:00,Nurse Ratched,Morning
+CASE_008,Doctor Consultation,2023-10-01 11:03:00,Dr. Anderson,Morning
+CASE_008,Doctor Review,2023-10-01 11:45:00,Dr. Brown,Morning
+CASE_008,Discharge,2023-10-01 12:11:00,Nurse Jackie,Morning
+CASE_009,Registration,2023-10-01 09:03:00,Nurse Lee,Morning
+CASE_009,Triage,2023-10-01 09:24:00,Nurse Wilson,Morning
+CASE_009,Doctor Consultation,2023-10-01 09:52:00,Dr. Garcia,Morning
+CASE_009,X-Ray,2023-10-01 10:25:00,Tech Miller,Morning
+CASE_009,Doctor Review,2023-10-01 10:55:00,Dr. Garcia,Morning
+CASE_009,Discharge,2023-10-01 11:26:00,Nurse Jackie,Morning
+CASE_010,Registration,2023-10-01 09:14:00,Nurse Joy,Morning
+CASE_010,Triage,2023-10-01 09:31:00,Nurse Lee,Morning
+CASE_010,X-Ray,2023-10-01 10:03:00,Tech Miller,Morning
+CASE_010,Triage,2023-10-01 10:33:00,Nurse Davis,Morning
+CASE_010,Doctor Consultation,2023-10-01 11:10:00,Dr. Brown,Morning
+CASE_010,Doctor Review,2023-10-01 11:55:00,Dr. Brown,Morning
+CASE_010,Discharge,2023-10-01 12:18:00,Nurse Davis,Morning
+CASE_011,Registration,2023-10-01 09:26:00,Nurse Joy,Morning
+CASE_011,Triage,2023-10-01 09:46:00,Nurse Lee,Morning
+CASE_011,Doctor Consultation,2023-10-01 10:22:00,Dr. Chen,Morning
+CASE_011,X-Ray,2023-10-01 10:54:00,Tech Garcia,Morning
+CASE_011,Doctor Review,2023-10-01 11:29:00,Dr. Taylor,Morning
+CASE_011,Discharge,2023-10-01 11:46:00,Nurse Chapel,Morning
+CASE_012,Registration,2023-10-01 09:34:00,Nurse Chapel,Morning
+CASE_012,Triage,2023-10-01 09:49:00,Nurse Davis,Morning
+CASE_012,Blood Test,2023-10-01 10:24:00,Tech Rodriguez,Morning
+CASE_012,Blood Test,2023-10-01 11:00:00,Tech Rodriguez,Morning
+CASE_012,Doctor Consultation,2023-10-01 11:49:00,Dr. Patel,Morning
+CASE_012,Doctor Review,2023-10-01 12:30:00,Dr. Patel,Morning
+CASE_012,Discharge,2023-10-01 12:49:00,Nurse Davis,Morning
+CASE_013,Registration,2023-10-01 09:45:00,Nurse Jackie,Morning
+CASE_013,Triage,2023-10-01 10:05:00,Nurse Jackie,Morning
+CASE_013,Doctor Consultation,2023-10-01 10:30:00,Dr. Chen,Morning
+CASE_013,X-Ray,2023-10-01 11:19:00,Tech Rodriguez,Morning
+CASE_013,Doctor Review,2023-10-01 11:59:00,Dr. Jones,Morning
+CASE_013,Discharge,2023-10-01 12:27:00,Nurse Wilson,Morning
+CASE_014,Registration,2023-10-01 09:52:00,Nurse Ratched,Morning
+CASE_014,Triage,2023-10-01 10:15:00,Nurse Chapel,Morning
+CASE_014,Blood Test,2023-10-01 10:48:00,Tech Rodriguez,Morning
+CASE_014,Blood Test,2023-10-01 11:24:00,Tech Miller,Morning
+CASE_014,Doctor Consultation,2023-10-01 12:06:00,Dr. Chen,Morning
+CASE_014,Doctor Review,2023-10-01 12:37:00,Dr. Garcia,Morning
+CASE_014,Discharge,2023-10-01 12:55:00,Nurse Chapel,Morning
+CASE_015,Registration,2023-10-01 10:06:00,Nurse Lee,Morning
+CASE_015,Triage,2023-10-01 10:27:00,Nurse Lee,Morning
+CASE_015,Doctor Consultation,2023-10-01 10:59:00,Dr. Brown,Morning
+CASE_015,X-Ray,2023-10-01 11:52:00,Tech Rodriguez,Morning
+CASE_015,Doctor Review,2023-10-01 12:19:00,Dr. Garcia,Morning
+CASE_015,Discharge,2023-10-01 12:43:00,Nurse Chapel,Morning
+CASE_016,Registration,2023-10-01 10:21:00,Nurse Lee,Morning
+CASE_016,Triage,2023-10-01 10:49:00,Nurse Joy,Morning
+CASE_016,X-Ray,2023-10-01 11:29:00,Tech Miller,Morning
+CASE_016,Triage,2023-10-01 12:01:00,Nurse Ratched,Morning
+CASE_016,Doctor Consultation,2023-10-01 12:45:00,Dr. Garcia,Morning
+CASE_016,Doctor Review,2023-10-01 13:15:00,Dr. Garcia,Morning
+CASE_016,Discharge,2023-10-01 13:43:00,Nurse Davis,Morning
+CASE_017,Registration,2023-10-01 10:33:00,Nurse Davis,Morning
+CASE_017,Triage,2023-10-01 10:52:00,Nurse Jackie,Morning
+CASE_017,Blood Test,2023-10-01 11:15:00,Tech Rodriguez,Morning
+CASE_017,Blood Test,2023-10-01 11:50:00,Tech Rodriguez,Morning
+CASE_017,Doctor Consultation,2023-10-01 12:43:00,Dr. Wilson,Morning
+CASE_017,Doctor Review,2023-10-01 13:15:00,Dr. Anderson,Morning
+CASE_017,Discharge,2023-10-01 13:40:00,Nurse Davis,Morning
+CASE_018,Registration,2023-10-01 10:44:00,Nurse Chapel,Morning
+CASE_018,Triage,2023-10-01 11:06:00,Nurse Chapel,Morning
+CASE_018,X-Ray,2023-10-01 11:43:00,Tech Miller,Morning
+CASE_018,Triage,2023-10-01 12:25:00,Nurse Ratched,Morning
+CASE_018,Blood Test,2023-10-01 13:03:00,Tech Garcia,Morning
+CASE_018,Doctor Consultation,2023-10-01 13:40:00,Dr. Patel,Morning
+CASE_018,Doctor Review,2023-10-01 14:40:00,Dr. Taylor,Evening
+CASE_018,Discharge,2023-10-01 15:13:00,Nurse Lee,Evening
+CASE_019,Registration,2023-10-01 10:51:00,Nurse Lee,Morning
+CASE_019,Triage,2023-10-01 11:08:00,Nurse Chapel,Morning
+CASE_019,X-Ray,2023-10-01 11:36:00,Tech Rodriguez,Morning
+CASE_019,Triage,2023-10-01 12:15:00,Nurse Lee,Morning
+CASE_019,Blood Test,2023-10-01 13:00:00,Tech Miller,Morning
+CASE_019,Doctor Consultation,2023-10-01 13:41:00,Dr. Patel,Morning
+CASE_019,Doctor Review,2023-10-01 14:24:00,Dr. Wilson,Evening
+CASE_019,Discharge,2023-10-01 14:52:00,Nurse Jackie,Evening
+CASE_020,Registration,2023-10-01 10:56:00,Nurse Davis,Morning
+CASE_020,Triage,2023-10-01 11:20:00,Nurse Ratched,Morning
+CASE_020,X-Ray,2023-10-01 11:39:00,Tech Garcia,Morning
+CASE_020,Triage,2023-10-01 12:16:00,Nurse Davis,Morning
+CASE_020,Doctor Consultation,2023-10-01 12:58:00,Dr. Wilson,Morning
+CASE_020,Doctor Review,2023-10-01 13:52:00,Dr. Patel,Morning
+CASE_020,Discharge,2023-10-01 14:12:00,Nurse Lee,Evening
+CASE_021,Registration,2023-10-01 11:06:00,Nurse Chapel,Morning
+CASE_021,Triage,2023-10-01 11:29:00,Nurse Davis,Morning
+CASE_021,Blood Test,2023-10-01 12:06:00,Tech Miller,Morning
+CASE_021,Blood Test,2023-10-01 12:39:00,Tech Garcia,Morning
+CASE_021,Doctor Consultation,2023-10-01 13:14:00,Dr. Kim,Morning
+CASE_021,Doctor Review,2023-10-01 13:50:00,Dr. Patel,Morning
+CASE_021,Discharge,2023-10-01 14:20:00,Nurse Chapel,Evening
+CASE_022,Registration,2023-10-01 11:12:00,Nurse Joy,Morning
+CASE_022,Triage,2023-10-01 11:28:00,Nurse Wilson,Morning
+CASE_022,Doctor Consultation,2023-10-01 12:06:00,Dr. Smith,Morning
+CASE_022,X-Ray,2023-10-01 12:35:00,Tech Rodriguez,Morning
+CASE_022,Doctor Review,2023-10-01 13:05:00,Dr. Wilson,Morning
+CASE_022,Discharge,2023-10-01 13:26:00,Nurse Davis,Morning
+CASE_023,Registration,2023-10-01 11:18:00,Nurse Ratched,Morning
+CASE_023,Triage,2023-10-01 11:37:00,Nurse Lee,Morning
+CASE_023,X-Ray,2023-10-01 12:09:00,Tech Rodriguez,Morning
+CASE_023,Triage,2023-10-01 12:34:00,Nurse Chapel,Morning
+CASE_023,Blood Test,2023-10-01 13:10:00,Tech Rodriguez,Morning
+CASE_023,Doctor Consultation,2023-10-01 13:44:00,Dr. Smith,Morning
+CASE_023,Doctor Review,2023-10-01 14:11:00,Dr. Anderson,Evening
+CASE_023,Discharge,2023-10-01 14:36:00,Nurse Ratched,Evening
+CASE_024,Registration,2023-10-01 11:23:00,Nurse Davis,Morning
+CASE_024,Triage,2023-10-01 11:50:00,Nurse Ratched,Morning
+CASE_024,X-Ray,2023-10-01 12:25:00,Tech Rodriguez,Morning
+CASE_024,Triage,2023-10-01 12:57:00,Nurse Jackie,Morning
+CASE_024,Doctor Consultation,2023-10-01 13:45:00,Dr. Patel,Morning
+CASE_024,Doctor Review,2023-10-01 14:17:00,Dr. Wilson,Evening
+CASE_024,Discharge,2023-10-01 14:42:00,Nurse Lee,Evening
+CASE_025,Registration,2023-10-01 11:35:00,Nurse Chapel,Morning
+CASE_025,Triage,2023-10-01 11:55:00,Nurse Lee,Morning
+CASE_025,Blood Test,2023-10-01 12:15:00,Tech Rodriguez,Morning
+CASE_025,Blood Test,2023-10-01 12:48:00,Tech Miller,Morning
+CASE_025,Doctor Consultation,2023-10-01 13:27:00,Dr. Anderson,Morning
+CASE_025,Doctor Review,2023-10-01 14:13:00,Dr. Brown,Evening
+CASE_025,Discharge,2023-10-01 14:35:00,Nurse Ratched,Evening
+CASE_026,Registration,2023-10-01 11:41:00,Nurse Ratched,Morning
+CASE_026,Triage,2023-10-01 12:06:00,Nurse Jackie,Morning
+CASE_026,Blood Test,2023-10-01 12:36:00,Tech Rodriguez,Morning
+CASE_026,Blood Test,2023-10-01 13:09:00,Tech Garcia,Morning
+CASE_026,Doctor Consultation,2023-10-01 13:47:00,Dr. Chen,Morning
+CASE_026,Doctor Review,2023-10-01 14:31:00,Dr. Anderson,Evening
+CASE_026,Discharge,2023-10-01 14:50:00,Nurse Davis,Evening
+CASE_027,Registration,2023-10-01 11:51:00,Nurse Chapel,Morning
+CASE_027,Triage,2023-10-01 12:07:00,Nurse Davis,Morning
+CASE_027,Blood Test,2023-10-01 12:40:00,Tech Garcia,Morning
+CASE_027,Blood Test,2023-10-01 13:09:00,Tech Miller,Morning
+CASE_027,Doctor Consultation,2023-10-01 13:35:00,Dr. Chen,Morning
+CASE_027,Doctor Review,2023-10-01 14:06:00,Dr. Garcia,Evening
+CASE_027,Discharge,2023-10-01 14:27:00,Nurse Joy,Evening
+CASE_028,Registration,2023-10-01 11:59:00,Nurse Chapel,Morning
+CASE_028,Triage,2023-10-01 12:19:00,Nurse Davis,Morning
+CASE_028,X-Ray,2023-10-01 12:50:00,Tech Rodriguez,Morning
+CASE_028,Triage,2023-10-01 13:24:00,Nurse Wilson,Morning
+CASE_028,Doctor Consultation,2023-10-01 14:12:00,Dr. Chen,Evening
+CASE_028,Doctor Review,2023-10-01 14:44:00,Dr. Taylor,Evening
+CASE_028,Discharge,2023-10-01 15:09:00,Nurse Joy,Evening
+CASE_029,Registration,2023-10-01 12:06:00,Nurse Ratched,Morning
+CASE_029,Triage,2023-10-01 12:31:00,Nurse Chapel,Morning
+CASE_029,X-Ray,2023-10-01 12:55:00,Tech Rodriguez,Morning
+CASE_029,Triage,2023-10-01 13:29:00,Nurse Lee,Morning
+CASE_029,Doctor Consultation,2023-10-01 13:59:00,Dr. Jones,Morning
+CASE_029,Doctor Review,2023-10-01 14:32:00,Dr. Smith,Evening
+CASE_029,Discharge,2023-10-01 15:00:00,Nurse Joy,Evening
+CASE_030,Registration,2023-10-01 12:15:00,Nurse Jackie,Morning
+CASE_030,Triage,2023-10-01 12:41:00,Nurse Ratched,Morning
+CASE_030,X-Ray,2023-10-01 13:12:00,Tech Garcia,Morning
+CASE_030,Triage,2023-10-01 13:55:00,Nurse Lee,Morning
+CASE_030,Doctor Consultation,2023-10-01 14:33:00,Dr. Patel,Evening
+CASE_030,Doctor Review,2023-10-01 15:06:00,Dr. Wilson,Evening
+CASE_030,Discharge,2023-10-01 15:25:00,Nurse Lee,Evening
+CASE_031,Registration,2023-10-01 12:29:00,Nurse Joy,Morning
+CASE_031,Triage,2023-10-01 12:46:00,Nurse Davis,Morning
+CASE_031,Doctor Consultation,2023-10-01 13:25:00,Dr. Taylor,Morning
+CASE_031,X-Ray,2023-10-01 13:55:00,Tech Garcia,Morning
+CASE_031,Doctor Review,2023-10-01 14:26:00,Dr. Wilson,Evening
+CASE_031,Discharge,2023-10-01 14:49:00,Nurse Wilson,Evening
+CASE_032,Registration,2023-10-01 12:40:00,Nurse Chapel,Morning
+CASE_032,Triage,2023-10-01 13:04:00,Nurse Joy,Morning
+CASE_032,X-Ray,2023-10-01 13:36:00,Tech Rodriguez,Morning
+CASE_032,Triage,2023-10-01 14:15:00,Nurse Jackie,Evening
+CASE_032,Doctor Consultation,2023-10-01 15:07:00,Dr. Patel,Evening
+CASE_032,Doctor Review,2023-10-01 16:00:00,Dr. Brown,Evening
+CASE_032,Discharge,2023-10-01 16:30:00,Nurse Ratched,Evening
+CASE_033,Registration,2023-10-01 12:49:00,Nurse Ratched,Morning
+CASE_033,Triage,2023-10-01 13:08:00,Nurse Joy,Morning
+CASE_033,Blood Test,2023-10-01 13:44:00,Tech Miller,Morning
+CASE_033,Blood Test,2023-10-01 14:26:00,Tech Rodriguez,Evening
+CASE_033,Doctor Consultation,2023-10-01 15:10:00,Dr. Patel,Evening
+CASE_033,Doctor Review,2023-10-01 15:30:00,Dr. Kim,Evening
+CASE_033,Discharge,2023-10-01 15:50:00,Nurse Davis,Evening
+CASE_034,Registration,2023-10-01 13:03:00,Nurse Jackie,Morning
+CASE_034,Triage,2023-10-01 13:27:00,Nurse Lee,Morning
+CASE_034,Blood Test,2023-10-01 13:49:00,Tech Rodriguez,Morning
+CASE_034,Blood Test,2023-10-01 14:23:00,Tech Rodriguez,Evening
+CASE_034,Doctor Consultation,2023-10-01 14:51:00,Dr. Garcia,Evening
+CASE_034,Doctor Review,2023-10-01 15:23:00,Dr. Chen,Evening
+CASE_034,Discharge,2023-10-01 15:50:00,Nurse Davis,Evening
+CASE_035,Registration,2023-10-01 13:10:00,Nurse Wilson,Morning
+CASE_035,Triage,2023-10-01 13:25:00,Nurse Chapel,Morning
+CASE_035,Blood Test,2023-10-01 13:43:00,Tech Miller,Morning
+CASE_035,Blood Test,2023-10-01 14:12:00,Tech Rodriguez,Evening
+CASE_035,Doctor Consultation,2023-10-01 14:58:00,Dr. Brown,Evening
+CASE_035,Doctor Review,2023-10-01 15:49:00,Dr. Brown,Evening
+CASE_035,Discharge,2023-10-01 16:19:00,Nurse Davis,Evening
+CASE_036,Registration,2023-10-01 13:25:00,Nurse Ratched,Morning
+CASE_036,Triage,2023-10-01 13:39:00,Nurse Davis,Morning
+CASE_036,Doctor Consultation,2023-10-01 14:18:00,Dr. Anderson,Evening
+CASE_036,X-Ray,2023-10-01 14:55:00,Tech Garcia,Evening
+CASE_036,Doctor Review,2023-10-01 15:24:00,Dr. Taylor,Evening
+CASE_036,Discharge,2023-10-01 15:56:00,Nurse Joy,Evening
+CASE_037,Registration,2023-10-01 13:35:00,Nurse Davis,Morning
+CASE_037,Triage,2023-10-01 13:47:00,Nurse Lee,Morning
+CASE_037,X-Ray,2023-10-01 14:13:00,Tech Garcia,Evening
+CASE_037,Triage,2023-10-01 14:46:00,Nurse Wilson,Evening
+CASE_037,Doctor Consultation,2023-10-01 15:28:00,Dr. Kim,Evening
+CASE_037,Doctor Review,2023-10-01 16:03:00,Dr. Anderson,Evening
+CASE_037,Discharge,2023-10-01 16:30:00,Nurse Ratched,Evening
+CASE_038,Registration,2023-10-01 13:43:00,Nurse Ratched,Morning
+CASE_038,Triage,2023-10-01 13:59:00,Nurse Lee,Morning
+CASE_038,X-Ray,2023-10-01 14:28:00,Tech Miller,Evening
+CASE_038,Triage,2023-10-01 15:00:00,Nurse Ratched,Evening
+CASE_038,Blood Test,2023-10-01 15:39:00,Tech Rodriguez,Evening
+CASE_038,Doctor Consultation,2023-10-01 16:05:00,Dr. Taylor,Evening
+CASE_038,Doctor Review,2023-10-01 16:52:00,Dr. Wilson,Evening
+CASE_038,Discharge,2023-10-01 17:24:00,Nurse Jackie,Evening
+CASE_039,Registration,2023-10-01 13:50:00,Nurse Chapel,Morning
+CASE_039,Triage,2023-10-01 14:10:00,Nurse Davis,Evening
+CASE_039,Doctor Consultation,2023-10-01 14:55:00,Dr. Kim,Evening
+CASE_039,X-Ray,2023-10-01 15:18:00,Tech Miller,Evening
+CASE_039,Doctor Review,2023-10-01 15:46:00,Dr. Kim,Evening
+CASE_039,Discharge,2023-10-01 16:07:00,Nurse Davis,Evening
+CASE_040,Registration,2023-10-01 14:00:00,Nurse Davis,Evening
+CASE_040,Triage,2023-10-01 14:26:00,Nurse Lee,Evening
+CASE_040,X-Ray,2023-10-01 15:03:00,Tech Miller,Evening
+CASE_040,Triage,2023-10-01 15:42:00,Nurse Joy,Evening
+CASE_040,Doctor Consultation,2023-10-01 16:30:00,Dr. Brown,Evening
+CASE_040,Doctor Review,2023-10-01 16:59:00,Dr. Kim,Evening
+CASE_040,Discharge,2023-10-01 17:29:00,Nurse Davis,Evening
+CASE_041,Registration,2023-10-01 14:07:00,Nurse Davis,Evening
+CASE_041,Triage,2023-10-01 14:32:00,Nurse Jackie,Evening
+CASE_041,X-Ray,2023-10-01 15:05:00,Tech Miller,Evening
+CASE_041,Triage,2023-10-01 15:45:00,Nurse Lee,Evening
+CASE_041,Doctor Consultation,2023-10-01 16:26:00,Dr. Patel,Evening
+CASE_041,Doctor Review,2023-10-01 17:22:00,Dr. Brown,Evening
+CASE_041,Discharge,2023-10-01 17:44:00,Nurse Joy,Evening
+CASE_042,Registration,2023-10-01 14:19:00,Nurse Wilson,Evening
+CASE_042,Triage,2023-10-01 14:41:00,Nurse Wilson,Evening
+CASE_042,X-Ray,2023-10-01 15:12:00,Tech Garcia,Evening
+CASE_042,Triage,2023-10-01 15:41:00,Nurse Jackie,Evening
+CASE_042,Doctor Consultation,2023-10-01 16:26:00,Dr. Wilson,Evening
+CASE_042,Doctor Review,2023-10-01 17:18:00,Dr. Anderson,Evening
+CASE_042,Discharge,2023-10-01 17:47:00,Nurse Joy,Evening
+CASE_043,Registration,2023-10-01 14:27:00,Nurse Joy,Evening
+CASE_043,Triage,2023-10-01 14:51:00,Nurse Ratched,Evening
+CASE_043,Blood Test,2023-10-01 15:19:00,Tech Miller,Evening
+CASE_043,Blood Test,2023-10-01 15:48:00,Tech Rodriguez,Evening
+CASE_043,Doctor Consultation,2023-10-01 16:20:00,Dr. Taylor,Evening
+CASE_043,Doctor Review,2023-10-01 17:12:00,Dr. Brown,Evening
+CASE_043,Discharge,2023-10-01 17:31:00,Nurse Ratched,Evening
+CASE_044,Registration,2023-10-01 14:39:00,Nurse Jackie,Evening
+CASE_044,Triage,2023-10-01 15:01:00,Nurse Joy,Evening
+CASE_044,Blood Test,2023-10-01 15:26:00,Tech Garcia,Evening
+CASE_044,Blood Test,2023-10-01 15:53:00,Tech Rodriguez,Evening
+CASE_044,Doctor Consultation,2023-10-01 16:38:00,Dr. Garcia,Evening
+CASE_044,Doctor Review,2023-10-01 17:33:00,Dr. Jones,Evening
+CASE_044,Discharge,2023-10-01 18:05:00,Nurse Davis,Evening
+CASE_045,Registration,2023-10-01 14:44:00,Nurse Chapel,Evening
+CASE_045,Triage,2023-10-01 15:09:00,Nurse Jackie,Evening
+CASE_045,Blood Test,2023-10-01 15:40:00,Tech Rodriguez,Evening
+CASE_045,Blood Test,2023-10-01 16:09:00,Tech Miller,Evening
+CASE_045,Doctor Consultation,2023-10-01 16:43:00,Dr. Chen,Evening
+CASE_045,Doctor Review,2023-10-01 17:33:00,Dr. Kim,Evening
+CASE_045,Discharge,2023-10-01 17:54:00,Nurse Jackie,Evening
+CASE_046,Registration,2023-10-01 14:50:00,Nurse Lee,Evening
+CASE_046,Triage,2023-10-01 15:13:00,Nurse Chapel,Evening
+CASE_046,Doctor Consultation,2023-10-01 15:37:00,Dr. Chen,Evening
+CASE_046,X-Ray,2023-10-01 16:26:00,Tech Garcia,Evening
+CASE_046,Doctor Review,2023-10-01 17:05:00,Dr. Garcia,Evening
+CASE_046,Discharge,2023-10-01 17:34:00,Nurse Jackie,Evening
+CASE_047,Registration,2023-10-01 15:05:00,Nurse Joy,Evening
+CASE_047,Triage,2023-10-01 15:24:00,Nurse Lee,Evening
+CASE_047,X-Ray,2023-10-01 16:01:00,Tech Rodriguez,Evening
+CASE_047,Triage,2023-10-01 16:41:00,Nurse Lee,Evening
+CASE_047,Blood Test,2023-10-01 17:13:00,Tech Garcia,Evening
+CASE_047,Doctor Consultation,2023-10-01 17:53:00,Dr. Wilson,Evening
+CASE_047,Doctor Review,2023-10-01 18:29:00,Dr. Kim,Evening
+CASE_047,Discharge,2023-10-01 18:53:00,Nurse Lee,Evening
+CASE_048,Registration,2023-10-01 15:12:00,Nurse Ratched,Evening
+CASE_048,Triage,2023-10-01 15:41:00,Nurse Davis,Evening
+CASE_048,X-Ray,2023-10-01 16:08:00,Tech Miller,Evening
+CASE_048,Triage,2023-10-01 16:30:00,Nurse Wilson,Evening
+CASE_048,Doctor Consultation,2023-10-01 17:15:00,Dr. Kim,Evening
+CASE_048,Doctor Review,2023-10-01 17:57:00,Dr. Kim,Evening
+CASE_048,Discharge,2023-10-01 18:18:00,Nurse Jackie,Evening
+CASE_049,Registration,2023-10-01 15:25:00,Nurse Joy,Evening
+CASE_049,Triage,2023-10-01 15:54:00,Nurse Davis,Evening
+CASE_049,Doctor Consultation,2023-10-01 16:35:00,Dr. Jones,Evening
+CASE_049,X-Ray,2023-10-01 17:22:00,Tech Rodriguez,Evening
+CASE_049,Doctor Review,2023-10-01 17:46:00,Dr. Taylor,Evening
+CASE_049,Discharge,2023-10-01 18:16:00,Nurse Davis,Evening
+CASE_050,Registration,2023-10-01 15:38:00,Nurse Jackie,Evening
+CASE_050,Triage,2023-10-01 15:57:00,Nurse Joy,Evening
+CASE_050,X-Ray,2023-10-01 16:30:00,Tech Rodriguez,Evening
+CASE_050,Triage,2023-10-01 17:06:00,Nurse Lee,Evening
+CASE_050,Blood Test,2023-10-01 17:38:00,Tech Garcia,Evening
+CASE_050,Doctor Consultation,2023-10-01 18:11:00,Dr. Jones,Evening
+CASE_050,Doctor Review,2023-10-01 19:11:00,Dr. Brown,Evening
+CASE_050,Discharge,2023-10-01 19:33:00,Nurse Chapel,Evening
+CASE_051,Registration,2023-10-01 15:50:00,Nurse Joy,Evening
+CASE_051,Triage,2023-10-01 16:07:00,Nurse Jackie,Evening
+CASE_051,X-Ray,2023-10-01 16:33:00,Tech Miller,Evening
+CASE_051,Triage,2023-10-01 17:07:00,Nurse Jackie,Evening
+CASE_051,Doctor Consultation,2023-10-01 17:57:00,Dr. Smith,Evening
+CASE_051,Doctor Review,2023-10-01 18:23:00,Dr. Smith,Evening
+CASE_051,Discharge,2023-10-01 18:52:00,Nurse Chapel,Evening
+CASE_052,Registration,2023-10-01 15:59:00,Nurse Ratched,Evening
+CASE_052,Triage,2023-10-01 16:19:00,Nurse Davis,Evening
+CASE_052,Doctor Consultation,2023-10-01 16:50:00,Dr. Patel,Evening
+CASE_052,X-Ray,2023-10-01 17:29:00,Tech Miller,Evening
+CASE_052,Doctor Review,2023-10-01 18:04:00,Dr. Wilson,Evening
+CASE_052,Discharge,2023-10-01 18:29:00,Nurse Jackie,Evening
+CASE_053,Registration,2023-10-01 16:12:00,Nurse Ratched,Evening
+CASE_053,Triage,2023-10-01 16:39:00,Nurse Jackie,Evening
+CASE_053,Blood Test,2023-10-01 16:58:00,Tech Rodriguez,Evening
+CASE_053,Blood Test,2023-10-01 17:25:00,Tech Rodriguez,Evening
+CASE_053,Doctor Consultation,2023-10-01 18:13:00,Dr. Brown,Evening
+CASE_053,Doctor Review,2023-10-01 18:59:00,Dr. Brown,Evening
+CASE_053,Discharge,2023-10-01 19:21:00,Nurse Lee,Evening
+CASE_054,Registration,2023-10-01 16:21:00,Nurse Joy,Evening
+CASE_054,Triage,2023-10-01 16:33:00,Nurse Lee,Evening
+CASE_054,Blood Test,2023-10-01 17:07:00,Tech Garcia,Evening
+CASE_054,Blood Test,2023-10-01 17:42:00,Tech Garcia,Evening
+CASE_054,Doctor Consultation,2023-10-01 18:29:00,Dr. Chen,Evening
+CASE_054,Doctor Review,2023-10-01 19:12:00,Dr. Taylor,Evening
+CASE_054,Discharge,2023-10-01 19:34:00,Nurse Chapel,Evening
+CASE_055,Registration,2023-10-01 16:30:00,Nurse Chapel,Evening
+CASE_055,Triage,2023-10-01 16:50:00,Nurse Davis,Evening
+CASE_055,Doctor Consultation,2023-10-01 17:23:00,Dr. Chen,Evening
+CASE_055,X-Ray,2023-10-01 17:53:00,Tech Miller,Evening
+CASE_055,Doctor Review,2023-10-01 18:28:00,Dr. Brown,Evening
+CASE_055,Discharge,2023-10-01 18:52:00,Nurse Wilson,Evening
+CASE_056,Registration,2023-10-01 16:43:00,Nurse Lee,Evening
+CASE_056,Triage,2023-10-01 17:04:00,Nurse Davis,Evening
+CASE_056,Blood Test,2023-10-01 17:40:00,Tech Rodriguez,Evening
+CASE_056,Blood Test,2023-10-01 18:12:00,Tech Garcia,Evening
+CASE_056,Doctor Consultation,2023-10-01 18:57:00,Dr. Kim,Evening
+CASE_056,Doctor Review,2023-10-01 19:53:00,Dr. Anderson,Evening
+CASE_056,Discharge,2023-10-01 20:20:00,Nurse Chapel,Evening
+CASE_057,Registration,2023-10-01 16:49:00,Nurse Chapel,Evening
+CASE_057,Triage,2023-10-01 17:11:00,Nurse Jackie,Evening
+CASE_057,X-Ray,2023-10-01 17:47:00,Tech Rodriguez,Evening
+CASE_057,Triage,2023-10-01 18:10:00,Nurse Ratched,Evening
+CASE_057,Blood Test,2023-10-01 18:45:00,Tech Rodriguez,Evening
+CASE_057,Doctor Consultation,2023-10-01 19:19:00,Dr. Taylor,Evening
+CASE_057,Doctor Review,2023-10-01 20:14:00,Dr. Smith,Evening
+CASE_057,Discharge,2023-10-01 20:47:00,Nurse Lee,Evening
+CASE_058,Registration,2023-10-01 17:04:00,Nurse Chapel,Evening
+CASE_058,Triage,2023-10-01 17:23:00,Nurse Wilson,Evening
+CASE_058,Doctor Consultation,2023-10-01 17:44:00,Dr. Chen,Evening
+CASE_058,X-Ray,2023-10-01 18:21:00,Tech Miller,Evening
+CASE_058,Doctor Review,2023-10-01 18:52:00,Dr. Garcia,Evening
+CASE_058,Discharge,2023-10-01 19:14:00,Nurse Joy,Evening
+CASE_059,Registration,2023-10-01 17:14:00,Nurse Lee,Evening
+CASE_059,Triage,2023-10-01 17:30:00,Nurse Wilson,Evening
+CASE_059,Doctor Consultation,2023-10-01 18:08:00,Dr. Kim,Evening
+CASE_059,X-Ray,2023-10-01 18:54:00,Tech Miller,Evening
+CASE_059,Doctor Review,2023-10-01 19:31:00,Dr. Brown,Evening
+CASE_059,Discharge,2023-10-01 20:00:00,Nurse Jackie,Evening
+CASE_060,Registration,2023-10-01 17:22:00,Nurse Wilson,Evening
+CASE_060,Triage,2023-10-01 17:49:00,Nurse Davis,Evening
+CASE_060,Blood Test,2023-10-01 18:06:00,Tech Garcia,Evening
+CASE_060,Blood Test,2023-10-01 18:44:00,Tech Garcia,Evening
+CASE_060,Doctor Consultation,2023-10-01 19:25:00,Dr. Anderson,Evening
+CASE_060,Doctor Review,2023-10-01 20:13:00,Dr. Taylor,Evening
+CASE_060,Discharge,2023-10-01 20:37:00,Nurse Davis,Evening
+CASE_061,Registration,2023-10-01 17:36:00,Nurse Lee,Evening
+CASE_061,Triage,2023-10-01 17:56:00,Nurse Lee,Evening
+CASE_061,X-Ray,2023-10-01 18:30:00,Tech Miller,Evening
+CASE_061,Triage,2023-10-01 19:05:00,Nurse Joy,Evening
+CASE_061,Blood Test,2023-10-01 19:54:00,Tech Miller,Evening
+CASE_061,Doctor Consultation,2023-10-01 20:30:00,Dr. Wilson,Evening
+CASE_061,Doctor Review,2023-10-01 21:05:00,Dr. Patel,Evening
+CASE_061,Discharge,2023-10-01 21:34:00,Nurse Ratched,Evening
+CASE_062,Registration,2023-10-01 17:51:00,Nurse Wilson,Evening
+CASE_062,Triage,2023-10-01 18:10:00,Nurse Ratched,Evening
+CASE_062,X-Ray,2023-10-01 18:48:00,Tech Garcia,Evening
+CASE_062,Triage,2023-10-01 19:19:00,Nurse Chapel,Evening
+CASE_062,Doctor Consultation,2023-10-01 19:53:00,Dr. Patel,Evening
+CASE_062,Doctor Review,2023-10-01 20:42:00,Dr. Smith,Evening
+CASE_062,Discharge,2023-10-01 21:09:00,Nurse Davis,Evening
+CASE_063,Registration,2023-10-01 18:01:00,Nurse Joy,Evening
+CASE_063,Triage,2023-10-01 18:18:00,Nurse Ratched,Evening
+CASE_063,Doctor Consultation,2023-10-01 18:51:00,Dr. Chen,Evening
+CASE_063,X-Ray,2023-10-01 19:49:00,Tech Garcia,Evening
+CASE_063,Doctor Review,2023-10-01 20:23:00,Dr. Kim,Evening
+CASE_063,Discharge,2023-10-01 20:48:00,Nurse Chapel,Evening
+CASE_064,Registration,2023-10-01 18:10:00,Nurse Joy,Evening
+CASE_064,Triage,2023-10-01 18:35:00,Nurse Chapel,Evening
+CASE_064,Doctor Consultation,2023-10-01 19:09:00,Dr. Anderson,Evening
+CASE_064,X-Ray,2023-10-01 20:01:00,Tech Garcia,Evening
+CASE_064,Doctor Review,2023-10-01 20:29:00,Dr. Jones,Evening
+CASE_064,Discharge,2023-10-01 20:44:00,Nurse Ratched,Evening
+CASE_065,Registration,2023-10-01 18:17:00,Nurse Jackie,Evening
+CASE_065,Triage,2023-10-01 18:44:00,Nurse Ratched,Evening
+CASE_065,Doctor Consultation,2023-10-01 19:19:00,Dr. Taylor,Evening
+CASE_065,X-Ray,2023-10-01 20:09:00,Tech Garcia,Evening
+CASE_065,Doctor Review,2023-10-01 20:44:00,Dr. Anderson,Evening
+CASE_065,Discharge,2023-10-01 21:17:00,Nurse Lee,Evening
+CASE_066,Registration,2023-10-01 18:22:00,Nurse Chapel,Evening
+CASE_066,Triage,2023-10-01 18:37:00,Nurse Jackie,Evening
+CASE_066,X-Ray,2023-10-01 18:59:00,Tech Miller,Evening
+CASE_066,Triage,2023-10-01 19:27:00,Nurse Jackie,Evening
+CASE_066,Doctor Consultation,2023-10-01 20:00:00,Dr. Brown,Evening
+CASE_066,Doctor Review,2023-10-01 20:56:00,Dr. Brown,Evening
+CASE_066,Discharge,2023-10-01 21:19:00,Nurse Ratched,Evening
+CASE_067,Registration,2023-10-01 18:30:00,Nurse Wilson,Evening
+CASE_067,Triage,2023-10-01 18:59:00,Nurse Ratched,Evening
+CASE_067,Blood Test,2023-10-01 19:28:00,Tech Rodriguez,Evening
+CASE_067,Blood Test,2023-10-01 19:49:00,Tech Miller,Evening
+CASE_067,Doctor Consultation,2023-10-01 20:30:00,Dr. Wilson,Evening
+CASE_067,Doctor Review,2023-10-01 21:02:00,Dr. Wilson,Evening
+CASE_067,Discharge,2023-10-01 21:28:00,Nurse Ratched,Evening
+CASE_068,Registration,2023-10-01 18:44:00,Nurse Ratched,Evening
+CASE_068,Triage,2023-10-01 19:04:00,Nurse Ratched,Evening
+CASE_068,Blood Test,2023-10-01 19:28:00,Tech Miller,Evening
+CASE_068,Blood Test,2023-10-01 20:07:00,Tech Rodriguez,Evening
+CASE_068,Doctor Consultation,2023-10-01 20:55:00,Dr. Anderson,Evening
+CASE_068,Doctor Review,2023-10-01 21:34:00,Dr. Kim,Evening
+CASE_068,Discharge,2023-10-01 21:54:00,Nurse Wilson,Evening
+CASE_069,Registration,2023-10-01 18:59:00,Nurse Ratched,Evening
+CASE_069,Triage,2023-10-01 19:20:00,Nurse Ratched,Evening
+CASE_069,Doctor Consultation,2023-10-01 19:53:00,Dr. Kim,Evening
+CASE_069,X-Ray,2023-10-01 20:49:00,Tech Miller,Evening
+CASE_069,Doctor Review,2023-10-01 21:25:00,Dr. Kim,Evening
+CASE_069,Discharge,2023-10-01 21:50:00,Nurse Jackie,Evening
+CASE_070,Registration,2023-10-01 19:07:00,Nurse Wilson,Evening
+CASE_070,Triage,2023-10-01 19:27:00,Nurse Joy,Evening
+CASE_070,Blood Test,2023-10-01 19:49:00,Tech Miller,Evening
+CASE_070,Blood Test,2023-10-01 20:28:00,Tech Garcia,Evening
+CASE_070,Doctor Consultation,2023-10-01 21:13:00,Dr. Taylor,Evening
+CASE_070,Doctor Review,2023-10-01 21:45:00,Dr. Kim,Evening
+CASE_070,Discharge,2023-10-01 22:15:00,Nurse Chapel,Night
+CASE_071,Registration,2023-10-01 19:20:00,Nurse Chapel,Evening
+CASE_071,Triage,2023-10-01 19:40:00,Nurse Ratched,Evening
+CASE_071,Blood Test,2023-10-01 20:01:00,Tech Miller,Evening
+CASE_071,Blood Test,2023-10-01 20:35:00,Tech Rodriguez,Evening
+CASE_071,Doctor Consultation,2023-10-01 21:09:00,Dr. Anderson,Evening
+CASE_071,Doctor Review,2023-10-01 21:46:00,Dr. Taylor,Evening
+CASE_071,Discharge,2023-10-01 22:13:00,Nurse Joy,Night
+CASE_072,Registration,2023-10-01 19:31:00,Nurse Chapel,Evening
+CASE_072,Triage,2023-10-01 19:46:00,Nurse Chapel,Evening
+CASE_072,Blood Test,2023-10-01 20:17:00,Tech Garcia,Evening
+CASE_072,Blood Test,2023-10-01 20:44:00,Tech Garcia,Evening
+CASE_072,Doctor Consultation,2023-10-01 21:15:00,Dr. Taylor,Evening
+CASE_072,Doctor Review,2023-10-01 22:01:00,Dr. Brown,Night
+CASE_072,Discharge,2023-10-01 22:28:00,Nurse Jackie,Night
+CASE_073,Registration,2023-10-01 19:39:00,Nurse Ratched,Evening
+CASE_073,Triage,2023-10-01 20:07:00,Nurse Wilson,Evening
+CASE_073,X-Ray,2023-10-01 20:42:00,Tech Garcia,Evening
+CASE_073,Triage,2023-10-01 21:15:00,Nurse Wilson,Evening
+CASE_073,Doctor Consultation,2023-10-01 22:00:00,Dr. Patel,Night
+CASE_073,Doctor Review,2023-10-01 22:44:00,Dr. Patel,Night
+CASE_073,Discharge,2023-10-01 23:03:00,Nurse Jackie,Night
+CASE_074,Registration,2023-10-01 19:51:00,Nurse Lee,Evening
+CASE_074,Triage,2023-10-01 20:13:00,Nurse Davis,Evening
+CASE_074,X-Ray,2023-10-01 20:47:00,Tech Miller,Evening
+CASE_074,Triage,2023-10-01 21:21:00,Nurse Ratched,Evening
+CASE_074,Doctor Consultation,2023-10-01 21:55:00,Dr. Kim,Evening
+CASE_074,Doctor Review,2023-10-01 22:24:00,Dr. Wilson,Night
+CASE_074,Discharge,2023-10-01 22:53:00,Nurse Joy,Night
+CASE_075,Registration,2023-10-01 19:57:00,Nurse Jackie,Evening
+CASE_075,Triage,2023-10-01 20:09:00,Nurse Ratched,Evening
+CASE_075,X-Ray,2023-10-01 20:26:00,Tech Rodriguez,Evening
+CASE_075,Triage,2023-10-01 20:54:00,Nurse Ratched,Evening
+CASE_075,Blood Test,2023-10-01 21:28:00,Tech Rodriguez,Evening
+CASE_075,Doctor Consultation,2023-10-01 22:03:00,Dr. Chen,Night
+CASE_075,Doctor Review,2023-10-01 23:01:00,Dr. Smith,Night
+CASE_075,Discharge,2023-10-01 23:21:00,Nurse Wilson,Night
+CASE_076,Registration,2023-10-01 20:07:00,Nurse Davis,Evening
+CASE_076,Triage,2023-10-01 20:29:00,Nurse Jackie,Evening
+CASE_076,Doctor Consultation,2023-10-01 20:51:00,Dr. Taylor,Evening
+CASE_076,X-Ray,2023-10-01 21:36:00,Tech Miller,Evening
+CASE_076,Doctor Review,2023-10-01 22:01:00,Dr. Jones,Night
+CASE_076,Discharge,2023-10-01 22:21:00,Nurse Chapel,Night
+CASE_077,Registration,2023-10-01 20:12:00,Nurse Davis,Evening
+CASE_077,Triage,2023-10-01 20:33:00,Nurse Lee,Evening
+CASE_077,Doctor Consultation,2023-10-01 20:59:00,Dr. Taylor,Evening
+CASE_077,X-Ray,2023-10-01 21:52:00,Tech Garcia,Evening
+CASE_077,Doctor Review,2023-10-01 22:22:00,Dr. Kim,Night
+CASE_077,Discharge,2023-10-01 22:39:00,Nurse Jackie,Night
+CASE_078,Registration,2023-10-01 20:24:00,Nurse Jackie,Evening
+CASE_078,Triage,2023-10-01 20:36:00,Nurse Joy,Evening
+CASE_078,X-Ray,2023-10-01 21:07:00,Tech Garcia,Evening
+CASE_078,Triage,2023-10-01 21:47:00,Nurse Jackie,Evening
+CASE_078,Doctor Consultation,2023-10-01 22:23:00,Dr. Anderson,Night
+CASE_078,Doctor Review,2023-10-01 23:13:00,Dr. Anderson,Night
+CASE_078,Discharge,2023-10-01 23:31:00,Nurse Joy,Night
+CASE_079,Registration,2023-10-01 20:32:00,Nurse Davis,Evening
+CASE_079,Triage,2023-10-01 20:57:00,Nurse Chapel,Evening
+CASE_079,X-Ray,2023-10-01 21:15:00,Tech Rodriguez,Evening
+CASE_079,Triage,2023-10-01 21:36:00,Nurse Lee,Evening
+CASE_079,Blood Test,2023-10-01 22:06:00,Tech Miller,Night
+CASE_079,Doctor Consultation,2023-10-01 22:47:00,Dr. Wilson,Night
+CASE_079,Doctor Review,2023-10-01 23:42:00,Dr. Brown,Night
+CASE_079,Discharge,2023-10-02 00:17:00,Nurse Davis,Night
+CASE_080,Registration,2023-10-01 20:46:00,Nurse Jackie,Evening
+CASE_080,Triage,2023-10-01 20:59:00,Nurse Davis,Evening
+CASE_080,Blood Test,2023-10-01 21:14:00,Tech Miller,Evening
+CASE_080,Blood Test,2023-10-01 21:52:00,Tech Garcia,Evening
+CASE_080,Doctor Consultation,2023-10-01 22:30:00,Dr. Garcia,Night
+CASE_080,Doctor Review,2023-10-01 23:15:00,Dr. Wilson,Night
+CASE_080,Discharge,2023-10-01 23:36:00,Nurse Jackie,Night
+CASE_081,Registration,2023-10-01 20:56:00,Nurse Jackie,Evening
+CASE_081,Triage,2023-10-01 21:13:00,Nurse Wilson,Evening
+CASE_081,X-Ray,2023-10-01 21:45:00,Tech Garcia,Evening
+CASE_081,Triage,2023-10-01 22:21:00,Nurse Lee,Night
+CASE_081,Doctor Consultation,2023-10-01 22:57:00,Dr. Chen,Night
+CASE_081,Doctor Review,2023-10-01 23:40:00,Dr. Brown,Night
+CASE_081,Discharge,2023-10-02 00:12:00,Nurse Lee,Night
+CASE_082,Registration,2023-10-01 21:02:00,Nurse Wilson,Evening
+CASE_082,Triage,2023-10-01 21:20:00,Nurse Jackie,Evening
+CASE_082,X-Ray,2023-10-01 21:48:00,Tech Rodriguez,Evening
+CASE_082,Triage,2023-10-01 22:20:00,Nurse Lee,Night
+CASE_082,Doctor Consultation,2023-10-01 22:52:00,Dr. Wilson,Night
+CASE_082,Doctor Review,2023-10-01 23:22:00,Dr. Smith,Night
+CASE_082,Discharge,2023-10-01 23:42:00,Nurse Davis,Night
+CASE_083,Registration,2023-10-01 21:17:00,Nurse Chapel,Evening
+CASE_083,Triage,2023-10-01 21:46:00,Nurse Lee,Evening
+CASE_083,Blood Test,2023-10-01 22:16:00,Tech Garcia,Night
+CASE_083,Blood Test,2023-10-01 22:43:00,Tech Garcia,Night
+CASE_083,Doctor Consultation,2023-10-01 23:37:00,Dr. Jones,Night
+CASE_083,Doctor Review,2023-10-02 00:35:00,Dr. Wilson,Night
+CASE_083,Discharge,2023-10-02 00:54:00,Nurse Lee,Night
+CASE_084,Registration,2023-10-01 21:31:00,Nurse Chapel,Evening
+CASE_084,Triage,2023-10-01 21:54:00,Nurse Wilson,Evening
+CASE_084,X-Ray,2023-10-01 22:32:00,Tech Miller,Night
+CASE_084,Triage,2023-10-01 23:07:00,Nurse Davis,Night
+CASE_084,Doctor Consultation,2023-10-01 23:38:00,Dr. Jones,Night
+CASE_084,Doctor Review,2023-10-02 00:25:00,Dr. Jones,Night
+CASE_084,Discharge,2023-10-02 00:58:00,Nurse Davis,Night
+CASE_085,Registration,2023-10-01 21:38:00,Nurse Lee,Evening
+CASE_085,Triage,2023-10-01 21:55:00,Nurse Chapel,Evening
+CASE_085,Blood Test,2023-10-01 22:27:00,Tech Miller,Night
+CASE_085,Blood Test,2023-10-01 22:51:00,Tech Miller,Night
+CASE_085,Doctor Consultation,2023-10-01 23:26:00,Dr. Jones,Night
+CASE_085,Doctor Review,2023-10-02 00:17:00,Dr. Taylor,Night
+CASE_085,Discharge,2023-10-02 00:44:00,Nurse Jackie,Night
+CASE_086,Registration,2023-10-01 21:45:00,Nurse Wilson,Evening
+CASE_086,Triage,2023-10-01 22:01:00,Nurse Joy,Night
+CASE_086,Blood Test,2023-10-01 22:40:00,Tech Rodriguez,Night
+CASE_086,Blood Test,2023-10-01 23:03:00,Tech Garcia,Night
+CASE_086,Doctor Consultation,2023-10-01 23:47:00,Dr. Smith,Night
+CASE_086,Doctor Review,2023-10-02 00:24:00,Dr. Chen,Night
+CASE_086,Discharge,2023-10-02 00:50:00,Nurse Lee,Night
+CASE_087,Registration,2023-10-01 21:54:00,Nurse Lee,Evening
+CASE_087,Triage,2023-10-01 22:08:00,Nurse Davis,Night
+CASE_087,X-Ray,2023-10-01 22:48:00,Tech Rodriguez,Night
+CASE_087,Triage,2023-10-01 23:20:00,Nurse Wilson,Night
+CASE_087,Blood Test,2023-10-02 00:09:00,Tech Garcia,Night
+CASE_087,Doctor Consultation,2023-10-02 00:34:00,Dr. Wilson,Night
+CASE_087,Doctor Review,2023-10-02 01:27:00,Dr. Smith,Night
+CASE_087,Discharge,2023-10-02 01:56:00,Nurse Davis,Night
+CASE_088,Registration,2023-10-01 22:04:00,Nurse Joy,Night
+CASE_088,Triage,2023-10-01 22:24:00,Nurse Chapel,Night
+CASE_088,X-Ray,2023-10-01 22:46:00,Tech Garcia,Night
+CASE_088,Triage,2023-10-01 23:13:00,Nurse Davis,Night
+CASE_088,Doctor Consultation,2023-10-01 23:59:00,Dr. Kim,Night
+CASE_088,Doctor Review,2023-10-02 00:50:00,Dr. Kim,Night
+CASE_088,Discharge,2023-10-02 01:17:00,Nurse Lee,Night
+CASE_089,Registration,2023-10-01 22:16:00,Nurse Joy,Night
+CASE_089,Triage,2023-10-01 22:42:00,Nurse Lee,Night
+CASE_089,Doctor Consultation,2023-10-01 23:16:00,Dr. Chen,Night
+CASE_089,X-Ray,2023-10-01 23:44:00,Tech Rodriguez,Night
+CASE_089,Doctor Review,2023-10-02 00:17:00,Dr. Garcia,Night
+CASE_089,Discharge,2023-10-02 00:48:00,Nurse Davis,Night
+CASE_090,Registration,2023-10-01 22:25:00,Nurse Jackie,Night
+CASE_090,Triage,2023-10-01 22:44:00,Nurse Jackie,Night
+CASE_090,X-Ray,2023-10-01 23:18:00,Tech Miller,Night
+CASE_090,Triage,2023-10-01 23:52:00,Nurse Wilson,Night
+CASE_090,Doctor Consultation,2023-10-02 00:23:00,Dr. Brown,Night
+CASE_090,Doctor Review,2023-10-02 01:07:00,Dr. Chen,Night
+CASE_090,Discharge,2023-10-02 01:40:00,Nurse Chapel,Night
+CASE_091,Registration,2023-10-01 22:36:00,Nurse Ratched,Night
+CASE_091,Triage,2023-10-01 22:59:00,Nurse Wilson,Night
+CASE_091,X-Ray,2023-10-01 23:32:00,Tech Rodriguez,Night
+CASE_091,Triage,2023-10-02 00:03:00,Nurse Chapel,Night
+CASE_091,Doctor Consultation,2023-10-02 00:31:00,Dr. Patel,Night
+CASE_091,Doctor Review,2023-10-02 01:23:00,Dr. Chen,Night
+CASE_091,Discharge,2023-10-02 01:54:00,Nurse Davis,Night
+CASE_092,Registration,2023-10-01 22:47:00,Nurse Lee,Night
+CASE_092,Triage,2023-10-01 23:02:00,Nurse Ratched,Night
+CASE_092,X-Ray,2023-10-01 23:27:00,Tech Miller,Night
+CASE_092,Triage,2023-10-01 23:59:00,Nurse Ratched,Night
+CASE_092,Doctor Consultation,2023-10-02 00:51:00,Dr. Wilson,Night
+CASE_092,Doctor Review,2023-10-02 01:42:00,Dr. Garcia,Night
+CASE_092,Discharge,2023-10-02 02:09:00,Nurse Chapel,Night
+CASE_093,Registration,2023-10-01 23:00:00,Nurse Davis,Night
+CASE_093,Triage,2023-10-01 23:20:00,Nurse Lee,Night
+CASE_093,Doctor Consultation,2023-10-01 23:42:00,Dr. Patel,Night
+CASE_093,X-Ray,2023-10-02 00:26:00,Tech Garcia,Night
+CASE_093,Doctor Review,2023-10-02 00:59:00,Dr. Anderson,Night
+CASE_093,Discharge,2023-10-02 01:32:00,Nurse Wilson,Night
+CASE_094,Registration,2023-10-01 23:11:00,Nurse Wilson,Night
+CASE_094,Triage,2023-10-01 23:24:00,Nurse Lee,Night
+CASE_094,X-Ray,2023-10-01 23:56:00,Tech Garcia,Night
+CASE_094,Triage,2023-10-02 00:38:00,Nurse Jackie,Night
+CASE_094,Doctor Consultation,2023-10-02 01:10:00,Dr. Brown,Night
+CASE_094,Doctor Review,2023-10-02 01:56:00,Dr. Brown,Night
+CASE_094,Discharge,2023-10-02 02:23:00,Nurse Davis,Night
+CASE_095,Registration,2023-10-01 23:22:00,Nurse Wilson,Night
+CASE_095,Triage,2023-10-01 23:39:00,Nurse Ratched,Night
+CASE_095,X-Ray,2023-10-02 00:17:00,Tech Rodriguez,Night
+CASE_095,Triage,2023-10-02 00:56:00,Nurse Davis,Night
+CASE_095,Doctor Consultation,2023-10-02 01:45:00,Dr. Taylor,Night
+CASE_095,Doctor Review,2023-10-02 02:30:00,Dr. Brown,Night
+CASE_095,Discharge,2023-10-02 02:48:00,Nurse Wilson,Night
+CASE_096,Registration,2023-10-01 23:34:00,Nurse Ratched,Night
+CASE_096,Triage,2023-10-01 23:49:00,Nurse Ratched,Night
+CASE_096,X-Ray,2023-10-02 00:08:00,Tech Miller,Night
+CASE_096,Triage,2023-10-02 00:49:00,Nurse Lee,Night
+CASE_096,Blood Test,2023-10-02 01:39:00,Tech Miller,Night
+CASE_096,Doctor Consultation,2023-10-02 02:08:00,Dr. Wilson,Night
+CASE_096,Doctor Review,2023-10-02 02:45:00,Dr. Garcia,Night
+CASE_096,Discharge,2023-10-02 03:05:00,Nurse Chapel,Night
+CASE_097,Registration,2023-10-01 23:41:00,Nurse Lee,Night
+CASE_097,Triage,2023-10-02 00:03:00,Nurse Chapel,Night
+CASE_097,X-Ray,2023-10-02 00:34:00,Tech Rodriguez,Night
+CASE_097,Triage,2023-10-02 01:11:00,Nurse Joy,Night
+CASE_097,Doctor Consultation,2023-10-02 01:50:00,Dr. Brown,Night
+CASE_097,Doctor Review,2023-10-02 02:27:00,Dr. Anderson,Night
+CASE_097,Discharge,2023-10-02 02:59:00,Nurse Lee,Night
+CASE_098,Registration,2023-10-01 23:46:00,Nurse Jackie,Night
+CASE_098,Triage,2023-10-01 23:59:00,Nurse Ratched,Night
+CASE_098,Blood Test,2023-10-02 00:34:00,Tech Rodriguez,Night
+CASE_098,Blood Test,2023-10-02 01:05:00,Tech Rodriguez,Night
+CASE_098,Doctor Consultation,2023-10-02 01:47:00,Dr. Smith,Night
+CASE_098,Doctor Review,2023-10-02 02:38:00,Dr. Smith,Night
+CASE_098,Discharge,2023-10-02 03:03:00,Nurse Davis,Night
+CASE_099,Registration,2023-10-01 23:53:00,Nurse Wilson,Night
+CASE_099,Triage,2023-10-02 00:11:00,Nurse Lee,Night
+CASE_099,X-Ray,2023-10-02 00:35:00,Tech Rodriguez,Night
+CASE_099,Triage,2023-10-02 01:08:00,Nurse Lee,Night
+CASE_099,Doctor Consultation,2023-10-02 01:51:00,Dr. Brown,Night
+CASE_099,Doctor Review,2023-10-02 02:37:00,Dr. Anderson,Night
+CASE_099,Discharge,2023-10-02 02:59:00,Nurse Lee,Night
+CASE_100,Registration,2023-10-02 00:04:00,Nurse Lee,Night
+CASE_100,Triage,2023-10-02 00:28:00,Nurse Davis,Night
+CASE_100,Doctor Consultation,2023-10-02 01:01:00,Dr. Anderson,Night
+CASE_100,X-Ray,2023-10-02 01:24:00,Tech Rodriguez,Night
+CASE_100,Doctor Review,2023-10-02 01:51:00,Dr. Patel,Night
+CASE_100,Discharge,2023-10-02 02:14:00,Nurse Chapel,Night
+CASE_101,Registration,2023-10-02 00:10:00,Nurse Lee,Night
+CASE_101,Triage,2023-10-02 00:28:00,Nurse Chapel,Night
+CASE_101,X-Ray,2023-10-02 01:00:00,Tech Garcia,Night
+CASE_101,Triage,2023-10-02 01:29:00,Nurse Jackie,Night
+CASE_101,Blood Test,2023-10-02 02:12:00,Tech Miller,Night
+CASE_101,Doctor Consultation,2023-10-02 02:48:00,Dr. Patel,Night
+CASE_101,Doctor Review,2023-10-02 03:11:00,Dr. Smith,Night
+CASE_101,Discharge,2023-10-02 03:41:00,Nurse Joy,Night
+CASE_102,Registration,2023-10-02 00:25:00,Nurse Chapel,Night
+CASE_102,Triage,2023-10-02 00:47:00,Nurse Ratched,Night
+CASE_102,X-Ray,2023-10-02 01:19:00,Tech Rodriguez,Night
+CASE_102,Triage,2023-10-02 01:57:00,Nurse Wilson,Night
+CASE_102,Blood Test,2023-10-02 02:48:00,Tech Rodriguez,Night
+CASE_102,Doctor Consultation,2023-10-02 03:10:00,Dr. Smith,Night
+CASE_102,Doctor Review,2023-10-02 04:04:00,Dr. Kim,Night
+CASE_102,Discharge,2023-10-02 04:22:00,Nurse Jackie,Night
+CASE_103,Registration,2023-10-02 00:36:00,Nurse Chapel,Night
+CASE_103,Triage,2023-10-02 01:02:00,Nurse Jackie,Night
+CASE_103,Blood Test,2023-10-02 01:38:00,Tech Miller,Night
+CASE_103,Blood Test,2023-10-02 02:18:00,Tech Garcia,Night
+CASE_103,Doctor Consultation,2023-10-02 03:02:00,Dr. Jones,Night
+CASE_103,Doctor Review,2023-10-02 03:42:00,Dr. Patel,Night
+CASE_103,Discharge,2023-10-02 04:01:00,Nurse Ratched,Night
+CASE_104,Registration,2023-10-02 00:41:00,Nurse Chapel,Night
+CASE_104,Triage,2023-10-02 01:09:00,Nurse Wilson,Night
+CASE_104,X-Ray,2023-10-02 01:36:00,Tech Miller,Night
+CASE_104,Triage,2023-10-02 02:15:00,Nurse Lee,Night
+CASE_104,Doctor Consultation,2023-10-02 02:58:00,Dr. Taylor,Night
+CASE_104,Doctor Review,2023-10-02 03:27:00,Dr. Kim,Night
+CASE_104,Discharge,2023-10-02 03:50:00,Nurse Jackie,Night
+CASE_105,Registration,2023-10-02 00:53:00,Nurse Joy,Night
+CASE_105,Triage,2023-10-02 01:13:00,Nurse Davis,Night
+CASE_105,Blood Test,2023-10-02 01:45:00,Tech Miller,Night
+CASE_105,Blood Test,2023-10-02 02:17:00,Tech Garcia,Night
+CASE_105,Doctor Consultation,2023-10-02 02:57:00,Dr. Chen,Night
+CASE_105,Doctor Review,2023-10-02 03:33:00,Dr. Anderson,Night
+CASE_105,Discharge,2023-10-02 03:55:00,Nurse Jackie,Night
+CASE_106,Registration,2023-10-02 01:05:00,Nurse Chapel,Night
+CASE_106,Triage,2023-10-02 01:25:00,Nurse Wilson,Night
+CASE_106,Doctor Consultation,2023-10-02 01:58:00,Dr. Garcia,Night
+CASE_106,X-Ray,2023-10-02 02:36:00,Tech Garcia,Night
+CASE_106,Doctor Review,2023-10-02 03:09:00,Dr. Wilson,Night
+CASE_106,Discharge,2023-10-02 03:33:00,Nurse Jackie,Night
+CASE_107,Registration,2023-10-02 01:10:00,Nurse Ratched,Night
+CASE_107,Triage,2023-10-02 01:29:00,Nurse Joy,Night
+CASE_107,Doctor Consultation,2023-10-02 01:51:00,Dr. Brown,Night
+CASE_107,X-Ray,2023-10-02 02:41:00,Tech Garcia,Night
+CASE_107,Doctor Review,2023-10-02 03:01:00,Dr. Kim,Night
+CASE_107,Discharge,2023-10-02 03:18:00,Nurse Jackie,Night
+CASE_108,Registration,2023-10-02 01:25:00,Nurse Joy,Night
+CASE_108,Triage,2023-10-02 01:46:00,Nurse Lee,Night
+CASE_108,Doctor Consultation,2023-10-02 02:03:00,Dr. Smith,Night
+CASE_108,X-Ray,2023-10-02 02:37:00,Tech Rodriguez,Night
+CASE_108,Doctor Review,2023-10-02 03:00:00,Dr. Kim,Night
+CASE_108,Discharge,2023-10-02 03:19:00,Nurse Wilson,Night
+CASE_109,Registration,2023-10-02 01:37:00,Nurse Jackie,Night
+CASE_109,Triage,2023-10-02 01:49:00,Nurse Wilson,Night
+CASE_109,X-Ray,2023-10-02 02:13:00,Tech Garcia,Night
+CASE_109,Triage,2023-10-02 02:41:00,Nurse Chapel,Night
+CASE_109,Blood Test,2023-10-02 03:17:00,Tech Miller,Night
+CASE_109,Doctor Consultation,2023-10-02 03:47:00,Dr. Brown,Night
+CASE_109,Doctor Review,2023-10-02 04:13:00,Dr. Patel,Night
+CASE_109,Discharge,2023-10-02 04:36:00,Nurse Chapel,Night
+CASE_110,Registration,2023-10-02 01:45:00,Nurse Lee,Night
+CASE_110,Triage,2023-10-02 02:08:00,Nurse Joy,Night
+CASE_110,Doctor Consultation,2023-10-02 02:42:00,Dr. Brown,Night
+CASE_110,X-Ray,2023-10-02 03:28:00,Tech Rodriguez,Night
+CASE_110,Doctor Review,2023-10-02 04:06:00,Dr. Jones,Night
+CASE_110,Discharge,2023-10-02 04:24:00,Nurse Chapel,Night
+CASE_111,Registration,2023-10-02 01:55:00,Nurse Joy,Night
+CASE_111,Triage,2023-10-02 02:14:00,Nurse Joy,Night
+CASE_111,X-Ray,2023-10-02 02:47:00,Tech Rodriguez,Night
+CASE_111,Triage,2023-10-02 03:16:00,Nurse Davis,Night
+CASE_111,Doctor Consultation,2023-10-02 03:50:00,Dr. Anderson,Night
+CASE_111,Doctor Review,2023-10-02 04:25:00,Dr. Smith,Night
+CASE_111,Discharge,2023-10-02 04:51:00,Nurse Jackie,Night
+CASE_112,Registration,2023-10-02 02:05:00,Nurse Lee,Night
+CASE_112,Triage,2023-10-02 02:22:00,Nurse Ratched,Night
+CASE_112,Doctor Consultation,2023-10-02 02:44:00,Dr. Taylor,Night
+CASE_112,X-Ray,2023-10-02 03:28:00,Tech Miller,Night
+CASE_112,Doctor Review,2023-10-02 04:03:00,Dr. Brown,Night
+CASE_112,Discharge,2023-10-02 04:31:00,Nurse Jackie,Night
+CASE_113,Registration,2023-10-02 02:16:00,Nurse Lee,Night
+CASE_113,Triage,2023-10-02 02:40:00,Nurse Jackie,Night
+CASE_113,X-Ray,2023-10-02 03:11:00,Tech Rodriguez,Night
+CASE_113,Triage,2023-10-02 03:38:00,Nurse Wilson,Night
+CASE_113,Blood Test,2023-10-02 04:19:00,Tech Garcia,Night
+CASE_113,Doctor Consultation,2023-10-02 04:54:00,Dr. Chen,Night
+CASE_113,Doctor Review,2023-10-02 05:22:00,Dr. Jones,Night
+CASE_113,Discharge,2023-10-02 05:43:00,Nurse Wilson,Night
+CASE_114,Registration,2023-10-02 02:21:00,Nurse Jackie,Night
+CASE_114,Triage,2023-10-02 02:35:00,Nurse Jackie,Night
+CASE_114,X-Ray,2023-10-02 03:05:00,Tech Garcia,Night
+CASE_114,Triage,2023-10-02 03:44:00,Nurse Chapel,Night
+CASE_114,Doctor Consultation,2023-10-02 04:23:00,Dr. Smith,Night
+CASE_114,Doctor Review,2023-10-02 04:50:00,Dr. Kim,Night
+CASE_114,Discharge,2023-10-02 05:14:00,Nurse Jackie,Night
+CASE_115,Registration,2023-10-02 02:36:00,Nurse Joy,Night
+CASE_115,Triage,2023-10-02 03:03:00,Nurse Ratched,Night
+CASE_115,X-Ray,2023-10-02 03:37:00,Tech Garcia,Night
+CASE_115,Triage,2023-10-02 04:13:00,Nurse Joy,Night
+CASE_115,Doctor Consultation,2023-10-02 04:56:00,Dr. Patel,Night
+CASE_115,Doctor Review,2023-10-02 05:55:00,Dr. Garcia,Night
+CASE_115,Discharge,2023-10-02 06:14:00,Nurse Ratched,Morning
+CASE_116,Registration,2023-10-02 02:50:00,Nurse Ratched,Night
+CASE_116,Triage,2023-10-02 03:08:00,Nurse Jackie,Night
+CASE_116,X-Ray,2023-10-02 03:34:00,Tech Garcia,Night
+CASE_116,Triage,2023-10-02 04:11:00,Nurse Davis,Night
+CASE_116,Blood Test,2023-10-02 04:39:00,Tech Rodriguez,Night
+CASE_116,Doctor Consultation,2023-10-02 05:09:00,Dr. Chen,Night
+CASE_116,Doctor Review,2023-10-02 05:41:00,Dr. Wilson,Night
+CASE_116,Discharge,2023-10-02 06:02:00,Nurse Davis,Morning
+CASE_117,Registration,2023-10-02 02:57:00,Nurse Joy,Night
+CASE_117,Triage,2023-10-02 03:17:00,Nurse Davis,Night
+CASE_117,X-Ray,2023-10-02 03:47:00,Tech Rodriguez,Night
+CASE_117,Triage,2023-10-02 04:11:00,Nurse Ratched,Night
+CASE_117,Doctor Consultation,2023-10-02 04:57:00,Dr. Anderson,Night
+CASE_117,Doctor Review,2023-10-02 05:40:00,Dr. Chen,Night
+CASE_117,Discharge,2023-10-02 05:56:00,Nurse Joy,Night
+CASE_118,Registration,2023-10-02 03:07:00,Nurse Wilson,Night
+CASE_118,Triage,2023-10-02 03:29:00,Nurse Joy,Night
+CASE_118,Blood Test,2023-10-02 03:54:00,Tech Rodriguez,Night
+CASE_118,Blood Test,2023-10-02 04:27:00,Tech Miller,Night
+CASE_118,Doctor Consultation,2023-10-02 05:06:00,Dr. Patel,Night
+CASE_118,Doctor Review,2023-10-02 05:29:00,Dr. Brown,Night
+CASE_118,Discharge,2023-10-02 05:58:00,Nurse Joy,Night
+CASE_119,Registration,2023-10-02 03:12:00,Nurse Chapel,Night
+CASE_119,Triage,2023-10-02 03:28:00,Nurse Jackie,Night
+CASE_119,Blood Test,2023-10-02 03:57:00,Tech Miller,Night
+CASE_119,Blood Test,2023-10-02 04:30:00,Tech Garcia,Night
+CASE_119,Doctor Consultation,2023-10-02 05:15:00,Dr. Wilson,Night
+CASE_119,Doctor Review,2023-10-02 05:54:00,Dr. Chen,Night
+CASE_119,Discharge,2023-10-02 06:23:00,Nurse Lee,Morning
+CASE_120,Registration,2023-10-02 03:21:00,Nurse Ratched,Night
+CASE_120,Triage,2023-10-02 03:38:00,Nurse Wilson,Night
+CASE_120,X-Ray,2023-10-02 03:56:00,Tech Garcia,Night
+CASE_120,Triage,2023-10-02 04:17:00,Nurse Davis,Night
+CASE_120,Doctor Consultation,2023-10-02 04:56:00,Dr. Anderson,Night
+CASE_120,Doctor Review,2023-10-02 05:56:00,Dr. Anderson,Night
+CASE_120,Discharge,2023-10-02 06:24:00,Nurse Davis,Morning
+CASE_121,Registration,2023-10-02 03:35:00,Nurse Ratched,Night
+CASE_121,Triage,2023-10-02 03:49:00,Nurse Ratched,Night
+CASE_121,X-Ray,2023-10-02 04:28:00,Tech Rodriguez,Night
+CASE_121,Triage,2023-10-02 05:01:00,Nurse Wilson,Night
+CASE_121,Blood Test,2023-10-02 05:43:00,Tech Miller,Night
+CASE_121,Doctor Consultation,2023-10-02 06:15:00,Dr. Patel,Morning
+CASE_121,Doctor Review,2023-10-02 07:14:00,Dr. Jones,Morning
+CASE_121,Discharge,2023-10-02 07:43:00,Nurse Lee,Morning
+CASE_122,Registration,2023-10-02 03:47:00,Nurse Chapel,Night
+CASE_122,Triage,2023-10-02 04:01:00,Nurse Chapel,Night
+CASE_122,Doctor Consultation,2023-10-02 04:22:00,Dr. Garcia,Night
+CASE_122,X-Ray,2023-10-02 04:55:00,Tech Garcia,Night
+CASE_122,Doctor Review,2023-10-02 05:26:00,Dr. Chen,Night
+CASE_122,Discharge,2023-10-02 05:51:00,Nurse Wilson,Night
+CASE_123,Registration,2023-10-02 04:00:00,Nurse Ratched,Night
+CASE_123,Triage,2023-10-02 04:15:00,Nurse Joy,Night
+CASE_123,Doctor Consultation,2023-10-02 04:51:00,Dr. Patel,Night
+CASE_123,X-Ray,2023-10-02 05:44:00,Tech Miller,Night
+CASE_123,Doctor Review,2023-10-02 06:26:00,Dr. Kim,Morning
+CASE_123,Discharge,2023-10-02 06:54:00,Nurse Davis,Morning
+CASE_124,Registration,2023-10-02 04:10:00,Nurse Ratched,Night
+CASE_124,Triage,2023-10-02 04:32:00,Nurse Chapel,Night
+CASE_124,Blood Test,2023-10-02 04:57:00,Tech Rodriguez,Night
+CASE_124,Blood Test,2023-10-02 05:35:00,Tech Garcia,Night
+CASE_124,Doctor Consultation,2023-10-02 06:18:00,Dr. Smith,Morning
+CASE_124,Doctor Review,2023-10-02 07:03:00,Dr. Wilson,Morning
+CASE_124,Discharge,2023-10-02 07:26:00,Nurse Davis,Morning
+CASE_125,Registration,2023-10-02 04:21:00,Nurse Davis,Night
+CASE_125,Triage,2023-10-02 04:40:00,Nurse Chapel,Night
+CASE_125,X-Ray,2023-10-02 05:06:00,Tech Garcia,Night
+CASE_125,Triage,2023-10-02 05:41:00,Nurse Joy,Night
+CASE_125,Doctor Consultation,2023-10-02 06:22:00,Dr. Kim,Morning
+CASE_125,Doctor Review,2023-10-02 07:15:00,Dr. Patel,Morning
+CASE_125,Discharge,2023-10-02 07:39:00,Nurse Jackie,Morning
+CASE_126,Registration,2023-10-02 04:35:00,Nurse Wilson,Night
+CASE_126,Triage,2023-10-02 04:54:00,Nurse Wilson,Night
+CASE_126,X-Ray,2023-10-02 05:28:00,Tech Miller,Night
+CASE_126,Triage,2023-10-02 05:53:00,Nurse Chapel,Night
+CASE_126,Doctor Consultation,2023-10-02 06:30:00,Dr. Wilson,Morning
+CASE_126,Doctor Review,2023-10-02 07:02:00,Dr. Taylor,Morning
+CASE_126,Discharge,2023-10-02 07:26:00,Nurse Jackie,Morning
+CASE_127,Registration,2023-10-02 04:48:00,Nurse Wilson,Night
+CASE_127,Triage,2023-10-02 05:02:00,Nurse Chapel,Night
+CASE_127,X-Ray,2023-10-02 05:28:00,Tech Rodriguez,Night
+CASE_127,Triage,2023-10-02 06:02:00,Nurse Davis,Morning
+CASE_127,Doctor Consultation,2023-10-02 06:45:00,Dr. Chen,Morning
+CASE_127,Doctor Review,2023-10-02 07:28:00,Dr. Jones,Morning
+CASE_127,Discharge,2023-10-02 07:48:00,Nurse Jackie,Morning
+CASE_128,Registration,2023-10-02 04:58:00,Nurse Lee,Night
+CASE_128,Triage,2023-10-02 05:18:00,Nurse Joy,Night
+CASE_128,Doctor Consultation,2023-10-02 05:39:00,Dr. Garcia,Night
+CASE_128,X-Ray,2023-10-02 06:12:00,Tech Garcia,Morning
+CASE_128,Doctor Review,2023-10-02 06:52:00,Dr. Taylor,Morning
+CASE_128,Discharge,2023-10-02 07:25:00,Nurse Joy,Morning
+CASE_129,Registration,2023-10-02 05:08:00,Nurse Ratched,Night
+CASE_129,Triage,2023-10-02 05:29:00,Nurse Wilson,Night
+CASE_129,X-Ray,2023-10-02 05:54:00,Tech Rodriguez,Night
+CASE_129,Triage,2023-10-02 06:24:00,Nurse Ratched,Morning
+CASE_129,Doctor Consultation,2023-10-02 07:08:00,Dr. Anderson,Morning
+CASE_129,Doctor Review,2023-10-02 07:32:00,Dr. Chen,Morning
+CASE_129,Discharge,2023-10-02 07:59:00,Nurse Joy,Morning
+CASE_130,Registration,2023-10-02 05:13:00,Nurse Lee,Night
+CASE_130,Triage,2023-10-02 05:33:00,Nurse Jackie,Night
+CASE_130,X-Ray,2023-10-02 05:53:00,Tech Garcia,Night
+CASE_130,Triage,2023-10-02 06:17:00,Nurse Wilson,Morning
+CASE_130,Doctor Consultation,2023-10-02 06:45:00,Dr. Brown,Morning
+CASE_130,Doctor Review,2023-10-02 07:26:00,Dr. Wilson,Morning
+CASE_130,Discharge,2023-10-02 07:44:00,Nurse Joy,Morning
+CASE_131,Registration,2023-10-02 05:27:00,Nurse Davis,Night
+CASE_131,Triage,2023-10-02 05:47:00,Nurse Wilson,Night
+CASE_131,Doctor Consultation,2023-10-02 06:07:00,Dr. Brown,Morning
+CASE_131,X-Ray,2023-10-02 06:40:00,Tech Rodriguez,Morning
+CASE_131,Doctor Review,2023-10-02 07:19:00,Dr. Wilson,Morning
+CASE_131,Discharge,2023-10-02 07:44:00,Nurse Jackie,Morning
+CASE_132,Registration,2023-10-02 05:39:00,Nurse Lee,Night
+CASE_132,Triage,2023-10-02 06:01:00,Nurse Joy,Morning
+CASE_132,X-Ray,2023-10-02 06:39:00,Tech Garcia,Morning
+CASE_132,Triage,2023-10-02 07:02:00,Nurse Chapel,Morning
+CASE_132,Doctor Consultation,2023-10-02 07:33:00,Dr. Wilson,Morning
+CASE_132,Doctor Review,2023-10-02 08:16:00,Dr. Smith,Morning
+CASE_132,Discharge,2023-10-02 08:41:00,Nurse Joy,Morning
+CASE_133,Registration,2023-10-02 05:45:00,Nurse Wilson,Night
+CASE_133,Triage,2023-10-02 06:06:00,Nurse Davis,Morning
+CASE_133,X-Ray,2023-10-02 06:34:00,Tech Rodriguez,Morning
+CASE_133,Triage,2023-10-02 07:10:00,Nurse Lee,Morning
+CASE_133,Doctor Consultation,2023-10-02 08:01:00,Dr. Patel,Morning
+CASE_133,Doctor Review,2023-10-02 08:31:00,Dr. Wilson,Morning
+CASE_133,Discharge,2023-10-02 08:50:00,Nurse Chapel,Morning
+CASE_134,Registration,2023-10-02 05:50:00,Nurse Lee,Night
+CASE_134,Triage,2023-10-02 06:05:00,Nurse Chapel,Morning
+CASE_134,Blood Test,2023-10-02 06:40:00,Tech Miller,Morning
+CASE_134,Blood Test,2023-10-02 07:13:00,Tech Rodriguez,Morning
+CASE_134,Doctor Consultation,2023-10-02 07:39:00,Dr. Wilson,Morning
+CASE_134,Doctor Review,2023-10-02 08:26:00,Dr. Chen,Morning
+CASE_134,Discharge,2023-10-02 08:56:00,Nurse Chapel,Morning
+CASE_135,Registration,2023-10-02 06:05:00,Nurse Lee,Morning
+CASE_135,Triage,2023-10-02 06:22:00,Nurse Ratched,Morning
+CASE_135,X-Ray,2023-10-02 06:49:00,Tech Rodriguez,Morning
+CASE_135,Triage,2023-10-02 07:30:00,Nurse Chapel,Morning
+CASE_135,Doctor Consultation,2023-10-02 07:59:00,Dr. Taylor,Morning
+CASE_135,Doctor Review,2023-10-02 08:23:00,Dr. Patel,Morning
+CASE_135,Discharge,2023-10-02 08:45:00,Nurse Wilson,Morning
+CASE_136,Registration,2023-10-02 06:13:00,Nurse Ratched,Morning
+CASE_136,Triage,2023-10-02 06:41:00,Nurse Lee,Morning
+CASE_136,Blood Test,2023-10-02 07:13:00,Tech Garcia,Morning
+CASE_136,Blood Test,2023-10-02 07:41:00,Tech Garcia,Morning
+CASE_136,Doctor Consultation,2023-10-02 08:23:00,Dr. Smith,Morning
+CASE_136,Doctor Review,2023-10-02 09:01:00,Dr. Anderson,Morning
+CASE_136,Discharge,2023-10-02 09:26:00,Nurse Chapel,Morning
+CASE_137,Registration,2023-10-02 06:19:00,Nurse Ratched,Morning
+CASE_137,Triage,2023-10-02 06:35:00,Nurse Joy,Morning
+CASE_137,Blood Test,2023-10-02 07:03:00,Tech Garcia,Morning
+CASE_137,Blood Test,2023-10-02 07:37:00,Tech Rodriguez,Morning
+CASE_137,Doctor Consultation,2023-10-02 08:21:00,Dr. Chen,Morning
+CASE_137,Doctor Review,2023-10-02 08:49:00,Dr. Patel,Morning
+CASE_137,Discharge,2023-10-02 09:19:00,Nurse Wilson,Morning
+CASE_138,Registration,2023-10-02 06:24:00,Nurse Chapel,Morning
+CASE_138,Triage,2023-10-02 06:50:00,Nurse Lee,Morning
+CASE_138,Doctor Consultation,2023-10-02 07:08:00,Dr. Anderson,Morning
+CASE_138,X-Ray,2023-10-02 07:31:00,Tech Rodriguez,Morning
+CASE_138,Doctor Review,2023-10-02 08:07:00,Dr. Garcia,Morning
+CASE_138,Discharge,2023-10-02 08:31:00,Nurse Jackie,Morning
+CASE_139,Registration,2023-10-02 06:30:00,Nurse Ratched,Morning
+CASE_139,Triage,2023-10-02 06:40:00,Nurse Wilson,Morning
+CASE_139,X-Ray,2023-10-02 07:20:00,Tech Rodriguez,Morning
+CASE_139,Triage,2023-10-02 07:42:00,Nurse Jackie,Morning
+CASE_139,Blood Test,2023-10-02 08:12:00,Tech Garcia,Morning
+CASE_139,Doctor Consultation,2023-10-02 08:55:00,Dr. Chen,Morning
+CASE_139,Doctor Review,2023-10-02 09:47:00,Dr. Patel,Morning
+CASE_139,Discharge,2023-10-02 10:18:00,Nurse Wilson,Morning
+CASE_140,Registration,2023-10-02 06:35:00,Nurse Joy,Morning
+CASE_140,Triage,2023-10-02 06:53:00,Nurse Lee,Morning
+CASE_140,X-Ray,2023-10-02 07:20:00,Tech Garcia,Morning
+CASE_140,Triage,2023-10-02 07:45:00,Nurse Chapel,Morning
+CASE_140,Doctor Consultation,2023-10-02 08:19:00,Dr. Garcia,Morning
+CASE_140,Doctor Review,2023-10-02 09:12:00,Dr. Kim,Morning
+CASE_140,Discharge,2023-10-02 09:35:00,Nurse Lee,Morning
+CASE_141,Registration,2023-10-02 06:41:00,Nurse Chapel,Morning
+CASE_141,Triage,2023-10-02 06:57:00,Nurse Lee,Morning
+CASE_141,Doctor Consultation,2023-10-02 07:31:00,Dr. Wilson,Morning
+CASE_141,X-Ray,2023-10-02 08:20:00,Tech Garcia,Morning
+CASE_141,Doctor Review,2023-10-02 08:54:00,Dr. Wilson,Morning
+CASE_141,Discharge,2023-10-02 09:19:00,Nurse Davis,Morning
+CASE_142,Registration,2023-10-02 06:51:00,Nurse Ratched,Morning
+CASE_142,Triage,2023-10-02 07:01:00,Nurse Davis,Morning
+CASE_142,Blood Test,2023-10-02 07:28:00,Tech Miller,Morning
+CASE_142,Blood Test,2023-10-02 07:56:00,Tech Rodriguez,Morning
+CASE_142,Doctor Consultation,2023-10-02 08:37:00,Dr. Taylor,Morning
+CASE_142,Doctor Review,2023-10-02 09:02:00,Dr. Patel,Morning
+CASE_142,Discharge,2023-10-02 09:24:00,Nurse Joy,Morning
+CASE_143,Registration,2023-10-02 06:59:00,Nurse Ratched,Morning
+CASE_143,Triage,2023-10-02 07:15:00,Nurse Jackie,Morning
+CASE_143,Blood Test,2023-10-02 07:46:00,Tech Miller,Morning
+CASE_143,Blood Test,2023-10-02 08:19:00,Tech Miller,Morning
+CASE_143,Doctor Consultation,2023-10-02 09:07:00,Dr. Garcia,Morning
+CASE_143,Doctor Review,2023-10-02 09:35:00,Dr. Brown,Morning
+CASE_143,Discharge,2023-10-02 09:58:00,Nurse Davis,Morning
+CASE_144,Registration,2023-10-02 07:06:00,Nurse Lee,Morning
+CASE_144,Triage,2023-10-02 07:25:00,Nurse Wilson,Morning
+CASE_144,X-Ray,2023-10-02 07:58:00,Tech Rodriguez,Morning
+CASE_144,Triage,2023-10-02 08:21:00,Nurse Wilson,Morning
+CASE_144,Blood Test,2023-10-02 09:09:00,Tech Rodriguez,Morning
+CASE_144,Doctor Consultation,2023-10-02 09:41:00,Dr. Brown,Morning
+CASE_144,Doctor Review,2023-10-02 10:08:00,Dr. Jones,Morning
+CASE_144,Discharge,2023-10-02 10:35:00,Nurse Wilson,Morning
+CASE_145,Registration,2023-10-02 07:13:00,Nurse Joy,Morning
+CASE_145,Triage,2023-10-02 07:29:00,Nurse Davis,Morning
+CASE_145,X-Ray,2023-10-02 07:57:00,Tech Garcia,Morning
+CASE_145,Triage,2023-10-02 08:29:00,Nurse Wilson,Morning
+CASE_145,Blood Test,2023-10-02 09:16:00,Tech Rodriguez,Morning
+CASE_145,Doctor Consultation,2023-10-02 09:48:00,Dr. Patel,Morning
+CASE_145,Doctor Review,2023-10-02 10:46:00,Dr. Wilson,Morning
+CASE_145,Discharge,2023-10-02 11:12:00,Nurse Ratched,Morning
+CASE_146,Registration,2023-10-02 07:20:00,Nurse Wilson,Morning
+CASE_146,Triage,2023-10-02 07:38:00,Nurse Wilson,Morning
+CASE_146,Blood Test,2023-10-02 07:55:00,Tech Rodriguez,Morning
+CASE_146,Blood Test,2023-10-02 08:29:00,Tech Miller,Morning
+CASE_146,Doctor Consultation,2023-10-02 08:57:00,Dr. Patel,Morning
+CASE_146,Doctor Review,2023-10-02 09:24:00,Dr. Kim,Morning
+CASE_146,Discharge,2023-10-02 09:48:00,Nurse Wilson,Morning
+CASE_147,Registration,2023-10-02 07:32:00,Nurse Wilson,Morning
+CASE_147,Triage,2023-10-02 07:52:00,Nurse Jackie,Morning
+CASE_147,X-Ray,2023-10-02 08:13:00,Tech Rodriguez,Morning
+CASE_147,Triage,2023-10-02 08:53:00,Nurse Joy,Morning
+CASE_147,Blood Test,2023-10-02 09:33:00,Tech Rodriguez,Morning
+CASE_147,Doctor Consultation,2023-10-02 10:11:00,Dr. Smith,Morning
+CASE_147,Doctor Review,2023-10-02 10:50:00,Dr. Patel,Morning
+CASE_147,Discharge,2023-10-02 11:11:00,Nurse Joy,Morning
+CASE_148,Registration,2023-10-02 07:37:00,Nurse Joy,Morning
+CASE_148,Triage,2023-10-02 07:55:00,Nurse Ratched,Morning
+CASE_148,Doctor Consultation,2023-10-02 08:39:00,Dr. Wilson,Morning
+CASE_148,X-Ray,2023-10-02 09:36:00,Tech Rodriguez,Morning
+CASE_148,Doctor Review,2023-10-02 10:04:00,Dr. Anderson,Morning
+CASE_148,Discharge,2023-10-02 10:23:00,Nurse Jackie,Morning
+CASE_149,Registration,2023-10-02 07:42:00,Nurse Jackie,Morning
+CASE_149,Triage,2023-10-02 08:09:00,Nurse Davis,Morning
+CASE_149,Doctor Consultation,2023-10-02 08:49:00,Dr. Kim,Morning
+CASE_149,X-Ray,2023-10-02 09:18:00,Tech Garcia,Morning
+CASE_149,Doctor Review,2023-10-02 09:44:00,Dr. Taylor,Morning
+CASE_149,Discharge,2023-10-02 10:00:00,Nurse Lee,Morning
+CASE_150,Registration,2023-10-02 07:52:00,Nurse Ratched,Morning
+CASE_150,Triage,2023-10-02 08:07:00,Nurse Chapel,Morning
+CASE_150,X-Ray,2023-10-02 08:49:00,Tech Garcia,Morning
+CASE_150,Triage,2023-10-02 09:19:00,Nurse Lee,Morning
+CASE_150,Blood Test,2023-10-02 10:11:00,Tech Garcia,Morning
+CASE_150,Doctor Consultation,2023-10-02 10:39:00,Dr. Anderson,Morning
+CASE_150,Doctor Review,2023-10-02 11:29:00,Dr. Jones,Morning
+CASE_150,Discharge,2023-10-02 11:53:00,Nurse Jackie,Morning
+CASE_151,Registration,2023-10-02 08:00:00,Nurse Joy,Morning
+CASE_151,Triage,2023-10-02 08:21:00,Nurse Lee,Morning
+CASE_151,X-Ray,2023-10-02 09:01:00,Tech Miller,Morning
+CASE_151,Triage,2023-10-02 09:33:00,Nurse Wilson,Morning
+CASE_151,Blood Test,2023-10-02 10:03:00,Tech Miller,Morning
+CASE_151,Doctor Consultation,2023-10-02 10:41:00,Dr. Chen,Morning
+CASE_151,Doctor Review,2023-10-02 11:35:00,Dr. Brown,Morning
+CASE_151,Discharge,2023-10-02 11:50:00,Nurse Wilson,Morning
+CASE_152,Registration,2023-10-02 08:11:00,Nurse Lee,Morning
+CASE_152,Triage,2023-10-02 08:33:00,Nurse Chapel,Morning
+CASE_152,Doctor Consultation,2023-10-02 09:07:00,Dr. Jones,Morning
+CASE_152,X-Ray,2023-10-02 09:56:00,Tech Garcia,Morning
+CASE_152,Doctor Review,2023-10-02 10:24:00,Dr. Taylor,Morning
+CASE_152,Discharge,2023-10-02 10:52:00,Nurse Wilson,Morning
+CASE_153,Registration,2023-10-02 08:23:00,Nurse Ratched,Morning
+CASE_153,Triage,2023-10-02 08:46:00,Nurse Davis,Morning
+CASE_153,Blood Test,2023-10-02 09:07:00,Tech Miller,Morning
+CASE_153,Blood Test,2023-10-02 09:42:00,Tech Garcia,Morning
+CASE_153,Doctor Consultation,2023-10-02 10:13:00,Dr. Wilson,Morning
+CASE_153,Doctor Review,2023-10-02 10:54:00,Dr. Patel,Morning
+CASE_153,Discharge,2023-10-02 11:19:00,Nurse Lee,Morning
+CASE_154,Registration,2023-10-02 08:33:00,Nurse Chapel,Morning
+CASE_154,Triage,2023-10-02 08:54:00,Nurse Wilson,Morning
+CASE_154,Doctor Consultation,2023-10-02 09:27:00,Dr. Patel,Morning
+CASE_154,X-Ray,2023-10-02 09:56:00,Tech Rodriguez,Morning
+CASE_154,Doctor Review,2023-10-02 10:24:00,Dr. Jones,Morning
+CASE_154,Discharge,2023-10-02 10:51:00,Nurse Ratched,Morning
+CASE_155,Registration,2023-10-02 08:42:00,Nurse Joy,Morning
+CASE_155,Triage,2023-10-02 09:05:00,Nurse Lee,Morning
+CASE_155,X-Ray,2023-10-02 09:43:00,Tech Miller,Morning
+CASE_155,Triage,2023-10-02 10:23:00,Nurse Davis,Morning
+CASE_155,Blood Test,2023-10-02 10:56:00,Tech Garcia,Morning
+CASE_155,Doctor Consultation,2023-10-02 11:33:00,Dr. Smith,Morning
+CASE_155,Doctor Review,2023-10-02 12:08:00,Dr. Kim,Morning
+CASE_155,Discharge,2023-10-02 12:43:00,Nurse Ratched,Morning
+CASE_156,Registration,2023-10-02 08:50:00,Nurse Wilson,Morning
+CASE_156,Triage,2023-10-02 09:06:00,Nurse Ratched,Morning
+CASE_156,X-Ray,2023-10-02 09:38:00,Tech Garcia,Morning
+CASE_156,Triage,2023-10-02 10:17:00,Nurse Ratched,Morning
+CASE_156,Doctor Consultation,2023-10-02 11:06:00,Dr. Wilson,Morning
+CASE_156,Doctor Review,2023-10-02 12:00:00,Dr. Anderson,Morning
+CASE_156,Discharge,2023-10-02 12:21:00,Nurse Wilson,Morning
+CASE_157,Registration,2023-10-02 09:05:00,Nurse Ratched,Morning
+CASE_157,Triage,2023-10-02 09:18:00,Nurse Davis,Morning
+CASE_157,X-Ray,2023-10-02 09:52:00,Tech Rodriguez,Morning
+CASE_157,Triage,2023-10-02 10:25:00,Nurse Ratched,Morning
+CASE_157,Doctor Consultation,2023-10-02 11:06:00,Dr. Jones,Morning
+CASE_157,Doctor Review,2023-10-02 11:53:00,Dr. Brown,Morning
+CASE_157,Discharge,2023-10-02 12:24:00,Nurse Wilson,Morning
+CASE_158,Registration,2023-10-02 09:15:00,Nurse Chapel,Morning
+CASE_158,Triage,2023-10-02 09:34:00,Nurse Lee,Morning
+CASE_158,X-Ray,2023-10-02 10:08:00,Tech Garcia,Morning
+CASE_158,Triage,2023-10-02 10:29:00,Nurse Ratched,Morning
+CASE_158,Doctor Consultation,2023-10-02 11:00:00,Dr. Taylor,Morning
+CASE_158,Doctor Review,2023-10-02 11:32:00,Dr. Taylor,Morning
+CASE_158,Discharge,2023-10-02 11:58:00,Nurse Joy,Morning
+CASE_159,Registration,2023-10-02 09:25:00,Nurse Jackie,Morning
+CASE_159,Triage,2023-10-02 09:46:00,Nurse Ratched,Morning
+CASE_159,Doctor Consultation,2023-10-02 10:25:00,Dr. Taylor,Morning
+CASE_159,X-Ray,2023-10-02 10:59:00,Tech Garcia,Morning
+CASE_159,Doctor Review,2023-10-02 11:31:00,Dr. Garcia,Morning
+CASE_159,Discharge,2023-10-02 11:56:00,Nurse Joy,Morning
+CASE_160,Registration,2023-10-02 09:39:00,Nurse Ratched,Morning
+CASE_160,Triage,2023-10-02 10:01:00,Nurse Joy,Morning
+CASE_160,Doctor Consultation,2023-10-02 10:41:00,Dr. Anderson,Morning
+CASE_160,X-Ray,2023-10-02 11:15:00,Tech Rodriguez,Morning
+CASE_160,Doctor Review,2023-10-02 11:55:00,Dr. Garcia,Morning
+CASE_160,Discharge,2023-10-02 12:19:00,Nurse Lee,Morning
+CASE_161,Registration,2023-10-02 09:50:00,Nurse Davis,Morning
+CASE_161,Triage,2023-10-02 10:01:00,Nurse Joy,Morning
+CASE_161,Blood Test,2023-10-02 10:34:00,Tech Miller,Morning
+CASE_161,Blood Test,2023-10-02 11:08:00,Tech Miller,Morning
+CASE_161,Doctor Consultation,2023-10-02 11:53:00,Dr. Taylor,Morning
+CASE_161,Doctor Review,2023-10-02 12:37:00,Dr. Wilson,Morning
+CASE_161,Discharge,2023-10-02 12:58:00,Nurse Chapel,Morning
+CASE_162,Registration,2023-10-02 10:00:00,Nurse Chapel,Morning
+CASE_162,Triage,2023-10-02 10:11:00,Nurse Chapel,Morning
+CASE_162,Blood Test,2023-10-02 10:48:00,Tech Rodriguez,Morning
+CASE_162,Blood Test,2023-10-02 11:30:00,Tech Miller,Morning
+CASE_162,Doctor Consultation,2023-10-02 12:12:00,Dr. Garcia,Morning
+CASE_162,Doctor Review,2023-10-02 13:03:00,Dr. Garcia,Morning
+CASE_162,Discharge,2023-10-02 13:22:00,Nurse Davis,Morning
+CASE_163,Registration,2023-10-02 10:11:00,Nurse Wilson,Morning
+CASE_163,Triage,2023-10-02 10:31:00,Nurse Wilson,Morning
+CASE_163,X-Ray,2023-10-02 11:00:00,Tech Miller,Morning
+CASE_163,Triage,2023-10-02 11:33:00,Nurse Lee,Morning
+CASE_163,Blood Test,2023-10-02 12:06:00,Tech Miller,Morning
+CASE_163,Doctor Consultation,2023-10-02 12:42:00,Dr. Chen,Morning
+CASE_163,Doctor Review,2023-10-02 13:22:00,Dr. Wilson,Morning
+CASE_163,Discharge,2023-10-02 13:40:00,Nurse Joy,Morning
+CASE_164,Registration,2023-10-02 10:19:00,Nurse Lee,Morning
+CASE_164,Triage,2023-10-02 10:36:00,Nurse Chapel,Morning
+CASE_164,Doctor Consultation,2023-10-02 11:04:00,Dr. Jones,Morning
+CASE_164,X-Ray,2023-10-02 11:30:00,Tech Miller,Morning
+CASE_164,Doctor Review,2023-10-02 12:06:00,Dr. Patel,Morning
+CASE_164,Discharge,2023-10-02 12:41:00,Nurse Lee,Morning
+CASE_165,Registration,2023-10-02 10:25:00,Nurse Joy,Morning
+CASE_165,Triage,2023-10-02 10:50:00,Nurse Wilson,Morning
+CASE_165,X-Ray,2023-10-02 11:27:00,Tech Miller,Morning
+CASE_165,Triage,2023-10-02 11:56:00,Nurse Ratched,Morning
+CASE_165,Doctor Consultation,2023-10-02 12:34:00,Dr. Brown,Morning
+CASE_165,Doctor Review,2023-10-02 13:30:00,Dr. Taylor,Morning
+CASE_165,Discharge,2023-10-02 13:47:00,Nurse Lee,Morning
+CASE_166,Registration,2023-10-02 10:36:00,Nurse Joy,Morning
+CASE_166,Triage,2023-10-02 11:01:00,Nurse Wilson,Morning
+CASE_166,X-Ray,2023-10-02 11:34:00,Tech Miller,Morning
+CASE_166,Triage,2023-10-02 12:15:00,Nurse Joy,Morning
+CASE_166,Doctor Consultation,2023-10-02 12:56:00,Dr. Smith,Morning
+CASE_166,Doctor Review,2023-10-02 13:43:00,Dr. Wilson,Morning
+CASE_166,Discharge,2023-10-02 14:02:00,Nurse Jackie,Evening
+CASE_167,Registration,2023-10-02 10:50:00,Nurse Wilson,Morning
+CASE_167,Triage,2023-10-02 11:10:00,Nurse Ratched,Morning
+CASE_167,Blood Test,2023-10-02 11:30:00,Tech Miller,Morning
+CASE_167,Blood Test,2023-10-02 12:06:00,Tech Miller,Morning
+CASE_167,Doctor Consultation,2023-10-02 12:41:00,Dr. Chen,Morning
+CASE_167,Doctor Review,2023-10-02 13:28:00,Dr. Anderson,Morning
+CASE_167,Discharge,2023-10-02 13:58:00,Nurse Lee,Morning
+CASE_168,Registration,2023-10-02 11:01:00,Nurse Lee,Morning
+CASE_168,Triage,2023-10-02 11:11:00,Nurse Jackie,Morning
+CASE_168,Doctor Consultation,2023-10-02 11:36:00,Dr. Wilson,Morning
+CASE_168,X-Ray,2023-10-02 12:11:00,Tech Rodriguez,Morning
+CASE_168,Doctor Review,2023-10-02 12:43:00,Dr. Patel,Morning
+CASE_168,Discharge,2023-10-02 13:13:00,Nurse Lee,Morning
+CASE_169,Registration,2023-10-02 11:12:00,Nurse Jackie,Morning
+CASE_169,Triage,2023-10-02 11:36:00,Nurse Lee,Morning
+CASE_169,X-Ray,2023-10-02 12:03:00,Tech Rodriguez,Morning
+CASE_169,Triage,2023-10-02 12:45:00,Nurse Joy,Morning
+CASE_169,Doctor Consultation,2023-10-02 13:22:00,Dr. Chen,Morning
+CASE_169,Doctor Review,2023-10-02 14:03:00,Dr. Anderson,Evening
+CASE_169,Discharge,2023-10-02 14:27:00,Nurse Davis,Evening
+CASE_170,Registration,2023-10-02 11:17:00,Nurse Lee,Morning
+CASE_170,Triage,2023-10-02 11:38:00,Nurse Wilson,Morning
+CASE_170,Doctor Consultation,2023-10-02 12:11:00,Dr. Anderson,Morning
+CASE_170,X-Ray,2023-10-02 12:53:00,Tech Rodriguez,Morning
+CASE_170,Doctor Review,2023-10-02 13:25:00,Dr. Patel,Morning
+CASE_170,Discharge,2023-10-02 13:57:00,Nurse Jackie,Morning
+CASE_171,Registration,2023-10-02 11:22:00,Nurse Jackie,Morning
+CASE_171,Triage,2023-10-02 11:42:00,Nurse Jackie,Morning
+CASE_171,X-Ray,2023-10-02 12:07:00,Tech Miller,Morning
+CASE_171,Triage,2023-10-02 12:37:00,Nurse Ratched,Morning
+CASE_171,Blood Test,2023-10-02 13:25:00,Tech Miller,Morning
+CASE_171,Doctor Consultation,2023-10-02 13:57:00,Dr. Chen,Morning
+CASE_171,Doctor Review,2023-10-02 14:56:00,Dr. Brown,Evening
+CASE_171,Discharge,2023-10-02 15:21:00,Nurse Jackie,Evening
+CASE_172,Registration,2023-10-02 11:29:00,Nurse Joy,Morning
+CASE_172,Triage,2023-10-02 11:58:00,Nurse Jackie,Morning
+CASE_172,X-Ray,2023-10-02 12:18:00,Tech Garcia,Morning
+CASE_172,Triage,2023-10-02 12:56:00,Nurse Lee,Morning
+CASE_172,Doctor Consultation,2023-10-02 13:32:00,Dr. Taylor,Morning
+CASE_172,Doctor Review,2023-10-02 14:22:00,Dr. Kim,Evening
+CASE_172,Discharge,2023-10-02 14:46:00,Nurse Jackie,Evening
+CASE_173,Registration,2023-10-02 11:37:00,Nurse Chapel,Morning
+CASE_173,Triage,2023-10-02 12:00:00,Nurse Wilson,Morning
+CASE_173,Blood Test,2023-10-02 12:36:00,Tech Miller,Morning
+CASE_173,Blood Test,2023-10-02 13:13:00,Tech Garcia,Morning
+CASE_173,Doctor Consultation,2023-10-02 13:52:00,Dr. Brown,Morning
+CASE_173,Doctor Review,2023-10-02 14:42:00,Dr. Brown,Evening
+CASE_173,Discharge,2023-10-02 15:15:00,Nurse Lee,Evening
+CASE_174,Registration,2023-10-02 11:48:00,Nurse Wilson,Morning
+CASE_174,Triage,2023-10-02 12:12:00,Nurse Davis,Morning
+CASE_174,Doctor Consultation,2023-10-02 12:43:00,Dr. Jones,Morning
+CASE_174,X-Ray,2023-10-02 13:34:00,Tech Rodriguez,Morning
+CASE_174,Doctor Review,2023-10-02 13:55:00,Dr. Jones,Morning
+CASE_174,Discharge,2023-10-02 14:18:00,Nurse Lee,Evening
+CASE_175,Registration,2023-10-02 11:53:00,Nurse Jackie,Morning
+CASE_175,Triage,2023-10-02 12:17:00,Nurse Davis,Morning
+CASE_175,Doctor Consultation,2023-10-02 12:56:00,Dr. Patel,Morning
+CASE_175,X-Ray,2023-10-02 13:43:00,Tech Rodriguez,Morning
+CASE_175,Doctor Review,2023-10-02 14:12:00,Dr. Kim,Evening
+CASE_175,Discharge,2023-10-02 14:27:00,Nurse Wilson,Evening
+CASE_176,Registration,2023-10-02 12:03:00,Nurse Joy,Morning
+CASE_176,Triage,2023-10-02 12:21:00,Nurse Joy,Morning
+CASE_176,X-Ray,2023-10-02 13:00:00,Tech Miller,Morning
+CASE_176,Triage,2023-10-02 13:39:00,Nurse Chapel,Morning
+CASE_176,Blood Test,2023-10-02 14:06:00,Tech Miller,Evening
+CASE_176,Doctor Consultation,2023-10-02 14:40:00,Dr. Garcia,Evening
+CASE_176,Doctor Review,2023-10-02 15:11:00,Dr. Brown,Evening
+CASE_176,Discharge,2023-10-02 15:35:00,Nurse Wilson,Evening
+CASE_177,Registration,2023-10-02 12:08:00,Nurse Chapel,Morning
+CASE_177,Triage,2023-10-02 12:24:00,Nurse Wilson,Morning
+CASE_177,Doctor Consultation,2023-10-02 13:06:00,Dr. Brown,Morning
+CASE_177,X-Ray,2023-10-02 13:57:00,Tech Garcia,Morning
+CASE_177,Doctor Review,2023-10-02 14:26:00,Dr. Wilson,Evening
+CASE_177,Discharge,2023-10-02 14:49:00,Nurse Joy,Evening
+CASE_178,Registration,2023-10-02 12:17:00,Nurse Jackie,Morning
+CASE_178,Triage,2023-10-02 12:35:00,Nurse Jackie,Morning
+CASE_178,Blood Test,2023-10-02 13:05:00,Tech Garcia,Morning
+CASE_178,Blood Test,2023-10-02 13:41:00,Tech Rodriguez,Morning
+CASE_178,Doctor Consultation,2023-10-02 14:17:00,Dr. Garcia,Evening
+CASE_178,Doctor Review,2023-10-02 15:04:00,Dr. Jones,Evening
+CASE_178,Discharge,2023-10-02 15:28:00,Nurse Joy,Evening
+CASE_179,Registration,2023-10-02 12:32:00,Nurse Ratched,Morning
+CASE_179,Triage,2023-10-02 12:42:00,Nurse Jackie,Morning
+CASE_179,Doctor Consultation,2023-10-02 13:25:00,Dr. Anderson,Morning
+CASE_179,X-Ray,2023-10-02 14:05:00,Tech Garcia,Evening
+CASE_179,Doctor Review,2023-10-02 14:39:00,Dr. Patel,Evening
+CASE_179,Discharge,2023-10-02 15:03:00,Nurse Davis,Evening
+CASE_180,Registration,2023-10-02 12:40:00,Nurse Chapel,Morning
+CASE_180,Triage,2023-10-02 13:03:00,Nurse Davis,Morning
+CASE_180,X-Ray,2023-10-02 13:32:00,Tech Miller,Morning
+CASE_180,Triage,2023-10-02 14:03:00,Nurse Chapel,Evening
+CASE_180,Blood Test,2023-10-02 14:31:00,Tech Miller,Evening
+CASE_180,Doctor Consultation,2023-10-02 14:55:00,Dr. Smith,Evening
+CASE_180,Doctor Review,2023-10-02 15:21:00,Dr. Taylor,Evening
+CASE_180,Discharge,2023-10-02 15:51:00,Nurse Ratched,Evening
+CASE_181,Registration,2023-10-02 12:53:00,Nurse Lee,Morning
+CASE_181,Triage,2023-10-02 13:14:00,Nurse Jackie,Morning
+CASE_181,Blood Test,2023-10-02 13:40:00,Tech Miller,Morning
+CASE_181,Blood Test,2023-10-02 14:13:00,Tech Rodriguez,Evening
+CASE_181,Doctor Consultation,2023-10-02 14:43:00,Dr. Taylor,Evening
+CASE_181,Doctor Review,2023-10-02 15:21:00,Dr. Jones,Evening
+CASE_181,Discharge,2023-10-02 15:42:00,Nurse Ratched,Evening
+CASE_182,Registration,2023-10-02 13:03:00,Nurse Lee,Morning
+CASE_182,Triage,2023-10-02 13:15:00,Nurse Jackie,Morning
+CASE_182,X-Ray,2023-10-02 13:47:00,Tech Miller,Morning
+CASE_182,Triage,2023-10-02 14:10:00,Nurse Joy,Evening
+CASE_182,Blood Test,2023-10-02 15:04:00,Tech Rodriguez,Evening
+CASE_182,Doctor Consultation,2023-10-02 15:32:00,Dr. Anderson,Evening
+CASE_182,Doctor Review,2023-10-02 16:15:00,Dr. Anderson,Evening
+CASE_182,Discharge,2023-10-02 16:40:00,Nurse Jackie,Evening
+CASE_183,Registration,2023-10-02 13:17:00,Nurse Ratched,Morning
+CASE_183,Triage,2023-10-02 13:37:00,Nurse Jackie,Morning
+CASE_183,Blood Test,2023-10-02 14:16:00,Tech Miller,Evening
+CASE_183,Blood Test,2023-10-02 15:00:00,Tech Garcia,Evening
+CASE_183,Doctor Consultation,2023-10-02 15:52:00,Dr. Wilson,Evening
+CASE_183,Doctor Review,2023-10-02 16:42:00,Dr. Smith,Evening
+CASE_183,Discharge,2023-10-02 17:11:00,Nurse Jackie,Evening
+CASE_184,Registration,2023-10-02 13:24:00,Nurse Joy,Morning
+CASE_184,Triage,2023-10-02 13:38:00,Nurse Joy,Morning
+CASE_184,X-Ray,2023-10-02 13:58:00,Tech Miller,Morning
+CASE_184,Triage,2023-10-02 14:26:00,Nurse Joy,Evening
+CASE_184,Doctor Consultation,2023-10-02 15:15:00,Dr. Chen,Evening
+CASE_184,Doctor Review,2023-10-02 15:49:00,Dr. Chen,Evening
+CASE_184,Discharge,2023-10-02 16:14:00,Nurse Ratched,Evening
+CASE_185,Registration,2023-10-02 13:38:00,Nurse Ratched,Morning
+CASE_185,Triage,2023-10-02 14:05:00,Nurse Wilson,Evening
+CASE_185,Doctor Consultation,2023-10-02 14:30:00,Dr. Patel,Evening
+CASE_185,X-Ray,2023-10-02 14:56:00,Tech Rodriguez,Evening
+CASE_185,Doctor Review,2023-10-02 15:28:00,Dr. Chen,Evening
+CASE_185,Discharge,2023-10-02 15:46:00,Nurse Davis,Evening
+CASE_186,Registration,2023-10-02 13:51:00,Nurse Wilson,Morning
+CASE_186,Triage,2023-10-02 14:07:00,Nurse Joy,Evening
+CASE_186,X-Ray,2023-10-02 14:29:00,Tech Miller,Evening
+CASE_186,Triage,2023-10-02 14:55:00,Nurse Chapel,Evening
+CASE_186,Blood Test,2023-10-02 15:32:00,Tech Garcia,Evening
+CASE_186,Doctor Consultation,2023-10-02 16:06:00,Dr. Garcia,Evening
+CASE_186,Doctor Review,2023-10-02 16:35:00,Dr. Taylor,Evening
+CASE_186,Discharge,2023-10-02 16:59:00,Nurse Lee,Evening
+CASE_187,Registration,2023-10-02 14:05:00,Nurse Wilson,Evening
+CASE_187,Triage,2023-10-02 14:30:00,Nurse Jackie,Evening
+CASE_187,X-Ray,2023-10-02 14:56:00,Tech Garcia,Evening
+CASE_187,Triage,2023-10-02 15:19:00,Nurse Lee,Evening
+CASE_187,Blood Test,2023-10-02 15:54:00,Tech Rodriguez,Evening
+CASE_187,Doctor Consultation,2023-10-02 16:24:00,Dr. Smith,Evening
+CASE_187,Doctor Review,2023-10-02 17:08:00,Dr. Chen,Evening
+CASE_187,Discharge,2023-10-02 17:38:00,Nurse Davis,Evening
+CASE_188,Registration,2023-10-02 14:17:00,Nurse Ratched,Evening
+CASE_188,Triage,2023-10-02 14:39:00,Nurse Davis,Evening
+CASE_188,Blood Test,2023-10-02 14:56:00,Tech Miller,Evening
+CASE_188,Blood Test,2023-10-02 15:21:00,Tech Garcia,Evening
+CASE_188,Doctor Consultation,2023-10-02 15:59:00,Dr. Chen,Evening
+CASE_188,Doctor Review,2023-10-02 16:41:00,Dr. Patel,Evening
+CASE_188,Discharge,2023-10-02 17:15:00,Nurse Wilson,Evening
+CASE_189,Registration,2023-10-02 14:31:00,Nurse Davis,Evening
+CASE_189,Triage,2023-10-02 14:47:00,Nurse Davis,Evening
+CASE_189,Blood Test,2023-10-02 15:03:00,Tech Miller,Evening
+CASE_189,Blood Test,2023-10-02 15:35:00,Tech Miller,Evening
+CASE_189,Doctor Consultation,2023-10-02 16:13:00,Dr. Garcia,Evening
+CASE_189,Doctor Review,2023-10-02 16:38:00,Dr. Brown,Evening
+CASE_189,Discharge,2023-10-02 17:07:00,Nurse Davis,Evening
+CASE_190,Registration,2023-10-02 14:38:00,Nurse Lee,Evening
+CASE_190,Triage,2023-10-02 15:06:00,Nurse Lee,Evening
+CASE_190,Doctor Consultation,2023-10-02 15:26:00,Dr. Wilson,Evening
+CASE_190,X-Ray,2023-10-02 15:56:00,Tech Rodriguez,Evening
+CASE_190,Doctor Review,2023-10-02 16:20:00,Dr. Wilson,Evening
+CASE_190,Discharge,2023-10-02 16:43:00,Nurse Jackie,Evening
+CASE_191,Registration,2023-10-02 14:49:00,Nurse Ratched,Evening
+CASE_191,Triage,2023-10-02 15:09:00,Nurse Wilson,Evening
+CASE_191,Doctor Consultation,2023-10-02 15:46:00,Dr. Jones,Evening
+CASE_191,X-Ray,2023-10-02 16:09:00,Tech Miller,Evening
+CASE_191,Doctor Review,2023-10-02 16:39:00,Dr. Kim,Evening
+CASE_191,Discharge,2023-10-02 16:59:00,Nurse Joy,Evening
+CASE_192,Registration,2023-10-02 15:00:00,Nurse Lee,Evening
+CASE_192,Triage,2023-10-02 15:19:00,Nurse Joy,Evening
+CASE_192,Blood Test,2023-10-02 15:58:00,Tech Rodriguez,Evening
+CASE_192,Blood Test,2023-10-02 16:32:00,Tech Rodriguez,Evening
+CASE_192,Doctor Consultation,2023-10-02 17:01:00,Dr. Taylor,Evening
+CASE_192,Doctor Review,2023-10-02 17:29:00,Dr. Jones,Evening
+CASE_192,Discharge,2023-10-02 17:57:00,Nurse Chapel,Evening
+CASE_193,Registration,2023-10-02 15:07:00,Nurse Jackie,Evening
+CASE_193,Triage,2023-10-02 15:31:00,Nurse Chapel,Evening
+CASE_193,X-Ray,2023-10-02 15:49:00,Tech Miller,Evening
+CASE_193,Triage,2023-10-02 16:14:00,Nurse Wilson,Evening
+CASE_193,Blood Test,2023-10-02 16:54:00,Tech Garcia,Evening
+CASE_193,Doctor Consultation,2023-10-02 17:24:00,Dr. Smith,Evening
+CASE_193,Doctor Review,2023-10-02 18:00:00,Dr. Smith,Evening
+CASE_193,Discharge,2023-10-02 18:18:00,Nurse Wilson,Evening
+CASE_194,Registration,2023-10-02 15:17:00,Nurse Joy,Evening
+CASE_194,Triage,2023-10-02 15:38:00,Nurse Wilson,Evening
+CASE_194,X-Ray,2023-10-02 16:06:00,Tech Garcia,Evening
+CASE_194,Triage,2023-10-02 16:45:00,Nurse Chapel,Evening
+CASE_194,Doctor Consultation,2023-10-02 17:13:00,Dr. Anderson,Evening
+CASE_194,Doctor Review,2023-10-02 17:34:00,Dr. Patel,Evening
+CASE_194,Discharge,2023-10-02 17:59:00,Nurse Davis,Evening
+CASE_195,Registration,2023-10-02 15:22:00,Nurse Ratched,Evening
+CASE_195,Triage,2023-10-02 15:43:00,Nurse Wilson,Evening
+CASE_195,Blood Test,2023-10-02 16:09:00,Tech Rodriguez,Evening
+CASE_195,Blood Test,2023-10-02 16:40:00,Tech Rodriguez,Evening
+CASE_195,Doctor Consultation,2023-10-02 17:22:00,Dr. Anderson,Evening
+CASE_195,Doctor Review,2023-10-02 18:12:00,Dr. Chen,Evening
+CASE_195,Discharge,2023-10-02 18:44:00,Nurse Wilson,Evening
+CASE_196,Registration,2023-10-02 15:28:00,Nurse Jackie,Evening
+CASE_196,Triage,2023-10-02 15:44:00,Nurse Lee,Evening
+CASE_196,X-Ray,2023-10-02 16:15:00,Tech Miller,Evening
+CASE_196,Triage,2023-10-02 16:45:00,Nurse Ratched,Evening
+CASE_196,Doctor Consultation,2023-10-02 17:31:00,Dr. Jones,Evening
+CASE_196,Doctor Review,2023-10-02 18:20:00,Dr. Jones,Evening
+CASE_196,Discharge,2023-10-02 18:45:00,Nurse Chapel,Evening
+CASE_197,Registration,2023-10-02 15:33:00,Nurse Chapel,Evening
+CASE_197,Triage,2023-10-02 15:44:00,Nurse Lee,Evening
+CASE_197,Doctor Consultation,2023-10-02 16:12:00,Dr. Chen,Evening
+CASE_197,X-Ray,2023-10-02 16:58:00,Tech Miller,Evening
+CASE_197,Doctor Review,2023-10-02 17:40:00,Dr. Wilson,Evening
+CASE_197,Discharge,2023-10-02 18:02:00,Nurse Wilson,Evening
+CASE_198,Registration,2023-10-02 15:39:00,Nurse Davis,Evening
+CASE_198,Triage,2023-10-02 16:05:00,Nurse Joy,Evening
+CASE_198,X-Ray,2023-10-02 16:40:00,Tech Garcia,Evening
+CASE_198,Triage,2023-10-02 17:02:00,Nurse Chapel,Evening
+CASE_198,Blood Test,2023-10-02 17:43:00,Tech Garcia,Evening
+CASE_198,Doctor Consultation,2023-10-02 18:12:00,Dr. Kim,Evening
+CASE_198,Doctor Review,2023-10-02 18:43:00,Dr. Anderson,Evening
+CASE_198,Discharge,2023-10-02 19:05:00,Nurse Jackie,Evening
+CASE_199,Registration,2023-10-02 15:48:00,Nurse Ratched,Evening
+CASE_199,Triage,2023-10-02 16:16:00,Nurse Wilson,Evening
+CASE_199,Doctor Consultation,2023-10-02 16:42:00,Dr. Wilson,Evening
+CASE_199,X-Ray,2023-10-02 17:30:00,Tech Garcia,Evening
+CASE_199,Doctor Review,2023-10-02 18:07:00,Dr. Jones,Evening
+CASE_199,Discharge,2023-10-02 18:27:00,Nurse Joy,Evening
+CASE_200,Registration,2023-10-02 15:58:00,Nurse Jackie,Evening
+CASE_200,Triage,2023-10-02 16:10:00,Nurse Joy,Evening
+CASE_200,X-Ray,2023-10-02 16:47:00,Tech Miller,Evening
+CASE_200,Triage,2023-10-02 17:19:00,Nurse Ratched,Evening
+CASE_200,Doctor Consultation,2023-10-02 18:00:00,Dr. Brown,Evening
+CASE_200,Doctor Review,2023-10-02 18:30:00,Dr. Kim,Evening
+CASE_200,Discharge,2023-10-02 18:58:00,Nurse Chapel,Evening
+CASE_201,Registration,2023-10-02 16:09:00,Nurse Ratched,Evening
+CASE_201,Triage,2023-10-02 16:27:00,Nurse Davis,Evening
+CASE_201,Blood Test,2023-10-02 16:57:00,Tech Miller,Evening
+CASE_201,Blood Test,2023-10-02 17:32:00,Tech Miller,Evening
+CASE_201,Doctor Consultation,2023-10-02 18:23:00,Dr. Brown,Evening
+CASE_201,Doctor Review,2023-10-02 19:14:00,Dr. Jones,Evening
+CASE_201,Discharge,2023-10-02 19:33:00,Nurse Jackie,Evening
+CASE_202,Registration,2023-10-02 16:14:00,Nurse Wilson,Evening
+CASE_202,Triage,2023-10-02 16:37:00,Nurse Jackie,Evening
+CASE_202,Doctor Consultation,2023-10-02 17:07:00,Dr. Smith,Evening
+CASE_202,X-Ray,2023-10-02 17:45:00,Tech Rodriguez,Evening
+CASE_202,Doctor Review,2023-10-02 18:21:00,Dr. Brown,Evening
+CASE_202,Discharge,2023-10-02 18:47:00,Nurse Joy,Evening
+CASE_203,Registration,2023-10-02 16:28:00,Nurse Davis,Evening
+CASE_203,Triage,2023-10-02 16:46:00,Nurse Jackie,Evening
+CASE_203,X-Ray,2023-10-02 17:14:00,Tech Garcia,Evening
+CASE_203,Triage,2023-10-02 17:43:00,Nurse Jackie,Evening
+CASE_203,Blood Test,2023-10-02 18:30:00,Tech Rodriguez,Evening
+CASE_203,Doctor Consultation,2023-10-02 19:08:00,Dr. Chen,Evening
+CASE_203,Doctor Review,2023-10-02 19:38:00,Dr. Patel,Evening
+CASE_203,Discharge,2023-10-02 20:01:00,Nurse Ratched,Evening
+CASE_204,Registration,2023-10-02 16:37:00,Nurse Chapel,Evening
+CASE_204,Triage,2023-10-02 16:51:00,Nurse Ratched,Evening
+CASE_204,Blood Test,2023-10-02 17:13:00,Tech Miller,Evening
+CASE_204,Blood Test,2023-10-02 17:44:00,Tech Rodriguez,Evening
+CASE_204,Doctor Consultation,2023-10-02 18:19:00,Dr. Smith,Evening
+CASE_204,Doctor Review,2023-10-02 18:47:00,Dr. Patel,Evening
+CASE_204,Discharge,2023-10-02 19:15:00,Nurse Jackie,Evening
+CASE_205,Registration,2023-10-02 16:46:00,Nurse Davis,Evening
+CASE_205,Triage,2023-10-02 17:06:00,Nurse Joy,Evening
+CASE_205,X-Ray,2023-10-02 17:32:00,Tech Rodriguez,Evening
+CASE_205,Triage,2023-10-02 18:11:00,Nurse Lee,Evening
+CASE_205,Doctor Consultation,2023-10-02 18:44:00,Dr. Wilson,Evening
+CASE_205,Doctor Review,2023-10-02 19:32:00,Dr. Smith,Evening
+CASE_205,Discharge,2023-10-02 19:57:00,Nurse Ratched,Evening
+CASE_206,Registration,2023-10-02 16:56:00,Nurse Wilson,Evening
+CASE_206,Triage,2023-10-02 17:07:00,Nurse Davis,Evening
+CASE_206,Blood Test,2023-10-02 17:23:00,Tech Rodriguez,Evening
+CASE_206,Blood Test,2023-10-02 17:49:00,Tech Garcia,Evening
+CASE_206,Doctor Consultation,2023-10-02 18:28:00,Dr. Wilson,Evening
+CASE_206,Doctor Review,2023-10-02 18:59:00,Dr. Wilson,Evening
+CASE_206,Discharge,2023-10-02 19:28:00,Nurse Lee,Evening
+CASE_207,Registration,2023-10-02 17:08:00,Nurse Lee,Evening
+CASE_207,Triage,2023-10-02 17:28:00,Nurse Joy,Evening
+CASE_207,X-Ray,2023-10-02 18:05:00,Tech Miller,Evening
+CASE_207,Triage,2023-10-02 18:34:00,Nurse Wilson,Evening
+CASE_207,Blood Test,2023-10-02 19:04:00,Tech Rodriguez,Evening
+CASE_207,Doctor Consultation,2023-10-02 19:32:00,Dr. Brown,Evening
+CASE_207,Doctor Review,2023-10-02 20:08:00,Dr. Wilson,Evening
+CASE_207,Discharge,2023-10-02 20:34:00,Nurse Davis,Evening
+CASE_208,Registration,2023-10-02 17:22:00,Nurse Joy,Evening
+CASE_208,Triage,2023-10-02 17:44:00,Nurse Jackie,Evening
+CASE_208,X-Ray,2023-10-02 18:28:00,Tech Garcia,Evening
+CASE_208,Triage,2023-10-02 19:09:00,Nurse Ratched,Evening
+CASE_208,Doctor Consultation,2023-10-02 19:45:00,Dr. Jones,Evening
+CASE_208,Doctor Review,2023-10-02 20:29:00,Dr. Kim,Evening
+CASE_208,Discharge,2023-10-02 21:04:00,Nurse Chapel,Evening
+CASE_209,Registration,2023-10-02 17:30:00,Nurse Wilson,Evening
+CASE_209,Triage,2023-10-02 17:51:00,Nurse Wilson,Evening
+CASE_209,Blood Test,2023-10-02 18:22:00,Tech Miller,Evening
+CASE_209,Blood Test,2023-10-02 18:43:00,Tech Garcia,Evening
+CASE_209,Doctor Consultation,2023-10-02 19:26:00,Dr. Smith,Evening
+CASE_209,Doctor Review,2023-10-02 20:18:00,Dr. Wilson,Evening
+CASE_209,Discharge,2023-10-02 20:49:00,Nurse Chapel,Evening
+CASE_210,Registration,2023-10-02 17:43:00,Nurse Ratched,Evening
+CASE_210,Triage,2023-10-02 17:59:00,Nurse Chapel,Evening
+CASE_210,Doctor Consultation,2023-10-02 18:24:00,Dr. Smith,Evening
+CASE_210,X-Ray,2023-10-02 19:11:00,Tech Rodriguez,Evening
+CASE_210,Doctor Review,2023-10-02 19:46:00,Dr. Patel,Evening
+CASE_210,Discharge,2023-10-02 20:08:00,Nurse Ratched,Evening
+CASE_211,Registration,2023-10-02 17:52:00,Nurse Joy,Evening
+CASE_211,Triage,2023-10-02 18:19:00,Nurse Lee,Evening
+CASE_211,X-Ray,2023-10-02 18:46:00,Tech Miller,Evening
+CASE_211,Triage,2023-10-02 19:26:00,Nurse Ratched,Evening
+CASE_211,Blood Test,2023-10-02 20:16:00,Tech Garcia,Evening
+CASE_211,Doctor Consultation,2023-10-02 20:39:00,Dr. Patel,Evening
+CASE_211,Doctor Review,2023-10-02 21:16:00,Dr. Chen,Evening
+CASE_211,Discharge,2023-10-02 21:49:00,Nurse Davis,Evening
+CASE_212,Registration,2023-10-02 18:06:00,Nurse Joy,Evening
+CASE_212,Triage,2023-10-02 18:17:00,Nurse Lee,Evening
+CASE_212,X-Ray,2023-10-02 18:43:00,Tech Rodriguez,Evening
+CASE_212,Triage,2023-10-02 19:13:00,Nurse Lee,Evening
+CASE_212,Blood Test,2023-10-02 19:46:00,Tech Garcia,Evening
+CASE_212,Doctor Consultation,2023-10-02 20:11:00,Dr. Garcia,Evening
+CASE_212,Doctor Review,2023-10-02 20:48:00,Dr. Kim,Evening
+CASE_212,Discharge,2023-10-02 21:17:00,Nurse Joy,Evening
+CASE_213,Registration,2023-10-02 18:12:00,Nurse Chapel,Evening
+CASE_213,Triage,2023-10-02 18:31:00,Nurse Davis,Evening
+CASE_213,X-Ray,2023-10-02 18:55:00,Tech Rodriguez,Evening
+CASE_213,Triage,2023-10-02 19:30:00,Nurse Ratched,Evening
+CASE_213,Doctor Consultation,2023-10-02 20:06:00,Dr. Jones,Evening
+CASE_213,Doctor Review,2023-10-02 20:46:00,Dr. Kim,Evening
+CASE_213,Discharge,2023-10-02 21:09:00,Nurse Lee,Evening
+CASE_214,Registration,2023-10-02 18:17:00,Nurse Joy,Evening
+CASE_214,Triage,2023-10-02 18:40:00,Nurse Chapel,Evening
+CASE_214,X-Ray,2023-10-02 19:03:00,Tech Miller,Evening
+CASE_214,Triage,2023-10-02 19:44:00,Nurse Lee,Evening
+CASE_214,Doctor Consultation,2023-10-02 20:28:00,Dr. Wilson,Evening
+CASE_214,Doctor Review,2023-10-02 21:23:00,Dr. Smith,Evening
+CASE_214,Discharge,2023-10-02 21:47:00,Nurse Joy,Evening
+CASE_215,Registration,2023-10-02 18:26:00,Nurse Lee,Evening
+CASE_215,Triage,2023-10-02 18:48:00,Nurse Wilson,Evening
+CASE_215,Doctor Consultation,2023-10-02 19:25:00,Dr. Brown,Evening
+CASE_215,X-Ray,2023-10-02 20:06:00,Tech Rodriguez,Evening
+CASE_215,Doctor Review,2023-10-02 20:35:00,Dr. Smith,Evening
+CASE_215,Discharge,2023-10-02 21:01:00,Nurse Chapel,Evening
+CASE_216,Registration,2023-10-02 18:41:00,Nurse Wilson,Evening
+CASE_216,Triage,2023-10-02 18:56:00,Nurse Wilson,Evening
+CASE_216,Blood Test,2023-10-02 19:30:00,Tech Garcia,Evening
+CASE_216,Blood Test,2023-10-02 19:57:00,Tech Rodriguez,Evening
+CASE_216,Doctor Consultation,2023-10-02 20:45:00,Dr. Brown,Evening
+CASE_216,Doctor Review,2023-10-02 21:33:00,Dr. Jones,Evening
+CASE_216,Discharge,2023-10-02 22:06:00,Nurse Lee,Night
+CASE_217,Registration,2023-10-02 18:47:00,Nurse Chapel,Evening
+CASE_217,Triage,2023-10-02 19:03:00,Nurse Chapel,Evening
+CASE_217,X-Ray,2023-10-02 19:34:00,Tech Miller,Evening
+CASE_217,Triage,2023-10-02 20:13:00,Nurse Lee,Evening
+CASE_217,Blood Test,2023-10-02 20:47:00,Tech Garcia,Evening
+CASE_217,Doctor Consultation,2023-10-02 21:09:00,Dr. Garcia,Evening
+CASE_217,Doctor Review,2023-10-02 21:45:00,Dr. Garcia,Evening
+CASE_217,Discharge,2023-10-02 22:07:00,Nurse Davis,Night
+CASE_218,Registration,2023-10-02 19:01:00,Nurse Lee,Evening
+CASE_218,Triage,2023-10-02 19:21:00,Nurse Davis,Evening
+CASE_218,Blood Test,2023-10-02 20:01:00,Tech Rodriguez,Evening
+CASE_218,Blood Test,2023-10-02 20:28:00,Tech Miller,Evening
+CASE_218,Doctor Consultation,2023-10-02 21:11:00,Dr. Patel,Evening
+CASE_218,Doctor Review,2023-10-02 22:07:00,Dr. Kim,Night
+CASE_218,Discharge,2023-10-02 22:39:00,Nurse Ratched,Night
+CASE_219,Registration,2023-10-02 19:12:00,Nurse Ratched,Evening
+CASE_219,Triage,2023-10-02 19:32:00,Nurse Wilson,Evening
+CASE_219,Doctor Consultation,2023-10-02 19:57:00,Dr. Smith,Evening
+CASE_219,X-Ray,2023-10-02 20:24:00,Tech Miller,Evening
+CASE_219,Doctor Review,2023-10-02 20:51:00,Dr. Wilson,Evening
+CASE_219,Discharge,2023-10-02 21:13:00,Nurse Wilson,Evening
+CASE_220,Registration,2023-10-02 19:20:00,Nurse Chapel,Evening
+CASE_220,Triage,2023-10-02 19:42:00,Nurse Joy,Evening
+CASE_220,Doctor Consultation,2023-10-02 20:09:00,Dr. Garcia,Evening
+CASE_220,X-Ray,2023-10-02 20:58:00,Tech Miller,Evening
+CASE_220,Doctor Review,2023-10-02 21:32:00,Dr. Kim,Evening
+CASE_220,Discharge,2023-10-02 21:55:00,Nurse Wilson,Evening
+CASE_221,Registration,2023-10-02 19:32:00,Nurse Joy,Evening
+CASE_221,Triage,2023-10-02 19:56:00,Nurse Davis,Evening
+CASE_221,X-Ray,2023-10-02 20:32:00,Tech Garcia,Evening
+CASE_221,Triage,2023-10-02 20:56:00,Nurse Davis,Evening
+CASE_221,Blood Test,2023-10-02 21:42:00,Tech Miller,Evening
+CASE_221,Doctor Consultation,2023-10-02 22:15:00,Dr. Brown,Night
+CASE_221,Doctor Review,2023-10-02 23:06:00,Dr. Jones,Night
+CASE_221,Discharge,2023-10-02 23:23:00,Nurse Jackie,Night
+CASE_222,Registration,2023-10-02 19:41:00,Nurse Jackie,Evening
+CASE_222,Triage,2023-10-02 20:02:00,Nurse Wilson,Evening
+CASE_222,Blood Test,2023-10-02 20:36:00,Tech Garcia,Evening
+CASE_222,Blood Test,2023-10-02 20:59:00,Tech Rodriguez,Evening
+CASE_222,Doctor Consultation,2023-10-02 21:45:00,Dr. Taylor,Evening
+CASE_222,Doctor Review,2023-10-02 22:07:00,Dr. Jones,Night
+CASE_222,Discharge,2023-10-02 22:40:00,Nurse Davis,Night
+CASE_223,Registration,2023-10-02 19:56:00,Nurse Wilson,Evening
+CASE_223,Triage,2023-10-02 20:26:00,Nurse Chapel,Evening
+CASE_223,Doctor Consultation,2023-10-02 20:52:00,Dr. Wilson,Evening
+CASE_223,X-Ray,2023-10-02 21:15:00,Tech Garcia,Evening
+CASE_223,Doctor Review,2023-10-02 21:47:00,Dr. Kim,Evening
+CASE_223,Discharge,2023-10-02 22:10:00,Nurse Ratched,Night
+CASE_224,Registration,2023-10-02 20:01:00,Nurse Wilson,Evening
+CASE_224,Triage,2023-10-02 20:16:00,Nurse Wilson,Evening
+CASE_224,X-Ray,2023-10-02 20:48:00,Tech Garcia,Evening
+CASE_224,Triage,2023-10-02 21:17:00,Nurse Ratched,Evening
+CASE_224,Blood Test,2023-10-02 21:56:00,Tech Garcia,Evening
+CASE_224,Doctor Consultation,2023-10-02 22:20:00,Dr. Wilson,Night
+CASE_224,Doctor Review,2023-10-02 23:13:00,Dr. Patel,Night
+CASE_224,Discharge,2023-10-02 23:40:00,Nurse Lee,Night
+CASE_225,Registration,2023-10-02 20:06:00,Nurse Wilson,Evening
+CASE_225,Triage,2023-10-02 20:24:00,Nurse Chapel,Evening
+CASE_225,X-Ray,2023-10-02 20:56:00,Tech Miller,Evening
+CASE_225,Triage,2023-10-02 21:34:00,Nurse Jackie,Evening
+CASE_225,Blood Test,2023-10-02 21:59:00,Tech Garcia,Evening
+CASE_225,Doctor Consultation,2023-10-02 22:32:00,Dr. Kim,Night
+CASE_225,Doctor Review,2023-10-02 23:09:00,Dr. Jones,Night
+CASE_225,Discharge,2023-10-02 23:31:00,Nurse Chapel,Night
+CASE_226,Registration,2023-10-02 20:11:00,Nurse Lee,Evening
+CASE_226,Triage,2023-10-02 20:35:00,Nurse Jackie,Evening
+CASE_226,X-Ray,2023-10-02 20:58:00,Tech Miller,Evening
+CASE_226,Triage,2023-10-02 21:24:00,Nurse Joy,Evening
+CASE_226,Doctor Consultation,2023-10-02 21:53:00,Dr. Kim,Evening
+CASE_226,Doctor Review,2023-10-02 22:30:00,Dr. Patel,Night
+CASE_226,Discharge,2023-10-02 22:51:00,Nurse Chapel,Night
+CASE_227,Registration,2023-10-02 20:20:00,Nurse Lee,Evening
+CASE_227,Triage,2023-10-02 20:39:00,Nurse Joy,Evening
+CASE_227,X-Ray,2023-10-02 21:07:00,Tech Garcia,Evening
+CASE_227,Triage,2023-10-02 21:49:00,Nurse Ratched,Evening
+CASE_227,Blood Test,2023-10-02 22:24:00,Tech Garcia,Night
+CASE_227,Doctor Consultation,2023-10-02 23:03:00,Dr. Anderson,Night
+CASE_227,Doctor Review,2023-10-02 23:45:00,Dr. Taylor,Night
+CASE_227,Discharge,2023-10-03 00:16:00,Nurse Davis,Night
+CASE_228,Registration,2023-10-02 20:31:00,Nurse Joy,Evening
+CASE_228,Triage,2023-10-02 20:48:00,Nurse Ratched,Evening
+CASE_228,X-Ray,2023-10-02 21:15:00,Tech Miller,Evening
+CASE_228,Triage,2023-10-02 21:49:00,Nurse Chapel,Evening
+CASE_228,Doctor Consultation,2023-10-02 22:31:00,Dr. Anderson,Night
+CASE_228,Doctor Review,2023-10-02 23:02:00,Dr. Kim,Night
+CASE_228,Discharge,2023-10-02 23:24:00,Nurse Joy,Night
+CASE_229,Registration,2023-10-02 20:45:00,Nurse Lee,Evening
+CASE_229,Triage,2023-10-02 21:09:00,Nurse Ratched,Evening
+CASE_229,X-Ray,2023-10-02 21:36:00,Tech Miller,Evening
+CASE_229,Triage,2023-10-02 22:07:00,Nurse Wilson,Night
+CASE_229,Doctor Consultation,2023-10-02 22:50:00,Dr. Patel,Night
+CASE_229,Doctor Review,2023-10-02 23:28:00,Dr. Kim,Night
+CASE_229,Discharge,2023-10-02 23:51:00,Nurse Chapel,Night
+CASE_230,Registration,2023-10-02 20:59:00,Nurse Jackie,Evening
+CASE_230,Triage,2023-10-02 21:16:00,Nurse Chapel,Evening
+CASE_230,X-Ray,2023-10-02 21:57:00,Tech Miller,Evening
+CASE_230,Triage,2023-10-02 22:30:00,Nurse Jackie,Night
+CASE_230,Blood Test,2023-10-02 23:00:00,Tech Rodriguez,Night
+CASE_230,Doctor Consultation,2023-10-02 23:32:00,Dr. Smith,Night
+CASE_230,Doctor Review,2023-10-02 23:59:00,Dr. Garcia,Night
+CASE_230,Discharge,2023-10-03 00:18:00,Nurse Chapel,Night
+CASE_231,Registration,2023-10-02 21:11:00,Nurse Jackie,Evening
+CASE_231,Triage,2023-10-02 21:40:00,Nurse Lee,Evening
+CASE_231,Blood Test,2023-10-02 21:57:00,Tech Garcia,Evening
+CASE_231,Blood Test,2023-10-02 22:25:00,Tech Garcia,Night
+CASE_231,Doctor Consultation,2023-10-02 23:08:00,Dr. Patel,Night
+CASE_231,Doctor Review,2023-10-02 23:52:00,Dr. Brown,Night
+CASE_231,Discharge,2023-10-03 00:18:00,Nurse Lee,Night
+CASE_232,Registration,2023-10-02 21:22:00,Nurse Wilson,Evening
+CASE_232,Triage,2023-10-02 21:41:00,Nurse Jackie,Evening
+CASE_232,Doctor Consultation,2023-10-02 22:16:00,Dr. Brown,Night
+CASE_232,X-Ray,2023-10-02 23:02:00,Tech Rodriguez,Night
+CASE_232,Doctor Review,2023-10-02 23:42:00,Dr. Kim,Night
+CASE_232,Discharge,2023-10-03 00:05:00,Nurse Davis,Night
+CASE_233,Registration,2023-10-02 21:29:00,Nurse Lee,Evening
+CASE_233,Triage,2023-10-02 21:44:00,Nurse Wilson,Evening
+CASE_233,Blood Test,2023-10-02 22:18:00,Tech Rodriguez,Night
+CASE_233,Blood Test,2023-10-02 22:47:00,Tech Rodriguez,Night
+CASE_233,Doctor Consultation,2023-10-02 23:25:00,Dr. Garcia,Night
+CASE_233,Doctor Review,2023-10-02 23:58:00,Dr. Patel,Night
+CASE_233,Discharge,2023-10-03 00:29:00,Nurse Joy,Night
+CASE_234,Registration,2023-10-02 21:43:00,Nurse Chapel,Evening
+CASE_234,Triage,2023-10-02 22:04:00,Nurse Chapel,Night
+CASE_234,X-Ray,2023-10-02 22:42:00,Tech Rodriguez,Night
+CASE_234,Triage,2023-10-02 23:11:00,Nurse Joy,Night
+CASE_234,Doctor Consultation,2023-10-02 23:49:00,Dr. Kim,Night
+CASE_234,Doctor Review,2023-10-03 00:34:00,Dr. Patel,Night
+CASE_234,Discharge,2023-10-03 01:05:00,Nurse Ratched,Night
+CASE_235,Registration,2023-10-02 21:52:00,Nurse Lee,Evening
+CASE_235,Triage,2023-10-02 22:13:00,Nurse Jackie,Night
+CASE_235,Blood Test,2023-10-02 22:41:00,Tech Garcia,Night
+CASE_235,Blood Test,2023-10-02 23:14:00,Tech Miller,Night
+CASE_235,Doctor Consultation,2023-10-02 23:46:00,Dr. Garcia,Night
+CASE_235,Doctor Review,2023-10-03 00:40:00,Dr. Brown,Night
+CASE_235,Discharge,2023-10-03 01:05:00,Nurse Jackie,Night
+CASE_236,Registration,2023-10-02 22:05:00,Nurse Jackie,Night
+CASE_236,Triage,2023-10-02 22:22:00,Nurse Wilson,Night
+CASE_236,X-Ray,2023-10-02 22:45:00,Tech Garcia,Night
+CASE_236,Triage,2023-10-02 23:09:00,Nurse Wilson,Night
+CASE_236,Blood Test,2023-10-02 23:45:00,Tech Miller,Night
+CASE_236,Doctor Consultation,2023-10-03 00:22:00,Dr. Garcia,Night
+CASE_236,Doctor Review,2023-10-03 01:00:00,Dr. Chen,Night
+CASE_236,Discharge,2023-10-03 01:25:00,Nurse Joy,Night
+CASE_237,Registration,2023-10-02 22:10:00,Nurse Chapel,Night
+CASE_237,Triage,2023-10-02 22:24:00,Nurse Joy,Night
+CASE_237,X-Ray,2023-10-02 22:47:00,Tech Garcia,Night
+CASE_237,Triage,2023-10-02 23:27:00,Nurse Davis,Night
+CASE_237,Doctor Consultation,2023-10-03 00:07:00,Dr. Taylor,Night
+CASE_237,Doctor Review,2023-10-03 00:46:00,Dr. Kim,Night
+CASE_237,Discharge,2023-10-03 01:17:00,Nurse Ratched,Night
+CASE_238,Registration,2023-10-02 22:15:00,Nurse Lee,Night
+CASE_238,Triage,2023-10-02 22:28:00,Nurse Davis,Night
+CASE_238,Doctor Consultation,2023-10-02 22:56:00,Dr. Smith,Night
+CASE_238,X-Ray,2023-10-02 23:34:00,Tech Garcia,Night
+CASE_238,Doctor Review,2023-10-03 00:00:00,Dr. Anderson,Night
+CASE_238,Discharge,2023-10-03 00:24:00,Nurse Ratched,Night
+CASE_239,Registration,2023-10-02 22:23:00,Nurse Chapel,Night
+CASE_239,Triage,2023-10-02 22:41:00,Nurse Lee,Night
+CASE_239,X-Ray,2023-10-02 22:58:00,Tech Miller,Night
+CASE_239,Triage,2023-10-02 23:33:00,Nurse Lee,Night
+CASE_239,Doctor Consultation,2023-10-03 00:18:00,Dr. Taylor,Night
+CASE_239,Doctor Review,2023-10-03 00:53:00,Dr. Garcia,Night
+CASE_239,Discharge,2023-10-03 01:25:00,Nurse Davis,Night
+CASE_240,Registration,2023-10-02 22:35:00,Nurse Davis,Night
+CASE_240,Triage,2023-10-02 22:58:00,Nurse Davis,Night
+CASE_240,X-Ray,2023-10-02 23:26:00,Tech Garcia,Night
+CASE_240,Triage,2023-10-02 23:54:00,Nurse Wilson,Night
+CASE_240,Blood Test,2023-10-03 00:27:00,Tech Rodriguez,Night
+CASE_240,Doctor Consultation,2023-10-03 01:00:00,Dr. Wilson,Night
+CASE_240,Doctor Review,2023-10-03 01:37:00,Dr. Patel,Night
+CASE_240,Discharge,2023-10-03 02:08:00,Nurse Ratched,Night
+CASE_241,Registration,2023-10-02 22:45:00,Nurse Joy,Night
+CASE_241,Triage,2023-10-02 22:58:00,Nurse Wilson,Night
+CASE_241,X-Ray,2023-10-02 23:18:00,Tech Miller,Night
+CASE_241,Triage,2023-10-02 23:46:00,Nurse Wilson,Night
+CASE_241,Doctor Consultation,2023-10-03 00:20:00,Dr. Wilson,Night
+CASE_241,Doctor Review,2023-10-03 01:14:00,Dr. Garcia,Night
+CASE_241,Discharge,2023-10-03 01:44:00,Nurse Joy,Night
+CASE_242,Registration,2023-10-02 23:00:00,Nurse Joy,Night
+CASE_242,Triage,2023-10-02 23:27:00,Nurse Chapel,Night
+CASE_242,X-Ray,2023-10-03 00:03:00,Tech Miller,Night
+CASE_242,Triage,2023-10-03 00:35:00,Nurse Wilson,Night
+CASE_242,Doctor Consultation,2023-10-03 01:19:00,Dr. Kim,Night
+CASE_242,Doctor Review,2023-10-03 01:56:00,Dr. Garcia,Night
+CASE_242,Discharge,2023-10-03 02:18:00,Nurse Wilson,Night
+CASE_243,Registration,2023-10-02 23:09:00,Nurse Chapel,Night
+CASE_243,Triage,2023-10-02 23:32:00,Nurse Wilson,Night
+CASE_243,X-Ray,2023-10-02 23:53:00,Tech Rodriguez,Night
+CASE_243,Triage,2023-10-03 00:29:00,Nurse Lee,Night
+CASE_243,Blood Test,2023-10-03 01:08:00,Tech Garcia,Night
+CASE_243,Doctor Consultation,2023-10-03 01:32:00,Dr. Patel,Night
+CASE_243,Doctor Review,2023-10-03 02:02:00,Dr. Patel,Night
+CASE_243,Discharge,2023-10-03 02:31:00,Nurse Chapel,Night
+CASE_244,Registration,2023-10-02 23:24:00,Nurse Chapel,Night
+CASE_244,Triage,2023-10-02 23:51:00,Nurse Jackie,Night
+CASE_244,Blood Test,2023-10-03 00:17:00,Tech Rodriguez,Night
+CASE_244,Blood Test,2023-10-03 00:48:00,Tech Miller,Night
+CASE_244,Doctor Consultation,2023-10-03 01:31:00,Dr. Kim,Night
+CASE_244,Doctor Review,2023-10-03 02:27:00,Dr. Jones,Night
+CASE_244,Discharge,2023-10-03 02:52:00,Nurse Ratched,Night
+CASE_245,Registration,2023-10-02 23:31:00,Nurse Jackie,Night
+CASE_245,Triage,2023-10-02 23:55:00,Nurse Chapel,Night
+CASE_245,X-Ray,2023-10-03 00:14:00,Tech Garcia,Night
+CASE_245,Triage,2023-10-03 00:55:00,Nurse Chapel,Night
+CASE_245,Blood Test,2023-10-03 01:41:00,Tech Miller,Night
+CASE_245,Doctor Consultation,2023-10-03 02:14:00,Dr. Chen,Night
+CASE_245,Doctor Review,2023-10-03 03:03:00,Dr. Jones,Night
+CASE_245,Discharge,2023-10-03 03:25:00,Nurse Ratched,Night
+CASE_246,Registration,2023-10-02 23:37:00,Nurse Wilson,Night
+CASE_246,Triage,2023-10-03 00:04:00,Nurse Jackie,Night
+CASE_246,X-Ray,2023-10-03 00:36:00,Tech Garcia,Night
+CASE_246,Triage,2023-10-03 01:10:00,Nurse Chapel,Night
+CASE_246,Blood Test,2023-10-03 01:39:00,Tech Miller,Night
+CASE_246,Doctor Consultation,2023-10-03 02:07:00,Dr. Garcia,Night
+CASE_246,Doctor Review,2023-10-03 02:59:00,Dr. Jones,Night
+CASE_246,Discharge,2023-10-03 03:30:00,Nurse Lee,Night
+CASE_247,Registration,2023-10-02 23:43:00,Nurse Joy,Night
+CASE_247,Triage,2023-10-02 23:56:00,Nurse Joy,Night
+CASE_247,X-Ray,2023-10-03 00:30:00,Tech Garcia,Night
+CASE_247,Triage,2023-10-03 01:00:00,Nurse Ratched,Night
+CASE_247,Blood Test,2023-10-03 01:41:00,Tech Rodriguez,Night
+CASE_247,Doctor Consultation,2023-10-03 02:14:00,Dr. Brown,Night
+CASE_247,Doctor Review,2023-10-03 02:55:00,Dr. Taylor,Night
+CASE_247,Discharge,2023-10-03 03:19:00,Nurse Wilson,Night
+CASE_248,Registration,2023-10-02 23:50:00,Nurse Davis,Night
+CASE_248,Triage,2023-10-03 00:10:00,Nurse Davis,Night
+CASE_248,Doctor Consultation,2023-10-03 00:39:00,Dr. Wilson,Night
+CASE_248,X-Ray,2023-10-03 01:11:00,Tech Miller,Night
+CASE_248,Doctor Review,2023-10-03 01:42:00,Dr. Wilson,Night
+CASE_248,Discharge,2023-10-03 02:07:00,Nurse Jackie,Night
+CASE_249,Registration,2023-10-03 00:03:00,Nurse Chapel,Night
+CASE_249,Triage,2023-10-03 00:17:00,Nurse Davis,Night
+CASE_249,X-Ray,2023-10-03 00:55:00,Tech Rodriguez,Night
+CASE_249,Triage,2023-10-03 01:29:00,Nurse Wilson,Night
+CASE_249,Blood Test,2023-10-03 02:14:00,Tech Rodriguez,Night
+CASE_249,Doctor Consultation,2023-10-03 02:53:00,Dr. Wilson,Night
+CASE_249,Doctor Review,2023-10-03 03:33:00,Dr. Jones,Night
+CASE_249,Discharge,2023-10-03 03:58:00,Nurse Chapel,Night
+CASE_250,Registration,2023-10-03 00:11:00,Nurse Davis,Night
+CASE_250,Triage,2023-10-03 00:29:00,Nurse Davis,Night
+CASE_250,X-Ray,2023-10-03 00:49:00,Tech Rodriguez,Night
+CASE_250,Triage,2023-10-03 01:19:00,Nurse Ratched,Night
+CASE_250,Blood Test,2023-10-03 01:44:00,Tech Rodriguez,Night
+CASE_250,Doctor Consultation,2023-10-03 02:15:00,Dr. Patel,Night
+CASE_250,Doctor Review,2023-10-03 02:45:00,Dr. Anderson,Night
+CASE_250,Discharge,2023-10-03 03:11:00,Nurse Wilson,Night
+CASE_251,Registration,2023-10-03 00:26:00,Nurse Jackie,Night
+CASE_251,Triage,2023-10-03 00:42:00,Nurse Davis,Night
+CASE_251,X-Ray,2023-10-03 01:04:00,Tech Rodriguez,Night
+CASE_251,Triage,2023-10-03 01:27:00,Nurse Lee,Night
+CASE_251,Blood Test,2023-10-03 02:05:00,Tech Garcia,Night
+CASE_251,Doctor Consultation,2023-10-03 02:27:00,Dr. Brown,Night
+CASE_251,Doctor Review,2023-10-03 03:06:00,Dr. Chen,Night
+CASE_251,Discharge,2023-10-03 03:28:00,Nurse Ratched,Night
+CASE_252,Registration,2023-10-03 00:35:00,Nurse Joy,Night
+CASE_252,Triage,2023-10-03 00:56:00,Nurse Wilson,Night
+CASE_252,Doctor Consultation,2023-10-03 01:36:00,Dr. Jones,Night
+CASE_252,X-Ray,2023-10-03 02:27:00,Tech Garcia,Night
+CASE_252,Doctor Review,2023-10-03 03:00:00,Dr. Taylor,Night
+CASE_252,Discharge,2023-10-03 03:23:00,Nurse Chapel,Night
+CASE_253,Registration,2023-10-03 00:46:00,Nurse Wilson,Night
+CASE_253,Triage,2023-10-03 01:03:00,Nurse Lee,Night
+CASE_253,Blood Test,2023-10-03 01:27:00,Tech Miller,Night
+CASE_253,Blood Test,2023-10-03 02:10:00,Tech Miller,Night
+CASE_253,Doctor Consultation,2023-10-03 02:59:00,Dr. Smith,Night
+CASE_253,Doctor Review,2023-10-03 03:50:00,Dr. Garcia,Night
+CASE_253,Discharge,2023-10-03 04:19:00,Nurse Davis,Night
+CASE_254,Registration,2023-10-03 00:53:00,Nurse Joy,Night
+CASE_254,Triage,2023-10-03 01:10:00,Nurse Davis,Night
+CASE_254,X-Ray,2023-10-03 01:37:00,Tech Garcia,Night
+CASE_254,Triage,2023-10-03 02:16:00,Nurse Davis,Night
+CASE_254,Doctor Consultation,2023-10-03 03:03:00,Dr. Wilson,Night
+CASE_254,Doctor Review,2023-10-03 03:57:00,Dr. Patel,Night
+CASE_254,Discharge,2023-10-03 04:24:00,Nurse Davis,Night
+CASE_255,Registration,2023-10-03 01:08:00,Nurse Lee,Night
+CASE_255,Triage,2023-10-03 01:25:00,Nurse Ratched,Night
+CASE_255,Blood Test,2023-10-03 01:52:00,Tech Garcia,Night
+CASE_255,Blood Test,2023-10-03 02:27:00,Tech Miller,Night
+CASE_255,Doctor Consultation,2023-10-03 03:07:00,Dr. Wilson,Night
+CASE_255,Doctor Review,2023-10-03 03:30:00,Dr. Wilson,Night
+CASE_255,Discharge,2023-10-03 03:53:00,Nurse Lee,Night
+CASE_256,Registration,2023-10-03 01:15:00,Nurse Lee,Night
+CASE_256,Triage,2023-10-03 01:30:00,Nurse Davis,Night
+CASE_256,Blood Test,2023-10-03 01:53:00,Tech Rodriguez,Night
+CASE_256,Blood Test,2023-10-03 02:30:00,Tech Garcia,Night
+CASE_256,Doctor Consultation,2023-10-03 03:15:00,Dr. Brown,Night
+CASE_256,Doctor Review,2023-10-03 03:42:00,Dr. Smith,Night
+CASE_256,Discharge,2023-10-03 04:11:00,Nurse Lee,Night
+CASE_257,Registration,2023-10-03 01:28:00,Nurse Wilson,Night
+CASE_257,Triage,2023-10-03 01:47:00,Nurse Ratched,Night
+CASE_257,Doctor Consultation,2023-10-03 02:23:00,Dr. Brown,Night
+CASE_257,X-Ray,2023-10-03 02:57:00,Tech Miller,Night
+CASE_257,Doctor Review,2023-10-03 03:40:00,Dr. Anderson,Night
+CASE_257,Discharge,2023-10-03 04:05:00,Nurse Davis,Night
+CASE_258,Registration,2023-10-03 01:38:00,Nurse Chapel,Night
+CASE_258,Triage,2023-10-03 01:58:00,Nurse Chapel,Night
+CASE_258,Doctor Consultation,2023-10-03 02:35:00,Dr. Jones,Night
+CASE_258,X-Ray,2023-10-03 03:09:00,Tech Rodriguez,Night
+CASE_258,Doctor Review,2023-10-03 03:39:00,Dr. Brown,Night
+CASE_258,Discharge,2023-10-03 04:08:00,Nurse Wilson,Night
+CASE_259,Registration,2023-10-03 01:44:00,Nurse Lee,Night
+CASE_259,Triage,2023-10-03 02:14:00,Nurse Chapel,Night
+CASE_259,X-Ray,2023-10-03 02:46:00,Tech Garcia,Night
+CASE_259,Triage,2023-10-03 03:23:00,Nurse Davis,Night
+CASE_259,Doctor Consultation,2023-10-03 04:06:00,Dr. Kim,Night
+CASE_259,Doctor Review,2023-10-03 04:56:00,Dr. Jones,Night
+CASE_259,Discharge,2023-10-03 05:27:00,Nurse Ratched,Night
+CASE_260,Registration,2023-10-03 01:54:00,Nurse Chapel,Night
+CASE_260,Triage,2023-10-03 02:19:00,Nurse Lee,Night
+CASE_260,X-Ray,2023-10-03 02:49:00,Tech Miller,Night
+CASE_260,Triage,2023-10-03 03:14:00,Nurse Davis,Night
+CASE_260,Doctor Consultation,2023-10-03 03:54:00,Dr. Patel,Night
+CASE_260,Doctor Review,2023-10-03 04:20:00,Dr. Wilson,Night
+CASE_260,Discharge,2023-10-03 04:43:00,Nurse Joy,Night
+CASE_261,Registration,2023-10-03 02:04:00,Nurse Wilson,Night
+CASE_261,Triage,2023-10-03 02:30:00,Nurse Lee,Night
+CASE_261,X-Ray,2023-10-03 03:03:00,Tech Miller,Night
+CASE_261,Triage,2023-10-03 03:32:00,Nurse Jackie,Night
+CASE_261,Blood Test,2023-10-03 04:01:00,Tech Garcia,Night
+CASE_261,Doctor Consultation,2023-10-03 04:38:00,Dr. Jones,Night
+CASE_261,Doctor Review,2023-10-03 05:28:00,Dr. Taylor,Night
+CASE_261,Discharge,2023-10-03 05:53:00,Nurse Wilson,Night
+CASE_262,Registration,2023-10-03 02:12:00,Nurse Wilson,Night
+CASE_262,Triage,2023-10-03 02:34:00,Nurse Ratched,Night
+CASE_262,X-Ray,2023-10-03 03:13:00,Tech Rodriguez,Night
+CASE_262,Triage,2023-10-03 03:46:00,Nurse Davis,Night
+CASE_262,Blood Test,2023-10-03 04:22:00,Tech Miller,Night
+CASE_262,Doctor Consultation,2023-10-03 04:43:00,Dr. Garcia,Night
+CASE_262,Doctor Review,2023-10-03 05:11:00,Dr. Taylor,Night
+CASE_262,Discharge,2023-10-03 05:38:00,Nurse Davis,Night
+CASE_263,Registration,2023-10-03 02:22:00,Nurse Joy,Night
+CASE_263,Triage,2023-10-03 02:46:00,Nurse Wilson,Night
+CASE_263,Doctor Consultation,2023-10-03 03:15:00,Dr. Jones,Night
+CASE_263,X-Ray,2023-10-03 04:03:00,Tech Miller,Night
+CASE_263,Doctor Review,2023-10-03 04:37:00,Dr. Jones,Night
+CASE_263,Discharge,2023-10-03 04:53:00,Nurse Davis,Night
+CASE_264,Registration,2023-10-03 02:31:00,Nurse Wilson,Night
+CASE_264,Triage,2023-10-03 02:56:00,Nurse Davis,Night
+CASE_264,X-Ray,2023-10-03 03:27:00,Tech Rodriguez,Night
+CASE_264,Triage,2023-10-03 04:06:00,Nurse Joy,Night
+CASE_264,Blood Test,2023-10-03 04:39:00,Tech Rodriguez,Night
+CASE_264,Doctor Consultation,2023-10-03 05:10:00,Dr. Smith,Night
+CASE_264,Doctor Review,2023-10-03 06:02:00,Dr. Chen,Morning
+CASE_264,Discharge,2023-10-03 06:17:00,Nurse Ratched,Morning
+CASE_265,Registration,2023-10-03 02:45:00,Nurse Lee,Night
+CASE_265,Triage,2023-10-03 02:57:00,Nurse Jackie,Night
+CASE_265,X-Ray,2023-10-03 03:20:00,Tech Rodriguez,Night
+CASE_265,Triage,2023-10-03 03:55:00,Nurse Chapel,Night
+CASE_265,Blood Test,2023-10-03 04:33:00,Tech Miller,Night
+CASE_265,Doctor Consultation,2023-10-03 04:56:00,Dr. Anderson,Night
+CASE_265,Doctor Review,2023-10-03 05:42:00,Dr. Jones,Night
+CASE_265,Discharge,2023-10-03 06:10:00,Nurse Chapel,Morning
+CASE_266,Registration,2023-10-03 02:58:00,Nurse Jackie,Night
+CASE_266,Triage,2023-10-03 03:20:00,Nurse Joy,Night
+CASE_266,Doctor Consultation,2023-10-03 03:53:00,Dr. Taylor,Night
+CASE_266,X-Ray,2023-10-03 04:28:00,Tech Miller,Night
+CASE_266,Doctor Review,2023-10-03 04:55:00,Dr. Jones,Night
+CASE_266,Discharge,2023-10-03 05:27:00,Nurse Lee,Night
+CASE_267,Registration,2023-10-03 03:08:00,Nurse Wilson,Night
+CASE_267,Triage,2023-10-03 03:29:00,Nurse Lee,Night
+CASE_267,X-Ray,2023-10-03 03:49:00,Tech Rodriguez,Night
+CASE_267,Triage,2023-10-03 04:30:00,Nurse Jackie,Night
+CASE_267,Blood Test,2023-10-03 05:04:00,Tech Rodriguez,Night
+CASE_267,Doctor Consultation,2023-10-03 05:32:00,Dr. Anderson,Night
+CASE_267,Doctor Review,2023-10-03 06:05:00,Dr. Wilson,Morning
+CASE_267,Discharge,2023-10-03 06:28:00,Nurse Ratched,Morning
+CASE_268,Registration,2023-10-03 03:22:00,Nurse Davis,Night
+CASE_268,Triage,2023-10-03 03:41:00,Nurse Wilson,Night
+CASE_268,X-Ray,2023-10-03 03:58:00,Tech Garcia,Night
+CASE_268,Triage,2023-10-03 04:32:00,Nurse Davis,Night
+CASE_268,Doctor Consultation,2023-10-03 05:24:00,Dr. Brown,Night
+CASE_268,Doctor Review,2023-10-03 05:53:00,Dr. Chen,Night
+CASE_268,Discharge,2023-10-03 06:18:00,Nurse Ratched,Morning
+CASE_269,Registration,2023-10-03 03:37:00,Nurse Chapel,Night
+CASE_269,Triage,2023-10-03 03:54:00,Nurse Jackie,Night
+CASE_269,Blood Test,2023-10-03 04:17:00,Tech Rodriguez,Night
+CASE_269,Blood Test,2023-10-03 04:40:00,Tech Rodriguez,Night
+CASE_269,Doctor Consultation,2023-10-03 05:11:00,Dr. Kim,Night
+CASE_269,Doctor Review,2023-10-03 05:33:00,Dr. Jones,Night
+CASE_269,Discharge,2023-10-03 06:00:00,Nurse Chapel,Morning
+CASE_270,Registration,2023-10-03 03:42:00,Nurse Chapel,Night
+CASE_270,Triage,2023-10-03 04:04:00,Nurse Joy,Night
+CASE_270,X-Ray,2023-10-03 04:30:00,Tech Rodriguez,Night
+CASE_270,Triage,2023-10-03 04:55:00,Nurse Lee,Night
+CASE_270,Doctor Consultation,2023-10-03 05:24:00,Dr. Taylor,Night
+CASE_270,Doctor Review,2023-10-03 05:49:00,Dr. Garcia,Night
+CASE_270,Discharge,2023-10-03 06:23:00,Nurse Lee,Morning
+CASE_271,Registration,2023-10-03 03:51:00,Nurse Ratched,Night
+CASE_271,Triage,2023-10-03 04:15:00,Nurse Joy,Night
+CASE_271,X-Ray,2023-10-03 04:38:00,Tech Garcia,Night
+CASE_271,Triage,2023-10-03 05:19:00,Nurse Jackie,Night
+CASE_271,Blood Test,2023-10-03 06:01:00,Tech Rodriguez,Morning
+CASE_271,Doctor Consultation,2023-10-03 06:39:00,Dr. Brown,Morning
+CASE_271,Doctor Review,2023-10-03 07:29:00,Dr. Wilson,Morning
+CASE_271,Discharge,2023-10-03 07:59:00,Nurse Wilson,Morning
+CASE_272,Registration,2023-10-03 03:56:00,Nurse Joy,Night
+CASE_272,Triage,2023-10-03 04:12:00,Nurse Joy,Night
+CASE_272,Blood Test,2023-10-03 04:39:00,Tech Garcia,Night
+CASE_272,Blood Test,2023-10-03 05:13:00,Tech Miller,Night
+CASE_272,Doctor Consultation,2023-10-03 05:56:00,Dr. Patel,Night
+CASE_272,Doctor Review,2023-10-03 06:52:00,Dr. Wilson,Morning
+CASE_272,Discharge,2023-10-03 07:22:00,Nurse Joy,Morning
+CASE_273,Registration,2023-10-03 04:03:00,Nurse Davis,Night
+CASE_273,Triage,2023-10-03 04:23:00,Nurse Lee,Night
+CASE_273,X-Ray,2023-10-03 04:41:00,Tech Rodriguez,Night
+CASE_273,Triage,2023-10-03 05:09:00,Nurse Chapel,Night
+CASE_273,Doctor Consultation,2023-10-03 05:57:00,Dr. Anderson,Night
+CASE_273,Doctor Review,2023-10-03 06:55:00,Dr. Kim,Morning
+CASE_273,Discharge,2023-10-03 07:19:00,Nurse Joy,Morning
+CASE_274,Registration,2023-10-03 04:16:00,Nurse Wilson,Night
+CASE_274,Triage,2023-10-03 04:37:00,Nurse Ratched,Night
+CASE_274,Doctor Consultation,2023-10-03 05:13:00,Dr. Jones,Night
+CASE_274,X-Ray,2023-10-03 05:49:00,Tech Garcia,Night
+CASE_274,Doctor Review,2023-10-03 06:29:00,Dr. Garcia,Morning
+CASE_274,Discharge,2023-10-03 07:01:00,Nurse Lee,Morning
+CASE_275,Registration,2023-10-03 04:30:00,Nurse Lee,Night
+CASE_275,Triage,2023-10-03 04:51:00,Nurse Davis,Night
+CASE_275,X-Ray,2023-10-03 05:17:00,Tech Rodriguez,Night
+CASE_275,Triage,2023-10-03 05:47:00,Nurse Chapel,Night
+CASE_275,Blood Test,2023-10-03 06:23:00,Tech Miller,Morning
+CASE_275,Doctor Consultation,2023-10-03 06:53:00,Dr. Taylor,Morning
+CASE_275,Doctor Review,2023-10-03 07:41:00,Dr. Wilson,Morning
+CASE_275,Discharge,2023-10-03 08:09:00,Nurse Joy,Morning
+CASE_276,Registration,2023-10-03 04:45:00,Nurse Lee,Night
+CASE_276,Triage,2023-10-03 05:00:00,Nurse Ratched,Night
+CASE_276,X-Ray,2023-10-03 05:26:00,Tech Rodriguez,Night
+CASE_276,Triage,2023-10-03 05:56:00,Nurse Lee,Night
+CASE_276,Blood Test,2023-10-03 06:32:00,Tech Rodriguez,Morning
+CASE_276,Doctor Consultation,2023-10-03 07:00:00,Dr. Smith,Morning
+CASE_276,Doctor Review,2023-10-03 07:30:00,Dr. Jones,Morning
+CASE_276,Discharge,2023-10-03 07:57:00,Nurse Lee,Morning
+CASE_277,Registration,2023-10-03 04:58:00,Nurse Joy,Night
+CASE_277,Triage,2023-10-03 05:21:00,Nurse Davis,Night
+CASE_277,X-Ray,2023-10-03 05:44:00,Tech Miller,Night
+CASE_277,Triage,2023-10-03 06:19:00,Nurse Chapel,Morning
+CASE_277,Blood Test,2023-10-03 07:09:00,Tech Garcia,Morning
+CASE_277,Doctor Consultation,2023-10-03 07:30:00,Dr. Chen,Morning
+CASE_277,Doctor Review,2023-10-03 08:24:00,Dr. Garcia,Morning
+CASE_277,Discharge,2023-10-03 08:52:00,Nurse Wilson,Morning
+CASE_278,Registration,2023-10-03 05:07:00,Nurse Joy,Night
+CASE_278,Triage,2023-10-03 05:27:00,Nurse Joy,Night
+CASE_278,X-Ray,2023-10-03 06:09:00,Tech Garcia,Morning
+CASE_278,Triage,2023-10-03 06:46:00,Nurse Joy,Morning
+CASE_278,Doctor Consultation,2023-10-03 07:21:00,Dr. Smith,Morning
+CASE_278,Doctor Review,2023-10-03 07:59:00,Dr. Patel,Morning
+CASE_278,Discharge,2023-10-03 08:26:00,Nurse Wilson,Morning
+CASE_279,Registration,2023-10-03 05:19:00,Nurse Lee,Night
+CASE_279,Triage,2023-10-03 05:39:00,Nurse Chapel,Night
+CASE_279,X-Ray,2023-10-03 06:07:00,Tech Miller,Morning
+CASE_279,Triage,2023-10-03 06:28:00,Nurse Ratched,Morning
+CASE_279,Blood Test,2023-10-03 07:12:00,Tech Miller,Morning
+CASE_279,Doctor Consultation,2023-10-03 07:50:00,Dr. Smith,Morning
+CASE_279,Doctor Review,2023-10-03 08:24:00,Dr. Patel,Morning
+CASE_279,Discharge,2023-10-03 08:47:00,Nurse Wilson,Morning
+CASE_280,Registration,2023-10-03 05:25:00,Nurse Jackie,Night
+CASE_280,Triage,2023-10-03 05:50:00,Nurse Ratched,Night
+CASE_280,Doctor Consultation,2023-10-03 06:27:00,Dr. Wilson,Morning
+CASE_280,X-Ray,2023-10-03 07:10:00,Tech Miller,Morning
+CASE_280,Doctor Review,2023-10-03 07:45:00,Dr. Brown,Morning
+CASE_280,Discharge,2023-10-03 08:08:00,Nurse Lee,Morning
+CASE_281,Registration,2023-10-03 05:35:00,Nurse Jackie,Night
+CASE_281,Triage,2023-10-03 05:52:00,Nurse Chapel,Night
+CASE_281,X-Ray,2023-10-03 06:11:00,Tech Miller,Morning
+CASE_281,Triage,2023-10-03 06:50:00,Nurse Wilson,Morning
+CASE_281,Blood Test,2023-10-03 07:22:00,Tech Garcia,Morning
+CASE_281,Doctor Consultation,2023-10-03 07:50:00,Dr. Anderson,Morning
+CASE_281,Doctor Review,2023-10-03 08:32:00,Dr. Jones,Morning
+CASE_281,Discharge,2023-10-03 08:58:00,Nurse Lee,Morning
+CASE_282,Registration,2023-10-03 05:40:00,Nurse Jackie,Night
+CASE_282,Triage,2023-10-03 05:59:00,Nurse Ratched,Night
+CASE_282,X-Ray,2023-10-03 06:17:00,Tech Garcia,Morning
+CASE_282,Triage,2023-10-03 06:44:00,Nurse Chapel,Morning
+CASE_282,Blood Test,2023-10-03 07:18:00,Tech Garcia,Morning
+CASE_282,Doctor Consultation,2023-10-03 07:47:00,Dr. Brown,Morning
+CASE_282,Doctor Review,2023-10-03 08:16:00,Dr. Garcia,Morning
+CASE_282,Discharge,2023-10-03 08:48:00,Nurse Wilson,Morning
+CASE_283,Registration,2023-10-03 05:55:00,Nurse Davis,Night
+CASE_283,Triage,2023-10-03 06:17:00,Nurse Jackie,Morning
+CASE_283,Doctor Consultation,2023-10-03 06:40:00,Dr. Jones,Morning
+CASE_283,X-Ray,2023-10-03 07:24:00,Tech Miller,Morning
+CASE_283,Doctor Review,2023-10-03 07:55:00,Dr. Kim,Morning
+CASE_283,Discharge,2023-10-03 08:20:00,Nurse Wilson,Morning
+CASE_284,Registration,2023-10-03 06:03:00,Nurse Wilson,Morning
+CASE_284,Triage,2023-10-03 06:30:00,Nurse Jackie,Morning
+CASE_284,X-Ray,2023-10-03 07:08:00,Tech Garcia,Morning
+CASE_284,Triage,2023-10-03 07:48:00,Nurse Wilson,Morning
+CASE_284,Blood Test,2023-10-03 08:25:00,Tech Garcia,Morning
+CASE_284,Doctor Consultation,2023-10-03 09:07:00,Dr. Wilson,Morning
+CASE_284,Doctor Review,2023-10-03 09:34:00,Dr. Taylor,Morning
+CASE_284,Discharge,2023-10-03 09:51:00,Nurse Joy,Morning
+CASE_285,Registration,2023-10-03 06:12:00,Nurse Jackie,Morning
+CASE_285,Triage,2023-10-03 06:28:00,Nurse Lee,Morning
+CASE_285,X-Ray,2023-10-03 07:00:00,Tech Rodriguez,Morning
+CASE_285,Triage,2023-10-03 07:34:00,Nurse Lee,Morning
+CASE_285,Blood Test,2023-10-03 08:21:00,Tech Rodriguez,Morning
+CASE_285,Doctor Consultation,2023-10-03 08:55:00,Dr. Smith,Morning
+CASE_285,Doctor Review,2023-10-03 09:49:00,Dr. Wilson,Morning
+CASE_285,Discharge,2023-10-03 10:14:00,Nurse Jackie,Morning
+CASE_286,Registration,2023-10-03 06:23:00,Nurse Jackie,Morning
+CASE_286,Triage,2023-10-03 06:45:00,Nurse Wilson,Morning
+CASE_286,X-Ray,2023-10-03 07:04:00,Tech Garcia,Morning
+CASE_286,Triage,2023-10-03 07:31:00,Nurse Ratched,Morning
+CASE_286,Blood Test,2023-10-03 08:18:00,Tech Miller,Morning
+CASE_286,Doctor Consultation,2023-10-03 08:54:00,Dr. Kim,Morning
+CASE_286,Doctor Review,2023-10-03 09:32:00,Dr. Wilson,Morning
+CASE_286,Discharge,2023-10-03 09:59:00,Nurse Davis,Morning
+CASE_287,Registration,2023-10-03 06:38:00,Nurse Lee,Morning
+CASE_287,Triage,2023-10-03 06:52:00,Nurse Lee,Morning
+CASE_287,Doctor Consultation,2023-10-03 07:15:00,Dr. Garcia,Morning
+CASE_287,X-Ray,2023-10-03 07:40:00,Tech Rodriguez,Morning
+CASE_287,Doctor Review,2023-10-03 08:16:00,Dr. Wilson,Morning
+CASE_287,Discharge,2023-10-03 08:37:00,Nurse Jackie,Morning
+CASE_288,Registration,2023-10-03 06:43:00,Nurse Wilson,Morning
+CASE_288,Triage,2023-10-03 07:04:00,Nurse Jackie,Morning
+CASE_288,Blood Test,2023-10-03 07:44:00,Tech Rodriguez,Morning
+CASE_288,Blood Test,2023-10-03 08:25:00,Tech Garcia,Morning
+CASE_288,Doctor Consultation,2023-10-03 09:00:00,Dr. Wilson,Morning
+CASE_288,Doctor Review,2023-10-03 09:56:00,Dr. Brown,Morning
+CASE_288,Discharge,2023-10-03 10:20:00,Nurse Wilson,Morning
+CASE_289,Registration,2023-10-03 06:49:00,Nurse Lee,Morning
+CASE_289,Triage,2023-10-03 07:07:00,Nurse Wilson,Morning
+CASE_289,Doctor Consultation,2023-10-03 07:26:00,Dr. Jones,Morning
+CASE_289,X-Ray,2023-10-03 07:47:00,Tech Miller,Morning
+CASE_289,Doctor Review,2023-10-03 08:31:00,Dr. Wilson,Morning
+CASE_289,Discharge,2023-10-03 08:49:00,Nurse Davis,Morning
+CASE_290,Registration,2023-10-03 07:04:00,Nurse Joy,Morning
+CASE_290,Triage,2023-10-03 07:23:00,Nurse Lee,Morning
+CASE_290,Blood Test,2023-10-03 07:51:00,Tech Miller,Morning
+CASE_290,Blood Test,2023-10-03 08:22:00,Tech Garcia,Morning
+CASE_290,Doctor Consultation,2023-10-03 08:55:00,Dr. Jones,Morning
+CASE_290,Doctor Review,2023-10-03 09:53:00,Dr. Jones,Morning
+CASE_290,Discharge,2023-10-03 10:20:00,Nurse Lee,Morning
+CASE_291,Registration,2023-10-03 07:15:00,Nurse Ratched,Morning
+CASE_291,Triage,2023-10-03 07:42:00,Nurse Davis,Morning
+CASE_291,X-Ray,2023-10-03 08:00:00,Tech Rodriguez,Morning
+CASE_291,Triage,2023-10-03 08:38:00,Nurse Davis,Morning
+CASE_291,Blood Test,2023-10-03 09:18:00,Tech Rodriguez,Morning
+CASE_291,Doctor Consultation,2023-10-03 09:54:00,Dr. Taylor,Morning
+CASE_291,Doctor Review,2023-10-03 10:35:00,Dr. Patel,Morning
+CASE_291,Discharge,2023-10-03 10:58:00,Nurse Wilson,Morning
+CASE_292,Registration,2023-10-03 07:21:00,Nurse Ratched,Morning
+CASE_292,Triage,2023-10-03 07:46:00,Nurse Wilson,Morning
+CASE_292,Doctor Consultation,2023-10-03 08:22:00,Dr. Chen,Morning
+CASE_292,X-Ray,2023-10-03 08:53:00,Tech Miller,Morning
+CASE_292,Doctor Review,2023-10-03 09:19:00,Dr. Taylor,Morning
+CASE_292,Discharge,2023-10-03 09:49:00,Nurse Jackie,Morning
+CASE_293,Registration,2023-10-03 07:33:00,Nurse Jackie,Morning
+CASE_293,Triage,2023-10-03 07:53:00,Nurse Chapel,Morning
+CASE_293,Doctor Consultation,2023-10-03 08:31:00,Dr. Taylor,Morning
+CASE_293,X-Ray,2023-10-03 09:11:00,Tech Rodriguez,Morning
+CASE_293,Doctor Review,2023-10-03 09:38:00,Dr. Kim,Morning
+CASE_293,Discharge,2023-10-03 10:04:00,Nurse Joy,Morning
+CASE_294,Registration,2023-10-03 07:47:00,Nurse Chapel,Morning
+CASE_294,Triage,2023-10-03 08:12:00,Nurse Chapel,Morning
+CASE_294,X-Ray,2023-10-03 08:34:00,Tech Rodriguez,Morning
+CASE_294,Triage,2023-10-03 09:04:00,Nurse Ratched,Morning
+CASE_294,Doctor Consultation,2023-10-03 09:39:00,Dr. Smith,Morning
+CASE_294,Doctor Review,2023-10-03 10:10:00,Dr. Patel,Morning
+CASE_294,Discharge,2023-10-03 10:37:00,Nurse Ratched,Morning
+CASE_295,Registration,2023-10-03 07:55:00,Nurse Davis,Morning
+CASE_295,Triage,2023-10-03 08:11:00,Nurse Chapel,Morning
+CASE_295,Doctor Consultation,2023-10-03 08:42:00,Dr. Wilson,Morning
+CASE_295,X-Ray,2023-10-03 09:16:00,Tech Miller,Morning
+CASE_295,Doctor Review,2023-10-03 09:40:00,Dr. Smith,Morning
+CASE_295,Discharge,2023-10-03 10:03:00,Nurse Joy,Morning
+CASE_296,Registration,2023-10-03 08:10:00,Nurse Lee,Morning
+CASE_296,Triage,2023-10-03 08:32:00,Nurse Chapel,Morning
+CASE_296,Doctor Consultation,2023-10-03 09:09:00,Dr. Kim,Morning
+CASE_296,X-Ray,2023-10-03 10:00:00,Tech Garcia,Morning
+CASE_296,Doctor Review,2023-10-03 10:28:00,Dr. Patel,Morning
+CASE_296,Discharge,2023-10-03 10:52:00,Nurse Wilson,Morning
+CASE_297,Registration,2023-10-03 08:18:00,Nurse Ratched,Morning
+CASE_297,Triage,2023-10-03 08:42:00,Nurse Lee,Morning
+CASE_297,X-Ray,2023-10-03 09:09:00,Tech Garcia,Morning
+CASE_297,Triage,2023-10-03 09:42:00,Nurse Davis,Morning
+CASE_297,Doctor Consultation,2023-10-03 10:30:00,Dr. Garcia,Morning
+CASE_297,Doctor Review,2023-10-03 11:10:00,Dr. Kim,Morning
+CASE_297,Discharge,2023-10-03 11:29:00,Nurse Jackie,Morning
+CASE_298,Registration,2023-10-03 08:25:00,Nurse Davis,Morning
+CASE_298,Triage,2023-10-03 08:41:00,Nurse Jackie,Morning
+CASE_298,X-Ray,2023-10-03 09:13:00,Tech Garcia,Morning
+CASE_298,Triage,2023-10-03 09:46:00,Nurse Ratched,Morning
+CASE_298,Doctor Consultation,2023-10-03 10:31:00,Dr. Patel,Morning
+CASE_298,Doctor Review,2023-10-03 11:10:00,Dr. Patel,Morning
+CASE_298,Discharge,2023-10-03 11:31:00,Nurse Jackie,Morning
+CASE_299,Registration,2023-10-03 08:31:00,Nurse Chapel,Morning
+CASE_299,Triage,2023-10-03 08:49:00,Nurse Wilson,Morning
+CASE_299,Blood Test,2023-10-03 09:34:00,Tech Miller,Morning
+CASE_299,Blood Test,2023-10-03 10:02:00,Tech Rodriguez,Morning
+CASE_299,Doctor Consultation,2023-10-03 10:42:00,Dr. Smith,Morning
+CASE_299,Doctor Review,2023-10-03 11:24:00,Dr. Anderson,Morning
+CASE_299,Discharge,2023-10-03 11:47:00,Nurse Chapel,Morning
+CASE_300,Registration,2023-10-03 08:44:00,Nurse Davis,Morning
+CASE_300,Triage,2023-10-03 09:00:00,Nurse Davis,Morning
+CASE_300,Blood Test,2023-10-03 09:31:00,Tech Garcia,Morning
+CASE_300,Blood Test,2023-10-03 10:07:00,Tech Garcia,Morning
+CASE_300,Doctor Consultation,2023-10-03 10:38:00,Dr. Wilson,Morning
+CASE_300,Doctor Review,2023-10-03 11:26:00,Dr. Smith,Morning
+CASE_300,Discharge,2023-10-03 11:57:00,Nurse Chapel,Morning
+CASE_301,Registration,2023-10-03 08:50:00,Nurse Joy,Morning
+CASE_301,Triage,2023-10-03 09:13:00,Nurse Chapel,Morning
+CASE_301,Blood Test,2023-10-03 09:36:00,Tech Miller,Morning
+CASE_301,Blood Test,2023-10-03 10:10:00,Tech Rodriguez,Morning
+CASE_301,Doctor Consultation,2023-10-03 11:01:00,Dr. Kim,Morning
+CASE_301,Doctor Review,2023-10-03 11:50:00,Dr. Jones,Morning
+CASE_301,Discharge,2023-10-03 12:20:00,Nurse Lee,Morning
+CASE_302,Registration,2023-10-03 08:55:00,Nurse Lee,Morning
+CASE_302,Triage,2023-10-03 09:14:00,Nurse Ratched,Morning
+CASE_302,X-Ray,2023-10-03 09:47:00,Tech Garcia,Morning
+CASE_302,Triage,2023-10-03 10:17:00,Nurse Chapel,Morning
+CASE_302,Doctor Consultation,2023-10-03 10:57:00,Dr. Jones,Morning
+CASE_302,Doctor Review,2023-10-03 11:33:00,Dr. Smith,Morning
+CASE_302,Discharge,2023-10-03 11:57:00,Nurse Jackie,Morning
+CASE_303,Registration,2023-10-03 09:01:00,Nurse Jackie,Morning
+CASE_303,Triage,2023-10-03 09:21:00,Nurse Wilson,Morning
+CASE_303,X-Ray,2023-10-03 09:45:00,Tech Garcia,Morning
+CASE_303,Triage,2023-10-03 10:27:00,Nurse Lee,Morning
+CASE_303,Blood Test,2023-10-03 11:03:00,Tech Miller,Morning
+CASE_303,Doctor Consultation,2023-10-03 11:36:00,Dr. Brown,Morning
+CASE_303,Doctor Review,2023-10-03 12:25:00,Dr. Wilson,Morning
+CASE_303,Discharge,2023-10-03 12:58:00,Nurse Jackie,Morning
+CASE_304,Registration,2023-10-03 09:15:00,Nurse Wilson,Morning
+CASE_304,Triage,2023-10-03 09:34:00,Nurse Ratched,Morning
+CASE_304,Blood Test,2023-10-03 10:02:00,Tech Rodriguez,Morning
+CASE_304,Blood Test,2023-10-03 10:29:00,Tech Miller,Morning
+CASE_304,Doctor Consultation,2023-10-03 11:09:00,Dr. Wilson,Morning
+CASE_304,Doctor Review,2023-10-03 11:49:00,Dr. Chen,Morning
+CASE_304,Discharge,2023-10-03 12:22:00,Nurse Joy,Morning
+CASE_305,Registration,2023-10-03 09:23:00,Nurse Ratched,Morning
+CASE_305,Triage,2023-10-03 09:40:00,Nurse Chapel,Morning
+CASE_305,Doctor Consultation,2023-10-03 10:13:00,Dr. Chen,Morning
+CASE_305,X-Ray,2023-10-03 11:03:00,Tech Miller,Morning
+CASE_305,Doctor Review,2023-10-03 11:23:00,Dr. Anderson,Morning
+CASE_305,Discharge,2023-10-03 11:50:00,Nurse Ratched,Morning
+CASE_306,Registration,2023-10-03 09:33:00,Nurse Joy,Morning
+CASE_306,Triage,2023-10-03 09:54:00,Nurse Davis,Morning
+CASE_306,Doctor Consultation,2023-10-03 10:16:00,Dr. Smith,Morning
+CASE_306,X-Ray,2023-10-03 11:04:00,Tech Garcia,Morning
+CASE_306,Doctor Review,2023-10-03 11:39:00,Dr. Kim,Morning
+CASE_306,Discharge,2023-10-03 12:04:00,Nurse Ratched,Morning
+CASE_307,Registration,2023-10-03 09:43:00,Nurse Jackie,Morning
+CASE_307,Triage,2023-10-03 10:05:00,Nurse Chapel,Morning
+CASE_307,Blood Test,2023-10-03 10:33:00,Tech Miller,Morning
+CASE_307,Blood Test,2023-10-03 11:13:00,Tech Miller,Morning
+CASE_307,Doctor Consultation,2023-10-03 11:47:00,Dr. Patel,Morning
+CASE_307,Doctor Review,2023-10-03 12:38:00,Dr. Patel,Morning
+CASE_307,Discharge,2023-10-03 13:12:00,Nurse Chapel,Morning
+CASE_308,Registration,2023-10-03 09:57:00,Nurse Jackie,Morning
+CASE_308,Triage,2023-10-03 10:19:00,Nurse Lee,Morning
+CASE_308,X-Ray,2023-10-03 10:43:00,Tech Miller,Morning
+CASE_308,Triage,2023-10-03 11:16:00,Nurse Joy,Morning
+CASE_308,Doctor Consultation,2023-10-03 11:59:00,Dr. Taylor,Morning
+CASE_308,Doctor Review,2023-10-03 12:28:00,Dr. Kim,Morning
+CASE_308,Discharge,2023-10-03 12:48:00,Nurse Lee,Morning
+CASE_309,Registration,2023-10-03 10:08:00,Nurse Chapel,Morning
+CASE_309,Triage,2023-10-03 10:29:00,Nurse Jackie,Morning
+CASE_309,Doctor Consultation,2023-10-03 10:56:00,Dr. Anderson,Morning
+CASE_309,X-Ray,2023-10-03 11:23:00,Tech Garcia,Morning
+CASE_309,Doctor Review,2023-10-03 11:45:00,Dr. Jones,Morning
+CASE_309,Discharge,2023-10-03 12:13:00,Nurse Chapel,Morning
+CASE_310,Registration,2023-10-03 10:19:00,Nurse Jackie,Morning
+CASE_310,Triage,2023-10-03 10:36:00,Nurse Ratched,Morning
+CASE_310,Doctor Consultation,2023-10-03 11:14:00,Dr. Wilson,Morning
+CASE_310,X-Ray,2023-10-03 11:46:00,Tech Rodriguez,Morning
+CASE_310,Doctor Review,2023-10-03 12:13:00,Dr. Smith,Morning
+CASE_310,Discharge,2023-10-03 12:43:00,Nurse Chapel,Morning
+CASE_311,Registration,2023-10-03 10:34:00,Nurse Davis,Morning
+CASE_311,Triage,2023-10-03 11:00:00,Nurse Ratched,Morning
+CASE_311,Doctor Consultation,2023-10-03 11:28:00,Dr. Kim,Morning
+CASE_311,X-Ray,2023-10-03 12:19:00,Tech Miller,Morning
+CASE_311,Doctor Review,2023-10-03 12:51:00,Dr. Chen,Morning
+CASE_311,Discharge,2023-10-03 13:18:00,Nurse Ratched,Morning
+CASE_312,Registration,2023-10-03 10:44:00,Nurse Ratched,Morning
+CASE_312,Triage,2023-10-03 11:01:00,Nurse Jackie,Morning
+CASE_312,Doctor Consultation,2023-10-03 11:33:00,Dr. Patel,Morning
+CASE_312,X-Ray,2023-10-03 12:27:00,Tech Rodriguez,Morning
+CASE_312,Doctor Review,2023-10-03 13:03:00,Dr. Patel,Morning
+CASE_312,Discharge,2023-10-03 13:25:00,Nurse Joy,Morning
+CASE_313,Registration,2023-10-03 10:59:00,Nurse Davis,Morning
+CASE_313,Triage,2023-10-03 11:17:00,Nurse Jackie,Morning
+CASE_313,X-Ray,2023-10-03 11:45:00,Tech Garcia,Morning
+CASE_313,Triage,2023-10-03 12:23:00,Nurse Jackie,Morning
+CASE_313,Blood Test,2023-10-03 13:07:00,Tech Garcia,Morning
+CASE_313,Doctor Consultation,2023-10-03 13:47:00,Dr. Smith,Morning
+CASE_313,Doctor Review,2023-10-03 14:15:00,Dr. Wilson,Evening
+CASE_313,Discharge,2023-10-03 14:45:00,Nurse Lee,Evening
+CASE_314,Registration,2023-10-03 11:11:00,Nurse Chapel,Morning
+CASE_314,Triage,2023-10-03 11:27:00,Nurse Joy,Morning
+CASE_314,Blood Test,2023-10-03 11:50:00,Tech Miller,Morning
+CASE_314,Blood Test,2023-10-03 12:23:00,Tech Miller,Morning
+CASE_314,Doctor Consultation,2023-10-03 13:01:00,Dr. Chen,Morning
+CASE_314,Doctor Review,2023-10-03 13:44:00,Dr. Wilson,Morning
+CASE_314,Discharge,2023-10-03 14:08:00,Nurse Davis,Evening
+CASE_315,Registration,2023-10-03 11:26:00,Nurse Joy,Morning
+CASE_315,Triage,2023-10-03 11:45:00,Nurse Chapel,Morning
+CASE_315,Doctor Consultation,2023-10-03 12:08:00,Dr. Kim,Morning
+CASE_315,X-Ray,2023-10-03 12:41:00,Tech Garcia,Morning
+CASE_315,Doctor Review,2023-10-03 13:09:00,Dr. Taylor,Morning
+CASE_315,Discharge,2023-10-03 13:34:00,Nurse Ratched,Morning
+CASE_316,Registration,2023-10-03 11:31:00,Nurse Ratched,Morning
+CASE_316,Triage,2023-10-03 11:56:00,Nurse Ratched,Morning
+CASE_316,Doctor Consultation,2023-10-03 12:37:00,Dr. Taylor,Morning
+CASE_316,X-Ray,2023-10-03 13:09:00,Tech Garcia,Morning
+CASE_316,Doctor Review,2023-10-03 13:36:00,Dr. Brown,Morning
+CASE_316,Discharge,2023-10-03 14:06:00,Nurse Jackie,Evening
+CASE_317,Registration,2023-10-03 11:46:00,Nurse Joy,Morning
+CASE_317,Triage,2023-10-03 12:01:00,Nurse Davis,Morning
+CASE_317,X-Ray,2023-10-03 12:22:00,Tech Miller,Morning
+CASE_317,Triage,2023-10-03 13:03:00,Nurse Jackie,Morning
+CASE_317,Blood Test,2023-10-03 13:51:00,Tech Miller,Morning
+CASE_317,Doctor Consultation,2023-10-03 14:30:00,Dr. Kim,Evening
+CASE_317,Doctor Review,2023-10-03 15:13:00,Dr. Kim,Evening
+CASE_317,Discharge,2023-10-03 15:41:00,Nurse Lee,Evening
+CASE_318,Registration,2023-10-03 11:58:00,Nurse Jackie,Morning
+CASE_318,Triage,2023-10-03 12:23:00,Nurse Lee,Morning
+CASE_318,X-Ray,2023-10-03 12:59:00,Tech Miller,Morning
+CASE_318,Triage,2023-10-03 13:31:00,Nurse Jackie,Morning
+CASE_318,Blood Test,2023-10-03 14:16:00,Tech Miller,Evening
+CASE_318,Doctor Consultation,2023-10-03 14:50:00,Dr. Patel,Evening
+CASE_318,Doctor Review,2023-10-03 15:27:00,Dr. Taylor,Evening
+CASE_318,Discharge,2023-10-03 15:49:00,Nurse Lee,Evening
+CASE_319,Registration,2023-10-03 12:12:00,Nurse Lee,Morning
+CASE_319,Triage,2023-10-03 12:29:00,Nurse Ratched,Morning
+CASE_319,Blood Test,2023-10-03 12:57:00,Tech Garcia,Morning
+CASE_319,Blood Test,2023-10-03 13:31:00,Tech Rodriguez,Morning
+CASE_319,Doctor Consultation,2023-10-03 14:11:00,Dr. Chen,Evening
+CASE_319,Doctor Review,2023-10-03 14:47:00,Dr. Smith,Evening
+CASE_319,Discharge,2023-10-03 15:13:00,Nurse Jackie,Evening
+CASE_320,Registration,2023-10-03 12:20:00,Nurse Chapel,Morning
+CASE_320,Triage,2023-10-03 12:39:00,Nurse Wilson,Morning
+CASE_320,Blood Test,2023-10-03 13:16:00,Tech Rodriguez,Morning
+CASE_320,Blood Test,2023-10-03 13:42:00,Tech Garcia,Morning
+CASE_320,Doctor Consultation,2023-10-03 14:18:00,Dr. Wilson,Evening
+CASE_320,Doctor Review,2023-10-03 15:00:00,Dr. Anderson,Evening
+CASE_320,Discharge,2023-10-03 15:24:00,Nurse Lee,Evening
+CASE_321,Registration,2023-10-03 12:29:00,Nurse Chapel,Morning
+CASE_321,Triage,2023-10-03 12:47:00,Nurse Davis,Morning
+CASE_321,X-Ray,2023-10-03 13:11:00,Tech Garcia,Morning
+CASE_321,Triage,2023-10-03 13:43:00,Nurse Jackie,Morning
+CASE_321,Blood Test,2023-10-03 14:34:00,Tech Garcia,Evening
+CASE_321,Doctor Consultation,2023-10-03 15:11:00,Dr. Anderson,Evening
+CASE_321,Doctor Review,2023-10-03 15:46:00,Dr. Jones,Evening
+CASE_321,Discharge,2023-10-03 16:06:00,Nurse Joy,Evening
+CASE_322,Registration,2023-10-03 12:35:00,Nurse Joy,Morning
+CASE_322,Triage,2023-10-03 12:58:00,Nurse Wilson,Morning
+CASE_322,Doctor Consultation,2023-10-03 13:35:00,Dr. Smith,Morning
+CASE_322,X-Ray,2023-10-03 14:24:00,Tech Rodriguez,Evening
+CASE_322,Doctor Review,2023-10-03 14:51:00,Dr. Chen,Evening
+CASE_322,Discharge,2023-10-03 15:24:00,Nurse Davis,Evening
+CASE_323,Registration,2023-10-03 12:41:00,Nurse Joy,Morning
+CASE_323,Triage,2023-10-03 13:07:00,Nurse Jackie,Morning
+CASE_323,Doctor Consultation,2023-10-03 13:38:00,Dr. Patel,Morning
+CASE_323,X-Ray,2023-10-03 14:25:00,Tech Rodriguez,Evening
+CASE_323,Doctor Review,2023-10-03 15:02:00,Dr. Wilson,Evening
+CASE_323,Discharge,2023-10-03 15:27:00,Nurse Lee,Evening
+CASE_324,Registration,2023-10-03 12:51:00,Nurse Lee,Morning
+CASE_324,Triage,2023-10-03 13:03:00,Nurse Chapel,Morning
+CASE_324,Doctor Consultation,2023-10-03 13:31:00,Dr. Chen,Morning
+CASE_324,X-Ray,2023-10-03 14:18:00,Tech Rodriguez,Evening
+CASE_324,Doctor Review,2023-10-03 14:45:00,Dr. Kim,Evening
+CASE_324,Discharge,2023-10-03 15:06:00,Nurse Lee,Evening
+CASE_325,Registration,2023-10-03 12:58:00,Nurse Joy,Morning
+CASE_325,Triage,2023-10-03 13:14:00,Nurse Jackie,Morning
+CASE_325,X-Ray,2023-10-03 13:51:00,Tech Rodriguez,Morning
+CASE_325,Triage,2023-10-03 14:19:00,Nurse Joy,Evening
+CASE_325,Doctor Consultation,2023-10-03 14:45:00,Dr. Wilson,Evening
+CASE_325,Doctor Review,2023-10-03 15:17:00,Dr. Garcia,Evening
+CASE_325,Discharge,2023-10-03 15:47:00,Nurse Davis,Evening
+CASE_326,Registration,2023-10-03 13:08:00,Nurse Davis,Morning
+CASE_326,Triage,2023-10-03 13:25:00,Nurse Jackie,Morning
+CASE_326,Blood Test,2023-10-03 13:51:00,Tech Rodriguez,Morning
+CASE_326,Blood Test,2023-10-03 14:20:00,Tech Miller,Evening
+CASE_326,Doctor Consultation,2023-10-03 15:00:00,Dr. Chen,Evening
+CASE_326,Doctor Review,2023-10-03 15:51:00,Dr. Anderson,Evening
+CASE_326,Discharge,2023-10-03 16:19:00,Nurse Chapel,Evening
+CASE_327,Registration,2023-10-03 13:14:00,Nurse Ratched,Morning
+CASE_327,Triage,2023-10-03 13:33:00,Nurse Wilson,Morning
+CASE_327,X-Ray,2023-10-03 13:59:00,Tech Miller,Morning
+CASE_327,Triage,2023-10-03 14:21:00,Nurse Jackie,Evening
+CASE_327,Doctor Consultation,2023-10-03 14:58:00,Dr. Smith,Evening
+CASE_327,Doctor Review,2023-10-03 15:46:00,Dr. Anderson,Evening
+CASE_327,Discharge,2023-10-03 16:18:00,Nurse Ratched,Evening
+CASE_328,Registration,2023-10-03 13:29:00,Nurse Davis,Morning
+CASE_328,Triage,2023-10-03 13:44:00,Nurse Chapel,Morning
+CASE_328,Doctor Consultation,2023-10-03 14:10:00,Dr. Kim,Evening
+CASE_328,X-Ray,2023-10-03 14:43:00,Tech Garcia,Evening
+CASE_328,Doctor Review,2023-10-03 15:13:00,Dr. Chen,Evening
+CASE_328,Discharge,2023-10-03 15:33:00,Nurse Joy,Evening
+CASE_329,Registration,2023-10-03 13:37:00,Nurse Joy,Morning
+CASE_329,Triage,2023-10-03 13:54:00,Nurse Joy,Morning
+CASE_329,X-Ray,2023-10-03 14:13:00,Tech Miller,Evening
+CASE_329,Triage,2023-10-03 14:40:00,Nurse Chapel,Evening
+CASE_329,Doctor Consultation,2023-10-03 15:25:00,Dr. Wilson,Evening
+CASE_329,Doctor Review,2023-10-03 16:08:00,Dr. Smith,Evening
+CASE_329,Discharge,2023-10-03 16:33:00,Nurse Wilson,Evening
+CASE_330,Registration,2023-10-03 13:49:00,Nurse Joy,Morning
+CASE_330,Triage,2023-10-03 14:12:00,Nurse Ratched,Evening
+CASE_330,Blood Test,2023-10-03 14:34:00,Tech Garcia,Evening
+CASE_330,Blood Test,2023-10-03 15:09:00,Tech Miller,Evening
+CASE_330,Doctor Consultation,2023-10-03 15:44:00,Dr. Patel,Evening
+CASE_330,Doctor Review,2023-10-03 16:30:00,Dr. Kim,Evening
+CASE_330,Discharge,2023-10-03 16:54:00,Nurse Davis,Evening
+CASE_331,Registration,2023-10-03 14:01:00,Nurse Chapel,Evening
+CASE_331,Triage,2023-10-03 14:27:00,Nurse Ratched,Evening
+CASE_331,Blood Test,2023-10-03 14:45:00,Tech Rodriguez,Evening
+CASE_331,Blood Test,2023-10-03 15:09:00,Tech Garcia,Evening
+CASE_331,Doctor Consultation,2023-10-03 15:44:00,Dr. Garcia,Evening
+CASE_331,Doctor Review,2023-10-03 16:25:00,Dr. Garcia,Evening
+CASE_331,Discharge,2023-10-03 16:48:00,Nurse Joy,Evening
+CASE_332,Registration,2023-10-03 14:09:00,Nurse Chapel,Evening
+CASE_332,Triage,2023-10-03 14:28:00,Nurse Joy,Evening
+CASE_332,X-Ray,2023-10-03 15:02:00,Tech Rodriguez,Evening
+CASE_332,Triage,2023-10-03 15:26:00,Nurse Chapel,Evening
+CASE_332,Doctor Consultation,2023-10-03 15:59:00,Dr. Smith,Evening
+CASE_332,Doctor Review,2023-10-03 16:38:00,Dr. Jones,Evening
+CASE_332,Discharge,2023-10-03 17:08:00,Nurse Chapel,Evening
+CASE_333,Registration,2023-10-03 14:18:00,Nurse Davis,Evening
+CASE_333,Triage,2023-10-03 14:44:00,Nurse Wilson,Evening
+CASE_333,X-Ray,2023-10-03 15:11:00,Tech Garcia,Evening
+CASE_333,Triage,2023-10-03 15:38:00,Nurse Wilson,Evening
+CASE_333,Blood Test,2023-10-03 16:24:00,Tech Miller,Evening
+CASE_333,Doctor Consultation,2023-10-03 16:52:00,Dr. Patel,Evening
+CASE_333,Doctor Review,2023-10-03 17:30:00,Dr. Patel,Evening
+CASE_333,Discharge,2023-10-03 18:01:00,Nurse Davis,Evening
+CASE_334,Registration,2023-10-03 14:32:00,Nurse Jackie,Evening
+CASE_334,Triage,2023-10-03 14:57:00,Nurse Wilson,Evening
+CASE_334,X-Ray,2023-10-03 15:30:00,Tech Garcia,Evening
+CASE_334,Triage,2023-10-03 15:55:00,Nurse Chapel,Evening
+CASE_334,Blood Test,2023-10-03 16:23:00,Tech Rodriguez,Evening
+CASE_334,Doctor Consultation,2023-10-03 16:51:00,Dr. Patel,Evening
+CASE_334,Doctor Review,2023-10-03 17:27:00,Dr. Anderson,Evening
+CASE_334,Discharge,2023-10-03 17:53:00,Nurse Ratched,Evening
+CASE_335,Registration,2023-10-03 14:44:00,Nurse Ratched,Evening
+CASE_335,Triage,2023-10-03 15:03:00,Nurse Wilson,Evening
+CASE_335,Doctor Consultation,2023-10-03 15:21:00,Dr. Chen,Evening
+CASE_335,X-Ray,2023-10-03 15:59:00,Tech Rodriguez,Evening
+CASE_335,Doctor Review,2023-10-03 16:29:00,Dr. Brown,Evening
+CASE_335,Discharge,2023-10-03 16:50:00,Nurse Davis,Evening
+CASE_336,Registration,2023-10-03 14:57:00,Nurse Ratched,Evening
+CASE_336,Triage,2023-10-03 15:27:00,Nurse Chapel,Evening
+CASE_336,X-Ray,2023-10-03 15:57:00,Tech Rodriguez,Evening
+CASE_336,Triage,2023-10-03 16:26:00,Nurse Jackie,Evening
+CASE_336,Blood Test,2023-10-03 17:06:00,Tech Miller,Evening
+CASE_336,Doctor Consultation,2023-10-03 17:39:00,Dr. Wilson,Evening
+CASE_336,Doctor Review,2023-10-03 18:15:00,Dr. Anderson,Evening
+CASE_336,Discharge,2023-10-03 18:34:00,Nurse Davis,Evening
+CASE_337,Registration,2023-10-03 15:03:00,Nurse Lee,Evening
+CASE_337,Triage,2023-10-03 15:21:00,Nurse Davis,Evening
+CASE_337,X-Ray,2023-10-03 15:46:00,Tech Rodriguez,Evening
+CASE_337,Triage,2023-10-03 16:18:00,Nurse Wilson,Evening
+CASE_337,Doctor Consultation,2023-10-03 17:04:00,Dr. Kim,Evening
+CASE_337,Doctor Review,2023-10-03 17:58:00,Dr. Smith,Evening
+CASE_337,Discharge,2023-10-03 18:24:00,Nurse Wilson,Evening
+CASE_338,Registration,2023-10-03 15:15:00,Nurse Wilson,Evening
+CASE_338,Triage,2023-10-03 15:34:00,Nurse Ratched,Evening
+CASE_338,Doctor Consultation,2023-10-03 15:58:00,Dr. Smith,Evening
+CASE_338,X-Ray,2023-10-03 16:43:00,Tech Garcia,Evening
+CASE_338,Doctor Review,2023-10-03 17:09:00,Dr. Brown,Evening
+CASE_338,Discharge,2023-10-03 17:43:00,Nurse Davis,Evening
+CASE_339,Registration,2023-10-03 15:20:00,Nurse Davis,Evening
+CASE_339,Triage,2023-10-03 15:39:00,Nurse Davis,Evening
+CASE_339,X-Ray,2023-10-03 16:13:00,Tech Miller,Evening
+CASE_339,Triage,2023-10-03 16:38:00,Nurse Chapel,Evening
+CASE_339,Blood Test,2023-10-03 17:11:00,Tech Miller,Evening
+CASE_339,Doctor Consultation,2023-10-03 17:44:00,Dr. Anderson,Evening
+CASE_339,Doctor Review,2023-10-03 18:14:00,Dr. Garcia,Evening
+CASE_339,Discharge,2023-10-03 18:38:00,Nurse Lee,Evening
+CASE_340,Registration,2023-10-03 15:31:00,Nurse Ratched,Evening
+CASE_340,Triage,2023-10-03 15:46:00,Nurse Joy,Evening
+CASE_340,X-Ray,2023-10-03 16:10:00,Tech Rodriguez,Evening
+CASE_340,Triage,2023-10-03 16:44:00,Nurse Chapel,Evening
+CASE_340,Doctor Consultation,2023-10-03 17:20:00,Dr. Jones,Evening
+CASE_340,Doctor Review,2023-10-03 18:01:00,Dr. Jones,Evening
+CASE_340,Discharge,2023-10-03 18:29:00,Nurse Joy,Evening
+CASE_341,Registration,2023-10-03 15:41:00,Nurse Jackie,Evening
+CASE_341,Triage,2023-10-03 16:04:00,Nurse Davis,Evening
+CASE_341,Doctor Consultation,2023-10-03 16:27:00,Dr. Jones,Evening
+CASE_341,X-Ray,2023-10-03 17:07:00,Tech Rodriguez,Evening
+CASE_341,Doctor Review,2023-10-03 17:44:00,Dr. Anderson,Evening
+CASE_341,Discharge,2023-10-03 18:05:00,Nurse Jackie,Evening
+CASE_342,Registration,2023-10-03 15:48:00,Nurse Ratched,Evening
+CASE_342,Triage,2023-10-03 16:14:00,Nurse Davis,Evening
+CASE_342,X-Ray,2023-10-03 16:45:00,Tech Garcia,Evening
+CASE_342,Triage,2023-10-03 17:14:00,Nurse Wilson,Evening
+CASE_342,Blood Test,2023-10-03 17:51:00,Tech Rodriguez,Evening
+CASE_342,Doctor Consultation,2023-10-03 18:22:00,Dr. Wilson,Evening
+CASE_342,Doctor Review,2023-10-03 18:59:00,Dr. Jones,Evening
+CASE_342,Discharge,2023-10-03 19:27:00,Nurse Jackie,Evening
+CASE_343,Registration,2023-10-03 16:01:00,Nurse Lee,Evening
+CASE_343,Triage,2023-10-03 16:18:00,Nurse Jackie,Evening
+CASE_343,Doctor Consultation,2023-10-03 16:41:00,Dr. Anderson,Evening
+CASE_343,X-Ray,2023-10-03 17:25:00,Tech Rodriguez,Evening
+CASE_343,Doctor Review,2023-10-03 17:57:00,Dr. Jones,Evening
+CASE_343,Discharge,2023-10-03 18:18:00,Nurse Wilson,Evening
+CASE_344,Registration,2023-10-03 16:11:00,Nurse Jackie,Evening
+CASE_344,Triage,2023-10-03 16:29:00,Nurse Davis,Evening
+CASE_344,Blood Test,2023-10-03 17:00:00,Tech Rodriguez,Evening
+CASE_344,Blood Test,2023-10-03 17:29:00,Tech Miller,Evening
+CASE_344,Doctor Consultation,2023-10-03 18:11:00,Dr. Brown,Evening
+CASE_344,Doctor Review,2023-10-03 18:48:00,Dr. Patel,Evening
+CASE_344,Discharge,2023-10-03 19:22:00,Nurse Wilson,Evening
+CASE_345,Registration,2023-10-03 16:20:00,Nurse Lee,Evening
+CASE_345,Triage,2023-10-03 16:48:00,Nurse Lee,Evening
+CASE_345,Doctor Consultation,2023-10-03 17:16:00,Dr. Jones,Evening
+CASE_345,X-Ray,2023-10-03 17:59:00,Tech Rodriguez,Evening
+CASE_345,Doctor Review,2023-10-03 18:31:00,Dr. Anderson,Evening
+CASE_345,Discharge,2023-10-03 18:47:00,Nurse Joy,Evening
+CASE_346,Registration,2023-10-03 16:32:00,Nurse Jackie,Evening
+CASE_346,Triage,2023-10-03 16:48:00,Nurse Lee,Evening
+CASE_346,Blood Test,2023-10-03 17:18:00,Tech Miller,Evening
+CASE_346,Blood Test,2023-10-03 17:43:00,Tech Rodriguez,Evening
+CASE_346,Doctor Consultation,2023-10-03 18:26:00,Dr. Kim,Evening
+CASE_346,Doctor Review,2023-10-03 19:01:00,Dr. Chen,Evening
+CASE_346,Discharge,2023-10-03 19:32:00,Nurse Joy,Evening
+CASE_347,Registration,2023-10-03 16:43:00,Nurse Joy,Evening
+CASE_347,Triage,2023-10-03 17:04:00,Nurse Wilson,Evening
+CASE_347,Doctor Consultation,2023-10-03 17:38:00,Dr. Wilson,Evening
+CASE_347,X-Ray,2023-10-03 18:06:00,Tech Miller,Evening
+CASE_347,Doctor Review,2023-10-03 18:41:00,Dr. Chen,Evening
+CASE_347,Discharge,2023-10-03 19:06:00,Nurse Joy,Evening
+CASE_348,Registration,2023-10-03 16:49:00,Nurse Joy,Evening
+CASE_348,Triage,2023-10-03 17:17:00,Nurse Wilson,Evening
+CASE_348,Doctor Consultation,2023-10-03 17:47:00,Dr. Kim,Evening
+CASE_348,X-Ray,2023-10-03 18:33:00,Tech Garcia,Evening
+CASE_348,Doctor Review,2023-10-03 19:04:00,Dr. Brown,Evening
+CASE_348,Discharge,2023-10-03 19:25:00,Nurse Ratched,Evening
+CASE_349,Registration,2023-10-03 17:01:00,Nurse Chapel,Evening
+CASE_349,Triage,2023-10-03 17:24:00,Nurse Chapel,Evening
+CASE_349,X-Ray,2023-10-03 17:43:00,Tech Miller,Evening
+CASE_349,Triage,2023-10-03 18:17:00,Nurse Chapel,Evening
+CASE_349,Doctor Consultation,2023-10-03 19:09:00,Dr. Jones,Evening
+CASE_349,Doctor Review,2023-10-03 20:04:00,Dr. Smith,Evening
+CASE_349,Discharge,2023-10-03 20:29:00,Nurse Ratched,Evening
+CASE_350,Registration,2023-10-03 17:09:00,Nurse Davis,Evening
+CASE_350,Triage,2023-10-03 17:37:00,Nurse Jackie,Evening
+CASE_350,Blood Test,2023-10-03 18:06:00,Tech Miller,Evening
+CASE_350,Blood Test,2023-10-03 18:47:00,Tech Miller,Evening
+CASE_350,Doctor Consultation,2023-10-03 19:27:00,Dr. Smith,Evening
+CASE_350,Doctor Review,2023-10-03 20:14:00,Dr. Smith,Evening
+CASE_350,Discharge,2023-10-03 20:33:00,Nurse Chapel,Evening
+CASE_351,Registration,2023-10-03 17:23:00,Nurse Wilson,Evening
+CASE_351,Triage,2023-10-03 17:43:00,Nurse Wilson,Evening
+CASE_351,Blood Test,2023-10-03 18:19:00,Tech Rodriguez,Evening
+CASE_351,Blood Test,2023-10-03 18:51:00,Tech Garcia,Evening
+CASE_351,Doctor Consultation,2023-10-03 19:26:00,Dr. Wilson,Evening
+CASE_351,Doctor Review,2023-10-03 19:57:00,Dr. Chen,Evening
+CASE_351,Discharge,2023-10-03 20:23:00,Nurse Joy,Evening
+CASE_352,Registration,2023-10-03 17:29:00,Nurse Lee,Evening
+CASE_352,Triage,2023-10-03 17:50:00,Nurse Joy,Evening
+CASE_352,X-Ray,2023-10-03 18:15:00,Tech Rodriguez,Evening
+CASE_352,Triage,2023-10-03 18:47:00,Nurse Wilson,Evening
+CASE_352,Doctor Consultation,2023-10-03 19:30:00,Dr. Anderson,Evening
+CASE_352,Doctor Review,2023-10-03 20:19:00,Dr. Patel,Evening
+CASE_352,Discharge,2023-10-03 20:42:00,Nurse Davis,Evening
+CASE_353,Registration,2023-10-03 17:38:00,Nurse Wilson,Evening
+CASE_353,Triage,2023-10-03 18:07:00,Nurse Joy,Evening
+CASE_353,X-Ray,2023-10-03 18:33:00,Tech Rodriguez,Evening
+CASE_353,Triage,2023-10-03 19:02:00,Nurse Jackie,Evening
+CASE_353,Doctor Consultation,2023-10-03 19:27:00,Dr. Anderson,Evening
+CASE_353,Doctor Review,2023-10-03 20:02:00,Dr. Garcia,Evening
+CASE_353,Discharge,2023-10-03 20:37:00,Nurse Jackie,Evening
+CASE_354,Registration,2023-10-03 17:53:00,Nurse Chapel,Evening
+CASE_354,Triage,2023-10-03 18:15:00,Nurse Chapel,Evening
+CASE_354,X-Ray,2023-10-03 18:39:00,Tech Miller,Evening
+CASE_354,Triage,2023-10-03 19:13:00,Nurse Ratched,Evening
+CASE_354,Blood Test,2023-10-03 19:48:00,Tech Miller,Evening
+CASE_354,Doctor Consultation,2023-10-03 20:25:00,Dr. Patel,Evening
+CASE_354,Doctor Review,2023-10-03 20:47:00,Dr. Jones,Evening
+CASE_354,Discharge,2023-10-03 21:13:00,Nurse Wilson,Evening
+CASE_355,Registration,2023-10-03 18:03:00,Nurse Joy,Evening
+CASE_355,Triage,2023-10-03 18:19:00,Nurse Lee,Evening
+CASE_355,X-Ray,2023-10-03 18:44:00,Tech Rodriguez,Evening
+CASE_355,Triage,2023-10-03 19:19:00,Nurse Davis,Evening
+CASE_355,Doctor Consultation,2023-10-03 20:03:00,Dr. Smith,Evening
+CASE_355,Doctor Review,2023-10-03 20:29:00,Dr. Patel,Evening
+CASE_355,Discharge,2023-10-03 20:56:00,Nurse Wilson,Evening
+CASE_356,Registration,2023-10-03 18:09:00,Nurse Ratched,Evening
+CASE_356,Triage,2023-10-03 18:25:00,Nurse Lee,Evening
+CASE_356,X-Ray,2023-10-03 18:45:00,Tech Rodriguez,Evening
+CASE_356,Triage,2023-10-03 19:15:00,Nurse Ratched,Evening
+CASE_356,Blood Test,2023-10-03 19:53:00,Tech Garcia,Evening
+CASE_356,Doctor Consultation,2023-10-03 20:30:00,Dr. Anderson,Evening
+CASE_356,Doctor Review,2023-10-03 21:05:00,Dr. Kim,Evening
+CASE_356,Discharge,2023-10-03 21:40:00,Nurse Jackie,Evening
+CASE_357,Registration,2023-10-03 18:19:00,Nurse Chapel,Evening
+CASE_357,Triage,2023-10-03 18:43:00,Nurse Chapel,Evening
+CASE_357,Blood Test,2023-10-03 19:15:00,Tech Garcia,Evening
+CASE_357,Blood Test,2023-10-03 19:51:00,Tech Miller,Evening
+CASE_357,Doctor Consultation,2023-10-03 20:25:00,Dr. Smith,Evening
+CASE_357,Doctor Review,2023-10-03 21:13:00,Dr. Garcia,Evening
+CASE_357,Discharge,2023-10-03 21:43:00,Nurse Lee,Evening
+CASE_358,Registration,2023-10-03 18:25:00,Nurse Wilson,Evening
+CASE_358,Triage,2023-10-03 18:48:00,Nurse Lee,Evening
+CASE_358,Doctor Consultation,2023-10-03 19:14:00,Dr. Jones,Evening
+CASE_358,X-Ray,2023-10-03 19:37:00,Tech Garcia,Evening
+CASE_358,Doctor Review,2023-10-03 20:13:00,Dr. Chen,Evening
+CASE_358,Discharge,2023-10-03 20:41:00,Nurse Davis,Evening
+CASE_359,Registration,2023-10-03 18:30:00,Nurse Chapel,Evening
+CASE_359,Triage,2023-10-03 18:56:00,Nurse Davis,Evening
+CASE_359,X-Ray,2023-10-03 19:12:00,Tech Miller,Evening
+CASE_359,Triage,2023-10-03 19:52:00,Nurse Wilson,Evening
+CASE_359,Blood Test,2023-10-03 20:35:00,Tech Garcia,Evening
+CASE_359,Doctor Consultation,2023-10-03 21:05:00,Dr. Taylor,Evening
+CASE_359,Doctor Review,2023-10-03 21:39:00,Dr. Kim,Evening
+CASE_359,Discharge,2023-10-03 22:08:00,Nurse Lee,Night
+CASE_360,Registration,2023-10-03 18:40:00,Nurse Wilson,Evening
+CASE_360,Triage,2023-10-03 18:53:00,Nurse Chapel,Evening
+CASE_360,Doctor Consultation,2023-10-03 19:29:00,Dr. Wilson,Evening
+CASE_360,X-Ray,2023-10-03 20:03:00,Tech Miller,Evening
+CASE_360,Doctor Review,2023-10-03 20:44:00,Dr. Garcia,Evening
+CASE_360,Discharge,2023-10-03 21:02:00,Nurse Joy,Evening
+CASE_361,Registration,2023-10-03 18:45:00,Nurse Jackie,Evening
+CASE_361,Triage,2023-10-03 18:58:00,Nurse Joy,Evening
+CASE_361,Blood Test,2023-10-03 19:18:00,Tech Rodriguez,Evening
+CASE_361,Blood Test,2023-10-03 19:44:00,Tech Garcia,Evening
+CASE_361,Doctor Consultation,2023-10-03 20:27:00,Dr. Kim,Evening
+CASE_361,Doctor Review,2023-10-03 21:06:00,Dr. Taylor,Evening
+CASE_361,Discharge,2023-10-03 21:25:00,Nurse Davis,Evening
+CASE_362,Registration,2023-10-03 18:55:00,Nurse Jackie,Evening
+CASE_362,Triage,2023-10-03 19:21:00,Nurse Ratched,Evening
+CASE_362,Blood Test,2023-10-03 19:54:00,Tech Miller,Evening
+CASE_362,Blood Test,2023-10-03 20:19:00,Tech Miller,Evening
+CASE_362,Doctor Consultation,2023-10-03 20:59:00,Dr. Chen,Evening
+CASE_362,Doctor Review,2023-10-03 21:47:00,Dr. Kim,Evening
+CASE_362,Discharge,2023-10-03 22:14:00,Nurse Jackie,Night
+CASE_363,Registration,2023-10-03 19:02:00,Nurse Ratched,Evening
+CASE_363,Triage,2023-10-03 19:14:00,Nurse Davis,Evening
+CASE_363,Doctor Consultation,2023-10-03 19:43:00,Dr. Patel,Evening
+CASE_363,X-Ray,2023-10-03 20:36:00,Tech Miller,Evening
+CASE_363,Doctor Review,2023-10-03 21:00:00,Dr. Kim,Evening
+CASE_363,Discharge,2023-10-03 21:29:00,Nurse Davis,Evening
+CASE_364,Registration,2023-10-03 19:09:00,Nurse Davis,Evening
+CASE_364,Triage,2023-10-03 19:30:00,Nurse Jackie,Evening
+CASE_364,X-Ray,2023-10-03 20:00:00,Tech Garcia,Evening
+CASE_364,Triage,2023-10-03 20:45:00,Nurse Joy,Evening
+CASE_364,Doctor Consultation,2023-10-03 21:30:00,Dr. Jones,Evening
+CASE_364,Doctor Review,2023-10-03 22:21:00,Dr. Smith,Night
+CASE_364,Discharge,2023-10-03 22:46:00,Nurse Ratched,Night
+CASE_365,Registration,2023-10-03 19:16:00,Nurse Jackie,Evening
+CASE_365,Triage,2023-10-03 19:35:00,Nurse Ratched,Evening
+CASE_365,Doctor Consultation,2023-10-03 20:12:00,Dr. Taylor,Evening
+CASE_365,X-Ray,2023-10-03 21:02:00,Tech Miller,Evening
+CASE_365,Doctor Review,2023-10-03 21:24:00,Dr. Chen,Evening
+CASE_365,Discharge,2023-10-03 21:48:00,Nurse Chapel,Evening
+CASE_366,Registration,2023-10-03 19:21:00,Nurse Davis,Evening
+CASE_366,Triage,2023-10-03 19:35:00,Nurse Joy,Evening
+CASE_366,Doctor Consultation,2023-10-03 20:05:00,Dr. Patel,Evening
+CASE_366,X-Ray,2023-10-03 20:42:00,Tech Garcia,Evening
+CASE_366,Doctor Review,2023-10-03 21:13:00,Dr. Chen,Evening
+CASE_366,Discharge,2023-10-03 21:37:00,Nurse Chapel,Evening
+CASE_367,Registration,2023-10-03 19:32:00,Nurse Davis,Evening
+CASE_367,Triage,2023-10-03 19:48:00,Nurse Chapel,Evening
+CASE_367,Doctor Consultation,2023-10-03 20:15:00,Dr. Anderson,Evening
+CASE_367,X-Ray,2023-10-03 21:07:00,Tech Garcia,Evening
+CASE_367,Doctor Review,2023-10-03 21:48:00,Dr. Chen,Evening
+CASE_367,Discharge,2023-10-03 22:14:00,Nurse Lee,Night
+CASE_368,Registration,2023-10-03 19:37:00,Nurse Jackie,Evening
+CASE_368,Triage,2023-10-03 19:57:00,Nurse Lee,Evening
+CASE_368,X-Ray,2023-10-03 20:38:00,Tech Miller,Evening
+CASE_368,Triage,2023-10-03 21:12:00,Nurse Lee,Evening
+CASE_368,Doctor Consultation,2023-10-03 22:01:00,Dr. Patel,Night
+CASE_368,Doctor Review,2023-10-03 22:38:00,Dr. Kim,Night
+CASE_368,Discharge,2023-10-03 23:08:00,Nurse Lee,Night
+CASE_369,Registration,2023-10-03 19:48:00,Nurse Davis,Evening
+CASE_369,Triage,2023-10-03 20:17:00,Nurse Ratched,Evening
+CASE_369,X-Ray,2023-10-03 20:42:00,Tech Rodriguez,Evening
+CASE_369,Triage,2023-10-03 21:15:00,Nurse Chapel,Evening
+CASE_369,Doctor Consultation,2023-10-03 21:53:00,Dr. Wilson,Evening
+CASE_369,Doctor Review,2023-10-03 22:36:00,Dr. Smith,Night
+CASE_369,Discharge,2023-10-03 22:54:00,Nurse Lee,Night
+CASE_370,Registration,2023-10-03 20:01:00,Nurse Joy,Evening
+CASE_370,Triage,2023-10-03 20:13:00,Nurse Lee,Evening
+CASE_370,X-Ray,2023-10-03 20:41:00,Tech Garcia,Evening
+CASE_370,Triage,2023-10-03 21:08:00,Nurse Jackie,Evening
+CASE_370,Doctor Consultation,2023-10-03 21:55:00,Dr. Brown,Evening
+CASE_370,Doctor Review,2023-10-03 22:41:00,Dr. Wilson,Night
+CASE_370,Discharge,2023-10-03 23:06:00,Nurse Davis,Night
+CASE_371,Registration,2023-10-03 20:11:00,Nurse Ratched,Evening
+CASE_371,Triage,2023-10-03 20:34:00,Nurse Wilson,Evening
+CASE_371,X-Ray,2023-10-03 21:16:00,Tech Miller,Evening
+CASE_371,Triage,2023-10-03 21:53:00,Nurse Lee,Evening
+CASE_371,Doctor Consultation,2023-10-03 22:39:00,Dr. Anderson,Night
+CASE_371,Doctor Review,2023-10-03 23:31:00,Dr. Anderson,Night
+CASE_371,Discharge,2023-10-04 00:02:00,Nurse Wilson,Night
+CASE_372,Registration,2023-10-03 20:16:00,Nurse Lee,Evening
+CASE_372,Triage,2023-10-03 20:28:00,Nurse Davis,Evening
+CASE_372,X-Ray,2023-10-03 20:57:00,Tech Miller,Evening
+CASE_372,Triage,2023-10-03 21:17:00,Nurse Chapel,Evening
+CASE_372,Doctor Consultation,2023-10-03 21:48:00,Dr. Wilson,Evening
+CASE_372,Doctor Review,2023-10-03 22:20:00,Dr. Brown,Night
+CASE_372,Discharge,2023-10-03 22:37:00,Nurse Jackie,Night
+CASE_373,Registration,2023-10-03 20:28:00,Nurse Lee,Evening
+CASE_373,Triage,2023-10-03 20:45:00,Nurse Wilson,Evening
+CASE_373,Blood Test,2023-10-03 21:10:00,Tech Garcia,Evening
+CASE_373,Blood Test,2023-10-03 21:41:00,Tech Miller,Evening
+CASE_373,Doctor Consultation,2023-10-03 22:14:00,Dr. Taylor,Night
+CASE_373,Doctor Review,2023-10-03 23:11:00,Dr. Garcia,Night
+CASE_373,Discharge,2023-10-03 23:40:00,Nurse Joy,Night
+CASE_374,Registration,2023-10-03 20:37:00,Nurse Davis,Evening
+CASE_374,Triage,2023-10-03 21:07:00,Nurse Joy,Evening
+CASE_374,Doctor Consultation,2023-10-03 21:39:00,Dr. Taylor,Evening
+CASE_374,X-Ray,2023-10-03 22:29:00,Tech Miller,Night
+CASE_374,Doctor Review,2023-10-03 23:03:00,Dr. Garcia,Night
+CASE_374,Discharge,2023-10-03 23:31:00,Nurse Joy,Night
+CASE_375,Registration,2023-10-03 20:44:00,Nurse Jackie,Evening
+CASE_375,Triage,2023-10-03 20:56:00,Nurse Wilson,Evening
+CASE_375,Blood Test,2023-10-03 21:27:00,Tech Miller,Evening
+CASE_375,Blood Test,2023-10-03 21:59:00,Tech Miller,Evening
+CASE_375,Doctor Consultation,2023-10-03 22:38:00,Dr. Brown,Night
+CASE_375,Doctor Review,2023-10-03 23:17:00,Dr. Smith,Night
+CASE_375,Discharge,2023-10-03 23:47:00,Nurse Davis,Night
+CASE_376,Registration,2023-10-03 20:53:00,Nurse Ratched,Evening
+CASE_376,Triage,2023-10-03 21:23:00,Nurse Davis,Evening
+CASE_376,X-Ray,2023-10-03 21:53:00,Tech Miller,Evening
+CASE_376,Triage,2023-10-03 22:25:00,Nurse Jackie,Night
+CASE_376,Doctor Consultation,2023-10-03 22:52:00,Dr. Jones,Night
+CASE_376,Doctor Review,2023-10-03 23:23:00,Dr. Garcia,Night
+CASE_376,Discharge,2023-10-03 23:56:00,Nurse Ratched,Night
+CASE_377,Registration,2023-10-03 21:02:00,Nurse Chapel,Evening
+CASE_377,Triage,2023-10-03 21:24:00,Nurse Ratched,Evening
+CASE_377,X-Ray,2023-10-03 21:54:00,Tech Rodriguez,Evening
+CASE_377,Triage,2023-10-03 22:21:00,Nurse Chapel,Night
+CASE_377,Doctor Consultation,2023-10-03 23:10:00,Dr. Brown,Night
+CASE_377,Doctor Review,2023-10-03 23:38:00,Dr. Kim,Night
+CASE_377,Discharge,2023-10-04 00:04:00,Nurse Wilson,Night
+CASE_378,Registration,2023-10-03 21:15:00,Nurse Davis,Evening
+CASE_378,Triage,2023-10-03 21:36:00,Nurse Joy,Evening
+CASE_378,Doctor Consultation,2023-10-03 22:13:00,Dr. Kim,Night
+CASE_378,X-Ray,2023-10-03 23:03:00,Tech Garcia,Night
+CASE_378,Doctor Review,2023-10-03 23:40:00,Dr. Taylor,Night
+CASE_378,Discharge,2023-10-04 00:05:00,Nurse Lee,Night
+CASE_379,Registration,2023-10-03 21:29:00,Nurse Wilson,Evening
+CASE_379,Triage,2023-10-03 21:43:00,Nurse Ratched,Evening
+CASE_379,Doctor Consultation,2023-10-03 22:13:00,Dr. Patel,Night
+CASE_379,X-Ray,2023-10-03 22:41:00,Tech Rodriguez,Night
+CASE_379,Doctor Review,2023-10-03 23:24:00,Dr. Garcia,Night
+CASE_379,Discharge,2023-10-03 23:53:00,Nurse Chapel,Night
+CASE_380,Registration,2023-10-03 21:36:00,Nurse Wilson,Evening
+CASE_380,Triage,2023-10-03 21:57:00,Nurse Wilson,Evening
+CASE_380,X-Ray,2023-10-03 22:19:00,Tech Garcia,Night
+CASE_380,Triage,2023-10-03 22:42:00,Nurse Wilson,Night
+CASE_380,Blood Test,2023-10-03 23:14:00,Tech Rodriguez,Night
+CASE_380,Doctor Consultation,2023-10-03 23:42:00,Dr. Patel,Night
+CASE_380,Doctor Review,2023-10-04 00:39:00,Dr. Wilson,Night
+CASE_380,Discharge,2023-10-04 01:03:00,Nurse Davis,Night
+CASE_381,Registration,2023-10-03 21:42:00,Nurse Joy,Evening
+CASE_381,Triage,2023-10-03 22:09:00,Nurse Ratched,Night
+CASE_381,X-Ray,2023-10-03 22:27:00,Tech Garcia,Night
+CASE_381,Triage,2023-10-03 23:00:00,Nurse Lee,Night
+CASE_381,Doctor Consultation,2023-10-03 23:40:00,Dr. Garcia,Night
+CASE_381,Doctor Review,2023-10-04 00:23:00,Dr. Wilson,Night
+CASE_381,Discharge,2023-10-04 00:47:00,Nurse Lee,Night
+CASE_382,Registration,2023-10-03 21:49:00,Nurse Joy,Evening
+CASE_382,Triage,2023-10-03 22:01:00,Nurse Ratched,Night
+CASE_382,X-Ray,2023-10-03 22:37:00,Tech Miller,Night
+CASE_382,Triage,2023-10-03 23:04:00,Nurse Ratched,Night
+CASE_382,Doctor Consultation,2023-10-03 23:30:00,Dr. Taylor,Night
+CASE_382,Doctor Review,2023-10-04 00:10:00,Dr. Smith,Night
+CASE_382,Discharge,2023-10-04 00:27:00,Nurse Chapel,Night
+CASE_383,Registration,2023-10-03 21:57:00,Nurse Davis,Evening
+CASE_383,Triage,2023-10-03 22:13:00,Nurse Wilson,Night
+CASE_383,Doctor Consultation,2023-10-03 22:36:00,Dr. Jones,Night
+CASE_383,X-Ray,2023-10-03 23:11:00,Tech Rodriguez,Night
+CASE_383,Doctor Review,2023-10-03 23:46:00,Dr. Smith,Night
+CASE_383,Discharge,2023-10-04 00:10:00,Nurse Davis,Night
+CASE_384,Registration,2023-10-03 22:08:00,Nurse Jackie,Night
+CASE_384,Triage,2023-10-03 22:32:00,Nurse Jackie,Night
+CASE_384,Doctor Consultation,2023-10-03 22:58:00,Dr. Brown,Night
+CASE_384,X-Ray,2023-10-03 23:48:00,Tech Rodriguez,Night
+CASE_384,Doctor Review,2023-10-04 00:17:00,Dr. Patel,Night
+CASE_384,Discharge,2023-10-04 00:38:00,Nurse Davis,Night
+CASE_385,Registration,2023-10-03 22:16:00,Nurse Davis,Night
+CASE_385,Triage,2023-10-03 22:44:00,Nurse Joy,Night
+CASE_385,Doctor Consultation,2023-10-03 23:15:00,Dr. Anderson,Night
+CASE_385,X-Ray,2023-10-03 23:55:00,Tech Rodriguez,Night
+CASE_385,Doctor Review,2023-10-04 00:32:00,Dr. Chen,Night
+CASE_385,Discharge,2023-10-04 00:55:00,Nurse Lee,Night
+CASE_386,Registration,2023-10-03 22:30:00,Nurse Wilson,Night
+CASE_386,Triage,2023-10-03 22:48:00,Nurse Lee,Night
+CASE_386,Blood Test,2023-10-03 23:11:00,Tech Garcia,Night
+CASE_386,Blood Test,2023-10-03 23:53:00,Tech Miller,Night
+CASE_386,Doctor Consultation,2023-10-04 00:32:00,Dr. Kim,Night
+CASE_386,Doctor Review,2023-10-04 01:02:00,Dr. Jones,Night
+CASE_386,Discharge,2023-10-04 01:35:00,Nurse Ratched,Night
+CASE_387,Registration,2023-10-03 22:40:00,Nurse Chapel,Night
+CASE_387,Triage,2023-10-03 23:07:00,Nurse Jackie,Night
+CASE_387,X-Ray,2023-10-03 23:27:00,Tech Garcia,Night
+CASE_387,Triage,2023-10-03 23:56:00,Nurse Chapel,Night
+CASE_387,Doctor Consultation,2023-10-04 00:33:00,Dr. Chen,Night
+CASE_387,Doctor Review,2023-10-04 01:03:00,Dr. Wilson,Night
+CASE_387,Discharge,2023-10-04 01:27:00,Nurse Jackie,Night
+CASE_388,Registration,2023-10-03 22:47:00,Nurse Ratched,Night
+CASE_388,Triage,2023-10-03 23:06:00,Nurse Lee,Night
+CASE_388,Blood Test,2023-10-03 23:46:00,Tech Garcia,Night
+CASE_388,Blood Test,2023-10-04 00:13:00,Tech Miller,Night
+CASE_388,Doctor Consultation,2023-10-04 00:40:00,Dr. Patel,Night
+CASE_388,Doctor Review,2023-10-04 01:36:00,Dr. Wilson,Night
+CASE_388,Discharge,2023-10-04 02:06:00,Nurse Wilson,Night
+CASE_389,Registration,2023-10-03 22:57:00,Nurse Chapel,Night
+CASE_389,Triage,2023-10-03 23:20:00,Nurse Joy,Night
+CASE_389,Doctor Consultation,2023-10-04 00:04:00,Dr. Smith,Night
+CASE_389,X-Ray,2023-10-04 01:02:00,Tech Miller,Night
+CASE_389,Doctor Review,2023-10-04 01:28:00,Dr. Smith,Night
+CASE_389,Discharge,2023-10-04 01:56:00,Nurse Joy,Night
+CASE_390,Registration,2023-10-03 23:08:00,Nurse Ratched,Night
+CASE_390,Triage,2023-10-03 23:31:00,Nurse Ratched,Night
+CASE_390,Doctor Consultation,2023-10-04 00:00:00,Dr. Taylor,Night
+CASE_390,X-Ray,2023-10-04 00:46:00,Tech Miller,Night
+CASE_390,Doctor Review,2023-10-04 01:15:00,Dr. Jones,Night
+CASE_390,Discharge,2023-10-04 01:33:00,Nurse Wilson,Night
+CASE_391,Registration,2023-10-03 23:13:00,Nurse Lee,Night
+CASE_391,Triage,2023-10-03 23:40:00,Nurse Lee,Night
+CASE_391,Blood Test,2023-10-04 00:13:00,Tech Rodriguez,Night
+CASE_391,Blood Test,2023-10-04 00:55:00,Tech Rodriguez,Night
+CASE_391,Doctor Consultation,2023-10-04 01:31:00,Dr. Smith,Night
+CASE_391,Doctor Review,2023-10-04 01:56:00,Dr. Smith,Night
+CASE_391,Discharge,2023-10-04 02:19:00,Nurse Chapel,Night
+CASE_392,Registration,2023-10-03 23:21:00,Nurse Ratched,Night
+CASE_392,Triage,2023-10-03 23:38:00,Nurse Jackie,Night
+CASE_392,Doctor Consultation,2023-10-04 00:08:00,Dr. Chen,Night
+CASE_392,X-Ray,2023-10-04 00:30:00,Tech Rodriguez,Night
+CASE_392,Doctor Review,2023-10-04 00:54:00,Dr. Anderson,Night
+CASE_392,Discharge,2023-10-04 01:15:00,Nurse Jackie,Night
+CASE_393,Registration,2023-10-03 23:34:00,Nurse Davis,Night
+CASE_393,Triage,2023-10-03 23:56:00,Nurse Wilson,Night
+CASE_393,X-Ray,2023-10-04 00:27:00,Tech Rodriguez,Night
+CASE_393,Triage,2023-10-04 01:08:00,Nurse Joy,Night
+CASE_393,Doctor Consultation,2023-10-04 01:39:00,Dr. Wilson,Night
+CASE_393,Doctor Review,2023-10-04 02:16:00,Dr. Taylor,Night
+CASE_393,Discharge,2023-10-04 02:36:00,Nurse Lee,Night
+CASE_394,Registration,2023-10-03 23:39:00,Nurse Jackie,Night
+CASE_394,Triage,2023-10-04 00:03:00,Nurse Davis,Night
+CASE_394,X-Ray,2023-10-04 00:29:00,Tech Garcia,Night
+CASE_394,Triage,2023-10-04 01:00:00,Nurse Lee,Night
+CASE_394,Doctor Consultation,2023-10-04 01:36:00,Dr. Brown,Night
+CASE_394,Doctor Review,2023-10-04 02:15:00,Dr. Smith,Night
+CASE_394,Discharge,2023-10-04 02:45:00,Nurse Wilson,Night
+CASE_395,Registration,2023-10-03 23:50:00,Nurse Joy,Night
+CASE_395,Triage,2023-10-04 00:07:00,Nurse Jackie,Night
+CASE_395,X-Ray,2023-10-04 00:40:00,Tech Garcia,Night
+CASE_395,Triage,2023-10-04 01:09:00,Nurse Ratched,Night
+CASE_395,Doctor Consultation,2023-10-04 01:46:00,Dr. Taylor,Night
+CASE_395,Doctor Review,2023-10-04 02:26:00,Dr. Anderson,Night
+CASE_395,Discharge,2023-10-04 02:54:00,Nurse Ratched,Night
+CASE_396,Registration,2023-10-03 23:57:00,Nurse Lee,Night
+CASE_396,Triage,2023-10-04 00:17:00,Nurse Davis,Night
+CASE_396,X-Ray,2023-10-04 00:37:00,Tech Rodriguez,Night
+CASE_396,Triage,2023-10-04 01:19:00,Nurse Joy,Night
+CASE_396,Blood Test,2023-10-04 01:55:00,Tech Rodriguez,Night
+CASE_396,Doctor Consultation,2023-10-04 02:17:00,Dr. Patel,Night
+CASE_396,Doctor Review,2023-10-04 02:44:00,Dr. Jones,Night
+CASE_396,Discharge,2023-10-04 03:10:00,Nurse Lee,Night
+CASE_397,Registration,2023-10-04 00:12:00,Nurse Lee,Night
+CASE_397,Triage,2023-10-04 00:34:00,Nurse Ratched,Night
+CASE_397,Doctor Consultation,2023-10-04 00:55:00,Dr. Patel,Night
+CASE_397,X-Ray,2023-10-04 01:22:00,Tech Rodriguez,Night
+CASE_397,Doctor Review,2023-10-04 01:56:00,Dr. Jones,Night
+CASE_397,Discharge,2023-10-04 02:24:00,Nurse Davis,Night
+CASE_398,Registration,2023-10-04 00:25:00,Nurse Jackie,Night
+CASE_398,Triage,2023-10-04 00:41:00,Nurse Jackie,Night
+CASE_398,X-Ray,2023-10-04 01:20:00,Tech Rodriguez,Night
+CASE_398,Triage,2023-10-04 01:59:00,Nurse Jackie,Night
+CASE_398,Blood Test,2023-10-04 02:42:00,Tech Garcia,Night
+CASE_398,Doctor Consultation,2023-10-04 03:13:00,Dr. Chen,Night
+CASE_398,Doctor Review,2023-10-04 04:02:00,Dr. Chen,Night
+CASE_398,Discharge,2023-10-04 04:31:00,Nurse Wilson,Night
+CASE_399,Registration,2023-10-04 00:34:00,Nurse Joy,Night
+CASE_399,Triage,2023-10-04 00:50:00,Nurse Joy,Night
+CASE_399,X-Ray,2023-10-04 01:16:00,Tech Rodriguez,Night
+CASE_399,Triage,2023-10-04 01:54:00,Nurse Ratched,Night
+CASE_399,Blood Test,2023-10-04 02:21:00,Tech Garcia,Night
+CASE_399,Doctor Consultation,2023-10-04 02:49:00,Dr. Smith,Night
+CASE_399,Doctor Review,2023-10-04 03:28:00,Dr. Brown,Night
+CASE_399,Discharge,2023-10-04 04:00:00,Nurse Ratched,Night
+CASE_400,Registration,2023-10-04 00:39:00,Nurse Davis,Night
+CASE_400,Triage,2023-10-04 01:01:00,Nurse Lee,Night
+CASE_400,X-Ray,2023-10-04 01:21:00,Tech Miller,Night
+CASE_400,Triage,2023-10-04 01:59:00,Nurse Chapel,Night
+CASE_400,Blood Test,2023-10-04 02:37:00,Tech Miller,Night
+CASE_400,Doctor Consultation,2023-10-04 03:03:00,Dr. Patel,Night
+CASE_400,Doctor Review,2023-10-04 03:55:00,Dr. Jones,Night
+CASE_400,Discharge,2023-10-04 04:18:00,Nurse Joy,Night
+CASE_401,Registration,2023-10-04 00:45:00,Nurse Joy,Night
+CASE_401,Triage,2023-10-04 01:00:00,Nurse Wilson,Night
+CASE_401,Doctor Consultation,2023-10-04 01:34:00,Dr. Jones,Night
+CASE_401,X-Ray,2023-10-04 02:03:00,Tech Garcia,Night
+CASE_401,Doctor Review,2023-10-04 02:34:00,Dr. Kim,Night
+CASE_401,Discharge,2023-10-04 03:06:00,Nurse Jackie,Night
+CASE_402,Registration,2023-10-04 00:58:00,Nurse Joy,Night
+CASE_402,Triage,2023-10-04 01:17:00,Nurse Lee,Night
+CASE_402,X-Ray,2023-10-04 01:40:00,Tech Rodriguez,Night
+CASE_402,Triage,2023-10-04 02:12:00,Nurse Joy,Night
+CASE_402,Doctor Consultation,2023-10-04 03:02:00,Dr. Smith,Night
+CASE_402,Doctor Review,2023-10-04 03:51:00,Dr. Chen,Night
+CASE_402,Discharge,2023-10-04 04:17:00,Nurse Chapel,Night
+CASE_403,Registration,2023-10-04 01:06:00,Nurse Chapel,Night
+CASE_403,Triage,2023-10-04 01:23:00,Nurse Chapel,Night
+CASE_403,X-Ray,2023-10-04 01:53:00,Tech Miller,Night
+CASE_403,Triage,2023-10-04 02:21:00,Nurse Chapel,Night
+CASE_403,Doctor Consultation,2023-10-04 03:07:00,Dr. Jones,Night
+CASE_403,Doctor Review,2023-10-04 03:37:00,Dr. Chen,Night
+CASE_403,Discharge,2023-10-04 04:02:00,Nurse Lee,Night
+CASE_404,Registration,2023-10-04 01:18:00,Nurse Joy,Night
+CASE_404,Triage,2023-10-04 01:32:00,Nurse Ratched,Night
+CASE_404,X-Ray,2023-10-04 02:03:00,Tech Rodriguez,Night
+CASE_404,Triage,2023-10-04 02:32:00,Nurse Joy,Night
+CASE_404,Blood Test,2023-10-04 03:08:00,Tech Garcia,Night
+CASE_404,Doctor Consultation,2023-10-04 03:39:00,Dr. Kim,Night
+CASE_404,Doctor Review,2023-10-04 04:27:00,Dr. Brown,Night
+CASE_404,Discharge,2023-10-04 04:52:00,Nurse Jackie,Night
+CASE_405,Registration,2023-10-04 01:26:00,Nurse Lee,Night
+CASE_405,Triage,2023-10-04 01:50:00,Nurse Jackie,Night
+CASE_405,X-Ray,2023-10-04 02:25:00,Tech Miller,Night
+CASE_405,Triage,2023-10-04 02:52:00,Nurse Davis,Night
+CASE_405,Doctor Consultation,2023-10-04 03:28:00,Dr. Kim,Night
+CASE_405,Doctor Review,2023-10-04 04:22:00,Dr. Anderson,Night
+CASE_405,Discharge,2023-10-04 04:49:00,Nurse Lee,Night
+CASE_406,Registration,2023-10-04 01:33:00,Nurse Ratched,Night
+CASE_406,Triage,2023-10-04 01:58:00,Nurse Ratched,Night
+CASE_406,X-Ray,2023-10-04 02:22:00,Tech Garcia,Night
+CASE_406,Triage,2023-10-04 02:44:00,Nurse Lee,Night
+CASE_406,Doctor Consultation,2023-10-04 03:10:00,Dr. Jones,Night
+CASE_406,Doctor Review,2023-10-04 03:43:00,Dr. Garcia,Night
+CASE_406,Discharge,2023-10-04 04:08:00,Nurse Lee,Night
+CASE_407,Registration,2023-10-04 01:41:00,Nurse Joy,Night
+CASE_407,Triage,2023-10-04 02:06:00,Nurse Davis,Night
+CASE_407,Blood Test,2023-10-04 02:38:00,Tech Garcia,Night
+CASE_407,Blood Test,2023-10-04 03:19:00,Tech Miller,Night
+CASE_407,Doctor Consultation,2023-10-04 04:09:00,Dr. Smith,Night
+CASE_407,Doctor Review,2023-10-04 05:07:00,Dr. Patel,Night
+CASE_407,Discharge,2023-10-04 05:38:00,Nurse Jackie,Night
+CASE_408,Registration,2023-10-04 01:47:00,Nurse Chapel,Night
+CASE_408,Triage,2023-10-04 02:07:00,Nurse Chapel,Night
+CASE_408,Doctor Consultation,2023-10-04 02:40:00,Dr. Kim,Night
+CASE_408,X-Ray,2023-10-04 03:13:00,Tech Garcia,Night
+CASE_408,Doctor Review,2023-10-04 03:55:00,Dr. Anderson,Night
+CASE_408,Discharge,2023-10-04 04:24:00,Nurse Joy,Night
+CASE_409,Registration,2023-10-04 02:01:00,Nurse Davis,Night
+CASE_409,Triage,2023-10-04 02:23:00,Nurse Joy,Night
+CASE_409,X-Ray,2023-10-04 03:03:00,Tech Miller,Night
+CASE_409,Triage,2023-10-04 03:41:00,Nurse Davis,Night
+CASE_409,Doctor Consultation,2023-10-04 04:15:00,Dr. Taylor,Night
+CASE_409,Doctor Review,2023-10-04 04:42:00,Dr. Jones,Night
+CASE_409,Discharge,2023-10-04 05:06:00,Nurse Lee,Night
+CASE_410,Registration,2023-10-04 02:07:00,Nurse Jackie,Night
+CASE_410,Triage,2023-10-04 02:31:00,Nurse Lee,Night
+CASE_410,X-Ray,2023-10-04 02:53:00,Tech Rodriguez,Night
+CASE_410,Triage,2023-10-04 03:24:00,Nurse Wilson,Night
+CASE_410,Blood Test,2023-10-04 04:05:00,Tech Rodriguez,Night
+CASE_410,Doctor Consultation,2023-10-04 04:40:00,Dr. Chen,Night
+CASE_410,Doctor Review,2023-10-04 05:07:00,Dr. Jones,Night
+CASE_410,Discharge,2023-10-04 05:35:00,Nurse Ratched,Night
+CASE_411,Registration,2023-10-04 02:12:00,Nurse Chapel,Night
+CASE_411,Triage,2023-10-04 02:30:00,Nurse Lee,Night
+CASE_411,Doctor Consultation,2023-10-04 02:58:00,Dr. Anderson,Night
+CASE_411,X-Ray,2023-10-04 03:38:00,Tech Rodriguez,Night
+CASE_411,Doctor Review,2023-10-04 04:07:00,Dr. Kim,Night
+CASE_411,Discharge,2023-10-04 04:35:00,Nurse Wilson,Night
+CASE_412,Registration,2023-10-04 02:17:00,Nurse Chapel,Night
+CASE_412,Triage,2023-10-04 02:39:00,Nurse Joy,Night
+CASE_412,X-Ray,2023-10-04 03:00:00,Tech Miller,Night
+CASE_412,Triage,2023-10-04 03:25:00,Nurse Joy,Night
+CASE_412,Doctor Consultation,2023-10-04 04:04:00,Dr. Kim,Night
+CASE_412,Doctor Review,2023-10-04 04:34:00,Dr. Smith,Night
+CASE_412,Discharge,2023-10-04 04:58:00,Nurse Davis,Night
+CASE_413,Registration,2023-10-04 02:32:00,Nurse Davis,Night
+CASE_413,Triage,2023-10-04 02:49:00,Nurse Ratched,Night
+CASE_413,Doctor Consultation,2023-10-04 03:20:00,Dr. Brown,Night
+CASE_413,X-Ray,2023-10-04 03:45:00,Tech Miller,Night
+CASE_413,Doctor Review,2023-10-04 04:27:00,Dr. Patel,Night
+CASE_413,Discharge,2023-10-04 04:55:00,Nurse Wilson,Night
+CASE_414,Registration,2023-10-04 02:44:00,Nurse Jackie,Night
+CASE_414,Triage,2023-10-04 03:09:00,Nurse Davis,Night
+CASE_414,X-Ray,2023-10-04 03:47:00,Tech Rodriguez,Night
+CASE_414,Triage,2023-10-04 04:12:00,Nurse Ratched,Night
+CASE_414,Doctor Consultation,2023-10-04 04:41:00,Dr. Taylor,Night
+CASE_414,Doctor Review,2023-10-04 05:10:00,Dr. Wilson,Night
+CASE_414,Discharge,2023-10-04 05:35:00,Nurse Chapel,Night
+CASE_415,Registration,2023-10-04 02:54:00,Nurse Joy,Night
+CASE_415,Triage,2023-10-04 03:19:00,Nurse Chapel,Night
+CASE_415,Doctor Consultation,2023-10-04 03:59:00,Dr. Smith,Night
+CASE_415,X-Ray,2023-10-04 04:49:00,Tech Garcia,Night
+CASE_415,Doctor Review,2023-10-04 05:18:00,Dr. Kim,Night
+CASE_415,Discharge,2023-10-04 05:50:00,Nurse Jackie,Night
+CASE_416,Registration,2023-10-04 03:02:00,Nurse Ratched,Night
+CASE_416,Triage,2023-10-04 03:22:00,Nurse Joy,Night
+CASE_416,X-Ray,2023-10-04 03:47:00,Tech Miller,Night
+CASE_416,Triage,2023-10-04 04:30:00,Nurse Davis,Night
+CASE_416,Doctor Consultation,2023-10-04 05:23:00,Dr. Anderson,Night
+CASE_416,Doctor Review,2023-10-04 06:04:00,Dr. Chen,Morning
+CASE_416,Discharge,2023-10-04 06:37:00,Nurse Davis,Morning
+CASE_417,Registration,2023-10-04 03:08:00,Nurse Jackie,Night
+CASE_417,Triage,2023-10-04 03:38:00,Nurse Ratched,Night
+CASE_417,Doctor Consultation,2023-10-04 04:11:00,Dr. Chen,Night
+CASE_417,X-Ray,2023-10-04 05:01:00,Tech Garcia,Night
+CASE_417,Doctor Review,2023-10-04 05:31:00,Dr. Garcia,Night
+CASE_417,Discharge,2023-10-04 05:50:00,Nurse Jackie,Night
+CASE_418,Registration,2023-10-04 03:19:00,Nurse Davis,Night
+CASE_418,Triage,2023-10-04 03:29:00,Nurse Ratched,Night
+CASE_418,X-Ray,2023-10-04 04:02:00,Tech Garcia,Night
+CASE_418,Triage,2023-10-04 04:27:00,Nurse Joy,Night
+CASE_418,Doctor Consultation,2023-10-04 04:55:00,Dr. Garcia,Night
+CASE_418,Doctor Review,2023-10-04 05:22:00,Dr. Brown,Night
+CASE_418,Discharge,2023-10-04 05:39:00,Nurse Jackie,Night
+CASE_419,Registration,2023-10-04 03:33:00,Nurse Joy,Night
+CASE_419,Triage,2023-10-04 03:49:00,Nurse Wilson,Night
+CASE_419,Doctor Consultation,2023-10-04 04:21:00,Dr. Smith,Night
+CASE_419,X-Ray,2023-10-04 04:52:00,Tech Miller,Night
+CASE_419,Doctor Review,2023-10-04 05:24:00,Dr. Wilson,Night
+CASE_419,Discharge,2023-10-04 05:41:00,Nurse Lee,Night
+CASE_420,Registration,2023-10-04 03:39:00,Nurse Lee,Night
+CASE_420,Triage,2023-10-04 04:08:00,Nurse Ratched,Night
+CASE_420,X-Ray,2023-10-04 04:47:00,Tech Rodriguez,Night
+CASE_420,Triage,2023-10-04 05:19:00,Nurse Lee,Night
+CASE_420,Doctor Consultation,2023-10-04 06:10:00,Dr. Brown,Morning
+CASE_420,Doctor Review,2023-10-04 06:39:00,Dr. Kim,Morning
+CASE_420,Discharge,2023-10-04 07:02:00,Nurse Lee,Morning
+CASE_421,Registration,2023-10-04 03:50:00,Nurse Davis,Night
+CASE_421,Triage,2023-10-04 04:10:00,Nurse Davis,Night
+CASE_421,X-Ray,2023-10-04 04:44:00,Tech Miller,Night
+CASE_421,Triage,2023-10-04 05:09:00,Nurse Joy,Night
+CASE_421,Doctor Consultation,2023-10-04 06:01:00,Dr. Chen,Morning
+CASE_421,Doctor Review,2023-10-04 06:54:00,Dr. Wilson,Morning
+CASE_421,Discharge,2023-10-04 07:19:00,Nurse Davis,Morning
+CASE_422,Registration,2023-10-04 03:56:00,Nurse Wilson,Night
+CASE_422,Triage,2023-10-04 04:16:00,Nurse Chapel,Night
+CASE_422,Doctor Consultation,2023-10-04 04:45:00,Dr. Smith,Night
+CASE_422,X-Ray,2023-10-04 05:29:00,Tech Miller,Night
+CASE_422,Doctor Review,2023-10-04 06:06:00,Dr. Garcia,Morning
+CASE_422,Discharge,2023-10-04 06:33:00,Nurse Davis,Morning
+CASE_423,Registration,2023-10-04 04:05:00,Nurse Jackie,Night
+CASE_423,Triage,2023-10-04 04:22:00,Nurse Lee,Night
+CASE_423,X-Ray,2023-10-04 04:49:00,Tech Rodriguez,Night
+CASE_423,Triage,2023-10-04 05:22:00,Nurse Chapel,Night
+CASE_423,Doctor Consultation,2023-10-04 05:56:00,Dr. Jones,Night
+CASE_423,Doctor Review,2023-10-04 06:40:00,Dr. Brown,Morning
+CASE_423,Discharge,2023-10-04 07:04:00,Nurse Davis,Morning
+CASE_424,Registration,2023-10-04 04:16:00,Nurse Davis,Night
+CASE_424,Triage,2023-10-04 04:41:00,Nurse Jackie,Night
+CASE_424,Doctor Consultation,2023-10-04 05:23:00,Dr. Chen,Night
+CASE_424,X-Ray,2023-10-04 05:57:00,Tech Rodriguez,Night
+CASE_424,Doctor Review,2023-10-04 06:33:00,Dr. Kim,Morning
+CASE_424,Discharge,2023-10-04 06:56:00,Nurse Lee,Morning
+CASE_425,Registration,2023-10-04 04:22:00,Nurse Lee,Night
+CASE_425,Triage,2023-10-04 04:42:00,Nurse Joy,Night
+CASE_425,X-Ray,2023-10-04 05:21:00,Tech Rodriguez,Night
+CASE_425,Triage,2023-10-04 05:58:00,Nurse Joy,Night
+CASE_425,Blood Test,2023-10-04 06:43:00,Tech Rodriguez,Morning
+CASE_425,Doctor Consultation,2023-10-04 07:17:00,Dr. Anderson,Morning
+CASE_425,Doctor Review,2023-10-04 08:07:00,Dr. Taylor,Morning
+CASE_425,Discharge,2023-10-04 08:29:00,Nurse Wilson,Morning
+CASE_426,Registration,2023-10-04 04:31:00,Nurse Ratched,Night
+CASE_426,Triage,2023-10-04 04:43:00,Nurse Ratched,Night
+CASE_426,Doctor Consultation,2023-10-04 05:16:00,Dr. Jones,Night
+CASE_426,X-Ray,2023-10-04 05:53:00,Tech Garcia,Night
+CASE_426,Doctor Review,2023-10-04 06:21:00,Dr. Wilson,Morning
+CASE_426,Discharge,2023-10-04 06:48:00,Nurse Davis,Morning
+CASE_427,Registration,2023-10-04 04:45:00,Nurse Lee,Night
+CASE_427,Triage,2023-10-04 05:02:00,Nurse Davis,Night
+CASE_427,Doctor Consultation,2023-10-04 05:37:00,Dr. Chen,Night
+CASE_427,X-Ray,2023-10-04 06:27:00,Tech Rodriguez,Morning
+CASE_427,Doctor Review,2023-10-04 07:01:00,Dr. Garcia,Morning
+CASE_427,Discharge,2023-10-04 07:31:00,Nurse Davis,Morning
+CASE_428,Registration,2023-10-04 04:52:00,Nurse Wilson,Night
+CASE_428,Triage,2023-10-04 05:19:00,Nurse Joy,Night
+CASE_428,X-Ray,2023-10-04 05:50:00,Tech Miller,Night
+CASE_428,Triage,2023-10-04 06:19:00,Nurse Davis,Morning
+CASE_428,Doctor Consultation,2023-10-04 07:02:00,Dr. Jones,Morning
+CASE_428,Doctor Review,2023-10-04 07:32:00,Dr. Wilson,Morning
+CASE_428,Discharge,2023-10-04 07:55:00,Nurse Jackie,Morning
+CASE_429,Registration,2023-10-04 04:57:00,Nurse Jackie,Night
+CASE_429,Triage,2023-10-04 05:12:00,Nurse Wilson,Night
+CASE_429,Doctor Consultation,2023-10-04 05:46:00,Dr. Smith,Night
+CASE_429,X-Ray,2023-10-04 06:33:00,Tech Miller,Morning
+CASE_429,Doctor Review,2023-10-04 07:08:00,Dr. Jones,Morning
+CASE_429,Discharge,2023-10-04 07:28:00,Nurse Wilson,Morning
+CASE_430,Registration,2023-10-04 05:08:00,Nurse Chapel,Night
+CASE_430,Triage,2023-10-04 05:24:00,Nurse Jackie,Night
+CASE_430,Blood Test,2023-10-04 05:46:00,Tech Rodriguez,Night
+CASE_430,Blood Test,2023-10-04 06:14:00,Tech Garcia,Morning
+CASE_430,Doctor Consultation,2023-10-04 07:00:00,Dr. Jones,Morning
+CASE_430,Doctor Review,2023-10-04 07:34:00,Dr. Chen,Morning
+CASE_430,Discharge,2023-10-04 07:54:00,Nurse Jackie,Morning
+CASE_431,Registration,2023-10-04 05:21:00,Nurse Lee,Night
+CASE_431,Triage,2023-10-04 05:50:00,Nurse Davis,Night
+CASE_431,X-Ray,2023-10-04 06:25:00,Tech Rodriguez,Morning
+CASE_431,Triage,2023-10-04 06:55:00,Nurse Wilson,Morning
+CASE_431,Blood Test,2023-10-04 07:33:00,Tech Miller,Morning
+CASE_431,Doctor Consultation,2023-10-04 08:04:00,Dr. Jones,Morning
+CASE_431,Doctor Review,2023-10-04 08:40:00,Dr. Smith,Morning
+CASE_431,Discharge,2023-10-04 09:04:00,Nurse Ratched,Morning
+CASE_432,Registration,2023-10-04 05:26:00,Nurse Joy,Night
+CASE_432,Triage,2023-10-04 05:40:00,Nurse Wilson,Night
+CASE_432,X-Ray,2023-10-04 05:55:00,Tech Garcia,Night
+CASE_432,Triage,2023-10-04 06:23:00,Nurse Ratched,Morning
+CASE_432,Doctor Consultation,2023-10-04 07:01:00,Dr. Chen,Morning
+CASE_432,Doctor Review,2023-10-04 07:40:00,Dr. Chen,Morning
+CASE_432,Discharge,2023-10-04 08:11:00,Nurse Joy,Morning
+CASE_433,Registration,2023-10-04 05:41:00,Nurse Jackie,Night
+CASE_433,Triage,2023-10-04 06:02:00,Nurse Wilson,Morning
+CASE_433,Blood Test,2023-10-04 06:32:00,Tech Garcia,Morning
+CASE_433,Blood Test,2023-10-04 07:03:00,Tech Miller,Morning
+CASE_433,Doctor Consultation,2023-10-04 07:42:00,Dr. Patel,Morning
+CASE_433,Doctor Review,2023-10-04 08:32:00,Dr. Kim,Morning
+CASE_433,Discharge,2023-10-04 09:04:00,Nurse Lee,Morning
+CASE_434,Registration,2023-10-04 05:46:00,Nurse Lee,Night
+CASE_434,Triage,2023-10-04 06:12:00,Nurse Ratched,Morning
+CASE_434,Doctor Consultation,2023-10-04 06:42:00,Dr. Taylor,Morning
+CASE_434,X-Ray,2023-10-04 07:13:00,Tech Rodriguez,Morning
+CASE_434,Doctor Review,2023-10-04 07:51:00,Dr. Smith,Morning
+CASE_434,Discharge,2023-10-04 08:19:00,Nurse Chapel,Morning
+CASE_435,Registration,2023-10-04 05:59:00,Nurse Ratched,Night
+CASE_435,Triage,2023-10-04 06:24:00,Nurse Jackie,Morning
+CASE_435,Blood Test,2023-10-04 06:45:00,Tech Garcia,Morning
+CASE_435,Blood Test,2023-10-04 07:21:00,Tech Miller,Morning
+CASE_435,Doctor Consultation,2023-10-04 08:06:00,Dr. Taylor,Morning
+CASE_435,Doctor Review,2023-10-04 08:40:00,Dr. Brown,Morning
+CASE_435,Discharge,2023-10-04 09:12:00,Nurse Joy,Morning
+CASE_436,Registration,2023-10-04 06:14:00,Nurse Jackie,Morning
+CASE_436,Triage,2023-10-04 06:39:00,Nurse Davis,Morning
+CASE_436,X-Ray,2023-10-04 07:03:00,Tech Miller,Morning
+CASE_436,Triage,2023-10-04 07:42:00,Nurse Davis,Morning
+CASE_436,Doctor Consultation,2023-10-04 08:21:00,Dr. Kim,Morning
+CASE_436,Doctor Review,2023-10-04 09:08:00,Dr. Jones,Morning
+CASE_436,Discharge,2023-10-04 09:31:00,Nurse Jackie,Morning
+CASE_437,Registration,2023-10-04 06:24:00,Nurse Joy,Morning
+CASE_437,Triage,2023-10-04 06:43:00,Nurse Davis,Morning
+CASE_437,Doctor Consultation,2023-10-04 07:16:00,Dr. Kim,Morning
+CASE_437,X-Ray,2023-10-04 08:04:00,Tech Miller,Morning
+CASE_437,Doctor Review,2023-10-04 08:28:00,Dr. Chen,Morning
+CASE_437,Discharge,2023-10-04 08:53:00,Nurse Chapel,Morning
+CASE_438,Registration,2023-10-04 06:29:00,Nurse Davis,Morning
+CASE_438,Triage,2023-10-04 06:42:00,Nurse Joy,Morning
+CASE_438,X-Ray,2023-10-04 07:19:00,Tech Rodriguez,Morning
+CASE_438,Triage,2023-10-04 07:55:00,Nurse Joy,Morning
+CASE_438,Blood Test,2023-10-04 08:42:00,Tech Rodriguez,Morning
+CASE_438,Doctor Consultation,2023-10-04 09:21:00,Dr. Smith,Morning
+CASE_438,Doctor Review,2023-10-04 10:17:00,Dr. Kim,Morning
+CASE_438,Discharge,2023-10-04 10:37:00,Nurse Jackie,Morning
+CASE_439,Registration,2023-10-04 06:38:00,Nurse Chapel,Morning
+CASE_439,Triage,2023-10-04 06:59:00,Nurse Ratched,Morning
+CASE_439,X-Ray,2023-10-04 07:36:00,Tech Rodriguez,Morning
+CASE_439,Triage,2023-10-04 08:05:00,Nurse Chapel,Morning
+CASE_439,Doctor Consultation,2023-10-04 08:54:00,Dr. Brown,Morning
+CASE_439,Doctor Review,2023-10-04 09:39:00,Dr. Chen,Morning
+CASE_439,Discharge,2023-10-04 10:02:00,Nurse Joy,Morning
+CASE_440,Registration,2023-10-04 06:43:00,Nurse Davis,Morning
+CASE_440,Triage,2023-10-04 07:02:00,Nurse Davis,Morning
+CASE_440,Blood Test,2023-10-04 07:25:00,Tech Garcia,Morning
+CASE_440,Blood Test,2023-10-04 07:53:00,Tech Garcia,Morning
+CASE_440,Doctor Consultation,2023-10-04 08:37:00,Dr. Kim,Morning
+CASE_440,Doctor Review,2023-10-04 09:27:00,Dr. Wilson,Morning
+CASE_440,Discharge,2023-10-04 09:48:00,Nurse Chapel,Morning
+CASE_441,Registration,2023-10-04 06:57:00,Nurse Joy,Morning
+CASE_441,Triage,2023-10-04 07:25:00,Nurse Lee,Morning
+CASE_441,X-Ray,2023-10-04 07:42:00,Tech Rodriguez,Morning
+CASE_441,Triage,2023-10-04 08:24:00,Nurse Chapel,Morning
+CASE_441,Doctor Consultation,2023-10-04 09:10:00,Dr. Garcia,Morning
+CASE_441,Doctor Review,2023-10-04 09:33:00,Dr. Wilson,Morning
+CASE_441,Discharge,2023-10-04 09:58:00,Nurse Lee,Morning
+CASE_442,Registration,2023-10-04 07:04:00,Nurse Jackie,Morning
+CASE_442,Triage,2023-10-04 07:31:00,Nurse Joy,Morning
+CASE_442,Blood Test,2023-10-04 08:09:00,Tech Miller,Morning
+CASE_442,Blood Test,2023-10-04 08:36:00,Tech Garcia,Morning
+CASE_442,Doctor Consultation,2023-10-04 09:24:00,Dr. Chen,Morning
+CASE_442,Doctor Review,2023-10-04 09:55:00,Dr. Taylor,Morning
+CASE_442,Discharge,2023-10-04 10:22:00,Nurse Wilson,Morning
+CASE_443,Registration,2023-10-04 07:17:00,Nurse Davis,Morning
+CASE_443,Triage,2023-10-04 07:36:00,Nurse Ratched,Morning
+CASE_443,X-Ray,2023-10-04 08:17:00,Tech Miller,Morning
+CASE_443,Triage,2023-10-04 08:48:00,Nurse Jackie,Morning
+CASE_443,Doctor Consultation,2023-10-04 09:32:00,Dr. Taylor,Morning
+CASE_443,Doctor Review,2023-10-04 10:06:00,Dr. Anderson,Morning
+CASE_443,Discharge,2023-10-04 10:25:00,Nurse Chapel,Morning
+CASE_444,Registration,2023-10-04 07:26:00,Nurse Chapel,Morning
+CASE_444,Triage,2023-10-04 07:41:00,Nurse Jackie,Morning
+CASE_444,Doctor Consultation,2023-10-04 07:58:00,Dr. Garcia,Morning
+CASE_444,X-Ray,2023-10-04 08:51:00,Tech Garcia,Morning
+CASE_444,Doctor Review,2023-10-04 09:23:00,Dr. Taylor,Morning
+CASE_444,Discharge,2023-10-04 09:48:00,Nurse Davis,Morning
+CASE_445,Registration,2023-10-04 07:35:00,Nurse Davis,Morning
+CASE_445,Triage,2023-10-04 07:48:00,Nurse Ratched,Morning
+CASE_445,X-Ray,2023-10-04 08:12:00,Tech Garcia,Morning
+CASE_445,Triage,2023-10-04 08:46:00,Nurse Wilson,Morning
+CASE_445,Doctor Consultation,2023-10-04 09:33:00,Dr. Chen,Morning
+CASE_445,Doctor Review,2023-10-04 10:06:00,Dr. Wilson,Morning
+CASE_445,Discharge,2023-10-04 10:35:00,Nurse Davis,Morning
+CASE_446,Registration,2023-10-04 07:50:00,Nurse Lee,Morning
+CASE_446,Triage,2023-10-04 08:10:00,Nurse Jackie,Morning
+CASE_446,Blood Test,2023-10-04 08:35:00,Tech Rodriguez,Morning
+CASE_446,Blood Test,2023-10-04 09:17:00,Tech Garcia,Morning
+CASE_446,Doctor Consultation,2023-10-04 09:58:00,Dr. Anderson,Morning
+CASE_446,Doctor Review,2023-10-04 10:49:00,Dr. Jones,Morning
+CASE_446,Discharge,2023-10-04 11:16:00,Nurse Lee,Morning
+CASE_447,Registration,2023-10-04 07:59:00,Nurse Wilson,Morning
+CASE_447,Triage,2023-10-04 08:15:00,Nurse Wilson,Morning
+CASE_447,Blood Test,2023-10-04 08:49:00,Tech Garcia,Morning
+CASE_447,Blood Test,2023-10-04 09:27:00,Tech Miller,Morning
+CASE_447,Doctor Consultation,2023-10-04 10:00:00,Dr. Patel,Morning
+CASE_447,Doctor Review,2023-10-04 10:46:00,Dr. Taylor,Morning
+CASE_447,Discharge,2023-10-04 11:10:00,Nurse Lee,Morning
+CASE_448,Registration,2023-10-04 08:06:00,Nurse Ratched,Morning
+CASE_448,Triage,2023-10-04 08:26:00,Nurse Wilson,Morning
+CASE_448,X-Ray,2023-10-04 09:03:00,Tech Rodriguez,Morning
+CASE_448,Triage,2023-10-04 09:36:00,Nurse Ratched,Morning
+CASE_448,Doctor Consultation,2023-10-04 10:28:00,Dr. Garcia,Morning
+CASE_448,Doctor Review,2023-10-04 11:11:00,Dr. Chen,Morning
+CASE_448,Discharge,2023-10-04 11:37:00,Nurse Jackie,Morning
+CASE_449,Registration,2023-10-04 08:14:00,Nurse Jackie,Morning
+CASE_449,Triage,2023-10-04 08:32:00,Nurse Lee,Morning
+CASE_449,Doctor Consultation,2023-10-04 09:01:00,Dr. Jones,Morning
+CASE_449,X-Ray,2023-10-04 09:28:00,Tech Garcia,Morning
+CASE_449,Doctor Review,2023-10-04 10:10:00,Dr. Smith,Morning
+CASE_449,Discharge,2023-10-04 10:42:00,Nurse Chapel,Morning
+CASE_450,Registration,2023-10-04 08:26:00,Nurse Davis,Morning
+CASE_450,Triage,2023-10-04 08:45:00,Nurse Wilson,Morning
+CASE_450,Blood Test,2023-10-04 09:14:00,Tech Miller,Morning
+CASE_450,Blood Test,2023-10-04 09:45:00,Tech Rodriguez,Morning
+CASE_450,Doctor Consultation,2023-10-04 10:18:00,Dr. Jones,Morning
+CASE_450,Doctor Review,2023-10-04 10:47:00,Dr. Anderson,Morning
+CASE_450,Discharge,2023-10-04 11:10:00,Nurse Wilson,Morning
