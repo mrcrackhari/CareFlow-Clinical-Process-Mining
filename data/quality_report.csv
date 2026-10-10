@@ -1,0 +1,9 @@
+check_name,expected,actual,status
+required_columns_present,10,10,PASS
+all_activities_valid,0 invalid,0 invalid,PASS
+unique_cases,500,500,PASS
+no_null_keys,0,0,PASS
+loopback_rate_after_xray,0.40,0.40,PASS
+timestamps_monotonic,0,0,PASS
+total_events,>=2000,2254,PASS
+insurance_types_valid,0 invalid,0 invalid,PASS
