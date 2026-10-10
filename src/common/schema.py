@@ -1,0 +1,40 @@
+COL_CASE_ID = "case_id"
+COL_ACTIVITY = "activity"
+COL_TIMESTAMP = "timestamp"
+COL_RESOURCE = "resource"  
+COL_SHIFT = "shift"        
+
+EXPECTED_COLUMNS = [
+    COL_CASE_ID,
+    COL_ACTIVITY,
+    COL_TIMESTAMP,
+    COL_RESOURCE,
+    COL_SHIFT
+]
+
+ACT_REGISTRATION = "Registration"
+ACT_TRIAGE = "Triage"
+ACT_CONSULTATION = "Doctor Consultation"
+ACT_XRAY = "X-Ray"
+ACT_REVIEW = "Doctor Review"
+ACT_DISCHARGE = "Discharge"
+
+VALID_ACTIVITIES = [
+    ACT_REGISTRATION,
+    ACT_TRIAGE,
+    ACT_CONSULTATION,
+    ACT_XRAY,
+    ACT_REVIEW,
+    ACT_DISCHARGE
+]
+
+IDEAL_PATH = [
+    ACT_REGISTRATION,
+    ACT_TRIAGE,
+    ACT_CONSULTATION,
+    ACT_XRAY,
+    ACT_REVIEW,
+    ACT_DISCHARGE
+]
+
+VALID_SHIFTS = ["Morning", "Evening", "Night"]
