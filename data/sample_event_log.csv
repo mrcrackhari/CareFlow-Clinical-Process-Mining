@@ -1,52 +1,59 @@
-case_id,patient_id,activity,timestamp,resource,department,age,gender,insurance_type,loop_back_flag
-C0001,P10234,Triage,2024-01-15 08:02:00,Nurse_Jane,Emergency,45,M,Private,N
-C0001,P10234,X-Ray,2024-01-15 08:22:00,Dr_Smith,Radiology,45,M,Private,N
-C0001,P10234,Triage,2024-01-15 08:40:00,Nurse_Jane,Emergency,45,M,Private,Y
-C0001,P10234,Doctor_Consult,2024-01-15 09:05:00,Dr_Lee,Emergency,45,M,Private,N
-C0001,P10234,Blood_Test,2024-01-15 09:20:00,Lab_Tech_A,Pathology,45,M,Private,N
-C0001,P10234,Doctor_Consult,2024-01-15 10:00:00,Dr_Lee,Emergency,45,M,Private,N
-C0001,P10234,Admit_Ward,2024-01-15 10:45:00,Nurse_Mary,Ward_3,45,M,Private,N
-C0002,P10235,Triage,2024-01-15 08:15:00,Nurse_Tom,Emergency,32,F,Medicare,N
-C0002,P10235,Blood_Test,2024-01-15 08:35:00,Lab_Tech_B,Pathology,32,F,Medicare,N
-C0002,P10235,Doctor_Consult,2024-01-15 09:10:00,Dr_Patel,Emergency,32,F,Medicare,N
-C0002,P10235,Discharge,2024-01-15 09:50:00,Dr_Patel,Emergency,32,F,Medicare,N
-C0003,P10236,Triage,2024-01-15 08:30:00,Nurse_Jane,Emergency,67,M,Medicare,N
-C0003,P10236,X-Ray,2024-01-15 08:55:00,Dr_Smith,Radiology,67,M,Medicare,N
-C0003,P10236,Triage,2024-01-15 09:15:00,Nurse_Jane,Emergency,67,M,Medicare,Y
-C0003,P10236,Doctor_Consult,2024-01-15 09:40:00,Dr_Lee,Emergency,67,M,Medicare,N
-C0003,P10236,X-Ray,2024-01-15 10:10:00,Dr_Smith,Radiology,67,M,Medicare,Y
-C0003,P10236,Triage,2024-01-15 10:30:00,Nurse_Tom,Emergency,67,M,Medicare,Y
-C0003,P10236,Admit_Ward,2024-01-15 11:15:00,Nurse_Mary,Ward_3,67,M,Medicare,N
-C0004,P10237,Triage,2024-01-15 09:00:00,Nurse_Tom,Emergency,28,F,Self-Pay,N
-C0004,P10237,Doctor_Consult,2024-01-15 09:30:00,Dr_Patel,Emergency,28,F,Self-Pay,N
-C0004,P10237,Discharge,2024-01-15 10:00:00,Dr_Patel,Emergency,28,F,Self-Pay,N
-C0005,P10238,Triage,2024-01-15 09:20:00,Nurse_Jane,Emergency,55,F,Private,N
-C0005,P10238,Blood_Test,2024-01-15 09:45:00,Lab_Tech_A,Pathology,55,F,Private,N
-C0005,P10238,X-Ray,2024-01-15 10:15:00,Dr_Smith,Radiology,55,F,Private,N
-C0005,P10238,Triage,2024-01-15 10:35:00,Nurse_Jane,Emergency,55,F,Private,Y
-C0005,P10238,Doctor_Consult,2024-01-15 11:00:00,Dr_Lee,Emergency,55,F,Private,N
-C0005,P10238,Admit_Ward,2024-01-15 11:40:00,Nurse_Mary,Ward_3,55,F,Private,N
-C0006,P10239,Triage,2024-01-15 10:00:00,Nurse_Tom,Emergency,41,M,Medicaid,N
-C0006,P10239,Doctor_Consult,2024-01-15 10:25:00,Dr_Patel,Emergency,41,M,Medicaid,N
-C0006,P10239,Blood_Test,2024-01-15 10:50:00,Lab_Tech_B,Pathology,41,M,Medicaid,N
-C0006,P10239,Doctor_Consult,2024-01-15 11:20:00,Dr_Patel,Emergency,41,M,Medicaid,N
-C0006,P10239,Discharge,2024-01-15 12:00:00,Dr_Patel,Emergency,41,M,Medicaid,N
-C0007,P10240,Triage,2024-01-15 10:30:00,Nurse_Jane,Emergency,73,F,Medicare,N
-C0007,P10240,X-Ray,2024-01-15 11:00:00,Dr_Smith,Radiology,73,F,Medicare,N
-C0007,P10240,Triage,2024-01-15 11:25:00,Nurse_Jane,Emergency,73,F,Medicare,Y
-C0007,P10240,Doctor_Consult,2024-01-15 11:55:00,Dr_Lee,Emergency,73,F,Medicare,N
-C0007,P10240,Admit_Ward,2024-01-15 12:40:00,Nurse_Mary,Ward_3,73,F,Medicare,N
-C0008,P10241,Triage,2024-01-15 11:00:00,Nurse_Tom,Emergency,36,M,Private,N
-C0008,P10241,Blood_Test,2024-01-15 11:20:00,Lab_Tech_A,Pathology,36,M,Private,N
-C0008,P10241,Doctor_Consult,2024-01-15 11:50:00,Dr_Patel,Emergency,36,M,Private,N
-C0008,P10241,Discharge,2024-01-15 12:30:00,Dr_Patel,Emergency,36,M,Private,N
-C0009,P10242,Triage,2024-01-15 11:30:00,Nurse_Jane,Emergency,59,M,Medicare,N
-C0009,P10242,X-Ray,2024-01-15 12:00:00,Dr_Smith,Radiology,59,M,Medicare,N
-C0009,P10242,Triage,2024-01-15 12:20:00,Nurse_Jane,Emergency,59,M,Medicare,Y
-C0009,P10242,Doctor_Consult,2024-01-15 12:50:00,Dr_Lee,Emergency,59,M,Medicare,N
-C0009,P10242,Blood_Test,2024-01-15 13:15:00,Lab_Tech_B,Pathology,59,M,Medicare,N
-C0009,P10242,Doctor_Consult,2024-01-15 13:45:00,Dr_Lee,Emergency,59,M,Medicare,N
-C0009,P10242,Admit_Ward,2024-01-15 14:30:00,Nurse_Mary,Ward_3,59,M,Medicare,N
-C0010,P10243,Triage,2024-01-15 12:00:00,Nurse_Tom,Emergency,24,F,Self-Pay,N
-C0010,P10243,Doctor_Consult,2024-01-15 12:30:00,Dr_Patel,Emergency,24,F,Self-Pay,N
-C0010,P10243,Discharge,2024-01-15 13:00:00,Dr_Patel,Emergency,24,F,Self-Pay,N
+case_id,activity,timestamp,resource,shift
+CASE-0001,Registration,2024-01-15 08:00:00,Reg_Clerk_A,Morning
+CASE-0001,Triage,2024-01-15 08:15:00,Nurse_Jane,Morning
+CASE-0001,X-Ray,2024-01-15 08:35:00,Tech_Miller,Morning
+CASE-0001,Triage,2024-01-15 08:55:00,Nurse_Jane,Morning
+CASE-0001,Doctor Consultation,2024-01-15 09:15:00,Dr_Lee,Morning
+CASE-0001,Doctor Review,2024-01-15 09:35:00,Dr_Lee,Morning
+CASE-0001,Discharge,2024-01-15 10:00:00,Dr_Lee,Morning
+CASE-0002,Registration,2024-01-15 09:00:00,Reg_Clerk_B,Morning
+CASE-0002,Triage,2024-01-15 09:12:00,Nurse_Tom,Morning
+CASE-0002,Doctor Consultation,2024-01-15 09:35:00,Dr_Patel,Morning
+CASE-0002,Discharge,2024-01-15 10:00:00,Dr_Patel,Morning
+CASE-0003,Registration,2024-01-15 10:00:00,Reg_Clerk_A,Morning
+CASE-0003,Triage,2024-01-15 10:15:00,Nurse_Sara,Morning
+CASE-0003,X-Ray,2024-01-15 10:40:00,Tech_Rao,Morning
+CASE-0003,Triage,2024-01-15 11:00:00,Nurse_Sara,Morning
+CASE-0003,Doctor Consultation,2024-01-15 11:25:00,Dr_Adams,Morning
+CASE-0003,X-Ray,2024-01-15 11:50:00,Tech_Rao,Morning
+CASE-0003,Triage,2024-01-15 12:10:00,Nurse_Sara,Morning
+CASE-0003,Discharge,2024-01-15 12:40:00,Dr_Adams,Morning
+CASE-0004,Registration,2024-01-15 14:05:00,Reg_Clerk_B,Evening
+CASE-0004,Triage,2024-01-15 14:18:00,Nurse_Mike,Evening
+CASE-0004,Doctor Consultation,2024-01-15 14:40:00,Dr_Smith,Evening
+CASE-0004,Discharge,2024-01-15 15:05:00,Dr_Smith,Evening
+CASE-0005,Registration,2024-01-15 15:30:00,Reg_Clerk_A,Evening
+CASE-0005,Triage,2024-01-15 15:45:00,Nurse_Jane,Evening
+CASE-0005,Doctor Consultation,2024-01-15 16:10:00,Dr_Kim,Evening
+CASE-0005,Doctor Review,2024-01-15 16:35:00,Dr_Kim,Evening
+CASE-0005,Discharge,2024-01-15 17:00:00,Dr_Kim,Evening
+CASE-0006,Registration,2024-01-15 16:00:00,Reg_Clerk_B,Evening
+CASE-0006,Triage,2024-01-15 16:12:00,Nurse_Tom,Evening
+CASE-0006,X-Ray,2024-01-15 16:35:00,Tech_Kim,Evening
+CASE-0006,Doctor Consultation,2024-01-15 17:00:00,Dr_Patel,Evening
+CASE-0006,Discharge,2024-01-15 17:30:00,Dr_Patel,Evening
+CASE-0007,Registration,2024-01-15 22:15:00,Reg_Clerk_A,Night
+CASE-0007,Triage,2024-01-15 22:30:00,Nurse_Mike,Night
+CASE-0007,X-Ray,2024-01-15 22:55:00,Tech_Miller,Night
+CASE-0007,Triage,2024-01-15 23:15:00,Nurse_Mike,Night
+CASE-0007,Doctor Consultation,2024-01-15 23:40:00,Dr_Lee,Night
+CASE-0007,Doctor Review,2024-01-16 00:05:00,Dr_Lee,Night
+CASE-0007,Discharge,2024-01-16 00:35:00,Dr_Lee,Night
+CASE-0008,Registration,2024-01-16 01:00:00,Reg_Clerk_B,Night
+CASE-0008,Triage,2024-01-16 01:12:00,Nurse_Sara,Night
+CASE-0008,Doctor Consultation,2024-01-16 01:35:00,Dr_Adams,Night
+CASE-0008,Doctor Review,2024-01-16 02:00:00,Dr_Adams,Night
+CASE-0008,Discharge,2024-01-16 02:25:00,Dr_Adams,Night
+CASE-0009,Registration,2024-01-16 08:30:00,Reg_Clerk_A,Morning
+CASE-0009,Triage,2024-01-16 08:45:00,Nurse_Jane,Morning
+CASE-0009,X-Ray,2024-01-16 09:05:00,Tech_Rao,Morning
+CASE-0009,Triage,2024-01-16 09:25:00,Nurse_Jane,Morning
+CASE-0009,Doctor Consultation,2024-01-16 09:50:00,Dr_Kim,Morning
+CASE-0009,Doctor Review,2024-01-16 10:10:00,Dr_Kim,Morning
+CASE-0009,Discharge,2024-01-16 10:35:00,Dr_Kim,Morning
+CASE-0010,Registration,2024-01-16 19:00:00,Reg_Clerk_B,Evening
+CASE-0010,Triage,2024-01-16 19:12:00,Nurse_Tom,Evening
+CASE-0010,X-Ray,2024-01-16 19:35:00,Tech_Miller,Evening
+CASE-0010,Triage,2024-01-16 19:55:00,Nurse_Tom,Evening
+CASE-0010,Doctor Consultation,2024-01-16 20:20:00,Dr_Smith,Evening
+CASE-0010,Discharge,2024-01-16 20:45:00,Dr_Smith,Evening
