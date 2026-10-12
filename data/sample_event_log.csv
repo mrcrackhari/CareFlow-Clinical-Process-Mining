@@ -1,4 +1,4 @@
-Case_ID,Activity_Name,Timestamp
+case_id,activity,timestamp
 CASE_001,Admission,2023-10-01 08:00:00
 CASE_001,Triage,2023-10-01 08:10:00
 CASE_001,Doctor_Consult,2023-10-01 08:35:00
@@ -382,4 +382,4 @@ CASE_070,X-Ray,2023-10-02 13:10:00
 CASE_070,Triage,2023-10-02 13:40:00
 CASE_070,X-Ray,2023-10-02 13:55:00
 CASE_070,Doctor_Consult,2023-10-02 14:25:00
-CASE_070,Discharge,2023-10-02 
+CASE_070,Discharge,2023-10-02 12:00:00
