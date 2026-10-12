@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-# Import processing logic from data_loader
+# Import data preparation logic from data_loader
 from data_loader import DATA_PATH, build_cases, build_transitions, prepare
 
 st.set_page_config(page_title="CareFlow Dashboard", page_icon="🏥", layout="wide")
@@ -26,7 +26,7 @@ def get_transitions(df: pd.DataFrame) -> pd.DataFrame:
     return build_transitions(df)
 
 
-# ---------------------------------------------------------------- Sidebar
+# ---------------------------------------------------------------- Sidebar & Data Loading
 st.sidebar.title("🏥 CareFlow")
 uploaded = st.sidebar.file_uploader("Upload event log (CSV)", type="csv")
 
@@ -36,8 +36,36 @@ try:
     elif DATA_PATH.exists():
         raw = pd.read_csv(DATA_PATH)
     else:
-        st.info("No data found. Run `python generate_data.py` or upload a CSV from the sidebar.")
+        # Day 3: Enhanced Placeholder UI & Guidance State
+        st.title("CareFlow: Clinical Pathway Dashboard")
+        st.caption("Process mining view of patient journeys: volumes, pathways, delays and bottlenecks.")
+        
+        st.info("👋 Welcome to CareFlow! No default `event_log.csv` dataset was detected in `data/`.")
+        
+        c1, c2 = st.columns([2, 1])
+        with c1:
+            st.subheader("📋 Expected Dataset Schema")
+            st.markdown("""
+            Please upload a CSV file from the sidebar to begin process mining analysis. 
+            Your file should include the following standard columns:
+            - **`case_id`**: Unique identifier for the patient visit (e.g., `CASE-0001`)
+            - **`activity`**: Clinical step performed (e.g., `Registration`, `Triage`, `X-Ray`)
+            - **`timestamp`**: Event time (e.g., `2026-10-10 09:00:00`)
+            - **`department`**: *(Optional)* Hospital unit (e.g., `Emergency`, `ICU`, `Surgery`)
+            """)
+        
+        with c2:
+            st.subheader("💡 Example Layout")
+            sample_table = pd.DataFrame({
+                "case_id": ["CASE-001", "CASE-001", "CASE-002"],
+                "activity": ["Registration", "Triage", "Registration"],
+                "timestamp": ["2026-10-10 09:00", "2026-10-10 09:15", "2026-10-10 09:30"],
+                "department": ["Emergency", "Emergency", "ICU"]
+            })
+            st.dataframe(sample_table, hide_index=True, width="stretch")
+
         st.stop()
+        
     data = load_prepared_data(raw)
 except Exception as e:  # noqa: BLE001
     st.error(f"Could not load data: {e}")
