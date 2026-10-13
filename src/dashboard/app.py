@@ -4,8 +4,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-# Import data preparation logic from data_loader
-from data_loader import DATA_PATH, build_cases, build_transitions, prepare
+# Import data preparation logic and path helpers from data_loader
+from data_loader import get_dataset_path, build_cases, build_transitions, prepare
 
 st.set_page_config(page_title="CareFlow Dashboard", page_icon="🏥", layout="wide")
 
@@ -30,18 +30,20 @@ def get_transitions(df: pd.DataFrame) -> pd.DataFrame:
 st.sidebar.title("🏥 CareFlow")
 uploaded = st.sidebar.file_uploader("Upload event log (CSV)", type="csv")
 
+dataset_path = get_dataset_path()
+
 try:
     if uploaded is not None:
         raw = pd.read_csv(uploaded)
-    elif DATA_PATH.exists():
-        raw = pd.read_csv(DATA_PATH)
+    elif dataset_path.exists():
+        raw = pd.read_csv(dataset_path)
     else:
-        # Day 3: Enhanced Placeholder UI & Guidance State
+        # Day 3 / Day 4 Empty Guidance State
         st.title("CareFlow: Clinical Pathway Dashboard")
         st.caption("Process mining view of patient journeys: volumes, pathways, delays and bottlenecks.")
-        
+
         st.info("👋 Welcome to CareFlow! No default `event_log.csv` dataset was detected in `data/`.")
-        
+
         c1, c2 = st.columns([2, 1])
         with c1:
             st.subheader("📋 Expected Dataset Schema")
@@ -53,7 +55,7 @@ try:
             - **`timestamp`**: Event time (e.g., `2026-10-10 09:00:00`)
             - **`department`**: *(Optional)* Hospital unit (e.g., `Emergency`, `ICU`, `Surgery`)
             """)
-        
+
         with c2:
             st.subheader("💡 Example Layout")
             sample_table = pd.DataFrame({
@@ -65,7 +67,7 @@ try:
             st.dataframe(sample_table, hide_index=True, width="stretch")
 
         st.stop()
-        
+
     data = load_prepared_data(raw)
 except Exception as e:  # noqa: BLE001
     st.error(f"Could not load data: {e}")
