@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# Local dev artifacts
+careflow_dbt/
+.cache/
+.pytest_cache/
+dbt_modules/
+target/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# CareFlow local dev
+*.duckdb
+*.duckdb.wal

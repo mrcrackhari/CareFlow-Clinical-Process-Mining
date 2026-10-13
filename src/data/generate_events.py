@@ -7,21 +7,32 @@ Member 1 · Day 3–4 deliverable.
 Generates `data/event_log.csv` using the frozen data contract from
 `src/common/schema.py` (owned by Member 2).
 
-- 500 synthetic patient ER visits
-- Deterministic: fixed seed (42) → byte-identical output every run
-- Planted ground truth: ~40% of X-Ray cases deviate from IDEAL_PATH
-  via an X-Ray → Triage loop-back (the hidden paperwork bottleneck)
+Modes:
+  clean  (default) → data/event_log.csv
+                     Valid log for analysis + dashboard.
 
-Schema is imported from src/common/schema.py — single source of truth.
+  dirty            → data/event_log_dirty.csv
+                     Same generator, but with 7 deliberately-injected
+                     defects for src/data/validate_events.py to catch.
+
+Flags:
+  --patients N     Number of patients (default 500)
+  --mode clean|dirty
+  --out PATH       Override output path
+
+Determinism:
+  Fixed seed (42). Re-running with the same args produces
+  byte-identical output.
 """
 
+import argparse
 import csv
 import os
 import random
 from datetime import datetime, timedelta
 
 # ------------------------------------------------------------------
-# Import the shared schema (M2's file — single source of truth)
+# Shared schema — single source of truth (owned by M2)
 # ------------------------------------------------------------------
 from src.common.schema import (
     EXPECTED_COLUMNS,
@@ -35,18 +46,17 @@ from src.common.schema import (
 # CONFIG — tunable knobs
 # ============================================================
 CONFIG = {
-    # Reproducibility
     "seed":                42,
     "num_patients":       500,
     "start_date":         datetime(2024, 1, 15, 8, 0, 0),
     "output_file":        "data/event_log.csv",
+    "output_dirty":       "data/event_log_dirty.csv",
 
-    # Planted ground-truth rates (recorded in data/README.md §6)
-    "xray_inclusion":     0.55,   # ~55% of patients get an X-Ray
-    "review_inclusion":   0.45,   # ~45% get a Doctor Review
-    "loopback_rate":      0.40,   # 40% of X-Ray cases loop back to Triage
-    "deep_second_loop":   0.15,   # of loopers, ~15% loop again
-    "admit_rate":         0.40,   # 40% admitted (get Review before Discharge)
+    # Planted ground-truth rates
+    "xray_inclusion":     0.55,
+    "review_inclusion":   0.45,
+    "loopback_rate":      0.40,
+    "deep_second_loop":   0.15,
 
     # Timing (minutes between consecutive events)
     "gap_min":            10,
@@ -67,7 +77,6 @@ CONFIG = {
 # HELPERS
 # ============================================================
 def shift_for(dt):
-    """Return Morning / Evening / Night for a datetime."""
     h = dt.hour
     if 6 <= h < 14:
         return "Morning"
@@ -77,40 +86,18 @@ def shift_for(dt):
 
 
 def resource_for(activity):
-    """Return a fictional staff member for the given activity."""
     c = CONFIG
-    if activity == ACT_REGISTRATION:
-        return random.choice(c["reg_staff"])
-    if activity == ACT_TRIAGE:
-        return random.choice(c["triage_nurses"])
-    if activity == ACT_CONSULTATION:
-        return random.choice(c["doctors"])
-    if activity == ACT_XRAY:
-        return random.choice(c["xray_techs"])
-    if activity == ACT_REVIEW:
-        return random.choice(c["doctors"])
-    if activity == ACT_DISCHARGE:
-        return random.choice(c["doctors"])
+    if activity == ACT_REGISTRATION: return random.choice(c["reg_staff"])
+    if activity == ACT_TRIAGE:       return random.choice(c["triage_nurses"])
+    if activity == ACT_CONSULTATION: return random.choice(c["doctors"])
+    if activity == ACT_XRAY:         return random.choice(c["xray_techs"])
+    if activity == ACT_REVIEW:       return random.choice(c["doctors"])
+    if activity == ACT_DISCHARGE:    return random.choice(c["doctors"])
     raise ValueError(f"Unknown activity: {activity}")
 
 
 def build_journey():
-    """
-    Return a list of activity names for one patient.
-
-    The 'default' path when a patient has both X-Ray and Review follows
-    the IDEAL_PATH from schema.py exactly:
-
-        Registration → Triage → Doctor Consultation
-                     → X-Ray → Doctor Review → Discharge
-
-    Deviations:
-      - No X-Ray, no Review  : Registration → Triage → Consultation → Discharge
-      - Review, no X-Ray     : Registration → Triage → Consultation → Review → Discharge
-      - X-Ray + loop-back    : Registration → Triage → Consultation → X-Ray
-                               → Triage (LOOP) → Consultation → ... → Discharge
-      - Deep second loop     : a second X-Ray + Triage loop before Discharge
-    """
+    """Return a list of activity names for one patient."""
     c = CONFIG
     has_xray   = random.random() < c["xray_inclusion"]
     has_review = random.random() < c["review_inclusion"]
@@ -119,23 +106,16 @@ def build_journey():
 
     if has_xray:
         journey.append(ACT_XRAY)
-
-        # ── Planted 40% bottleneck: X-Ray → Triage loop-back ──
         if random.random() < c["loopback_rate"]:
-            journey.append(ACT_TRIAGE)              # ← loop-back
-            journey.append(ACT_CONSULTATION)        # re-consult after loop
-
-            # Deep second loop (a second X-Ray + Triage)
+            journey.append(ACT_TRIAGE)          # ← planted 40% loop-back
+            journey.append(ACT_CONSULTATION)
             if random.random() < c["deep_second_loop"]:
                 journey.append(ACT_XRAY)
-                journey.append(ACT_TRIAGE)          # ← second loop-back
+                journey.append(ACT_TRIAGE)
                 journey.append(ACT_CONSULTATION)
-
         if has_review:
             journey.append(ACT_REVIEW)
-
     else:
-        # No X-Ray. Review is still possible.
         if has_review:
             journey.append(ACT_REVIEW)
 
@@ -144,9 +124,10 @@ def build_journey():
 
 
 # ============================================================
-# MAIN
+# GENERATION
 # ============================================================
-def main():
+def generate(num_patients):
+    """Produce the list of row dicts (clean)."""
     c = CONFIG
     random.seed(c["seed"])
 
@@ -154,7 +135,7 @@ def main():
     case_counter = 1
     clock = c["start_date"]
 
-    for _ in range(c["num_patients"]):
+    for _ in range(num_patients):
         case_id = f"CASE-{case_counter:04d}"
         case_counter += 1
 
@@ -162,10 +143,7 @@ def main():
 
         for activity in build_journey():
             if activity not in VALID_ACTIVITIES:
-                raise ValueError(
-                    f"Generated activity '{activity}' not in VALID_ACTIVITIES "
-                    f"from src/common/schema.py"
-                )
+                raise ValueError(f"Bad activity: {activity}")
 
             rows.append({
                 "case_id":   case_id,
@@ -180,18 +158,88 @@ def main():
             minutes=random.randint(c["arrival_jitter_min"], c["arrival_jitter_max"])
         )
 
-    os.makedirs(os.path.dirname(c["output_file"]), exist_ok=True)
+    return rows
 
-    with open(c["output_file"], "w", newline="") as f:
+
+def inject_defects(rows):
+    """
+    Inject 7 deliberately bad rows into a copy of the log,
+    one defect per type, so the Day-5 validator has something to catch.
+    """
+    rng = random.Random(999)  # separate seed → deterministic defects
+    dirty = [dict(r) for r in rows]
+
+    # Pick 6 rows spread through the log
+    n = len(dirty)
+    idx = [int(n * f) for f in (0.10, 0.25, 0.40, 0.55, 0.70, 0.85, 0.95)]
+
+    # 1) Missing case_id
+    dirty[idx[0]]["case_id"] = ""
+
+    # 2) Missing activity
+    dirty[idx[1]]["activity"] = ""
+
+    # 3) Invalid timestamp format (missing time component)
+    dirty[idx[2]]["timestamp"] = "2024-01-15"
+
+    # 4) Unknown activity name
+    dirty[idx[3]]["activity"] = "Unknown Activity"
+
+    # 5) Unknown shift value
+    dirty[idx[4]]["shift"] = "Twilight"
+
+    # 6) Duplicate timestamp — clone the timestamp of the row that precedes it
+    dirty[idx[5]]["timestamp"] = dirty[idx[5] - 1]["timestamp"]
+
+    # 7) Out-of-order timestamps — swap timestamps of two consecutive rows in same case
+    a, b = idx[6], idx[6] + 1
+    if a < n and b < n and dirty[a]["case_id"] == dirty[b]["case_id"]:
+        dirty[a]["timestamp"], dirty[b]["timestamp"] = (
+            dirty[b]["timestamp"], dirty[a]["timestamp"]
+        )
+
+    return dirty
+
+
+# ============================================================
+# I/O
+# ============================================================
+def write_csv(rows, path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=EXPECTED_COLUMNS)
         w.writeheader()
         w.writerows(rows)
 
-    unique_cases = len({r["case_id"] for r in rows})
-    print(f"[OK] Wrote {len(rows)} events for {unique_cases} patients → {c['output_file']}")
-    print(f"[OK] Seed: {c['seed']}  |  Deterministic: yes")
-    print(f"[OK] Schema imported from src/common/schema.py")
-    print(f"[OK] Columns: {EXPECTED_COLUMNS}")
+
+# ============================================================
+# MAIN
+# ============================================================
+def main():
+    parser = argparse.ArgumentParser(description="CareFlow event log generator")
+    parser.add_argument("--patients", type=int, default=CONFIG["num_patients"],
+                        help="Number of patients (default 500)")
+    parser.add_argument("--mode", choices=["clean", "dirty"], default="clean",
+                        help="clean → valid log; dirty → log with injected defects")
+    parser.add_argument("--out", type=str, default=None,
+                        help="Override output path")
+    args = parser.parse_args()
+
+    rows = generate(args.patients)
+
+    if args.mode == "dirty":
+        rows = inject_defects(rows)
+        out = args.out or CONFIG["output_dirty"]
+    else:
+        out = args.out or CONFIG["output_file"]
+
+    write_csv(rows, out)
+
+    unique_cases = len({r["case_id"] for r in rows if r["case_id"]})
+    print(f"[OK] Mode:     {args.mode}")
+    print(f"[OK] Wrote:    {len(rows)} events for {unique_cases} patients → {out}")
+    print(f"[OK] Seed:     {CONFIG['seed']}  |  Deterministic: yes")
+    print(f"[OK] Columns:  {EXPECTED_COLUMNS}")
     print(f"[OK] Activities: {VALID_ACTIVITIES}")
 
 
