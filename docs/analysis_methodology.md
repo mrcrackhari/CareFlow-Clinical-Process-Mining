@@ -1,19 +1,69 @@
-# Analysis Methodology & Core Questions
+# Analysis Methodology and Rules
+
+Status: **Day 5 - rules agreed for the whole team.** Any change goes through Member 2 and is announced in the team channel.
 
 ## 1. Core Analysis Questions
 Our Python analysis scripts must answer the following business questions using the event log data:
-* **Process Discovery:** What is the most frequent clinical pathway patients take from Registration to Discharge?
+* **Process Discovery:** What is the most frequent clinical pathway patients take from Admission to Discharge?
 * **Bottleneck Identification:** Which consecutive activities have the longest average transition times (wait times)?
 * **Rework Metrics:** How often do patients experience a "loop-back" (e.g., returning to Triage after an X-Ray)?
 * **Throughput:** What is the average total time a patient spends in the hospital system?
 
-## 2. Sorting and Calculation Rules
-* **Sorting:** All event logs must be sorted first by `case_id` and then chronologically by `timestamp` before any analysis begins.
-* **Transition Time:** Calculated as the difference in minutes between the timestamp of the current activity and the timestamp of the immediately preceding activity for the same `case_id`.
-* **Rework Definitions:**
-  * **Repeat:** An activity occurs more than once consecutively (e.g., X-Ray -> X-Ray).
-  * **Loop-back:** A transition to an activity that already occurred earlier in the case journey (e.g., Triage -> Consultation -> X-Ray -> Triage).
+## 2. Input Assumptions
+* One row per event, with the columns `case_id`, `activity`, `timestamp` (`resource` and `shift` are optional).
+* `timestamp` format is `YYYY-MM-DD HH:MM:SS`, 24-hour clock, no timezone.
+* Activity names are exactly those in `src/common/schema.py`: Admission, Triage, Doctor_Consult, X-Ray, Blood_Test, Discharge.
+* All data is synthetic. The file is expected to have passed Member 1's validation checks; the rules below are a safety net, not a replacement for them.
 
-## 3. Conformance Checking
-* The actual paths taken by patients will be compared against the `IDEAL_PATH` defined in `src/common/schema.py`.
-* Any deviation (skipped steps, extra steps, or loop-backs) will be flagged as non-conformant.
+## 3. Rules for Sorting and Calculating Time
+
+| # | Rule |
+|---|------|
+| R1 | **Sorting.** Sort by `case_id`, then by `timestamp` (oldest first) before any analysis. The row order in the file is never trusted. Events with an identical timestamp keep their recorded order. |
+| R2 | **Cases.** A case is all rows with the same `case_id`. Time is never calculated across two different cases. |
+| R3 | **Transition time.** The difference in minutes between the timestamp of the current event and the timestamp of the immediately preceding event of the same case. It is kept as a decimal (2.5 = 2 min 30 s), and the full date and time are used, so a journey that crosses midnight is handled correctly. |
+| R4 | **First event.** The first event of a case has no preceding event, so its transition time is left **empty, never 0**, and it is excluded from every average. |
+| R5 | **Attribution.** A transition time belongs to the pair *(previous activity -> current activity)*. Averages are reported per pair, never per activity alone, because "arriving at Doctor_Consult" takes a different time after Triage than after Blood_Test. |
+| R6 | **Wording.** The log has one timestamp per event, so the gap contains waiting and the activity itself. We call it *transition time*; it is the "wait time" in the project plan. |
+| R7 | **Case duration (throughput).** Last timestamp minus first timestamp of the case, in minutes. The average is taken over all included cases. |
+| R8 | **Complete cases only.** After sorting, a case must start with Admission and end with Discharge. Any other case is excluded from all metrics and listed in a warning. |
+| R9 | **Unusable rows.** A row with a missing `case_id`, a missing `activity` or an unreadable `timestamp` is skipped with a warning. Values are never guessed or filled in. |
+
+### Rework definitions
+Repeat and loop-back never overlap:
+
+| # | Definition |
+|---|------------|
+| R10 | **Repeat:** a transition from an activity to itself, e.g. Blood_Test -> Blood_Test. |
+| R11 | **Loop-back:** a transition to an activity that already occurred earlier in the case and is not an immediate repeat, e.g. Triage -> X-Ray -> Triage. Every such transition counts once. |
+| R12 | **Rework rate:** cases with at least one loop-back divided by all included cases. |
+
+### Worked example (CASE_001)
+
+| # | Activity | Timestamp | Previous activity | Transition (min) | Note |
+|---|----------|-----------|-------------------|------------------|------|
+| 1 | Admission | 08:00 | - | empty | first event (R4) |
+| 2 | Triage | 08:10 | Admission | 10 | |
+| 3 | Doctor_Consult | 08:35 | Triage | 25 | |
+| 4 | X-Ray | 08:50 | Doctor_Consult | 15 | |
+| 5 | Triage | 09:20 | X-Ray | 30 | loop-back (R11) |
+| 6 | Doctor_Consult | 09:40 | Triage | 20 | loop-back (R11) |
+| 7 | Discharge | 10:10 | Doctor_Consult | 30 | |
+
+Case duration (R7): 08:00 to 10:10 = **130 minutes**. A repeat looks like CASE_008: Blood_Test at 10:05, then Blood_Test again at 10:35 (30 min).
+
+### Output files
+Both are regenerated by running the scripts and are never edited by hand.
+
+| File | Made by | Contents |
+|------|---------|----------|
+| `outputs/event_transitions.csv` | `src/analysis/calculate_metrics.py` | Every included event with `previous_activity` and `transition_time_minutes` (empty for first events). |
+| `outputs/bottleneck_metrics.csv` | `src/analysis/find_bottlenecks.py` | One row per pair: `from_activity`, `to_activity`, `count`, `avg_minutes`, `median_minutes`, `max_minutes`, `rank`. Rank 1 is the longest average; equal averages share a rank. The dashboard reads this file. |
+
+## 4. Conformance Checking
+* The actual paths taken by patients will be compared against the `IDEAL_PATH` defined in `src/common/schema.py`: Admission -> Triage -> Doctor_Consult -> Discharge.
+* Any deviation (skipped steps, extra steps such as X-Ray or Blood_Test, repeats, or loop-backs) will be flagged as non-conformant.
+
+## 5. Open Items
+1. **CASE_070** in `data/sample_event_log.csv` has its Discharge at 2023-10-02 12:00, before its Admission at 12:45. Member 1 to confirm whether this is a deliberate bad row (then it belongs in a test file) or a typo (then it should be about 14:55). Until then R8 excludes it, so 69 of 70 cases are analysed.
+2. **IDEAL_PATH** is drafted from the most common clean journey. The team confirms on Day 11 whether the diagnostic steps (X-Ray, Blood_Test) count as deviations.
