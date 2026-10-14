@@ -1,10 +1,11 @@
 from pathlib import Path
 import pandas as pd
 
-# Define path helpers for dataset discovery (Day 4 integration)
+# Define path helpers for dataset and output discovery (Day 5 optimization)
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_PATH = BASE_DIR / "data" / "event_log.csv"
 FALLBACK_DATA_PATH = Path(__file__).resolve().parent / "data" / "event_log.csv"
+BOTTLENECK_OUTPUT_PATH = BASE_DIR / "outputs" / "bottleneck_metrics.csv"
 
 
 def get_dataset_path() -> Path:
@@ -66,3 +67,13 @@ def build_transitions(df: pd.DataFrame) -> pd.DataFrame:
     ).dt.total_seconds() / 60.0
 
     return transitions
+
+
+def load_precomputed_bottlenecks() -> pd.DataFrame | None:
+    """Loads pre-calculated bottleneck metrics from outputs/ if available."""
+    if BOTTLENECK_OUTPUT_PATH.exists():
+        try:
+            return pd.read_csv(BOTTLENECK_OUTPUT_PATH)
+        except Exception:
+            return None
+    return None

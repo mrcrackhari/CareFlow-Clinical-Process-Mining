@@ -5,7 +5,13 @@ import plotly.graph_objects as go
 import streamlit as st
 
 # Import data preparation logic and path helpers from data_loader
-from data_loader import get_dataset_path, build_cases, build_transitions, prepare
+from data_loader import (
+    get_dataset_path,
+    build_cases,
+    build_transitions,
+    prepare,
+    load_precomputed_bottlenecks,
+)
 
 st.set_page_config(page_title="CareFlow Dashboard", page_icon="🏥", layout="wide")
 
@@ -177,16 +183,38 @@ with tab3:
     )
 
     st.subheader("Bottlenecks: average wait between steps")
-    bt = trans.groupby(["activity", "next_activity"]).agg(
-        avg_wait_min=("wait_min", "mean"), transitions=("wait_min", "count")
-    ).reset_index()
-    bt["step"] = bt["activity"] + " → " + bt["next_activity"]
-    bt = bt.sort_values("avg_wait_min", ascending=False)
-    top_bt = bt.head(10)
+
+    # Day 5 Optimization: Check for pre-computed bottleneck output file first
+    precomputed_bt = load_precomputed_bottlenecks()
+
+    if precomputed_bt is not None and not precomputed_bt.empty:
+        bt_data = precomputed_bt.copy()
+        if "transition_time_minutes" in bt_data.columns:
+            bt_summary = bt_data.groupby("activity").agg(
+                avg_wait_min=("transition_time_minutes", "mean"),
+                transitions=("transition_time_minutes", "count")
+            ).reset_index().rename(columns={"activity": "step"})
+        else:
+            bt_summary = bt_data
+    else:
+        bt_summary = trans.groupby(["activity", "next_activity"]).agg(
+            avg_wait_min=("wait_min", "mean"), transitions=("wait_min", "count")
+        ).reset_index()
+        bt_summary["step"] = bt_summary["activity"] + " → " + bt_summary["next_activity"]
+
+    bt_summary = bt_summary.sort_values("avg_wait_min", ascending=False)
+    top_bt = bt_summary.head(10)
+
     st.plotly_chart(
-        px.bar(top_bt, x="avg_wait_min", y="step", orientation="h", color="avg_wait_min",
-               color_continuous_scale="Reds", title="Top 10 slowest transitions (minutes)")
-        .update_yaxes(categoryorder="total ascending"),
+        px.bar(
+            top_bt,
+            x="avg_wait_min",
+            y="step",
+            orientation="h",
+            color="avg_wait_min",
+            color_continuous_scale="Reds",
+            title="Top slowest steps / transitions (minutes)"
+        ).update_yaxes(categoryorder="total ascending"),
         width="stretch",
     )
 
