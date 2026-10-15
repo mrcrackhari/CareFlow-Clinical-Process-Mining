@@ -44,7 +44,7 @@ try:
     elif dataset_path.exists():
         raw = pd.read_csv(dataset_path)
     else:
-        # Day 3 / Day 4 Empty Guidance State
+        # Empty Guidance State
         st.title("CareFlow: Clinical Pathway Dashboard")
         st.caption("Process mining view of patient journeys: volumes, pathways, delays and bottlenecks.")
 
@@ -84,8 +84,13 @@ cases_all = get_cases(data)
 st.sidebar.header("Filters")
 min_d, max_d = cases_all["start"].min().date(), cases_all["start"].max().date()
 date_range = st.sidebar.date_input("Case start date", (min_d, max_d), min_value=min_d, max_value=max_d)
+
 depts = sorted(cases_all["department"].unique())
 sel_depts = st.sidebar.multiselect("Department", depts, default=depts)
+
+# Day 6 Feature: Pathway Variant Multi-Select
+all_pathways = sorted(cases_all["pathway"].unique())
+sel_pathways = st.sidebar.multiselect("Pathway Variant", all_pathways, default=[])
 
 if len(date_range) != 2:
     st.warning("Pick both a start and an end date.")
@@ -96,6 +101,10 @@ mask = (
     & (cases_all["start"].dt.date <= date_range[1])
     & (cases_all["department"].isin(sel_depts))
 )
+
+if sel_pathways:
+    mask = mask & (cases_all["pathway"].isin(sel_pathways))
+
 cases = cases_all[mask]
 df = data[data["case_id"].isin(cases["case_id"])]
 
@@ -184,7 +193,6 @@ with tab3:
 
     st.subheader("Bottlenecks: average wait between steps")
 
-    # Day 5 Optimization: Check for pre-computed bottleneck output file first
     precomputed_bt = load_precomputed_bottlenecks()
 
     if precomputed_bt is not None and not precomputed_bt.empty:
@@ -238,4 +246,7 @@ with tab4:
         slow = slow[slow["case_id"].str.contains(search, case=False) | slow["pathway"].str.contains(search, case=False)]
     show = slow[["case_id", "department", "start", "duration_hrs", "steps", "pathway"]].round({"duration_hrs": 1})
     st.dataframe(show, width="stretch", hide_index=True)
-    st.download_button("⬇️ Download these cases (CSV)", show.to_csv(index=False), "delayed_cases.csv", "text/csv")
+    
+    col_dl1, col_dl2 = st.columns(2)
+    col_dl1.download_button("⬇️ Download Outlier Cases (CSV)", show.to_csv(index=False), "delayed_cases.csv", "text/csv")
+    col_dl2.download_button("⬇️ Download All Filtered Cases (CSV)", cases.to_csv(index=False), "all_filtered_cases.csv", "text/csv")

@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 
-# Define path helpers for dataset and output discovery (Day 5 optimization)
+# Define path helpers for dataset and output discovery
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_PATH = BASE_DIR / "data" / "event_log.csv"
 FALLBACK_DATA_PATH = Path(__file__).resolve().parent / "data" / "event_log.csv"
@@ -20,10 +20,8 @@ def get_dataset_path() -> Path:
 def prepare(df: pd.DataFrame) -> pd.DataFrame:
     """Cleans raw event log dataframe and casts timestamp columns."""
     df = df.copy()
-    # Normalize column names
     df.columns = df.columns.str.strip().str.lower()
 
-    # Required columns validation check
     required_cols = {"case_id", "activity", "timestamp"}
     if not required_cols.issubset(set(df.columns)):
         missing = required_cols - set(df.columns)
