@@ -1,12 +1,10 @@
 from_activity,to_activity,count,avg_minutes,median_minutes,max_minutes,rank
-X-Ray,Triage,31,30.0,30.0,30.0,1
-X-Ray,Doctor_Consult,12,30.0,30.0,30.0,1
-Blood_Test,Blood_Test,3,30.0,30.0,30.0,1
-Doctor_Consult,Discharge,69,26.74,30.0,30.0,4
-Blood_Test,Doctor_Consult,12,25.42,25.0,30.0,5
-Triage,Doctor_Consult,46,23.91,20.0,30.0,6
-Blood_Test,X-Ray,11,20.0,20.0,20.0,7
-Triage,Blood_Test,23,19.78,20.0,20.0,8
-Triage,X-Ray,31,15.16,15.0,20.0,9
-Doctor_Consult,X-Ray,1,15.0,15.0,15.0,10
-Admission,Triage,69,10.0,10.0,10.0,11
+Doctor Consultation,X-Ray,275,28.15,28.0,45.0,1
+Doctor Review,Discharge,212,28.1,27.5,45.0,2
+Triage,Doctor Consultation,627,27.97,28.0,45.0,3
+Registration,Triage,500,27.63,27.5,45.0,4
+X-Ray,Triage,127,27.45,26.0,45.0,5
+Doctor Consultation,Discharge,205,27.09,27.0,45.0,6
+Doctor Consultation,Doctor Review,147,26.99,28.0,45.0,7
+X-Ray,Discharge,83,26.58,25.0,45.0,8
+X-Ray,Doctor Review,65,26.0,26.0,45.0,9
