@@ -1,0 +1,33 @@
+case_id,activity,timestamp,resource,shift
+CASE-0001,Registration,2024-01-15 13:27:00,Reg_Clerk_A,Morning
+CASE-0001,Triage,2024-01-15 14:11:00,Nurse_Jane,Evening
+CASE-0001,Doctor Consultation,2024-01-15 14:48:00,Dr_Smith,Evening
+CASE-0001,X-Ray,2024-01-15 14:59:00,Tech_Miller,Evening
+CASE-0001,Triage,2024-01-15 15:22:00,Nurse_Tom,Evening
+CASE-0001,Doctor Consultation,2024-01-15 16:04:00,Dr_Kim,Evening
+CASE-0001,X-Ray,2024-01-15 16:15:00,Tech_Kim,Evening
+CASE-0001,Triage,2024-01-15 16:37:00,Nurse_Mike,Evening
+CASE-0001,Doctor Consultation,2024-01-15 17:01:00,Dr_Adams,Evening
+CASE-0001,Discharge,2024-01-15 17:28:00,Dr_Smith,Evening
+CASE-0002,Registration,2024-01-15 11:49:00,Reg_Clerk_B,Morning
+CASE-0002,Triage,2024-01-15 12:05:00,Nurse_Jane,Morning
+CASE-0002,Doctor Consultation,2024-01-15 12:39:00,Dr_Smith,Morning
+CASE-0002,X-Ray,2024-01-15 13:11:00,Tech_Rao,Morning
+CASE-0002,Doctor Review,2024-01-15 13:37:00,Dr_Smith,Morning
+CASE-0002,Discharge,2024-01-15 14:16:00,Dr_Kim,Evening
+CASE-0003,Registration,2024-01-15 09:01:00,Reg_Clerk_B,Morning
+CASE-0003,Triage,2024-01-15 09:23:00,Nurse_Jane,Morning
+CASE-0003,Doctor Consultation,2024-01-15 09:35:00,Dr_Lee,Morning
+CASE-0003,Discharge,2024-01-15 10:03:00,Dr_Smith,Morning
+CASE-0006,Registration,2024-01-15 16:19:00,Reg_Clerk_B,Evening
+CASE-0006,Triage,2024-01-15 16:54:00,Nurse_Mike,Evening
+CASE-0006,Doctor Consultation,2024-01-15 17:13:00,Dr_Patel,Evening
+CASE-0006,Doctor Review,2024-01-15 17:31:00,Dr_Lee,Evening
+CASE-0006,Discharge,2024-01-15 18:16:00,Dr_Kim,Evening
+CASE-0007,Registration,2024-01-15 14:03:00,Reg_Clerk_A,Evening
+CASE-0007,Triage,2024-01-15 14:45:00,Nurse_Mike,Evening
+CASE-0007,Doctor Consultation,2024-01-15 15:00:00,Dr_Smith,Evening
+CASE-0007,X-Ray,2024-01-15 15:17:00,Tech_Miller,Evening
+CASE-0007,Triage,2024-01-15 15:37:00,Nurse_Mike,Evening
+CASE-0007,Doctor Consultation,2024-01-15 15:51:00,Dr_Adams,Evening
+CASE-0007,Discharge,2024-01-15 16:25:00,Dr_Kim,Evening
