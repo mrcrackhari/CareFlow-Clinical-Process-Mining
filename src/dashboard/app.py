@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-# Import data preparation logic and path helpers from data_loader
+# Import data loader helpers
 from data_loader import (
     get_dataset_path,
     build_cases,
@@ -44,7 +44,6 @@ try:
     elif dataset_path.exists():
         raw = pd.read_csv(dataset_path)
     else:
-        # Empty Guidance State
         st.title("CareFlow: Clinical Pathway Dashboard")
         st.caption("Process mining view of patient journeys: volumes, pathways, delays and bottlenecks.")
 
@@ -55,20 +54,20 @@ try:
             st.subheader("📋 Expected Dataset Schema")
             st.markdown("""
             Please upload a CSV file from the sidebar to begin process mining analysis. 
-            Your file should include the following standard columns:
-            - **`case_id`**: Unique identifier for the patient visit (e.g., `CASE-0001`)
-            - **`activity`**: Clinical step performed (e.g., `Registration`, `Triage`, `X-Ray`)
-            - **`timestamp`**: Event time (e.g., `2026-10-10 09:00:00`)
-            - **`department`**: *(Optional)* Hospital unit (e.g., `Emergency`, `ICU`, `Surgery`)
+            Your file should include the standard contract columns:
+            - **`case_id`**: Unique identifier (e.g., `CASE-0001`)
+            - **`activity`**: Clinical step (`Registration`, `Triage`, `Doctor Consultation`, `X-Ray`, `Doctor Review`, `Discharge`)
+            - **`timestamp`**: Event time (`YYYY-MM-DD HH:MM:SS`)
+            - **`department`**: *(Optional)* Hospital unit
             """)
 
         with c2:
             st.subheader("💡 Example Layout")
             sample_table = pd.DataFrame({
-                "case_id": ["CASE-001", "CASE-001", "CASE-002"],
+                "case_id": ["CASE-0001", "CASE-0001", "CASE-0002"],
                 "activity": ["Registration", "Triage", "Registration"],
-                "timestamp": ["2026-10-10 09:00", "2026-10-10 09:15", "2026-10-10 09:30"],
-                "department": ["Emergency", "Emergency", "ICU"]
+                "timestamp": ["2026-10-10 09:00:00", "2026-10-10 09:15:00", "2026-10-10 09:30:00"],
+                "department": ["General", "General", "General"]
             })
             st.dataframe(sample_table, hide_index=True, width="stretch")
 
@@ -88,9 +87,13 @@ date_range = st.sidebar.date_input("Case start date", (min_d, max_d), min_value=
 depts = sorted(cases_all["department"].unique())
 sel_depts = st.sidebar.multiselect("Department", depts, default=depts)
 
-# Day 6 Feature: Pathway Variant Multi-Select
 all_pathways = sorted(cases_all["pathway"].unique())
 sel_pathways = st.sidebar.multiselect("Pathway Variant", all_pathways, default=[])
+
+# Day 7 Feature: KPI Target Thresholds Controls
+st.sidebar.header("⚠️ Target Thresholds")
+target_duration = st.sidebar.number_input("Max Target Pathway Time (hrs)", value=2.0, step=0.5)
+target_wait = st.sidebar.number_input("Max Wait Alert Threshold (min)", value=25.0, step=5.0)
 
 if len(date_range) != 2:
     st.warning("Pick both a start and an end date.")
@@ -118,10 +121,16 @@ trans = get_transitions(df)
 st.title("CareFlow: Clinical Pathway Dashboard")
 st.caption("Process mining view of patient journeys: volumes, pathways, delays and bottlenecks.")
 
+avg_duration = cases['duration_hrs'].mean()
+delayed_count = (cases['duration_hrs'] > target_duration).sum()
+
+if avg_duration > target_duration:
+    st.warning(f"⚠️ **Target SLA Alert:** Average pathway time ({avg_duration:.1f} h) exceeds target limit of {target_duration:.1f} h! ({delayed_count} delayed cases)")
+
 k1, k2, k3, k4, k5 = st.columns(5)
 k1.metric("Patients (cases)", f"{len(cases):,}")
 k2.metric("Events", f"{len(df):,}")
-k3.metric("Avg pathway time", f"{cases['duration_hrs'].mean():.1f} h")
+k3.metric("Avg pathway time", f"{avg_duration:.1f} h", delta=f"{avg_duration - target_duration:+.1f} h vs target", delta_color="inverse")
 k4.metric("Median pathway time", f"{cases['duration_hrs'].median():.1f} h")
 k5.metric("Unique pathways", f"{cases['pathway'].nunique():,}")
 
@@ -213,15 +222,18 @@ with tab3:
     bt_summary = bt_summary.sort_values("avg_wait_min", ascending=False)
     top_bt = bt_summary.head(10)
 
+    # Day 7 Feature: Highlight bottleneck transitions exceeding target threshold
+    top_bt["is_alert"] = top_bt["avg_wait_min"] > target_wait
+    
     st.plotly_chart(
         px.bar(
             top_bt,
             x="avg_wait_min",
             y="step",
             orientation="h",
-            color="avg_wait_min",
-            color_continuous_scale="Reds",
-            title="Top slowest steps / transitions (minutes)"
+            color="is_alert",
+            color_discrete_map={True: "#d9534f", False: "#0275d8"},
+            title=f"Top slowest steps / transitions (Red indicates wait > {target_wait} min)"
         ).update_yaxes(categoryorder="total ascending"),
         width="stretch",
     )
