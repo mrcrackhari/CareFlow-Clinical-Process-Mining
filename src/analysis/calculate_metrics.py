@@ -1,16 +1,3 @@
-"""Time between consecutive activities of each case.
-
-Implements the rules in docs/analysis_methodology.md:
-    R1  sort by case_id, then timestamp
-    R3  transition time = this timestamp - previous timestamp of the same case, in minutes
-    R4  the first event of a case has no transition (left empty, never 0)
-    R8  cases that do not start with START_ACTIVITY and end with END_ACTIVITY are excluded
-    R9  rows with a missing case_id / activity or an invalid timestamp are skipped
-
-Run from anywhere:  python src/analysis/calculate_metrics.py
-Input:              data/event_log.csv (Member 1's file)
-Output:             outputs/event_transitions.csv
-"""
 import sys
 from pathlib import Path
 
@@ -37,7 +24,13 @@ MAX_IDS_SHOWN = 10
 
 def load_event_log(csv_path) -> pd.DataFrame:
     """Read the event log, keeping only rows with a case ID, an activity and a valid timestamp (R9)."""
-    df = pd.read_csv(csv_path)
+    if not Path(csv_path).exists():
+        raise FileNotFoundError(
+            f"{csv_path} not found. Copy Member 1's file with "
+            "'git checkout origin/member1-data -- data/event_log.csv', or give another path: "
+            "python src/analysis/calculate_metrics.py data/sample_event_log.csv"
+        )
+    df = pd.read_csv(csv_path, encoding="utf-8-sig")  # also reads files saved with a Windows BOM
     missing = [col for col in REQUIRED_COLUMNS if col not in df.columns]
     if missing:
         raise ValueError(f"{csv_path} is missing required columns: {missing}")
@@ -94,4 +87,4 @@ def calculate_transition_times(csv_path=EVENT_LOG, output_path=EVENT_TRANSITIONS
 
 
 if __name__ == "__main__":
-    calculate_transition_times()
+    calculate_transition_times(*sys.argv[1:2])  
