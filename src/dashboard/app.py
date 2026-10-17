@@ -90,7 +90,7 @@ sel_depts = st.sidebar.multiselect("Department", depts, default=depts)
 all_pathways = sorted(cases_all["pathway"].unique())
 sel_pathways = st.sidebar.multiselect("Pathway Variant", all_pathways, default=[])
 
-# Day 7 Feature: KPI Target Thresholds Controls
+# Target Threshold Controls
 st.sidebar.header("⚠️ Target Thresholds")
 target_duration = st.sidebar.number_input("Max Target Pathway Time (hrs)", value=2.0, step=0.5)
 target_wait = st.sidebar.number_input("Max Wait Alert Threshold (min)", value=25.0, step=5.0)
@@ -190,55 +190,69 @@ with tab2:
 
 # ---------------------------------------------------------------- Performance
 with tab3:
+    st.header("⏱️ Clinical Performance & Bottleneck Analysis")
+    
     c1, c2 = st.columns(2)
     c1.plotly_chart(
-        px.histogram(cases, x="duration_hrs", nbins=40, title="Pathway time distribution (hours)"),
+        px.histogram(cases, x="duration_hrs", nbins=40, title="Pathway Time Distribution (Hours)"),
         width="stretch",
     )
     c2.plotly_chart(
-        px.box(cases, x="department", y="duration_hrs", title="Pathway time by department (hours)"),
+        px.box(cases, x="department", y="duration_hrs", title="Pathway Time by Department (Hours)"),
         width="stretch",
     )
 
-    st.subheader("Bottlenecks: average wait between steps")
+    st.subheader("Step-by-Step Transition Wait Times")
 
     precomputed_bt = load_precomputed_bottlenecks()
 
     if precomputed_bt is not None and not precomputed_bt.empty:
+        st.success("✅ Loaded precalculated bottleneck metrics from `outputs/bottleneck_metrics.csv`")
         bt_data = precomputed_bt.copy()
-        if "transition_time_minutes" in bt_data.columns:
-            bt_summary = bt_data.groupby("activity").agg(
-                avg_wait_min=("transition_time_minutes", "mean"),
-                transitions=("transition_time_minutes", "count")
-            ).reset_index().rename(columns={"activity": "step"})
-        else:
-            bt_summary = bt_data
+        
+        st.dataframe(bt_data, width="stretch", hide_index=True)
+        
+        if "activity" in bt_data.columns and "avg_wait_min" in bt_data.columns:
+            top_bt = bt_data.sort_values("avg_wait_min", ascending=False).head(10)
+            top_bt["is_alert"] = top_bt["avg_wait_min"] > target_wait
+            
+            st.plotly_chart(
+                px.bar(
+                    top_bt,
+                    x="avg_wait_min",
+                    y="activity",
+                    orientation="h",
+                    color="is_alert",
+                    color_discrete_map={True: "#d9534f", False: "#0275d8"},
+                    title=f"Top Slowest Clinical Steps (Red indicates wait > {target_wait} min)"
+                ).update_yaxes(categoryorder="total ascending"),
+                width="stretch",
+            )
     else:
         bt_summary = trans.groupby(["activity", "next_activity"]).agg(
-            avg_wait_min=("wait_min", "mean"), transitions=("wait_min", "count")
+            avg_wait_min=("wait_min", "mean"),
+            transitions=("wait_min", "count")
         ).reset_index()
         bt_summary["step"] = bt_summary["activity"] + " → " + bt_summary["next_activity"]
+        bt_summary = bt_summary.sort_values("avg_wait_min", ascending=False)
+        top_bt = bt_summary.head(10)
 
-    bt_summary = bt_summary.sort_values("avg_wait_min", ascending=False)
-    top_bt = bt_summary.head(10)
+        top_bt["is_alert"] = top_bt["avg_wait_min"] > target_wait
+        
+        st.plotly_chart(
+            px.bar(
+                top_bt,
+                x="avg_wait_min",
+                y="step",
+                orientation="h",
+                color="is_alert",
+                color_discrete_map={True: "#d9534f", False: "#0275d8"},
+                title=f"Top Slowest Steps / Transitions (Red indicates wait > {target_wait} min)"
+            ).update_yaxes(categoryorder="total ascending"),
+            width="stretch",
+        )
 
-    # Day 7 Feature: Highlight bottleneck transitions exceeding target threshold
-    top_bt["is_alert"] = top_bt["avg_wait_min"] > target_wait
-    
-    st.plotly_chart(
-        px.bar(
-            top_bt,
-            x="avg_wait_min",
-            y="step",
-            orientation="h",
-            color="is_alert",
-            color_discrete_map={True: "#d9534f", False: "#0275d8"},
-            title=f"Top slowest steps / transitions (Red indicates wait > {target_wait} min)"
-        ).update_yaxes(categoryorder="total ascending"),
-        width="stretch",
-    )
-
-    st.subheader("Transition heatmap (patient counts)")
+    st.subheader("Transition Heatmap (Patient Counts)")
     pivot = trans.pivot_table(index="activity", columns="next_activity", values="case_id", aggfunc="count", fill_value=0)
     st.plotly_chart(
         px.imshow(pivot, text_auto=True, aspect="auto", color_continuous_scale="Blues",

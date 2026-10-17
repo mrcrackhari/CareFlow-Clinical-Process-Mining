@@ -68,10 +68,13 @@ def build_transitions(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def load_precomputed_bottlenecks() -> pd.DataFrame | None:
-    """Loads pre-calculated bottleneck metrics from outputs/ if available."""
+    """Loads pre-calculated bottleneck metrics from outputs/ sitting in workspace root."""
     if BOTTLENECK_OUTPUT_PATH.exists():
         try:
-            return pd.read_csv(BOTTLENECK_OUTPUT_PATH)
+            df = pd.read_csv(BOTTLENECK_OUTPUT_PATH)
+            # Normalize column headers for consistent dashboard display
+            df.columns = df.columns.str.strip().str.lower()
+            return df
         except Exception:
             return None
     return None

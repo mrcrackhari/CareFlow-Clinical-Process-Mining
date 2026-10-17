@@ -1,0 +1,4 @@
+from_activity,to_activity,rework_type,transition_count,cases_affected,pct_cases_affected,avg_minutes,median_minutes,max_minutes
+X-Ray,Triage,loop_back,127,112,22.4,27.45,26.0,45.0
+Triage,Doctor Consultation,loop_back,127,112,22.4,27.39,27.0,45.0
+Doctor Consultation,X-Ray,loop_back,15,15,3.0,27.0,23.0,45.0

@@ -1,0 +1,9 @@
+rank,path,case_count,pct_cases,step_count,avg_duration_minutes,median_duration_minutes,has_repeat,has_loopback
+1,Registration -> Triage -> Doctor Consultation -> Discharge,137,27.4,4,80.18,80.0,False,False
+2,Registration -> Triage -> Doctor Consultation -> Doctor Review -> Discharge,103,20.6,5,113.12,114.0,False,False
+3,Registration -> Triage -> Doctor Consultation -> X-Ray -> Discharge,83,16.6,5,112.07,113.0,False,False
+4,Registration -> Triage -> Doctor Consultation -> X-Ray -> Doctor Review -> Discharge,65,13.0,6,137.85,137.0,False,False
+5,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Discharge,62,12.4,7,166.23,166.0,False,True
+6,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Doctor Review -> Discharge,35,7.0,8,195.74,200.0,False,True
+7,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Doctor Review -> Discharge,9,1.8,11,276.0,275.0,False,True
+8,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Discharge,6,1.2,10,236.33,246.0,False,True
