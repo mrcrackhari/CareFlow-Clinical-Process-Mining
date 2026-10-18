@@ -11,6 +11,8 @@ from data_loader import (
     build_transitions,
     prepare,
     load_precomputed_bottlenecks,
+    load_precomputed_repeat_loops,
+    calculate_repeat_metrics,
 )
 
 st.set_page_config(page_title="CareFlow Dashboard", page_icon="🏥", layout="wide")
@@ -134,7 +136,7 @@ k3.metric("Avg pathway time", f"{avg_duration:.1f} h", delta=f"{avg_duration - t
 k4.metric("Median pathway time", f"{cases['duration_hrs'].median():.1f} h")
 k5.metric("Unique pathways", f"{cases['pathway'].nunique():,}")
 
-tab1, tab2, tab3, tab4 = st.tabs(["📊 Overview", "🔀 Pathways", "⏱️ Performance", "📋 Cases"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["📊 Overview", "🔀 Pathways", "⏱️ Performance", "🔁 Repeat & Loops", "📋 Cases"])
 
 # ---------------------------------------------------------------- Overview
 with tab1:
@@ -260,9 +262,9 @@ with tab3:
         width="stretch",
     )
 
-# ---------------------------------------------------------------- Cases
-with tab4:
-    st.subheader("Delayed / outlier cases")
+# ---------------------------------------------------------------- Day 9 Feature: Repeat & Loops
+with tab5:
+    st.header("📋 Delayed / Outlier Cases")
     pct = st.slider("Show cases slower than this percentile", 50, 99, 90)
     threshold = cases["duration_hrs"].quantile(pct / 100)
     st.caption(f"Threshold: {threshold:.1f} hours")
@@ -276,3 +278,35 @@ with tab4:
     col_dl1, col_dl2 = st.columns(2)
     col_dl1.download_button("⬇️ Download Outlier Cases (CSV)", show.to_csv(index=False), "delayed_cases.csv", "text/csv")
     col_dl2.download_button("⬇️ Download All Filtered Cases (CSV)", cases.to_csv(index=False), "all_filtered_cases.csv", "text/csv")
+
+with tab4:
+    st.header("🔁 Repeat Activity & Loop-Back Analysis")
+    
+    precomputed_loops = load_precomputed_repeat_loops()
+    
+    if precomputed_loops is not None and not precomputed_loops.empty:
+        st.success("✅ Loaded precalculated repeat loop metrics from `outputs/repeat_loop_metrics.csv`")
+        st.dataframe(precomputed_loops, width="stretch", hide_index=True)
+        
+        if "activity" in precomputed_loops.columns:
+            val_col = "repeat_count" if "repeat_count" in precomputed_loops.columns else precomputed_loops.columns[1]
+            st.plotly_chart(
+                px.bar(precomputed_loops, x="activity", y=val_col, title="Repeat Activity Frequency"),
+                width="stretch",
+            )
+    else:
+        st.info("Calculating repeat activities dynamically from event log...")
+        repeat_df = calculate_repeat_metrics(df)
+        if not repeat_df.empty:
+            summary_repeats = repeat_df.groupby("activity").agg(
+                affected_cases=("case_id", "nunique"),
+                total_repeats=("occurrence_count", "sum")
+            ).reset_index().sort_values("total_repeats", ascending=False)
+            
+            st.dataframe(summary_repeats, width="stretch", hide_index=True)
+            st.plotly_chart(
+                px.bar(summary_repeats, x="activity", y="total_repeats", title="Repeat Step Frequencies"),
+                width="stretch",
+            )
+        else:
+            st.success("🎉 No repeated activities or loops detected in filtered dataset!")

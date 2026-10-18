@@ -6,6 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_PATH = BASE_DIR / "data" / "event_log.csv"
 FALLBACK_DATA_PATH = Path(__file__).resolve().parent / "data" / "event_log.csv"
 BOTTLENECK_OUTPUT_PATH = BASE_DIR / "outputs" / "bottleneck_metrics.csv"
+REPEAT_LOOP_OUTPUT_PATH = BASE_DIR / "outputs" / "repeat_loop_metrics.csv"
 
 
 def get_dataset_path() -> Path:
@@ -72,9 +73,27 @@ def load_precomputed_bottlenecks() -> pd.DataFrame | None:
     if BOTTLENECK_OUTPUT_PATH.exists():
         try:
             df = pd.read_csv(BOTTLENECK_OUTPUT_PATH)
-            # Normalize column headers for consistent dashboard display
             df.columns = df.columns.str.strip().str.lower()
             return df
         except Exception:
             return None
     return None
+
+
+def load_precomputed_repeat_loops() -> pd.DataFrame | None:
+    """Loads pre-calculated repeat loop metrics from outputs/ sitting in workspace root."""
+    if REPEAT_LOOP_OUTPUT_PATH.exists():
+        try:
+            df = pd.read_csv(REPEAT_LOOP_OUTPUT_PATH)
+            df.columns = df.columns.str.strip().str.lower()
+            return df
+        except Exception:
+            return None
+    return None
+
+
+def calculate_repeat_metrics(df: pd.DataFrame) -> pd.DataFrame:
+    """Calculates on-the-fly repeat activity counts per case if precomputed metrics are absent."""
+    counts = df.groupby(["case_id", "activity"]).size().reset_index(name="occurrence_count")
+    repeats = counts[counts["occurrence_count"] > 1].copy()
+    return repeats
