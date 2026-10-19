@@ -12,6 +12,7 @@ from data_loader import (
     prepare,
     load_precomputed_bottlenecks,
     load_precomputed_repeat_loops,
+    load_precomputed_process_map,
     calculate_repeat_metrics,
 )
 
@@ -161,7 +162,7 @@ with tab1:
         width="stretch",
     )
 
-# ---------------------------------------------------------------- Pathways
+# ---------------------------------------------------------------- Pathways (Day 10 Feature: Process Map Integration)
 with tab2:
     st.subheader("Most common clinical pathways")
     top_n = st.slider("Number of pathways", 5, 20, 10)
@@ -171,6 +172,14 @@ with tab2:
     variants["share_%"] = (variants["patients"] / variants["patients"].sum() * 100).round(1)
     variants["avg_hours"] = variants["avg_hours"].round(1)
     st.dataframe(variants.head(top_n), width="stretch", hide_index=True)
+
+    st.subheader("Process Map Edge Network")
+    proc_map = load_precomputed_process_map()
+    if proc_map is not None and not proc_map.empty:
+        st.success("✅ Loaded precalculated process map edges from `outputs/process_map_edges.csv`")
+        st.dataframe(proc_map, width="stretch", hide_index=True)
+    else:
+        st.info("No precalculated process map edge file found in `outputs/`. Showing dynamic transition flows below.")
 
     st.subheader("Patient flow (Sankey)")
     s = df.copy()
@@ -209,7 +218,7 @@ with tab3:
     precomputed_bt = load_precomputed_bottlenecks()
 
     if precomputed_bt is not None and not precomputed_bt.empty:
-        st.success("✅ Loaded precalculated bottleneck metrics from `outputs/bottleneck_metrics.csv`")
+        st.success("✅ Loaded precalculated bottleneck metrics from `outputs/bottleneck_metrics.csv`[cite: 7]")
         bt_data = precomputed_bt.copy()
         
         st.dataframe(bt_data, width="stretch", hide_index=True)
@@ -262,30 +271,14 @@ with tab3:
         width="stretch",
     )
 
-# ---------------------------------------------------------------- Day 9 Feature: Repeat & Loops
-with tab5:
-    st.header("📋 Delayed / Outlier Cases")
-    pct = st.slider("Show cases slower than this percentile", 50, 99, 90)
-    threshold = cases["duration_hrs"].quantile(pct / 100)
-    st.caption(f"Threshold: {threshold:.1f} hours")
-    slow = cases[cases["duration_hrs"] >= threshold].sort_values("duration_hrs", ascending=False)
-    search = st.text_input("Search by case ID or pathway text")
-    if search:
-        slow = slow[slow["case_id"].str.contains(search, case=False) | slow["pathway"].str.contains(search, case=False)]
-    show = slow[["case_id", "department", "start", "duration_hrs", "steps", "pathway"]].round({"duration_hrs": 1})
-    st.dataframe(show, width="stretch", hide_index=True)
-    
-    col_dl1, col_dl2 = st.columns(2)
-    col_dl1.download_button("⬇️ Download Outlier Cases (CSV)", show.to_csv(index=False), "delayed_cases.csv", "text/csv")
-    col_dl2.download_button("⬇️ Download All Filtered Cases (CSV)", cases.to_csv(index=False), "all_filtered_cases.csv", "text/csv")
-
+# ---------------------------------------------------------------- Repeat & Loops
 with tab4:
     st.header("🔁 Repeat Activity & Loop-Back Analysis")
     
     precomputed_loops = load_precomputed_repeat_loops()
     
     if precomputed_loops is not None and not precomputed_loops.empty:
-        st.success("✅ Loaded precalculated repeat loop metrics from `outputs/repeat_loop_metrics.csv`")
+        st.success("✅ Loaded precalculated repeat loop metrics from `outputs/repeat_loop_metrics.csv`[cite: 7]")
         st.dataframe(precomputed_loops, width="stretch", hide_index=True)
         
         if "activity" in precomputed_loops.columns:
@@ -310,3 +303,20 @@ with tab4:
             )
         else:
             st.success("🎉 No repeated activities or loops detected in filtered dataset!")
+
+# ---------------------------------------------------------------- Cases
+with tab5:
+    st.header("📋 Delayed / Outlier Cases")
+    pct = st.slider("Show cases slower than this percentile", 50, 99, 90)
+    threshold = cases["duration_hrs"].quantile(pct / 100)
+    st.caption(f"Threshold: {threshold:.1f} hours")
+    slow = cases[cases["duration_hrs"] >= threshold].sort_values("duration_hrs", ascending=False)
+    search = st.text_input("Search by case ID or pathway text")
+    if search:
+        slow = slow[slow["case_id"].str.contains(search, case=False) | slow["pathway"].str.contains(search, case=False)]
+    show = slow[["case_id", "department", "start", "duration_hrs", "steps", "pathway"]].round({"duration_hrs": 1})
+    st.dataframe(show, width="stretch", hide_index=True)
+    
+    col_dl1, col_dl2 = st.columns(2)
+    col_dl1.download_button("⬇️ Download Outlier Cases (CSV)", show.to_csv(index=False), "delayed_cases.csv", "text/csv")
+    col_dl2.download_button("⬇️ Download All Filtered Cases (CSV)", cases.to_csv(index=False), "all_filtered_cases.csv", "text/csv")

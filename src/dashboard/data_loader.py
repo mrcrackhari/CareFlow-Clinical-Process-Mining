@@ -7,6 +7,7 @@ DATA_PATH = BASE_DIR / "data" / "event_log.csv"
 FALLBACK_DATA_PATH = Path(__file__).resolve().parent / "data" / "event_log.csv"
 BOTTLENECK_OUTPUT_PATH = BASE_DIR / "outputs" / "bottleneck_metrics.csv"
 REPEAT_LOOP_OUTPUT_PATH = BASE_DIR / "outputs" / "repeat_loop_metrics.csv"
+PROCESS_MAP_OUTPUT_PATH = BASE_DIR / "outputs" / "process_map_edges.csv"
 
 
 def get_dataset_path() -> Path:
@@ -85,6 +86,18 @@ def load_precomputed_repeat_loops() -> pd.DataFrame | None:
     if REPEAT_LOOP_OUTPUT_PATH.exists():
         try:
             df = pd.read_csv(REPEAT_LOOP_OUTPUT_PATH)
+            df.columns = df.columns.str.strip().str.lower()
+            return df
+        except Exception:
+            return None
+    return None
+
+
+def load_precomputed_process_map() -> pd.DataFrame | None:
+    """Loads pre-calculated process map edge counts from outputs/ sitting in workspace root."""
+    if PROCESS_MAP_OUTPUT_PATH.exists():
+        try:
+            df = pd.read_csv(PROCESS_MAP_OUTPUT_PATH)
             df.columns = df.columns.str.strip().str.lower()
             return df
         except Exception:
