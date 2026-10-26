@@ -14,6 +14,8 @@ from data_loader import (
     load_precomputed_repeat_loops,
     load_precomputed_process_map,
     calculate_repeat_metrics,
+    calculate_conformance_metrics,
+    STANDARD_PATHWAY,
 )
 
 st.set_page_config(page_title="CareFlow Dashboard", page_icon="🏥", layout="wide")
@@ -162,8 +164,28 @@ with tab1:
         width="stretch",
     )
 
-# ---------------------------------------------------------------- Pathways (Day 10 Feature: Process Map Integration)
+# ---------------------------------------------------------------- Pathways (Day 11 Enhancement: Conformance View)
 with tab2:
+    st.subheader("🎯 Actual vs. Ideal Pathway Conformance Analysis")
+    
+    target_path = st.text_input("Ideal Standard Pathway", value=STANDARD_PATHWAY)
+    
+    conf_cases = calculate_conformance_metrics(cases, standard_path=target_path)
+    total_cases = len(conf_cases)
+    conforming_count = conf_cases["is_conforming"].sum()
+    non_conforming_count = total_cases - conforming_count
+    conformance_rate = (conforming_count / total_cases * 100) if total_cases > 0 else 0.0
+
+    m1, m2, m3 = st.columns(3)
+    m1.metric("Conformance Rate", f"{conformance_rate:.1f}%")
+    m2.metric("Conforming Cases", f"{conforming_count:,}")
+    m3.metric("Non-Conforming Cases (Deviations)", f"{non_conforming_count:,}")
+
+    if conformance_rate < 70.0:
+        st.warning(f"⚠️ **Pathway Conformance Warning:** Only {conformance_rate:.1f}% of patients followed the exact standard pathway.")
+    else:
+        st.success(f"✅ **High Conformance:** {conformance_rate:.1f}% of patients followed the exact standard pathway.")
+
     st.subheader("Most common clinical pathways")
     top_n = st.slider("Number of pathways", 5, 20, 10)
     variants = cases.groupby("pathway").agg(
@@ -171,6 +193,8 @@ with tab2:
     ).reset_index().sort_values("patients", ascending=False)
     variants["share_%"] = (variants["patients"] / variants["patients"].sum() * 100).round(1)
     variants["avg_hours"] = variants["avg_hours"].round(1)
+    variants["is_standard"] = variants["pathway"] == target_path
+    
     st.dataframe(variants.head(top_n), width="stretch", hide_index=True)
 
     st.subheader("Process Map Edge Network")
@@ -218,7 +242,7 @@ with tab3:
     precomputed_bt = load_precomputed_bottlenecks()
 
     if precomputed_bt is not None and not precomputed_bt.empty:
-        st.success("✅ Loaded precalculated bottleneck metrics from `outputs/bottleneck_metrics.csv`[cite: 7]")
+        st.success("✅ Loaded precalculated bottleneck metrics from `outputs/bottleneck_metrics.csv`")
         bt_data = precomputed_bt.copy()
         
         st.dataframe(bt_data, width="stretch", hide_index=True)
@@ -278,7 +302,7 @@ with tab4:
     precomputed_loops = load_precomputed_repeat_loops()
     
     if precomputed_loops is not None and not precomputed_loops.empty:
-        st.success("✅ Loaded precalculated repeat loop metrics from `outputs/repeat_loop_metrics.csv`[cite: 7]")
+        st.success("✅ Loaded precalculated repeat loop metrics from `outputs/repeat_loop_metrics.csv`")
         st.dataframe(precomputed_loops, width="stretch", hide_index=True)
         
         if "activity" in precomputed_loops.columns:

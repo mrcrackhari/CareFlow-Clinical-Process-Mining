@@ -9,6 +9,8 @@ BOTTLENECK_OUTPUT_PATH = BASE_DIR / "outputs" / "bottleneck_metrics.csv"
 REPEAT_LOOP_OUTPUT_PATH = BASE_DIR / "outputs" / "repeat_loop_metrics.csv"
 PROCESS_MAP_OUTPUT_PATH = BASE_DIR / "outputs" / "process_map_edges.csv"
 
+STANDARD_PATHWAY = "Registration → Triage → Doctor Consultation → X-Ray → Doctor Review → Discharge"
+
 
 def get_dataset_path() -> Path:
     """Finds available event log path in root data/ or dashboard data/."""
@@ -110,3 +112,10 @@ def calculate_repeat_metrics(df: pd.DataFrame) -> pd.DataFrame:
     counts = df.groupby(["case_id", "activity"]).size().reset_index(name="occurrence_count")
     repeats = counts[counts["occurrence_count"] > 1].copy()
     return repeats
+
+
+def calculate_conformance_metrics(cases_df: pd.DataFrame, standard_path: str = STANDARD_PATHWAY) -> pd.DataFrame:
+    """Calculates conformance rate by comparing case pathways against standard target path."""
+    cases = cases_df.copy()
+    cases["is_conforming"] = cases["pathway"] == standard_path
+    return cases
