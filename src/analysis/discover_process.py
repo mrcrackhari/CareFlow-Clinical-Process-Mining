@@ -65,29 +65,18 @@ def validate_transitions(events: pd.DataFrame) -> None:
 
 
 def flag_repeats_and_loopbacks(events: pd.DataFrame) -> pd.DataFrame:
-    """Tag each event with is_repeat (R10) and is_loopback (R11) within its case."""
+    """Tag each event with is_repeat (R10) and is_loopback (R11) within its case.
+
+    The rows of a case are read in the order they appear (R1 sorting is done earlier). Every flag is
+    set on the row it describes, even if rows of different cases are mixed together.
+    """
     df = events.copy()
-    is_repeat = []
-    is_loopback = []
+    previous = df.groupby(COL_CASE_ID, sort=False)[COL_ACTIVITY].shift()
+    seen_before = df.groupby([COL_CASE_ID, COL_ACTIVITY], sort=False).cumcount() > 0
 
-    for _, group in df.groupby(COL_CASE_ID, sort=False):
-        seen = set()
-        prev_act = None
-        for act in group[COL_ACTIVITY]:
-            if prev_act is not None and act == prev_act:
-                is_repeat.append(True)
-                is_loopback.append(False)
-            elif act in seen:
-                is_repeat.append(False)
-                is_loopback.append(True)
-            else:
-                is_repeat.append(False)
-                is_loopback.append(False)
-            seen.add(act)
-            prev_act = act
-
-    df["is_repeat"] = is_repeat
-    df["is_loopback"] = is_loopback
+    is_repeat = previous.notna() & (df[COL_ACTIVITY] == previous)  # R10: same activity twice in a row
+    df["is_repeat"] = is_repeat.astype(bool)
+    df["is_loopback"] = (seen_before & ~is_repeat).astype(bool)  # R11: seen earlier, not an immediate repeat
     return df
 
 
@@ -218,7 +207,11 @@ def summarise_rework(events: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
 
 
 def summarise_process_map_edges(events: pd.DataFrame) -> pd.DataFrame:
-    """Build directed edge table (from_activity -> to_activity) for the Day 10 process map."""
+    """Build directed edge table (from_activity -> to_activity) for the Day 10 process map.
+
+    loopback_count is how many of the moves on an edge are loop-backs (R11). An edge on the ideal path
+    can still carry loop-backs, e.g. Triage -> Doctor Consultation after an X-Ray.
+    """
     tagged = flag_repeats_and_loopbacks(events)
     total_cases = tagged[COL_CASE_ID].nunique()
     transitions = tagged.dropna(subset=[COL_PREVIOUS_ACTIVITY, COL_TRANSITION_MINUTES]).copy()
@@ -267,6 +260,7 @@ def summarise_process_map_edges(events: pd.DataFrame) -> pd.DataFrame:
         "max_minutes",
         "is_ideal_edge",
         "edge_type",
+        "loopback_count",
     ]
     return edges[cols].sort_values(
         ["count", "avg_minutes", COL_FROM_ACTIVITY, COL_TO_ACTIVITY],

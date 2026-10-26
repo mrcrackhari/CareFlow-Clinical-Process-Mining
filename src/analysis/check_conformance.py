@@ -21,6 +21,7 @@ from src.common.schema import (  # noqa: E402
 
 CONFORMANCE_SUMMARY_CSV = OUTPUTS_DIR / "conformance_summary.csv"
 IDEAL_PATH_STR = " -> ".join(IDEAL_PATH)
+NO_STEPS = "(none)"  # not "None": pandas reads the word None back as an empty value
 
 
 def classify_case_conformance(
@@ -34,11 +35,11 @@ def classify_case_conformance(
         (is_conformant, deviation_type, skipped_steps, skipped_count)
     """
     if activities == IDEAL_PATH:
-        return True, "conformant", "None", 0
+        return True, "conformant", NO_STEPS, 0
 
     act_set = set(activities)
     skipped = [act for act in IDEAL_PATH if act not in act_set]
-    skipped_str = ", ".join(skipped) if skipped else "None"
+    skipped_str = ", ".join(skipped) if skipped else NO_STEPS
     skipped_count = len(skipped)
 
     first_seen_ideal = [act for act in dict.fromkeys(activities) if act in IDEAL_PATH]
@@ -99,6 +100,10 @@ def summarise_conformance(events: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     conf_subset = cases_df[cases_df["is_conformant"]]["duration_minutes"]
     non_conf_subset = cases_df[~cases_df["is_conformant"]]["duration_minutes"]
 
+    has_rework = (cases_df["repeat_count"] > 0) | (cases_df["loopback_count"] > 0)
+    plain_subset = cases_df[~cases_df["is_conformant"] & ~has_rework]["duration_minutes"]  # deviate without rework
+    rework_subset = cases_df[has_rework]["duration_minutes"]
+
     stats = {
         "total_cases": total_cases,
         "conformant_cases": conformant_cases,
@@ -106,6 +111,10 @@ def summarise_conformance(events: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         "conformance_rate_pct": round(conformant_cases / total_cases * 100.0, 2) if total_cases else 0.0,
         "conformant_avg_minutes": round(float(conf_subset.mean()), 2) if not conf_subset.empty else 0.0,
         "non_conformant_avg_minutes": round(float(non_conf_subset.mean()), 2) if not non_conf_subset.empty else 0.0,
+        "no_rework_cases": len(plain_subset),
+        "no_rework_avg_minutes": round(float(plain_subset.mean()), 2) if not plain_subset.empty else 0.0,
+        "rework_cases": len(rework_subset),
+        "rework_avg_minutes": round(float(rework_subset.mean()), 2) if not rework_subset.empty else 0.0,
     }
 
     summary = (
@@ -187,6 +196,11 @@ def check_conformance(
         f"{stats['non_conformant_cases']} non-conformant | "
         f"Conformant Avg: {stats['conformant_avg_minutes']} min vs "
         f"Non-Conformant Avg: {stats['non_conformant_avg_minutes']} min"
+    )
+    print(
+        f"Non-conformant split: {stats['no_rework_cases']} deviate without rework "
+        f"(avg {stats['no_rework_avg_minutes']} min) | {stats['rework_cases']} have a repeat or loop-back "
+        f"(avg {stats['rework_avg_minutes']} min)"
     )
 
     output_path = Path(output_path)

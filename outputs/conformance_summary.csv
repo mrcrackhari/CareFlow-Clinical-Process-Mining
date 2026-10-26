@@ -2,8 +2,8 @@ rank,path,is_conformant,deviation_type,skipped_steps,skipped_count,case_count,pc
 1,Registration -> Triage -> Doctor Consultation -> Discharge,False,skipped_steps,"X-Ray, Doctor Review",2,137,27.4,4,80.18,80.0,False,False
 2,Registration -> Triage -> Doctor Consultation -> Doctor Review -> Discharge,False,skipped_steps,X-Ray,1,103,20.6,5,113.12,114.0,False,False
 3,Registration -> Triage -> Doctor Consultation -> X-Ray -> Discharge,False,skipped_steps,Doctor Review,1,83,16.6,5,112.07,113.0,False,False
-4,Registration -> Triage -> Doctor Consultation -> X-Ray -> Doctor Review -> Discharge,True,conformant,None,0,65,13.0,6,137.85,137.0,False,False
+4,Registration -> Triage -> Doctor Consultation -> X-Ray -> Doctor Review -> Discharge,True,conformant,(none),0,65,13.0,6,137.85,137.0,False,False
 5,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Discharge,False,skipped_steps+loop_back,Doctor Review,1,62,12.4,7,166.23,166.0,False,True
-6,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Doctor Review -> Discharge,False,loop_back,None,0,35,7.0,8,195.74,200.0,False,True
-7,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Doctor Review -> Discharge,False,loop_back,None,0,9,1.8,11,276.0,275.0,False,True
+6,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Doctor Review -> Discharge,False,loop_back,(none),0,35,7.0,8,195.74,200.0,False,True
+7,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Doctor Review -> Discharge,False,loop_back,(none),0,9,1.8,11,276.0,275.0,False,True
 8,Registration -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> X-Ray -> Triage -> Doctor Consultation -> Discharge,False,skipped_steps+loop_back,Doctor Review,1,6,1.2,10,236.33,246.0,False,True

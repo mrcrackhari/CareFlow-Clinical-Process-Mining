@@ -75,7 +75,12 @@ def add_transition_times(df: pd.DataFrame) -> pd.DataFrame:
 def calculate_transition_times(csv_path=EVENT_LOG, output_path=EVENT_TRANSITIONS_CSV) -> pd.DataFrame:
     print(f"Loading data from {csv_path}...")
     events = load_event_log(csv_path)
-    events = add_transition_times(drop_incomplete_cases(sort_events(events)))
+    events = drop_incomplete_cases(sort_events(events))
+    if events.empty:  # stop before an existing, good output file is overwritten by an empty one
+        raise ValueError(
+            f"No complete cases in {csv_path}: every case must start with {START_ACTIVITY} and end with {END_ACTIVITY}."
+        )
+    events = add_transition_times(events)
 
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -87,4 +92,4 @@ def calculate_transition_times(csv_path=EVENT_LOG, output_path=EVENT_TRANSITIONS
 
 
 if __name__ == "__main__":
-    calculate_transition_times(*sys.argv[1:2])  
+    calculate_transition_times(*sys.argv[1:2])  # optional first argument: path to the event log
