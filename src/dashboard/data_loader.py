@@ -119,3 +119,13 @@ def calculate_conformance_metrics(cases_df: pd.DataFrame, standard_path: str = S
     cases = cases_df.copy()
     cases["is_conforming"] = cases["pathway"] == standard_path
     return cases
+
+
+def get_dataset_metadata(df: pd.DataFrame) -> dict:
+    """Returns dynamic dataset summary metadata for UI sidebar status badges."""
+    return {
+        "total_records": len(df),
+        "total_cases": df["case_id"].nunique(),
+        "min_date": df["timestamp"].min().strftime("%Y-%m-%d"),
+        "max_date": df["timestamp"].max().strftime("%Y-%m-%d"),
+    }

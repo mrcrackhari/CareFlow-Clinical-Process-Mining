@@ -15,6 +15,7 @@ from data_loader import (
     load_precomputed_process_map,
     calculate_repeat_metrics,
     calculate_conformance_metrics,
+    get_dataset_metadata,
     STANDARD_PATHWAY,
 )
 
@@ -38,9 +39,10 @@ def get_transitions(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------- Sidebar & Data Loading
-st.sidebar.title("🏥 CareFlow")
-uploaded = st.sidebar.file_uploader("Upload event log (CSV)", type="csv")
+st.sidebar.title("🏥 CareFlow Analytics")
+st.sidebar.caption("⚡ Process Mining Operations Console")
 
+uploaded = st.sidebar.file_uploader("Upload event log (CSV)", type="csv")
 dataset_path = get_dataset_path()
 
 try:
@@ -85,9 +87,19 @@ except Exception as e:  # noqa: BLE001
 
 cases_all = get_cases(data)
 
-st.sidebar.header("Filters")
+st.sidebar.markdown("---")
+st.sidebar.header("🔍 Dynamic Filters")
+
+metadata = get_dataset_metadata(data)
+st.sidebar.info(
+    f"📊 **Active Log Metadata**\n"
+    f"- Total Events: `{metadata['total_records']:,}`\n"
+    f"- Total Cases: `{metadata['total_cases']:,}`\n"
+    f"- Span: `{metadata['min_date']}` to `{metadata['max_date']}`"
+)
+
 min_d, max_d = cases_all["start"].min().date(), cases_all["start"].max().date()
-date_range = st.sidebar.date_input("Case start date", (min_d, max_d), min_value=min_d, max_value=max_d)
+date_range = st.sidebar.date_input("Case start date range", (min_d, max_d), min_value=min_d, max_value=max_d)
 
 depts = sorted(cases_all["department"].unique())
 sel_depts = st.sidebar.multiselect("Department", depts, default=depts)
@@ -96,9 +108,13 @@ all_pathways = sorted(cases_all["pathway"].unique())
 sel_pathways = st.sidebar.multiselect("Pathway Variant", all_pathways, default=[])
 
 # Target Threshold Controls
-st.sidebar.header("⚠️ Target Thresholds")
+st.sidebar.markdown("---")
+st.sidebar.header("⚠️ Target Thresholds & Alerts")
 target_duration = st.sidebar.number_input("Max Target Pathway Time (hrs)", value=2.0, step=0.5)
 target_wait = st.sidebar.number_input("Max Wait Alert Threshold (min)", value=25.0, step=5.0)
+
+st.sidebar.markdown("---")
+st.sidebar.caption("ℹ️ *CareFlow v1.2 — Synthetic Clinical Event Log Analytics*")
 
 if len(date_range) != 2:
     st.warning("Pick both a start and an end date.")
@@ -164,7 +180,7 @@ with tab1:
         width="stretch",
     )
 
-# ---------------------------------------------------------------- Pathways (Day 11 Enhancement: Conformance View)
+# ---------------------------------------------------------------- Pathways
 with tab2:
     st.subheader("🎯 Actual vs. Ideal Pathway Conformance Analysis")
     
