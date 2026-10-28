@@ -16,6 +16,7 @@ from data_loader import (
     calculate_repeat_metrics,
     calculate_conformance_metrics,
     get_dataset_metadata,
+    safe_calculate_metrics,
     STANDARD_PATHWAY,
 )
 
@@ -114,7 +115,7 @@ target_duration = st.sidebar.number_input("Max Target Pathway Time (hrs)", value
 target_wait = st.sidebar.number_input("Max Wait Alert Threshold (min)", value=25.0, step=5.0)
 
 st.sidebar.markdown("---")
-st.sidebar.caption("ℹ️ *CareFlow v1.2 — Synthetic Clinical Event Log Analytics*")
+st.sidebar.caption("ℹ️ *CareFlow v1.3 — Dynamic Pipeline Verification Build*")
 
 if len(date_range) != 2:
     st.warning("Pick both a start and an end date.")
@@ -133,7 +134,7 @@ cases = cases_all[mask]
 df = data[data["case_id"].isin(cases["case_id"])]
 
 if cases.empty:
-    st.warning("No cases match the selected filters.")
+    st.warning("⚠️ No cases match the selected filters. Adjust your sidebar settings.")
     st.stop()
 
 trans = get_transitions(df)
@@ -142,8 +143,9 @@ trans = get_transitions(df)
 st.title("CareFlow: Clinical Pathway Dashboard")
 st.caption("Process mining view of patient journeys: volumes, pathways, delays and bottlenecks.")
 
-avg_duration = cases['duration_hrs'].mean()
-delayed_count = (cases['duration_hrs'] > target_duration).sum()
+metrics = safe_calculate_metrics(cases)
+avg_duration = metrics["avg_duration"]
+delayed_count = (cases['duration_hrs'] > target_duration).sum() if not cases.empty else 0
 
 if avg_duration > target_duration:
     st.warning(f"⚠️ **Target SLA Alert:** Average pathway time ({avg_duration:.1f} h) exceeds target limit of {target_duration:.1f} h! ({delayed_count} delayed cases)")
@@ -152,8 +154,8 @@ k1, k2, k3, k4, k5 = st.columns(5)
 k1.metric("Patients (cases)", f"{len(cases):,}")
 k2.metric("Events", f"{len(df):,}")
 k3.metric("Avg pathway time", f"{avg_duration:.1f} h", delta=f"{avg_duration - target_duration:+.1f} h vs target", delta_color="inverse")
-k4.metric("Median pathway time", f"{cases['duration_hrs'].median():.1f} h")
-k5.metric("Unique pathways", f"{cases['pathway'].nunique():,}")
+k4.metric("Median pathway time", f"{cases['duration_hrs'].median():.1f} h" if not cases.empty else "0.0 h")
+k5.metric("Unique pathways", f"{cases['pathway'].nunique():,}" if not cases.empty else "0")
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["📊 Overview", "🔀 Pathways", "⏱️ Performance", "🔁 Repeat & Loops", "📋 Cases"])
 

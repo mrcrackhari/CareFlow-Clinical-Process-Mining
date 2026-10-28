@@ -129,3 +129,14 @@ def get_dataset_metadata(df: pd.DataFrame) -> dict:
         "min_date": df["timestamp"].min().strftime("%Y-%m-%d"),
         "max_date": df["timestamp"].max().strftime("%Y-%m-%d"),
     }
+
+
+def safe_calculate_metrics(df: pd.DataFrame) -> dict:
+    """Provides safe calculations for UI summaries when filtered datasets are minimal."""
+    if df.empty:
+        return {"avg_duration": 0.0, "total_cases": 0, "total_events": 0}
+    return {
+        "avg_duration": df["duration_hrs"].mean() if "duration_hrs" in df.columns else 0.0,
+        "total_cases": df["case_id"].nunique() if "case_id" in df.columns else 0,
+        "total_events": len(df),
+    }
