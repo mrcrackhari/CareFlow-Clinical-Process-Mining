@@ -140,3 +140,17 @@ def safe_calculate_metrics(df: pd.DataFrame) -> dict:
         "total_cases": df["case_id"].nunique() if "case_id" in df.columns else 0,
         "total_events": len(df),
     }
+
+
+def get_user_guide_content() -> dict:
+    """Returns documentation and walkthrough text for in-app review guide."""
+    return {
+        "overview": "CareFlow Clinical Pathway Dashboard process mining platform built using Streamlit and Plotly.",
+        "tabs": [
+            "📊 Overview: High-level volume and frequency metrics.",
+            "🔀 Pathways: Conformance analysis, Sankey flow diagrams, and edge networks.",
+            "⏱️ Performance: Bottleneck wait-time detection with alert thresholds.",
+            "🔁 Repeat & Loops: Re-work detection and activity re-visit counts.",
+            "📋 Cases: Outlier detection with export functionality."
+        ]
+    }
