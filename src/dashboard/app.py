@@ -4,6 +4,7 @@ CareFlow Clinical Pathway Dashboard — Interactive Process Mining Platform
 Architecture: Dual-read pipeline (Primary: precomputed outputs from Member 2,
               Fallback: dynamic pandas calculations from event log).
 Features: Executive KPIs, Conformance, Bottleneck SLA Alerts, Re-work Loops.
+Version: v1.6 (Final Documentation & Team Integration Release)
 """
 
 from pathlib import Path
@@ -124,7 +125,7 @@ target_duration = st.sidebar.number_input("Max Target Pathway Time (hrs)", value
 target_wait = st.sidebar.number_input("Max Wait Alert Threshold (min)", value=25.0, step=5.0)
 
 st.sidebar.markdown("---")
-st.sidebar.caption("ℹ️ *CareFlow v1.5 — Post-Review Maintenance Build*")
+st.sidebar.caption("ℹ️ *CareFlow v1.6 — Final Documentation Release*")
 
 if len(date_range) != 2:
     st.warning("Pick both a start and an end date.")
@@ -378,4 +379,3 @@ with tab5:
     col_dl1, col_dl2 = st.columns(2)
     col_dl1.download_button("⬇️ Download Outlier Cases (CSV)", show.to_csv(index=False), "delayed_cases.csv", "text/csv")
     col_dl2.download_button("⬇️ Download All Filtered Cases (CSV)", cases.to_csv(index=False), "all_filtered_cases.csv", "text/csv")
-    
