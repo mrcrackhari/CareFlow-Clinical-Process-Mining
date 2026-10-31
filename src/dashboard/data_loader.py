@@ -1,3 +1,11 @@
+"""
+CareFlow Data Loader & Fallback Pipeline Engine (Day 16 Final)
+============================================================
+Handles data preparation, dataset discovery, dual-read loading from 
+precomputed backend CSV files (`outputs/`), dynamic calculations fallback,
+and metadata helper functions for UI rendering.
+"""
+
 from pathlib import Path
 import pandas as pd
 
@@ -22,7 +30,7 @@ def get_dataset_path() -> Path:
 
 
 def prepare(df: pd.DataFrame) -> pd.DataFrame:
-    """Cleans raw event log dataframe and casts timestamp columns."""
+    """Cleans raw event log dataframe, casts timestamps, and handles missing departments."""
     df = df.copy()
     df.columns = df.columns.str.strip().str.lower()
 
@@ -72,7 +80,7 @@ def build_transitions(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def load_precomputed_bottlenecks() -> pd.DataFrame | None:
-    """Loads pre-calculated bottleneck metrics from outputs/ sitting in workspace root."""
+    """Loads precalculated bottleneck metrics from outputs/ sitting in workspace root."""
     if BOTTLENECK_OUTPUT_PATH.exists():
         try:
             df = pd.read_csv(BOTTLENECK_OUTPUT_PATH)
@@ -84,7 +92,7 @@ def load_precomputed_bottlenecks() -> pd.DataFrame | None:
 
 
 def load_precomputed_repeat_loops() -> pd.DataFrame | None:
-    """Loads pre-calculated repeat loop metrics from outputs/ sitting in workspace root."""
+    """Loads precalculated repeat loop metrics from outputs/ sitting in workspace root."""
     if REPEAT_LOOP_OUTPUT_PATH.exists():
         try:
             df = pd.read_csv(REPEAT_LOOP_OUTPUT_PATH)
@@ -96,7 +104,7 @@ def load_precomputed_repeat_loops() -> pd.DataFrame | None:
 
 
 def load_precomputed_process_map() -> pd.DataFrame | None:
-    """Loads pre-calculated process map edge counts from outputs/ sitting in workspace root."""
+    """Loads precalculated process map edge counts from outputs/ sitting in workspace root."""
     if PROCESS_MAP_OUTPUT_PATH.exists():
         try:
             df = pd.read_csv(PROCESS_MAP_OUTPUT_PATH)

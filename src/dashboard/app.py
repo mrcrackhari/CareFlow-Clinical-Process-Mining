@@ -378,3 +378,4 @@ with tab5:
     col_dl1, col_dl2 = st.columns(2)
     col_dl1.download_button("⬇️ Download Outlier Cases (CSV)", show.to_csv(index=False), "delayed_cases.csv", "text/csv")
     col_dl2.download_button("⬇️ Download All Filtered Cases (CSV)", cases.to_csv(index=False), "all_filtered_cases.csv", "text/csv")
+    
