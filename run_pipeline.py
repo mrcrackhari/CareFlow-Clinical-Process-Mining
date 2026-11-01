@@ -1,10 +1,3 @@
-"""One-command end-to-end clinical process mining pipeline runner (Day 15).
-
-Executes all four CareFlow analysis stages in sequence, verifies cross-file
-data integrity across all 6 output CSVs, runs the automated test suite,
-and prints a concise operational summary table in the terminal.
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -29,10 +22,11 @@ EVENT_LOG_PATH = Path(getattr(schema, "EVENT_LOG_PATH", PROJECT_ROOT / "data" / 
 OUTPUTS_DIR = Path(getattr(schema, "OUTPUTS_DIR", PROJECT_ROOT / "outputs"))
 
 PIPELINE_STAGES = [
-    ("1/4 Calculate Transition Metrics", PROJECT_ROOT / "src" / "analysis" / "calculate_metrics.py", []),
-    ("2/4 Identify Bottlenecks", PROJECT_ROOT / "src" / "analysis" / "find_bottlenecks.py", ["--quiet"]),
-    ("3/4 Discover Process & Rework", PROJECT_ROOT / "src" / "analysis" / "discover_process.py", ["--quiet"]),
-    ("4/4 Check Protocol Conformance", PROJECT_ROOT / "src" / "analysis" / "check_conformance.py", ["--quiet"]),
+    ("1/5 Calculate Transition Metrics", PROJECT_ROOT / "src" / "analysis" / "calculate_metrics.py", []),
+    ("2/5 Identify Bottlenecks", PROJECT_ROOT / "src" / "analysis" / "find_bottlenecks.py", ["--quiet"]),
+    ("3/5 Discover Process & Rework", PROJECT_ROOT / "src" / "analysis" / "discover_process.py", ["--quiet"]),
+    ("4/5 Check Protocol Conformance", PROJECT_ROOT / "src" / "analysis" / "check_conformance.py", ["--quiet"]),
+    ("5/5 Shift & Resource Workload", PROJECT_ROOT / "src" / "analysis" / "analyze_workload.py", ["--quiet"]),
 ]
 
 EXPECTED_OUTPUT_FILES = [
@@ -42,6 +36,7 @@ EXPECTED_OUTPUT_FILES = [
     "repeat_loop_metrics.csv",
     "process_map_edges.csv",
     "conformance_summary.csv",
+    "shift_resource_metrics.csv",
 ]
 
 
