@@ -1,5 +1,5 @@
 """
-CareFlow Data Loader & Fallback Pipeline Engine (Day 17 Extended)
+CareFlow Data Loader & Fallback Pipeline Engine
 ============================================================
 Handles data preparation, dataset discovery, dual-read loading from 
 precomputed backend CSV files (`outputs/`), dynamic calculations fallback,
@@ -10,10 +10,8 @@ import logging
 from pathlib import Path
 import pandas as pd
 
-# Setup logging for background evaluation and tracking
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-# Define path helpers for dataset and output discovery
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_PATH = BASE_DIR / "data" / "event_log.csv"
 FALLBACK_DATA_PATH = Path(__file__).resolve().parent / "data" / "event_log.csv"
@@ -25,7 +23,6 @@ STANDARD_PATHWAY = "Registration → Triage → Doctor Consultation → X-Ray �
 
 
 def get_dataset_path() -> Path:
-    """Finds available event log path in root data/ or dashboard data/ directory."""
     if DATA_PATH.exists():
         logging.info(f"Primary event log detected at: {DATA_PATH}")
         return DATA_PATH
@@ -37,7 +34,6 @@ def get_dataset_path() -> Path:
 
 
 def prepare(df: pd.DataFrame) -> pd.DataFrame:
-    """Cleans raw event log dataframe, casts timestamps, and handles missing departments."""
     df = df.copy()
     df.columns = df.columns.str.strip().str.lower()
 
@@ -57,7 +53,6 @@ def prepare(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def build_cases(df: pd.DataFrame) -> pd.DataFrame:
-    """Aggregates case-level summary metrics including start/end times, durations, and pathway variants."""
     grouped = df.groupby("case_id")
 
     cases = grouped.agg(
@@ -73,7 +68,6 @@ def build_cases(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def build_transitions(df: pd.DataFrame) -> pd.DataFrame:
-    """Computes transition step-to-step wait times in minutes for bottleneck evaluation."""
     df_sorted = df.sort_values(["case_id", "timestamp"]).copy()
     df_sorted["next_activity"] = df_sorted.groupby("case_id")["activity"].shift(-1)
     df_sorted["next_timestamp"] = df_sorted.groupby("case_id")["timestamp"].shift(-1)
@@ -87,12 +81,10 @@ def build_transitions(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def load_precomputed_bottlenecks() -> pd.DataFrame | None:
-    """Loads precalculated bottleneck metrics from outputs/ sitting in workspace root."""
     if BOTTLENECK_OUTPUT_PATH.exists():
         try:
             df = pd.read_csv(BOTTLENECK_OUTPUT_PATH)
             df.columns = df.columns.str.strip().str.lower()
-            logging.info("Successfully ingested precomputed bottleneck metrics from outputs/")
             return df
         except Exception as err:
             logging.error(f"Error reading precomputed bottlenecks: {err}")
@@ -101,12 +93,10 @@ def load_precomputed_bottlenecks() -> pd.DataFrame | None:
 
 
 def load_precomputed_repeat_loops() -> pd.DataFrame | None:
-    """Loads precalculated repeat loop metrics from outputs/ sitting in workspace root."""
     if REPEAT_LOOP_OUTPUT_PATH.exists():
         try:
             df = pd.read_csv(REPEAT_LOOP_OUTPUT_PATH)
             df.columns = df.columns.str.strip().str.lower()
-            logging.info("Successfully ingested precomputed repeat loop metrics from outputs/")
             return df
         except Exception as err:
             logging.error(f"Error reading precomputed repeat loops: {err}")
@@ -115,12 +105,10 @@ def load_precomputed_repeat_loops() -> pd.DataFrame | None:
 
 
 def load_precomputed_process_map() -> pd.DataFrame | None:
-    """Loads precalculated process map edge counts from outputs/ sitting in workspace root."""
     if PROCESS_MAP_OUTPUT_PATH.exists():
         try:
             df = pd.read_csv(PROCESS_MAP_OUTPUT_PATH)
             df.columns = df.columns.str.strip().str.lower()
-            logging.info("Successfully ingested precomputed process map edges from outputs/")
             return df
         except Exception as err:
             logging.error(f"Error reading precomputed process map: {err}")
@@ -129,28 +117,20 @@ def load_precomputed_process_map() -> pd.DataFrame | None:
 
 
 def calculate_repeat_metrics(df: pd.DataFrame) -> pd.DataFrame:
-    """Calculates on-the-fly repeat activity counts per case if precomputed metrics are absent."""
     counts = df.groupby(["case_id", "activity"]).size().reset_index(name="occurrence_count")
     repeats = counts[counts["occurrence_count"] > 1].copy()
     return repeats
 
 
 def calculate_conformance_metrics(cases_df: pd.DataFrame, standard_path: str = STANDARD_PATHWAY) -> pd.DataFrame:
-    """Calculates conformance rate by comparing case pathways against standard target path."""
     cases = cases_df.copy()
     cases["is_conforming"] = cases["pathway"] == standard_path
     return cases
 
 
 def get_dataset_metadata(df: pd.DataFrame) -> dict:
-    """Returns dynamic dataset summary metadata for UI sidebar status badges."""
     if df.empty:
-        return {
-            "total_records": 0,
-            "total_cases": 0,
-            "min_date": "N/A",
-            "max_date": "N/A",
-        }
+        return {"total_records": 0, "total_cases": 0, "min_date": "N/A", "max_date": "N/A"}
     return {
         "total_records": len(df),
         "total_cases": df["case_id"].nunique(),
@@ -160,7 +140,6 @@ def get_dataset_metadata(df: pd.DataFrame) -> dict:
 
 
 def safe_calculate_metrics(df: pd.DataFrame) -> dict:
-    """Provides safe calculations for UI summaries when filtered datasets are minimal or empty."""
     if df.empty:
         return {"avg_duration": 0.0, "total_cases": 0, "total_events": 0}
     return {
@@ -171,7 +150,6 @@ def safe_calculate_metrics(df: pd.DataFrame) -> dict:
 
 
 def get_user_guide_content() -> dict:
-    """Returns documentation and walkthrough text for in-app evaluator review guide."""
     return {
         "overview": "CareFlow Clinical Pathway Dashboard process mining platform built using Streamlit and Plotly.",
         "tabs": [
