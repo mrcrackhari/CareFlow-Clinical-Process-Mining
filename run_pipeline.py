@@ -22,11 +22,12 @@ EVENT_LOG_PATH = Path(getattr(schema, "EVENT_LOG_PATH", PROJECT_ROOT / "data" / 
 OUTPUTS_DIR = Path(getattr(schema, "OUTPUTS_DIR", PROJECT_ROOT / "outputs"))
 
 PIPELINE_STAGES = [
-    ("1/5 Calculate Transition Metrics", PROJECT_ROOT / "src" / "analysis" / "calculate_metrics.py", []),
-    ("2/5 Identify Bottlenecks", PROJECT_ROOT / "src" / "analysis" / "find_bottlenecks.py", ["--quiet"]),
-    ("3/5 Discover Process & Rework", PROJECT_ROOT / "src" / "analysis" / "discover_process.py", ["--quiet"]),
-    ("4/5 Check Protocol Conformance", PROJECT_ROOT / "src" / "analysis" / "check_conformance.py", ["--quiet"]),
-    ("5/5 Shift & Resource Workload", PROJECT_ROOT / "src" / "analysis" / "analyze_workload.py", ["--quiet"]),
+    ("1/6 Calculate Transition Metrics", PROJECT_ROOT / "src" / "analysis" / "calculate_metrics.py", []),
+    ("2/6 Identify Bottlenecks", PROJECT_ROOT / "src" / "analysis" / "find_bottlenecks.py", ["--quiet"]),
+    ("3/6 Discover Process & Rework", PROJECT_ROOT / "src" / "analysis" / "discover_process.py", ["--quiet"]),
+    ("4/6 Check Protocol Conformance", PROJECT_ROOT / "src" / "analysis" / "check_conformance.py", ["--quiet"]),
+    ("5/6 Shift & Resource Workload", PROJECT_ROOT / "src" / "analysis" / "analyze_workload.py", ["--quiet"]),
+    ("6/6 Multi-Diagnostic & SLA Cohorts", PROJECT_ROOT / "src" / "analysis" / "analyze_clinical_cohorts.py", ["--quiet"]),
 ]
 
 EXPECTED_OUTPUT_FILES = [
@@ -37,6 +38,7 @@ EXPECTED_OUTPUT_FILES = [
     "process_map_edges.csv",
     "conformance_summary.csv",
     "shift_resource_metrics.csv",
+    "clinical_cohort_metrics.csv",
 ]
 
 
