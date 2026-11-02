@@ -1,9 +1,15 @@
 
-## 5. Mid-Review Freeze Status (Day 10)
-As of Day 10, the data module is frozen for the Mid-Review. 
-- **Generator:** `src/data/generate_events.py` (seed=42, deterministic).
-- **Stable Data:** `data/event_log.csv` (2,741 events, 500 patients).
-- **Validation:** 10/10 checks PASS (`data/quality_report.csv`).
-- **Analysis Fixtures:** 5 cases locked in `tests/fixtures/hand_checked_journeys.csv`.
+## 6. Findings & Integration (Day 13-14)
 
-No further changes will be made to the data contract or the clean dataset unless a critical bug is discovered by Member 2's analysis.
+As of Day 14, the Data Module is fully integrated with the team's analysis and dashboard branches.
+
+### Key Data Findings
+- **The Hidden Bottleneck:** The 40% loop-back rate (X-Ray → Triage) is successfully planted and verified in the `event_log.csv`. Process mining algorithms (PM4Py) will be able to detect this as the dominant non-conformant edge.
+- **Shift Distribution:** The data spans Morning (31%), Evening (33%), and Night (36%) shifts, providing sufficient volume for dashboard filtering.
+- **Wait Times:** The simulated time deltas (10-45 minutes between events) create a realistic distribution of transition times for bottleneck analysis.
+
+### Integration Status
+- **Schema Alignment:** Both Member 1 and Member 2 branches share the exact same `schema.py` contract.
+- **Data Integrity:** The `pytest` suite confirms that the clean data (used for the dashboard) passes 100% of validation checks, while the dirty data successfully triggers 7 distinct failure warnings.
+
+The data foundation is stable, documented, and ready for the final presentation.
