@@ -4,7 +4,7 @@ CareFlow Clinical Pathway Dashboard — Interactive Process Mining Platform
 Architecture: Dual-read pipeline (Primary: precomputed outputs from Member 2,
               Fallback: dynamic pandas calculations from event log).
 Features: Executive KPIs, Conformance, Bottleneck SLA Alerts, Re-work Loops.
-Version: v1.8 (Day 18 Release — Enhanced Labels, Filters, and Conformance UI Polish)
+Version: v1.9 (Fully Corrected Release — Defensive CSV & Schema Protection)
 """
 
 from pathlib import Path
@@ -155,7 +155,7 @@ target_wait = st.sidebar.number_input(
 )
 
 st.sidebar.markdown("---")
-st.sidebar.caption("ℹ️ *CareFlow v1.8 — Day 18 Polish Release*")
+st.sidebar.caption("ℹ️ *CareFlow v1.9 — Fully Corrected Release*")
 
 if len(date_range) != 2:
     st.warning("Pick both a start and an end date.")
@@ -306,32 +306,34 @@ with tab3:
 
     precomputed_bt = load_precomputed_bottlenecks()
 
-    if precomputed_bt is not None and not precomputed_bt.empty:
+    # Robust validation: check if precomputed data exists AND contains 'avg_wait_min'
+    if precomputed_bt is not None and not precomputed_bt.empty and "avg_wait_min" in precomputed_bt.columns:
         st.success("✅ Loaded precalculated bottleneck metrics from `outputs/bottleneck_metrics.csv`")
         bt_data = precomputed_bt.copy()
         
+        act_col = "activity" if "activity" in bt_data.columns else bt_data.columns[0]
         top_step = bt_data.sort_values("avg_wait_min", ascending=False).iloc[0]
-        st.error(f"🚨 **Primary Bottleneck Highlight:** `{top_step['activity']}` step experiences an average delay of **{top_step['avg_wait_min']:.1f} minutes**!")
+        st.error(f"🚨 **Primary Bottleneck Highlight:** `{top_step[act_col]}` step experiences an average delay of **{top_step['avg_wait_min']:.1f} minutes**!")
         
         st.dataframe(bt_data, width="stretch", hide_index=True)
         
-        if "activity" in bt_data.columns and "avg_wait_min" in bt_data.columns:
-            top_bt = bt_data.sort_values("avg_wait_min", ascending=False).head(10)
-            top_bt["is_alert"] = top_bt["avg_wait_min"] > target_wait
-            
-            st.plotly_chart(
-                px.bar(
-                    top_bt,
-                    x="avg_wait_min",
-                    y="activity",
-                    orientation="h",
-                    color="is_alert",
-                    color_discrete_map={True: "#d9534f", False: "#0275d8"},
-                    title=f"Top Slowest Clinical Steps (Red indicates wait > {target_wait} min threshold)"
-                ).update_yaxes(categoryorder="total ascending"),
-                width="stretch",
-            )
+        top_bt = bt_data.sort_values("avg_wait_min", ascending=False).head(10)
+        top_bt["is_alert"] = top_bt["avg_wait_min"] > target_wait
+        
+        st.plotly_chart(
+            px.bar(
+                top_bt,
+                x="avg_wait_min",
+                y=act_col,
+                orientation="h",
+                color="is_alert",
+                color_discrete_map={True: "#d9534f", False: "#0275d8"},
+                title=f"Top Slowest Clinical Steps (Red indicates wait > {target_wait} min threshold)"
+            ).update_yaxes(categoryorder="total ascending"),
+            width="stretch",
+        )
     else:
+        # Dynamic fallback calculation from event log transitions
         bt_summary = trans.groupby(["activity", "next_activity"]).agg(
             avg_wait_min=("wait_min", "mean"),
             transitions=("wait_min", "count")
@@ -340,24 +342,25 @@ with tab3:
         bt_summary = bt_summary.sort_values("avg_wait_min", ascending=False)
         top_bt = bt_summary.head(10)
 
-        top_bt["is_alert"] = top_bt["avg_wait_min"] > target_wait
-        
         if not top_bt.empty:
+            top_bt["is_alert"] = top_bt["avg_wait_min"] > target_wait
             slowest = top_bt.iloc[0]
             st.error(f"🚨 **Primary Transition Bottleneck:** `{slowest['step']}` (Avg Wait: **{slowest['avg_wait_min']:.1f} min**)")
 
-        st.plotly_chart(
-            px.bar(
-                top_bt,
-                x="avg_wait_min",
-                y="step",
-                orientation="h",
-                color="is_alert",
-                color_discrete_map={True: "#d9534f", False: "#0275d8"},
-                title=f"Top Slowest Clinical Transitions (Red indicates wait > {target_wait} min threshold)"
-            ).update_yaxes(categoryorder="total ascending"),
-            width="stretch",
-        )
+            st.plotly_chart(
+                px.bar(
+                    top_bt,
+                    x="avg_wait_min",
+                    y="step",
+                    orientation="h",
+                    color="is_alert",
+                    color_discrete_map={True: "#d9534f", False: "#0275d8"},
+                    title=f"Top Slowest Clinical Transitions (Red indicates wait > {target_wait} min threshold)"
+                ).update_yaxes(categoryorder="total ascending"),
+                width="stretch",
+            )
+        else:
+            st.info("No transition wait-time data available for the current filter selection.")
 
     st.subheader("Transition Matrix Heatmap (Patient Density)")
     pivot = trans.pivot_table(index="activity", columns="next_activity", values="case_id", aggfunc="count", fill_value=0)
@@ -373,16 +376,18 @@ with tab4:
     
     precomputed_loops = load_precomputed_repeat_loops()
     
-    if precomputed_loops is not None and not precomputed_loops.empty:
+    # Robust validation for repeat loops CSV schema
+    if precomputed_loops is not None and not precomputed_loops.empty and len(precomputed_loops.columns) >= 2:
         st.success("✅ Loaded precalculated repeat loop metrics from `outputs/repeat_loop_metrics.csv`")
         st.dataframe(precomputed_loops, width="stretch", hide_index=True)
         
-        if "activity" in precomputed_loops.columns:
-            val_col = "repeat_count" if "repeat_count" in precomputed_loops.columns else precomputed_loops.columns[1]
-            st.plotly_chart(
-                px.bar(precomputed_loops, x="activity", y=val_col, title="Repeat Activity Frequency Count"),
-                width="stretch",
-            )
+        act_col = "activity" if "activity" in precomputed_loops.columns else precomputed_loops.columns[0]
+        val_col = "repeat_count" if "repeat_count" in precomputed_loops.columns else precomputed_loops.columns[1]
+        
+        st.plotly_chart(
+            px.bar(precomputed_loops, x=act_col, y=val_col, title="Repeat Activity Frequency Count"),
+            width="stretch",
+        )
     else:
         st.info("Calculating repeat activities dynamically from raw event log...")
         repeat_df = calculate_repeat_metrics(df)
