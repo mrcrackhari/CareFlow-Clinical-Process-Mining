@@ -7,7 +7,7 @@ Features: Executive KPIs, Conformance Analysis, Bottleneck SLA Alerts, Re-Work L
           Financial Cost Engine, Patient Journey Gantt Timelines, Automated Insights,
           and Interactive Color-Coded Case Auditing.
 Styling: React-Inspired Glassmorphism UI (Dark Slate Aesthetic).
-Version: v2.3 (Final Enterprise Release)
+Version: v2.3 (Final Enterprise Release - Bugfix)
 """
 
 from pathlib import Path
@@ -572,8 +572,7 @@ with tab5:
         styled_show, 
         use_container_width=True, 
         hide_index=True,
-        disabled=["case_id", "start", "pathway", "Status"], # Protects core data from accidental edits
-        help="You can interactively click and edit 'department' or 'duration_hrs' cells for live scenario testing."
+        disabled=["case_id", "start", "pathway", "Status"]
     )
     
     col_dl1, col_dl2 = st.columns(2)
