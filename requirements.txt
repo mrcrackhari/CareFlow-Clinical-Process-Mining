@@ -1,0 +1,7 @@
+# CareFlow — Clinical Pathway Process Mining Dependencies (M2 Owner)
+pandas>=2.1.0,<3.0.0
+numpy>=1.26.0,<3.0.0
+pm4py>=2.7.0
+streamlit>=1.32.0
+plotly>=5.18.0
+pytest>=8.0.0

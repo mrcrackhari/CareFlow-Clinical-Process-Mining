@@ -1,0 +1,6 @@
+scenario_name,xray_wait_reduction_pct,rework_reduction_pct,avg_los_minutes,median_los_minutes,p90_los_minutes,avg_minutes_saved_per_case,total_patient_hours_saved,sla_120m_breach_count,sla_120m_breach_pct,sla_breaches_prevented
+1. Baseline (Current Operations),0.0,0.0,123.91,116.0,189.0,0.0,0.0,229,45.8,0
+2. Fast-Track Radiology (-30% Consultation -> X-Ray Wait),30.0,0.0,119.27,112.5,178.87,4.64,38.7,207,41.4,22
+3. Rework Prevention (-50% X-Ray -> Triage Loop-Back Delay),0.0,50.0,115.38,114.0,161.0,8.53,71.12,215,43.0,14
+4. Combined Intervention (-30% X-Ray Wait & -50% Rework),30.0,50.0,110.73,110.0,151.0,13.18,109.82,185,37.0,44
+5. Zero-Rework Target (-30% X-Ray Wait & 100% Loop Elimination),30.0,100.0,102.2,103.0,132.55,21.71,180.93,120,24.0,109
