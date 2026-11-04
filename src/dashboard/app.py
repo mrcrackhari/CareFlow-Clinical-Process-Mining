@@ -1,10 +1,12 @@
 """
-CareFlow Clinical Pathway Dashboard — Interactive Process Mining Platform
+CareFlow Clinical Pathway Dashboard — Enterprise Process Mining Platform
 ========================================================================
 Architecture: Dual-read pipeline (Primary: precomputed outputs from Member 2,
               Fallback: dynamic pandas calculations from event log).
-Features: Executive KPIs, Conformance, Bottleneck SLA Alerts, Re-work Loops.
-Version: v1.9 (Fully Corrected Release — Defensive CSV & Schema Protection)
+Features: Executive KPIs, Conformance Analysis, Bottleneck SLA Alerts, Re-Work Loops,
+          Financial Cost Engine, Patient Journey Gantt Timelines, & Automated Insights.
+Styling: React-Inspired Glassmorphism UI (Dark Slate Aesthetic).
+Version: v2.2 (React-Styled Streamlit Release)
 """
 
 from pathlib import Path
@@ -30,10 +32,80 @@ from data_loader import (
     STANDARD_PATHWAY,
 )
 
-st.set_page_config(page_title="CareFlow Dashboard", page_icon="🏥", layout="wide")
+# ---------------------------------------------------------------- Streamlit Page Configuration
+st.set_page_config(
+    page_title="CareFlow Enterprise Dashboard", 
+    page_icon="🏥", 
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# ---------------------------------------------------------------- React-Inspired Glassmorphism CSS
+st.markdown("""
+<style>
+    /* Main App Dark Background */
+    .stApp {
+        background-color: #0f172a;
+        color: #f8fafc;
+    }
+    
+    /* Sidebar Dark Glass Styling */
+    section[data-testid="stSidebar"] {
+        background-color: #1e293b !important;
+        border-right: 1px solid #334155;
+    }
+    
+    /* React-Style Modern Metric Cards */
+    div[data-testid="stMetric"] {
+        background: rgba(30, 41, 59, 0.75);
+        border: 1px solid #334155;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+    }
+    
+    div[data-testid="stMetricLabel"] p {
+        color: #94a3b8 !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    div[data-testid="stMetricValue"] div {
+        color: #38bdf8 !important;
+        font-weight: 700;
+    }
+
+    /* Tab Header Navigation Styling */
+    button[data-baseweb="tab"] {
+        font-weight: 600 !important;
+        border-radius: 8px !important;
+        padding: 8px 16px !important;
+        color: #94a3b8 !important;
+    }
+
+    button[data-baseweb="tab"][aria-selected="true"] {
+        background-color: #0284c7 !important;
+        color: #ffffff !important;
+    }
+
+    /* Headings Accent Glow */
+    h1, h2, h3 {
+        color: #38bdf8 !important;
+        font-weight: 700 !important;
+    }
+
+    /* Expander Box Customization */
+    .stExpander {
+        background-color: #1e293b;
+        border: 1px solid #334155 !important;
+        border-radius: 10px;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 
-# ---------------------------------------------------------------- Streamlit Cached Wrappers
+# ---------------------------------------------------------------- Streamlit Cached Data Functions
 @st.cache_data
 def load_prepared_data(raw_df: pd.DataFrame) -> pd.DataFrame:
     return prepare(raw_df)
@@ -49,9 +121,9 @@ def get_transitions(df: pd.DataFrame) -> pd.DataFrame:
     return build_transitions(df)
 
 
-# ---------------------------------------------------------------- Sidebar & Data Loading
-st.sidebar.title("🏥 CareFlow Analytics Console")
-st.sidebar.caption("⚡ Clinical Process Mining & Pathway Optimization Platform")
+# ---------------------------------------------------------------- Sidebar Setup & Data Ingestion
+st.sidebar.title("🏥 CareFlow Console")
+st.sidebar.caption("⚡ Enterprise Process Mining & Cost Engine")
 
 uploaded = st.sidebar.file_uploader(
     "📂 Upload Event Log (CSV)", 
@@ -68,17 +140,15 @@ try:
     else:
         st.title("CareFlow: Clinical Pathway Dashboard")
         st.caption("Process mining view of patient journeys: volumes, pathways, delays and bottlenecks.")
-
         st.info("👋 Welcome to CareFlow! No default `event_log.csv` dataset was detected in `data/`.")
 
         c1, c2 = st.columns([2, 1])
         with c1:
             st.subheader("📋 Expected Dataset Schema")
             st.markdown("""
-            Please upload a CSV file from the sidebar to begin process mining analysis. 
-            Your file should include the standard contract columns:
+            Please upload a CSV file from the sidebar to begin process mining analysis:
             - **`case_id`**: Unique identifier (e.g., `CASE-0001`)
-            - **`activity`**: Clinical step (`Registration`, `Triage`, `Doctor Consultation`, `X-Ray`, `Doctor Review`, `Discharge`)
+            - **`activity`**: Clinical step name
             - **`timestamp`**: Event time (`YYYY-MM-DD HH:MM:SS`)
             - **`department`**: *(Optional)* Hospital unit
             """)
@@ -96,7 +166,7 @@ try:
         st.stop()
 
     data = load_prepared_data(raw)
-except Exception as e:  # noqa: BLE001
+except Exception as e:
     st.error(f"Could not load data: {e}")
     st.stop()
 
@@ -138,7 +208,7 @@ sel_pathways = st.sidebar.multiselect(
     help="Filter view by explicit step-by-step treatment pathways."
 )
 
-# Target Threshold Controls
+# Operational SLA Threshold Controls
 st.sidebar.markdown("---")
 st.sidebar.header("⚠️ Target Thresholds & SLA Controls")
 target_duration = st.sidebar.number_input(
@@ -154,13 +224,20 @@ target_wait = st.sidebar.number_input(
     help="SLA threshold for transition delay wait times between clinical steps."
 )
 
+# Enterprise Financial Parameters
 st.sidebar.markdown("---")
-st.sidebar.caption("ℹ️ *CareFlow v1.9 — Fully Corrected Release*")
+st.sidebar.header("💰 Financial Cost Engine")
+cost_per_delay_hour = st.sidebar.number_input("Cost per Delay Hour (₹)", value=500, step=50)
+cost_per_rework_step = st.sidebar.number_input("Cost per Re-Work Activity (₹)", value=1200, step=100)
+
+st.sidebar.markdown("---")
+st.sidebar.caption("ℹ️ *CareFlow v2.2 — React Glassmorphism Edition*")
 
 if len(date_range) != 2:
     st.warning("Pick both a start and an end date.")
     st.stop()
 
+# Filtering Mask
 mask = (
     (cases_all["start"].dt.date >= date_range[0])
     & (cases_all["start"].dt.date <= date_range[1])
@@ -179,57 +256,90 @@ if cases.empty:
 
 trans = get_transitions(df)
 
-# ---------------------------------------------------------------- Header + KPIs
+# ---------------------------------------------------------------- Header & Metric Cards
 st.title("CareFlow: Clinical Pathway Dashboard")
-st.caption("Process mining view of patient journeys: volumes, pathways, delays and bottlenecks.")
+st.caption("Process mining view of patient journeys: volumes, pathways, delays, bottlenecks, and financial impact.")
 
-# Evaluator Walkthrough Guide
+# Walkthrough Guide
 with st.expander("📖 Evaluator Walkthrough & User Guide (Click to expand)"):
     guide = get_user_guide_content()
     st.markdown(f"**Overview:** {guide['overview']}")
     for t in guide['tabs']:
         st.markdown(f"- {t}")
 
+# Calculate Operations & Financial Metrics
 metrics = safe_calculate_metrics(cases)
 avg_duration = metrics["avg_duration"]
+
+cases["excess_hours"] = (cases["duration_hrs"] - target_duration).clip(lower=0)
+total_delay_cost = cases["excess_hours"].sum() * cost_per_delay_hour
+
+repeat_df = calculate_repeat_metrics(df)
+total_reworks = (repeat_df["occurrence_count"].sum() - len(repeat_df)) if not repeat_df.empty else 0
+total_rework_cost = total_reworks * cost_per_rework_step
+total_financial_impact = total_delay_cost + total_rework_cost
 delayed_count = (cases['duration_hrs'] > target_duration).sum() if not cases.empty else 0
 
+# Executive SLA Warning Banner
 if avg_duration > target_duration:
-    st.warning(f"⚠️ **Target SLA Alert:** Average pathway time ({avg_duration:.1f} h) exceeds target limit of {target_duration:.1f} h! ({delayed_count} delayed cases)")
+    st.warning(
+        f"⚠️ **Target SLA Alert:** Average pathway time ({avg_duration:.1f} h) exceeds target limit of {target_duration:.1f} h! "
+        f"({delayed_count} delayed cases). Estimated Total Financial Loss: **₹{total_financial_impact:,.0f}**."
+    )
 
+# Styled Metric Cards
 k1, k2, k3, k4, k5 = st.columns(5)
 k1.metric("Patients (cases)", f"{len(cases):,}")
-k2.metric("Events", f"{len(df):,}")
-k3.metric("Avg pathway time", f"{avg_duration:.1f} h", delta=f"{avg_duration - target_duration:+.1f} h vs target", delta_color="inverse")
-k4.metric("Median pathway time", f"{cases['duration_hrs'].median():.1f} h" if not cases.empty else "0.0 h")
-k5.metric("Unique pathways", f"{cases['pathway'].nunique():,}" if not cases.empty else "0")
+k2.metric("Events Logged", f"{len(df):,}")
+k3.metric("Avg Pathway Time", f"{avg_duration:.1f} h", delta=f"{avg_duration - target_duration:+.1f} h vs target", delta_color="inverse")
+k4.metric("Est. Delay Cost", f"₹{total_delay_cost:,.0f}")
+k5.metric("Total Financial Loss", f"₹{total_financial_impact:,.0f}", delta=f"Includes ₹{total_rework_cost:,.0f} Re-Work", delta_color="inverse")
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["📊 Overview", "🔀 Pathways & Conformance", "⏱️ Bottleneck Performance", "🔁 Re-Work & Loops", "📋 Patient Cases"])
+# 5 Main Dashboard Tabs
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "📊 Overview & Insights", 
+    "🔀 Pathways & Conformance", 
+    "⏱️ Bottleneck Performance", 
+    "🔁 Re-Work & Loops", 
+    "📋 Patient Cases & Timeline"
+])
 
-# ---------------------------------------------------------------- Tab 1: Overview
+# ================================================================ Tab 1: Overview & Insights
 with tab1:
+    st.subheader("🤖 Automated Operational Insights & Root Cause Analysis")
+    
+    highest_dept = cases.groupby("department")["duration_hrs"].mean().idxmax()
+    highest_dept_val = cases.groupby("department")["duration_hrs"].mean().max()
+    peak_arrival_hour = df["timestamp"].dt.hour.mode()[0]
+    
+    c_ins1, c_ins2 = st.columns(2)
+    c_ins1.info(f"💡 **Departmental Bottleneck:** `{highest_dept}` department exhibits the longest average treatment time at **{highest_dept_val:.1f} hours** per patient case.")
+    c_ins2.info(f"💡 **Peak Arrival Window:** Patient registrations spike around **{peak_arrival_hour}:00 hrs**, causing temporary downstream throughput bottlenecks.")
+
+    st.markdown("---")
     c1, c2 = st.columns(2)
     freq = df["activity"].value_counts().reset_index()
     freq.columns = ["activity", "count"]
     c1.plotly_chart(
-        px.bar(freq, x="count", y="activity", orientation="h", title="Activity Frequency Distribution")
+        px.bar(freq, x="count", y="activity", orientation="h", title="Activity Frequency Distribution", template="plotly_dark")
         .update_yaxes(categoryorder="total ascending"),
         width="stretch",
     )
     vol = cases.set_index("start").resample("W").size().reset_index(name="patients")
     c2.plotly_chart(
-        px.line(vol, x="start", y="patients", markers=True, title="Weekly Patient Volume Trend"),
+        px.line(vol, x="start", y="patients", markers=True, title="Weekly Patient Volume Trend", template="plotly_dark"),
         width="stretch",
     )
+    
     c3, c4 = st.columns(2)
     dept = cases.groupby("department").agg(patients=("case_id", "count"), avg_hrs=("duration_hrs", "mean")).reset_index()
-    c3.plotly_chart(px.bar(dept, x="department", y="patients", title="Patient Distribution by Department"), width="stretch")
+    c3.plotly_chart(px.bar(dept, x="department", y="patients", title="Patient Distribution by Department", template="plotly_dark"), width="stretch")
     c4.plotly_chart(
-        px.bar(dept, x="department", y="avg_hrs", title="Average Pathway Time by Department (Hours)"),
+        px.bar(dept, x="department", y="avg_hrs", title="Average Pathway Time by Department (Hours)", template="plotly_dark"),
         width="stretch",
     )
 
-# ---------------------------------------------------------------- Tab 2: Pathways & Conformance
+# ================================================================ Tab 2: Pathways & Conformance
 with tab2:
     st.subheader("🎯 Actual vs. Ideal Standard Care Conformance Analysis")
     
@@ -285,28 +395,26 @@ with tab2:
             source=links["node"].map(idx), target=links["next_node"].map(idx), value=links["value"]
         ),
     ))
-    fig.update_layout(height=550, margin=dict(t=10, b=10))
+    fig.update_layout(height=550, margin=dict(t=10, b=10), template="plotly_dark")
     st.plotly_chart(fig, width="stretch")
 
-# ---------------------------------------------------------------- Tab 3: Bottleneck Performance
+# ================================================================ Tab 3: Bottleneck Performance
 with tab3:
     st.header("⏱️ Clinical Performance & Bottleneck Wait-Time Analysis")
     
     c1, c2 = st.columns(2)
     c1.plotly_chart(
-        px.histogram(cases, x="duration_hrs", nbins=40, title="Pathway Time Distribution (Hours)"),
+        px.histogram(cases, x="duration_hrs", nbins=40, title="Pathway Time Distribution (Hours)", template="plotly_dark"),
         width="stretch",
     )
     c2.plotly_chart(
-        px.box(cases, x="department", y="duration_hrs", title="Pathway Time Variance by Department (Hours)"),
+        px.box(cases, x="department", y="duration_hrs", title="Pathway Time Variance by Department (Hours)", template="plotly_dark"),
         width="stretch",
     )
 
     st.subheader("Step-by-Step Transition Wait Times & SLA Violations")
-
     precomputed_bt = load_precomputed_bottlenecks()
 
-    # Robust validation: check if precomputed data exists AND contains 'avg_wait_min'
     if precomputed_bt is not None and not precomputed_bt.empty and "avg_wait_min" in precomputed_bt.columns:
         st.success("✅ Loaded precalculated bottleneck metrics from `outputs/bottleneck_metrics.csv`")
         bt_data = precomputed_bt.copy()
@@ -328,12 +436,12 @@ with tab3:
                 orientation="h",
                 color="is_alert",
                 color_discrete_map={True: "#d9534f", False: "#0275d8"},
-                title=f"Top Slowest Clinical Steps (Red indicates wait > {target_wait} min threshold)"
+                title=f"Top Slowest Clinical Steps (Red indicates wait > {target_wait} min threshold)",
+                template="plotly_dark"
             ).update_yaxes(categoryorder="total ascending"),
             width="stretch",
         )
     else:
-        # Dynamic fallback calculation from event log transitions
         bt_summary = trans.groupby(["activity", "next_activity"]).agg(
             avg_wait_min=("wait_min", "mean"),
             transitions=("wait_min", "count")
@@ -355,7 +463,8 @@ with tab3:
                     orientation="h",
                     color="is_alert",
                     color_discrete_map={True: "#d9534f", False: "#0275d8"},
-                    title=f"Top Slowest Clinical Transitions (Red indicates wait > {target_wait} min threshold)"
+                    title=f"Top Slowest Clinical Transitions (Red indicates wait > {target_wait} min threshold)",
+                    template="plotly_dark"
                 ).update_yaxes(categoryorder="total ascending"),
                 width="stretch",
             )
@@ -365,18 +474,17 @@ with tab3:
     st.subheader("Transition Matrix Heatmap (Patient Density)")
     pivot = trans.pivot_table(index="activity", columns="next_activity", values="case_id", aggfunc="count", fill_value=0)
     st.plotly_chart(
-        px.imshow(pivot, text_auto=True, aspect="auto", color_continuous_scale="Blues",
+        px.imshow(pivot, text_auto=True, aspect="auto", color_continuous_scale="Blues", template="plotly_dark",
                   labels=dict(x="Next Clinical Step", y="Current Clinical Step", color="Patient Volume")),
         width="stretch",
     )
 
-# ---------------------------------------------------------------- Tab 4: Re-Work & Loops
+# ================================================================ Tab 4: Re-Work & Loops
 with tab4:
     st.header("🔁 Repeated Step Detection & Clinical Re-Work Analysis")
     
     precomputed_loops = load_precomputed_repeat_loops()
     
-    # Robust validation for repeat loops CSV schema
     if precomputed_loops is not None and not precomputed_loops.empty and len(precomputed_loops.columns) >= 2:
         st.success("✅ Loaded precalculated repeat loop metrics from `outputs/repeat_loop_metrics.csv`")
         st.dataframe(precomputed_loops, width="stretch", hide_index=True)
@@ -385,11 +493,10 @@ with tab4:
         val_col = "repeat_count" if "repeat_count" in precomputed_loops.columns else precomputed_loops.columns[1]
         
         st.plotly_chart(
-            px.bar(precomputed_loops, x=act_col, y=val_col, title="Repeat Activity Frequency Count"),
+            px.bar(precomputed_loops, x=act_col, y=val_col, title="Repeat Activity Frequency Count", template="plotly_dark"),
             width="stretch",
         )
     else:
-        st.info("Calculating repeat activities dynamically from raw event log...")
         repeat_df = calculate_repeat_metrics(df)
         if not repeat_df.empty:
             summary_repeats = repeat_df.groupby("activity").agg(
@@ -402,21 +509,44 @@ with tab4:
 
             st.dataframe(summary_repeats, width="stretch", hide_index=True)
             st.plotly_chart(
-                px.bar(summary_repeats, x="activity", y="total_repeats", title="Repeated Activity Step Frequencies"),
+                px.bar(summary_repeats, x="activity", y="total_repeats", title="Repeated Activity Step Frequencies", template="plotly_dark"),
                 width="stretch",
             )
         else:
             st.success("🎉 No repeated activities or clinical re-work loops detected in the filtered dataset!")
 
-# ---------------------------------------------------------------- Tab 5: Patient Cases
+# ================================================================ Tab 5: Patient Cases & Timeline
 with tab5:
-    st.header("📋 Patient Case Audit & Outlier Export")
+    st.header("📋 Patient Case Audit & Individual Journey Timeline")
+    
+    st.subheader("🔍 Individual Patient Journey Timeline Trace (Gantt Chart)")
+    selected_case = st.selectbox("Select Patient Case ID to Inspect Timeline", options=sorted(cases["case_id"].unique()))
+    
+    case_timeline = df[df["case_id"] == selected_case].sort_values("timestamp").copy()
+    case_timeline["next_timestamp"] = case_timeline["timestamp"].shift(-1)
+    case_timeline["next_timestamp"] = case_timeline["next_timestamp"].fillna(case_timeline["timestamp"] + pd.Timedelta(minutes=15))
+    
+    fig_timeline = px.timeline(
+        case_timeline,
+        x_start="timestamp",
+        x_end="next_timestamp",
+        y="activity",
+        color="activity",
+        title=f"Chronological Step Timeline for Patient {selected_case}",
+        labels={"timestamp": "Step Start", "next_timestamp": "Step End", "activity": "Clinical Activity"},
+        template="plotly_dark"
+    )
+    fig_timeline.update_yaxes(categoryorder="total ascending")
+    st.plotly_chart(fig_timeline, width="stretch")
+    
+    st.markdown("---")
+    st.subheader("Outlier Patient Case Audit Table")
     pct = st.slider("Select delay percentile threshold filter", 50, 99, 90)
     threshold = cases["duration_hrs"].quantile(pct / 100)
     st.caption(f"Calculated Duration Threshold ({pct}th Percentile): {threshold:.1f} hours")
     
     slow = cases[cases["duration_hrs"] >= threshold].sort_values("duration_hrs", ascending=False)
-    search = st.text_input("🔍 Search cases by Case ID or Pathway text", help="Enter a Case ID like 'CASE-0001' or a step name like 'X-Ray'")
+    search = st.text_input("🔍 Search cases by Case ID or Pathway text", help="Enter a Case ID like 'CASE-0001' or step text like 'X-Ray'")
     
     if search:
         slow = slow[slow["case_id"].str.contains(search, case=False) | slow["pathway"].str.contains(search, case=False)]
