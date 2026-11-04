@@ -4,9 +4,10 @@ CareFlow Clinical Pathway Dashboard — Enterprise Process Mining Platform
 Architecture: Dual-read pipeline (Primary: precomputed outputs from Member 2,
               Fallback: dynamic pandas calculations from event log).
 Features: Executive KPIs, Conformance Analysis, Bottleneck SLA Alerts, Re-Work Loops,
-          Financial Cost Engine, Patient Journey Gantt Timelines, & Automated Insights.
+          Financial Cost Engine, Patient Journey Gantt Timelines, Automated Insights,
+          and Interactive Color-Coded Case Auditing.
 Styling: React-Inspired Glassmorphism UI (Dark Slate Aesthetic).
-Version: v2.2 (React-Styled Streamlit Release)
+Version: v2.3 (Final Enterprise Release)
 """
 
 from pathlib import Path
@@ -231,7 +232,7 @@ cost_per_delay_hour = st.sidebar.number_input("Cost per Delay Hour (₹)", value
 cost_per_rework_step = st.sidebar.number_input("Cost per Re-Work Activity (₹)", value=1200, step=100)
 
 st.sidebar.markdown("---")
-st.sidebar.caption("ℹ️ *CareFlow v2.2 — React Glassmorphism Edition*")
+st.sidebar.caption("ℹ️ *CareFlow v2.3 — Interactive Audit Edition*")
 
 if len(date_range) != 2:
     st.warning("Pick both a start and an end date.")
@@ -546,13 +547,34 @@ with tab5:
     st.caption(f"Calculated Duration Threshold ({pct}th Percentile): {threshold:.1f} hours")
     
     slow = cases[cases["duration_hrs"] >= threshold].sort_values("duration_hrs", ascending=False)
-    search = st.text_input("🔍 Search cases by Case ID or Pathway text", help="Enter a Case ID like 'CASE-0001' or step text like 'X-Ray'")
+    search = st.text_input("🔍 Search cases by Case ID or Pathway text", help="Enter a Case ID like 'CASE-0001'")
     
     if search:
         slow = slow[slow["case_id"].str.contains(search, case=False) | slow["pathway"].str.contains(search, case=False)]
         
-    show = slow[["case_id", "department", "start", "duration_hrs", "steps", "pathway"]].round({"duration_hrs": 1})
-    st.dataframe(show, width="stretch", hide_index=True)
+    show = slow[["case_id", "department", "start", "duration_hrs", "steps", "pathway"]].copy()
+    show["duration_hrs"] = show["duration_hrs"].round(1)
+    
+    # 1. Custom Status Badges
+    show["Status"] = show["duration_hrs"].apply(
+        lambda x: "🚨 SLA Breached" if x > target_duration else "✅ Optimal"
+    )
+    
+    # 2. Color-Coded Heatmap Styling
+    def highlight_sla(row):
+        color = 'background-color: rgba(217, 83, 79, 0.3)' if row['duration_hrs'] > target_duration else ''
+        return [color] * len(row)
+    
+    styled_show = show.style.apply(highlight_sla, axis=1)
+    
+    # 3. Interactive Data Editor
+    st.data_editor(
+        styled_show, 
+        use_container_width=True, 
+        hide_index=True,
+        disabled=["case_id", "start", "pathway", "Status"], # Protects core data from accidental edits
+        help="You can interactively click and edit 'department' or 'duration_hrs' cells for live scenario testing."
+    )
     
     col_dl1, col_dl2 = st.columns(2)
     col_dl1.download_button("⬇️ Export Outlier Cases (CSV)", show.to_csv(index=False), "delayed_outlier_cases.csv", "text/csv")
