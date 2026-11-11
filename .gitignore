@@ -26,3 +26,4 @@ Thumbs.db
 # CareFlow local dev
 *.duckdb
 *.duckdb.wal
+data/event_log_dirty.csv
